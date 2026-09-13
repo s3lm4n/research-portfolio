@@ -1,0 +1,35 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Python
+__pycache__/
+*.pyc
+
+# Local tooling / generated binaries
+tailwindcss
+
+# Experimental render tooling
+generate_preview.py
+generate_hero_angles.py
+produce_hero_video.py
+test_and_render_hero.py
+test_and_render_hero.py.bak-*
+
+# Failed / experimental hero renders
+assets/macs/macs_hero_preview.png
+assets/macs/hero_candidate_*.png
+
+# Design source package
+stitch_*.zip
+stitch_*.zip:Zone.Identifier
+
+# Backups
+*.bak
+*.backup
+
+# Local temp
+.tmp/
+temp/
