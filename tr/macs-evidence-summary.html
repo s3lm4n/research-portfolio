@@ -29,22 +29,21 @@
     </style>
 </head>
 <body class="antialiased selection:bg-blue-100 selection:text-blue-900">
-    <header class="border-b border-subtle bg-white sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200/70 h-14 flex items-center transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-between">
             <nav class="flex items-center text-sm font-medium text-secondary">
-                <a href="/tr/index.html" class="hover:text-gray-900 transition-colors">Araştırma</a>
-                <span class="mx-2">/</span>
-                <a href="/tr/macs-project.html" class="hover:text-gray-900 transition-colors">MACS</a>
-                <span class="mx-2">/</span>
-                <a href="/tr/macs-project.html#documents-title" class="hover:text-gray-900 transition-colors">Araştırma Dokümantasyonu</a>
+                <a href="/tr/index.html" class="px-2 py-1 rounded-full hover:text-gray-900 hover:bg-gray-100/70 transition-colors">Araştırma</a>
+                <span class="mx-1 text-gray-300">/</span>
+                <a href="/tr/macs-project.html" class="px-2 py-1 rounded-full hover:text-gray-900 hover:bg-gray-100/70 transition-colors">MACS</a>
+                <span class="mx-1 text-gray-300 hidden sm:inline-block">/</span>
+                <a href="/tr/macs-project.html#documents-title" class="px-2 py-1 rounded-full hover:text-gray-900 hover:bg-gray-100/70 transition-colors hidden sm:inline-block">Dokümantasyon</a>
             </nav>
-            <div class="flex items-center space-x-6">
-                <div class="text-sm font-semibold tracking-widest uppercase text-gray-900 hidden sm:block">Mekanistik Kanıt Özeti</div>
-                <div class="h-4 w-px bg-gray-300 hidden sm:block"></div>
-                <div class="flex items-center space-x-2 text-xs font-semibold">
-                    <a href="/macs-evidence-summary.html" class="text-gray-500 hover:text-gray-900 transition-colors">EN</a>
-                    <span class="text-gray-400">|</span>
-                    <span class="text-gray-900">TR</span>
+            <div class="flex items-center space-x-2">
+                <div class="px-3 py-1.5 text-[11px] font-semibold tracking-widest uppercase text-gray-900 hidden lg:block">Mekanistik Kanıt Özeti</div>
+                <div class="h-4 w-px bg-gray-200 hidden lg:block mx-2"></div>
+                <div class="flex items-center bg-gray-50/80 border border-gray-200/70 rounded-full p-0.5 text-[11px] font-semibold tracking-wide">
+                    <a href="/macs-evidence-summary.html" class="px-2.5 py-1 text-gray-500 hover:text-gray-900 hover:bg-gray-100/50 rounded-full transition-colors">EN</a>
+                    <span class="px-2.5 py-1 bg-white rounded-full shadow-[0_1px_2px_rgba(0,0,0,0.04)] text-gray-900">TR</span>
                 </div>
             </div>
         </div>
