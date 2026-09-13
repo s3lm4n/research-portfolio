@@ -33,3 +33,6 @@ stitch_*.zip:Zone.Identifier
 # Local temp
 .tmp/
 temp/
+
+# Local QA scratch files
+scratch_qa.py
