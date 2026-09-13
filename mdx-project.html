@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDX: Molecular Dynamics Accelerator Architecture - Selman Ali Dokumacı</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta name="description" content="Technical documentation and architectural specifications for MDX: Molecular Dynamics Accelerator Architecture.">
+    <meta property="og:title" content="MDX: Molecular Dynamics Accelerator Architecture - Selman Ali Dokumacı">
+    <meta property="og:description" content="Technical documentation and architectural specifications for MDX: Molecular Dynamics Accelerator Architecture.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://research-portfolio-kappa-blush.vercel.app/mdx-project.html">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="tr_TR">
+    
+    <link rel="canonical" href="https://research-portfolio-kappa-blush.vercel.app/mdx-project.html">
+    <link rel="alternate" hreflang="en" href="https://research-portfolio-kappa-blush.vercel.app/mdx-project.html">
+    <link rel="alternate" hreflang="tr" href="https://research-portfolio-kappa-blush.vercel.app/tr/mdx-project.html">
+    <link rel="alternate" hreflang="x-default" href="https://research-portfolio-kappa-blush.vercel.app/mdx-project.html">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (Local) -->
+    <link href="/assets/css/style.css" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #111827; }
+        .text-secondary { color: #6b7280; }
+        .border-subtle { border-color: #e5e7eb; }
+        .accent-blue { color: #1e40af; }
+        .bg-accent-blue { background-color: #1e40af; }
+
+        .card { border: 1px solid #e5e7eb; background: #ffffff; border-radius: 4px; transition: border-color 0.2s ease, box-shadow 0.2s ease; }
+        .card:hover { border-color: #d1d5db; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03); }
+
+        [id] { scroll-margin-top: 5rem; }
+
+        .toc-link { display: block; padding: 0.375rem 0.75rem; font-size: 0.8125rem; color: #6b7280; border-left: 2px solid transparent; transition: color 0.15s, border-color 0.15s; }
+        .toc-link:hover, .toc-link.active { color: #111827; border-left-color: #1e40af; }
+
+        .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); will-change: opacity, transform; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal { transition: none; opacity: 1; transform: none; }
+            .card:hover { transform: none !important; }
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-blue-100 selection:text-blue-900">
+
+    <!-- Compact Header -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200/70 h-14 flex items-center transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-between">
+            <a href="/index.html" class="px-3 py-1.5 rounded-full text-sm font-medium text-secondary hover:text-gray-900 hover:bg-gray-100/70 flex items-center transition-colors">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                Back to Portfolio
+            </a>
+            <div class="flex items-center space-x-2">
+                <div class="px-3 py-1.5 text-[11px] font-semibold tracking-widest uppercase text-gray-900 hidden sm:block">MDX ARCHITECTURE</div>
+                <div class="h-4 w-px bg-gray-200 hidden sm:block mx-2"></div>
+                <div class="flex items-center bg-gray-50/80 border border-gray-200/70 rounded-full p-0.5 text-[11px] font-semibold tracking-wide">
+                    <span class="px-2.5 py-1 bg-white rounded-full shadow-[0_1px_2px_rgba(0,0,0,0.04)] text-gray-900">EN</span>
+                    <a href="/tr/mdx-project.html" class="px-2.5 py-1 text-gray-500 hover:text-gray-900 hover:bg-gray-100/50 rounded-full transition-colors">TR</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12 flex flex-col lg:flex-row lg:flex-wrap xl:flex-nowrap lg:items-start gap-8 lg:gap-12 relative">
+        
+        <!-- Left Sidebar Navigation -->
+        <aside class="hidden lg:block w-52 shrink-0 sticky top-24 self-start max-h-[calc(100vh-6rem)] overflow-y-auto pb-8">
+            <h3 class="text-xs font-semibold uppercase tracking-wider text-secondary mb-3">CONTENTS</h3>
+            <nav class="space-y-1">
+                <a href="#overview" class="toc-link">Overview</a>
+                <a href="#architecture-baseline" class="toc-link">Architecture Baseline</a>
+                <a href="#correctness-first" class="toc-link">Correctness-First Design</a>
+                <a href="#reference-progression" class="toc-link">Reference-Model Progression</a>
+                <a href="#validation-strategy" class="toc-link">Validation Strategy</a>
+                <a href="#current-boundaries" class="toc-link">Current Boundaries</a>
+                <a href="#engineering-roadmap" class="toc-link">Engineering Roadmap</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content Column -->
+        <main class="flex-1 max-w-3xl mx-auto lg:mx-0 w-full space-y-16 lg:space-y-24">
+            
+            <!-- 1. Project Header -->
+            <section aria-labelledby="project-title" class="reveal">
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-2.5 py-1 bg-gray-100 text-gray-600 rounded text-xs font-medium border border-gray-200">Hardware Architecture</span>
+                    <span class="px-2.5 py-1 bg-gray-100 text-gray-600 rounded text-xs font-medium border border-gray-200">Domain-Specific Accelerator</span>
+                </div>
+                <h1 id="project-title" class="text-3xl md:text-4xl font-bold tracking-tight text-anthracite mb-4">
+                    MDX &mdash; Molecular Dynamics Accelerator Architecture
+                </h1>
+                <p class="text-lg font-light text-secondary mb-8">
+                    A correctness-first, pre-silicon domain-specific accelerator architecture for classical molecular-dynamics workloads.
+                </p>
+                <div class="border-t border-subtle pt-6 mb-8">
+                    <p class="text-sm font-medium text-anthracite">Selman Ali Dokumacı</p>
+                    <p class="text-sm text-secondary">Independent Hardware Research Project | 2026</p>
+                </div>
+                <div class="bg-blue-50 border border-blue-200 rounded-sm p-4 text-sm text-blue-900 shadow-sm">
+                    <strong>Current Evidence:</strong> Architectural specifications through v0.12 and executable golden/reference models.
+                </div>
+            </section>
+
+            <!-- Overview -->
+            <section id="overview" class="reveal">
+                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">Overview</h2>
+                <div class="prose prose-gray max-w-none space-y-4 text-gray-700">
+                    <p>MDX is an independently developed, pre-silicon domain-specific accelerator architecture for classical molecular-dynamics workloads. The current MDX-1 baseline explores a multi-tile architecture for nonbonded interaction processing, contribution generation, force accumulation/reduction, and ownership-aware routing and persistence.</p>
+                    <p>The high-level scope of the architecture also encompasses critical aspects of MD computations, including periodic geometry handling, spatial pair selection, Verlet-list reuse and rebuild logic, and explicit lifecycle orchestration.</p>
+                    <p>It is important to emphasize that while MDX is designed for classical MD algorithms, the architecture is intrinsically generalized and is <strong>not inherently GROMACS-specific</strong>, allowing potential integration with a wide variety of molecular dynamics engines and software ecosystems.</p>
+                </div>
+            </section>
+
+            <!-- Architecture Baseline -->
+            <section id="architecture-baseline" class="reveal">
+                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">Architecture Baseline</h2>
+                <div class="card p-6 border-l-4 border-l-accent mb-6">
+                    <h3 class="text-lg font-semibold mb-2">MDX-1 Fabric</h3>
+                    <ul class="list-disc pl-5 space-y-2 text-sm text-gray-700">
+                        <li><strong>Fabric Configuration:</strong> 4 &times; 4</li>
+                        <li><strong>Scale:</strong> 4 &times; 4 / 16-tile architectural baseline</li>
+                        <li><strong>Target Workload:</strong> Classical Molecular Dynamics</li>
+                    </ul>
+                </div>
+                <p class="text-sm text-gray-700">
+                    The MDX-1 baseline defines a 4 &times; 4, 16-tile architectural namespace. At the current evidence level, the executable models specify architectural accounting and correctness semantics. Concrete routing topology, physical mapping, queueing, memory organization, timing, and datapath choices remain unresolved.
+                </p>
+            </section>
+
+            <!-- Correctness-First Design -->
+            <section id="correctness-first" class="reveal">
+                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">Correctness-First Design</h2>
+                <div class="prose prose-gray max-w-none space-y-4 text-gray-700">
+                    <p>The MDX development methodology relies strictly on a correctness-first paradigm. In hardware accelerator design for scientific computing, silent numerical errors or precision drift can render long-running simulations completely invalid. Therefore, the architecture is being developed with absolute priority on deterministic numerical correctness over speculative performance optimizations.</p>
+                    <p>Each currently modeled correctness domain, from interaction accounting to periodic geometry and lifecycle behavior, is defined through explicit contracts and checked against executable reference models.</p>
+                </div>
+            </section>
+
+            <!-- Reference-Model Progression -->
+            <section id="reference-progression" class="reveal">
+                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">Reference-Model Progression (v0.1 &ndash; v0.12)</h2>
+                <p class="text-sm text-gray-700 mb-6">The architectural specifications have evolved systematically through version 0.12, establishing a verified baseline through successive conceptual stages:</p>
+                <div class="grid gap-4">
+                    <div class="card p-4">
+                        <h4 class="font-semibold text-gray-900 mb-1">Architectural accounting and lifecycle</h4>
+                        <p class="text-sm text-gray-600">Established the foundational state machine and lifecycle tracking for particle assignments and task distribution across the fabric.</p>
+                    </div>
+                    <div class="card p-4">
+                        <h4 class="font-semibold text-gray-900 mb-1">Numerical pair/workload reference</h4>
+                        <p class="text-sm text-gray-600">Defined deterministic evaluation logic for pairwise interactions, establishing the numerical baseline for force and energy calculations.</p>
+                    </div>
+                    <div class="card p-4">
+                        <h4 class="font-semibold text-gray-900 mb-1">Spatial and periodic geometry</h4>
+                        <p class="text-sm text-gray-600">Integrated minimum-image conventions and spatial mapping rules required for accurately handling periodic boundary conditions in dense molecular systems.</p>
+                    </div>
+                    <div class="card p-4">
+                        <h4 class="font-semibold text-gray-900 mb-1">Verlet-list reuse and periodic workload integration</h4>
+                        <p class="text-sm text-gray-600">Introduced correctness models for stored-list construction, conservative reuse/rebuild eligibility, and validated periodic workload composition.</p>
+                    </div>
+                    <div class="card p-4">
+                        <h4 class="font-semibold text-gray-900 mb-1">Explicit lifecycle and configuration-transition orchestration</h4>
+                        <p class="text-sm text-gray-600">Adds explicit caller-controlled periodic configuration transition with mandatory fresh rebuild and optional immediate evaluation, while preserving earlier lifecycle boundaries.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Validation Strategy -->
+            <section id="validation-strategy" class="reveal">
+                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">Validation Strategy</h2>
+                <div class="prose prose-gray max-w-none space-y-4 text-gray-700">
+                    <p>The validation strategy uses executable golden/reference models as software correctness oracles for the behaviors defined by each specification. They provide deterministic comparison targets for future implementation work, but they are not timing models or evidence of physical hardware.</p>
+                    <p>Keeping algorithmic correctness contracts separate from future RTL allows later implementations to be checked against explicit reference behavior without implying that RTL or silicon has already been validated.</p>
+                </div>
+            </section>
+
+            <!-- Current Boundaries -->
+            <section id="current-boundaries" class="reveal">
+                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">Current Boundaries</h2>
+                <div class="bg-gray-50 border border-gray-200 rounded-sm p-5 text-sm text-gray-700 shadow-sm">
+                    <h4 class="font-semibold text-gray-900 mb-2">Evidence Boundary Constraints</h4>
+                    <p class="mb-3">The MDX project adheres to strict evidence-based reporting. The following boundaries define the current state of the architecture as of specification v0.12:</p>
+                    <ul class="list-disc pl-5 space-y-1">
+                        <li><strong>Silicon Status:</strong> Pre-silicon. The project is in the architectural definition and reference modeling phase.</li>
+                        <li><strong>Implementation:</strong> There is currently no validated RTL implementation.</li>
+                        <li><strong>Performance:</strong> There is no validated hardware performance model.</li>
+                        <li><strong>Metrics:</strong> No measured hardware performance, speedup, throughput, frequency, power, area, FPGA, or ASIC results are currently reported.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Engineering Roadmap -->
+            <section id="engineering-roadmap" class="reveal">
+                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">Engineering Roadmap</h2>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4">
+                        <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm shrink-0">1</div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900">Specification</h4>
+                            <p class="text-xs text-gray-500">Established through v0.12</p>
+                        </div>
+                    </div>
+                    <div class="ml-4 w-0.5 h-6 bg-gray-200"></div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm shrink-0">2</div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900">Executable Golden Model</h4>
+                            <p class="text-xs text-gray-500">Current Phase</p>
+                        </div>
+                    </div>
+                    <div class="ml-4 w-0.5 h-6 bg-gray-200"></div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-8 h-8 rounded-full bg-gray-100 text-gray-500 flex items-center justify-center font-bold text-sm shrink-0">3</div>
+                        <div>
+                            <h4 class="font-semibold text-gray-500">RTL Verification</h4>
+                            <p class="text-xs text-gray-400">Future Phase</p>
+                        </div>
+                    </div>
+                    <div class="ml-4 w-0.5 h-6 bg-gray-200"></div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-8 h-8 rounded-full bg-gray-100 text-gray-500 flex items-center justify-center font-bold text-sm shrink-0">4</div>
+                        <div>
+                            <h4 class="font-semibold text-gray-500">Synthesis-Oriented Evaluation</h4>
+                            <p class="text-xs text-gray-400">Future Phase</p>
+                        </div>
+                    </div>
+                    <div class="ml-4 w-0.5 h-6 bg-gray-200"></div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-8 h-8 rounded-full bg-gray-100 text-gray-500 flex items-center justify-center font-bold text-sm shrink-0">5</div>
+                        <div>
+                            <h4 class="font-semibold text-gray-500">FPGA Demonstration</h4>
+                            <p class="text-xs text-gray-400">Future Phase</p>
+                        </div>
+                    </div>
+                    <div class="ml-4 w-0.5 h-6 bg-gray-200"></div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-8 h-8 rounded-full bg-gray-100 text-gray-500 flex items-center justify-center font-bold text-sm shrink-0">6</div>
+                        <div>
+                            <h4 class="font-semibold text-gray-500">Measured Performance/Energy Evaluation</h4>
+                            <p class="text-xs text-gray-400">Future Phase</p>
+                        </div>
+                    </div>
+                    <div class="ml-4 w-0.5 h-6 bg-gray-200"></div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-8 h-8 rounded-full bg-gray-100 text-gray-500 flex items-center justify-center font-bold text-sm shrink-0">7</div>
+                        <div>
+                            <h4 class="font-semibold text-gray-500">Possible ASIC Feasibility</h4>
+                            <p class="text-xs text-gray-400">Long-term Vision</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Right Metadata Panel -->
+        <aside class="w-full xl:w-64 shrink-0 mt-12 xl:mt-0 xl:sticky xl:top-24 xl:self-start">
+            <div class="bg-white border border-gray-200/70 rounded-xl p-6 shadow-[0_2px_8px_rgba(0,0,0,0.02)] space-y-6">
+                
+                <div>
+                    <h4 class="text-[11px] font-semibold uppercase tracking-wider text-gray-500 mb-4 px-1">Research Status</h4>
+                    <div class="flex items-center gap-2 px-1">
+                        <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+                        <span class="text-[13px] font-medium text-gray-900">Pre-silicon</span>
+                    </div>
+                </div>
+
+                <div class="space-y-3 px-1">
+                    <div class="flex flex-col">
+                        <span class="text-[10px] uppercase tracking-wider text-gray-500 mb-0.5">Baseline</span>
+                        <span class="text-[13px] text-gray-900">MDX-1, 16 tiles</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-[10px] uppercase tracking-wider text-gray-500 mb-0.5">Reference Models</span>
+                        <span class="text-[13px] text-gray-900">v0.1 &ndash; v0.12</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-[10px] uppercase tracking-wider text-gray-500 mb-0.5">RTL</span>
+                        <span class="text-[13px] text-gray-900">Not yet validated</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-[10px] uppercase tracking-wider text-gray-500 mb-0.5">Hardware Performance</span>
+                        <span class="text-[13px] text-gray-900">Not yet measured</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-subtle mt-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-600">
+            <p>&copy; 2026 Selman Ali Dokumacı. All rights reserved.</p>
+            <div class="flex items-center gap-6">
+                <a href="https://www.linkedin.com/in/selman-ali-dokumac%C4%B1-4a6ba630a/" target="_blank" rel="noopener noreferrer" class="hover:text-gray-900 transition-colors">LinkedIn</a>
+                <a href="https://github.com/s3lm4n" target="_blank" rel="noopener noreferrer" class="hover:text-gray-900 transition-colors">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Scroll reveal animation observer
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Scroll spy for sidebar navigation
+        const tocLinks = document.querySelectorAll('.toc-link');
+        const sections = [];
+        tocLinks.forEach(link => {
+            const id = link.getAttribute('href').substring(1);
+            const section = document.getElementById(id);
+            if (section) sections.push({ id, el: section, link });
+        });
+
+        const spyObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    tocLinks.forEach(l => l.classList.remove('active'));
+                    const match = sections.find(s => s.id === entry.target.id);
+                    if (match) match.link.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '-80px 0px -60% 0px' });
+
+        sections.forEach(s => spyObserver.observe(s.el));
+        
+        // Setup initial active state if loaded at top
+        if(window.scrollY === 0 && sections.length > 0) {
+            sections[0].link.classList.add('active');
+        }
+    </script>
+</body>
+</html>
