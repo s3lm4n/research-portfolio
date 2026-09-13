@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methodological Decision Log - MACS Research Documentation</title>
+    
+    <link rel="alternate" hreflang="en" href="/macs-decision-log.html">
+    <link rel="alternate" hreflang="tr" href="/tr/macs-decision-log.html">
+    <link rel="alternate" hreflang="x-default" href="/macs-decision-log.html">
+
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #111827; }
+        .text-secondary { color: #6b7280; }
+        .border-subtle { border-color: #e5e7eb; }
+    </style>
+</head>
+<body class="antialiased selection:bg-blue-100 selection:text-blue-900">
+    <header class="border-b border-subtle bg-white sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <nav class="flex items-center text-sm font-medium text-secondary">
+                <a href="/index.html" class="hover:text-gray-900 transition-colors">Research</a>
+                <span class="mx-2">/</span>
+                <a href="/macs-project.html" class="hover:text-gray-900 transition-colors">MACS</a>
+                <span class="mx-2">/</span>
+                <a href="/macs-project.html#documents-title" class="hover:text-gray-900 transition-colors">Research Documentation</a>
+            </nav>
+            <div class="flex items-center space-x-6">
+                <div class="text-sm font-semibold tracking-widest uppercase text-gray-900 hidden sm:block">Methodological Decision Log</div>
+                <div class="h-4 w-px bg-gray-300 hidden sm:block"></div>
+                <div class="flex items-center space-x-2 text-xs font-semibold">
+                    <span class="text-gray-900">EN</span>
+                    <span class="text-gray-400">|</span>
+                    <a href="/tr/macs-decision-log.html" class="text-gray-500 hover:text-gray-900 transition-colors">TR</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="mb-10 pb-6 border-b border-subtle">
+            <h1 class="text-3xl font-bold text-gray-900 mb-4">Methodological Decision Log</h1>
+            <div class="flex flex-wrap gap-4 text-sm text-secondary">
+                <div class="flex items-center"><span class="font-semibold mr-1">Project:</span> MACS</div>
+                <div class="flex items-center"><span class="font-semibold mr-1">Document type:</span> Technical Documentation</div>
+                <div class="flex items-center"><span class="font-semibold mr-1">Year:</span> 2026</div>
+                <div class="flex items-center"><span class="font-semibold mr-1">Research status:</span> Computational Discovery</div>
+            </div>
+        </div>
+
+        <div class="prose prose-blue max-w-none text-gray-800 space-y-12">
+            
+            <section>
+                <h2 class="text-xl font-semibold text-gray-900 border-b border-subtle pb-2 mb-4">Motif finalized as HALDSLE</h2>
+                <div class="mb-2"><strong>Decision:</strong> MACS will use HALDSLE repeats instead of HALKSLE.</div>
+                <div class="mb-2"><strong>Reason:</strong> The intended pH-switch mechanism depends on Asp/Glu-assisted histidine pKa engineering. Aspartate provides a local negative electrostatic environment that may increase histidine protonation propensity near the target pH threshold around 6.8. Lysine would introduce a positive charge and may oppose histidine protonation, weakening the intended histidine-zipper mechanism.</div>
+                <div class="mb-2 text-gray-600"><strong>Alternative considered:</strong> HALKSLE, which appeared in earlier sequence files and AlphaFold input.</div>
+                <div class="text-amber-800 bg-amber-50 p-3 rounded-sm mt-3 text-sm border border-amber-200"><strong>Risk / limitation:</strong> The pKa shift is a design hypothesis. HALDSLE must be validated by PROPKA/H++ and MD. It must not be assumed correct solely from design intuition.</div>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-semibold text-gray-900 border-b border-subtle pb-2 mb-4">pH 6.8 histidine protonation candidate set</h2>
+                <div class="mb-2"><strong>Decision:</strong> For pH 6.8, do not protonate all histidines. Use a selective borderline histidine set based on PROPKA pKa values and structural inspection.</div>
+                <div class="mb-2"><strong>Primary pH 6.8 candidates:</strong> A:282, A:289, A:296, B:272, B:293, B:324, B:329, B:332.</div>
+                <div class="mb-2"><strong>Reason:</strong> These residues have PROPKA-predicted pKa values near the target pH range and/or are structurally close to the HALDSLE/interface region.</div>
+                <div class="mb-2 text-gray-600"><strong>pH 7.4 rule:</strong> Histidines will remain neutral unless a strong residue-specific reason exists.</div>
+                <div class="text-amber-800 bg-amber-50 p-3 rounded-sm mt-3 text-sm border border-amber-200"><strong>Risk / limitation:</strong> Static PROPKA on an AlphaFold model cannot capture dynamic pKa shifts. This is a fixed-protonation approximation, not constant-pH MD.</div>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-semibold text-gray-900 border-b border-subtle pb-2 mb-4">pH 7.4 histidine assignment</h2>
+                <div class="mb-2"><strong>Decision:</strong> All histidines in the pH 7.4 model were assigned as neutral HIE.</div>
+                <div class="mb-2"><strong>Reason:</strong> pH 7.4 is above the predicted pKa values for most histidines. Therefore, doubly protonated HIP was not used.</div>
+                <div class="mb-2 text-gray-600"><strong>Alternative considered:</strong> Mixed HID/HIE tautomer assignment. Deferred for simplicity; this model uses a uniform neutral HIE assignment.</div>
+                <div class="text-amber-800 bg-amber-50 p-3 rounded-sm mt-3 text-sm border border-amber-200"><strong>Risk / limitation:</strong> HIE/HID tautomer choice can affect local hydrogen-bonding. This should be acknowledged as a fixed-protonation approximation.</div>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-semibold text-gray-900 border-b border-subtle pb-2 mb-4">pH 6.8 topology finalized</h2>
+                <div class="mb-2"><strong>Decision:</strong> pH 6.8 topology was generated with selective HIP assignments: A:282, A:289, A:296, B:272, B:293, B:324, B:329, B:332. All other histidines were assigned as neutral HIE.</div>
+                <div class="mb-2"><strong>Reason:</strong> Selected residues are borderline pKa/interface/motif candidates based on PROPKA and structural inspection.</div>
+                <div class="text-amber-800 bg-amber-50 p-3 rounded-sm mt-3 text-sm border border-amber-200"><strong>Risk / limitation:</strong> This is still a fixed-protonation model. It approximates pH-dependent behavior but does not replace constant-pH MD.</div>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-semibold text-gray-900 border-b border-subtle pb-2 mb-4">Fixed-protonation approximation for pH 6.8</h2>
+                <div class="mb-2"><strong>Decision:</strong> The pH 6.8 model uses selective HIP assignments for eight borderline histidines.</div>
+                <div class="mb-2"><strong>Reason:</strong> PROPKA/Henderson–Hasselbalch analysis indicates that these residues have higher protonation propensity at pH 6.8 than at pH 7.4. The average predicted protonated fraction for the selected set is substantially higher at pH 6.8 than at pH 7.4, supporting a pH-dependent protonation gradient.</div>
+                <div class="mb-2 text-gray-600"><strong>Alternative considered:</strong> Constant-pH MD, which would allow dynamic protonation/deprotonation. This is more rigorous but outside the current compute/software scope.</div>
+                <div class="text-amber-800 bg-amber-50 p-3 rounded-sm mt-3 text-sm border border-amber-200"><strong>Important limitation:</strong> Classical fixed-protonation GROMACS MD cannot represent partial protonation. Assigning these residues as HIP does not mean that they are experimentally known to be 100% protonated at pH 6.8. Rather, this is a discrete approximation used to test whether protonation of the most pH-sensitive HALDSLE-associated histidines can drive the intended conformational switch. In any report or manuscript, this model must be described as a fixed-protonation approximation, not as direct proof of physiological full protonation at pH 6.8.</div>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-semibold text-gray-900 border-b border-subtle pb-2 mb-4">Local 1 ns validation completed</h2>
+                <div class="mb-2"><strong>Decision:</strong> Both pH 6.8 and pH 7.4 systems passed local 1 ns validation MD after EM/NVT/NPT.</div>
+                <div class="mb-2"><strong>Results:</strong> Both trajectories completed successfully, produced final coordinates, and passed standard validation checks.</div>
+                <div class="mb-2"><strong>Interpretation:</strong> The systems are stable enough to proceed to longer production MD.</div>
+                <div class="text-amber-800 bg-amber-50 p-3 rounded-sm mt-3 text-sm border border-amber-200"><strong>Risk / limitation:</strong> 1 ns validation only detects gross setup instability. It does not prove long-timescale convergence or biological correctness.</div>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-semibold text-gray-900 border-b border-subtle pb-2 mb-4">GROMACS 2026.1 production TPR regeneration</h2>
+                <div class="mb-2"><strong>Decision:</strong> Final 300 ns production TPR files were regenerated with GROMACS 2026.1.</div>
+                <div class="mb-2"><strong>Result:</strong> Both pH 6.8 and pH 7.4 300 ns TPR files were generated successfully with GROMACS 2026.1.</div>
+                <div class="mb-2"><strong>Output policy:</strong> TRR output remains disabled. Compressed XTC output is used for trajectory storage.</div>
+            </section>
+
+        </div>
+
+        <div class="mt-12 pt-8 border-t border-subtle flex flex-col sm:flex-row justify-between items-center gap-4">
+            <a href="macs-project.html" class="text-accent hover:text-blue-900 font-medium flex items-center transition-colors">
+                &larr; Back to MACS Project
+            </a>
+            <div class="flex gap-4 text-sm">
+                <a href="macs-evidence-summary.html" class="text-secondary hover:text-gray-900">Evidence Summary</a>
+                <a href="macs-evidence-matrix.html" class="text-secondary hover:text-gray-900">Evidence Matrix</a>
+                <a href="macs-mdp-consistency.html" class="text-secondary hover:text-gray-900">MDP Consistency</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

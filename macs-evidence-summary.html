@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechanistic Evidence Summary - MACS Research Documentation</title>
+    
+    <link rel="alternate" hreflang="en" href="/macs-evidence-summary.html">
+    <link rel="alternate" hreflang="tr" href="/tr/macs-evidence-summary.html">
+    <link rel="alternate" hreflang="x-default" href="/macs-evidence-summary.html">
+
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #111827; }
+        .text-secondary { color: #6b7280; }
+        .border-subtle { border-color: #e5e7eb; }
+    </style>
+</head>
+<body class="antialiased selection:bg-blue-100 selection:text-blue-900">
+    <header class="border-b border-subtle bg-white sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <nav class="flex items-center text-sm font-medium text-secondary">
+                <a href="/index.html" class="hover:text-gray-900 transition-colors">Research</a>
+                <span class="mx-2">/</span>
+                <a href="/macs-project.html" class="hover:text-gray-900 transition-colors">MACS</a>
+                <span class="mx-2">/</span>
+                <a href="/macs-project.html#documents-title" class="hover:text-gray-900 transition-colors">Research Documentation</a>
+            </nav>
+            <div class="flex items-center space-x-6">
+                <div class="text-sm font-semibold tracking-widest uppercase text-gray-900 hidden sm:block">Mechanistic Evidence Summary</div>
+                <div class="h-4 w-px bg-gray-300 hidden sm:block"></div>
+                <div class="flex items-center space-x-2 text-xs font-semibold">
+                    <span class="text-gray-900">EN</span>
+                    <span class="text-gray-400">|</span>
+                    <a href="/tr/macs-evidence-summary.html" class="text-gray-500 hover:text-gray-900 transition-colors">TR</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="mb-10 pb-6 border-b border-subtle">
+            <h1 class="text-3xl font-bold text-gray-900 mb-4">Mechanistic Evidence Summary</h1>
+            <div class="flex flex-wrap gap-4 text-sm text-secondary">
+                <div class="flex items-center"><span class="font-semibold mr-1">Project:</span> MACS</div>
+                <div class="flex items-center"><span class="font-semibold mr-1">Document type:</span> Technical Report</div>
+                <div class="flex items-center"><span class="font-semibold mr-1">Year:</span> 2026</div>
+                <div class="flex items-center"><span class="font-semibold mr-1">Research status:</span> Computational Discovery</div>
+            </div>
+        </div>
+
+        <div class="prose prose-blue max-w-none text-gray-800">
+            <h2 class="text-2xl font-semibold text-gray-900 mt-8 mb-4">Integrated Interpretation</h2>
+            <p class="mb-4">
+                The current simulations support a distributed and multiresidue pH-response model rather than a mechanism controlled by one residue alone. The strongest convergence is observed for:
+            </p>
+            <ul class="list-disc pl-6 mb-6 space-y-2">
+                <li>B293 alternative polar microenvironments</li>
+                <li>B324 pKa-associated local remodeling</li>
+                <li>Increased Module B compactness and internal contacts at pH 6.8</li>
+                <li>Reorganization of histidine-rich dynamic and communication networks</li>
+            </ul>
+            <p class="mb-6 font-medium">
+                The simulations support a candidate distributed pH-switch mechanism in which local electrostatic changes involving B293, B324, and additional histidines are coupled to broader changes in Module B compactness and intermodule communication.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-gray-900 mt-8 mb-4">Main Observations</h2>
+            
+            <h3 class="text-xl font-medium text-gray-900 mt-6 mb-3">Moderate-to-strong Evidence</h3>
+            <ul class="list-disc pl-6 mb-6 space-y-2">
+                <li>B324 local electrostatic remodeling</li>
+                <li>Distributed histidine-network reorganization</li>
+                <li>Multiresidue pH-response model</li>
+            </ul>
+
+            <h3 class="text-xl font-medium text-gray-900 mt-6 mb-3">Moderate Evidence</h3>
+            <ul class="list-disc pl-6 mb-6 space-y-2">
+                <li>B293 alternative microenvironment switching</li>
+                <li>Module B compactness at pH 6.8</li>
+            </ul>
+
+            <h3 class="text-xl font-medium text-gray-900 mt-6 mb-3">Moderate Directional Evidence</h3>
+            <p class="mb-4">
+                <strong>Global pH-dependent A–B PB-MMPBSA endpoint energetics:</strong><br>
+                PB-MMPBSA yielded a mean &Delta;TOTAL of +61.43 kcal/mol at pH 6.8 and +71.15 kcal/mol at pH 7.4, corresponding to a pH 6.8 minus pH 7.4 difference of -9.72 kcal/mol. The lower pH result was driven by more favorable gas-phase electrostatics, largely offset by less favorable polar solvation.
+            </p>
+            <p class="mb-6">
+                These calculations exclude configurational entropy and derive from one trajectory per pH. Therefore, the difference should be described as directional endpoint-energy evidence rather than replicate-level statistical validation.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-gray-900 mt-8 mb-4">Limitations</h2>
+            <p class="mb-6">
+                Most analyses originate from one 300 ns trajectory per pH condition. Consequently, agreement between analyses is mechanistically informative but does not constitute fully independent replicate-level statistical validation.
+            </p>
+        </div>
+
+        <div class="mt-12 pt-8 border-t border-subtle flex flex-col sm:flex-row justify-between items-center gap-4">
+            <a href="macs-project.html" class="text-accent hover:text-blue-900 font-medium flex items-center transition-colors">
+                &larr; Back to MACS Project
+            </a>
+            <div class="flex gap-4 text-sm">
+                <a href="macs-evidence-matrix.html" class="text-secondary hover:text-gray-900">Evidence Matrix</a>
+                <a href="macs-decision-log.html" class="text-secondary hover:text-gray-900">Decision Log</a>
+                <a href="macs-mdp-consistency.html" class="text-secondary hover:text-gray-900">MDP Consistency</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
