@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
-@source "../index.html";
-@source "../macs-project.html";
+@source "../*.html";
+@source "../tr/*.html";
 
 @theme {
   --color-anthracite: #111827;
@@ -146,13 +146,6 @@
     outline: 2px solid var(--color-accent);
     outline-offset: 2px;
   }
-  #mobile-menu {
-    display: none;
-  }
-  #mobile-menu.open {
-    display: block;
-  }
-
   /* From macs-project.html */
   .text-secondary {
     color: var(--color-secondary);
