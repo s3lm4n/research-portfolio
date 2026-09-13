@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodolojik Karar Günlüğü - MACS Araştırma Dokümantasyonu</title>
+    <meta name="description" content="MACS için protonasyon durumlarını, topolojileri ve MD parametrelerini detaylandıran metodolojik karar günlüğü.">
+    <meta property="og:title" content="Metodolojik Karar Günlüğü - MACS Araştırma Dokümantasyonu">
+    <meta property="og:description" content="MACS için protonasyon durumlarını, topolojileri ve MD parametrelerini detaylandıran metodolojik karar günlüğü.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://research-portfolio-kappa-blush.vercel.app/tr/macs-decision-log.html">
+    <meta property="og:image" content="https://research-portfolio-kappa-blush.vercel.app/assets/macs/overlay.png">
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:locale:alternate" content="en_US">
+    
+    <link rel="canonical" href="https://research-portfolio-kappa-blush.vercel.app/tr/macs-decision-log.html">
+    <link rel="alternate" hreflang="en" href="https://research-portfolio-kappa-blush.vercel.app/macs-decision-log.html">
+    <link rel="alternate" hreflang="tr" href="https://research-portfolio-kappa-blush.vercel.app/tr/macs-decision-log.html">
+    <link rel="alternate" hreflang="x-default" href="https://research-portfolio-kappa-blush.vercel.app/macs-decision-log.html">
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #111827; }
+        .text-secondary { color: #6b7280; }
+        .border-subtle { border-color: #e5e7eb; }
+    </style>
+</head>
+<body class="antialiased selection:bg-blue-100 selection:text-blue-900">
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200/70 h-14 flex items-center transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-between">
+            <nav class="flex items-center text-sm font-medium text-secondary">
+                <a href="/tr/index.html" class="px-2 py-1 rounded-full hover:text-gray-900 hover:bg-gray-100/70 transition-colors">Araştırma</a>
+                <span class="mx-1 text-gray-300">/</span>
+                <a href="/tr/macs-project.html" class="px-2 py-1 rounded-full hover:text-gray-900 hover:bg-gray-100/70 transition-colors">MACS</a>
+                <span class="mx-1 text-gray-300 hidden sm:inline-block">/</span>
+                <a href="/tr/macs-project.html#documents-title" class="px-2 py-1 rounded-full hover:text-gray-900 hover:bg-gray-100/70 transition-colors hidden sm:inline-block">Dokümantasyon</a>
+            </nav>
+            <div class="flex items-center space-x-2">
+                <div class="px-3 py-1.5 text-[11px] font-semibold tracking-widest uppercase text-gray-900 hidden lg:block">Metodolojik Karar Günlüğü</div>
+                <div class="h-4 w-px bg-gray-200 hidden lg:block mx-2"></div>
+                <div class="flex items-center bg-gray-50/80 border border-gray-200/70 rounded-full p-0.5 text-[11px] font-semibold tracking-wide">
+                    <a href="/macs-decision-log.html" class="px-2.5 py-1 text-gray-500 hover:text-gray-900 hover:bg-gray-100/50 rounded-full transition-colors">EN</a>
+                    <span class="px-2.5 py-1 bg-white rounded-full shadow-[0_1px_2px_rgba(0,0,0,0.04)] text-gray-900">TR</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="mb-10 pb-6 border-b border-subtle">
+            <h1 class="text-3xl font-bold text-gray-900 mb-4">Metodolojik Karar Günlüğü</h1>
+            <div class="flex flex-wrap gap-4 text-sm text-secondary">
+                <div class="flex items-center"><span class="font-semibold mr-1">Proje:</span> MACS</div>
+                <div class="flex items-center"><span class="font-semibold mr-1">Doküman türü:</span> Teknik Dokümantasyon</div>
+                <div class="flex items-center"><span class="font-semibold mr-1">Yıl:</span> 2026</div>
+                <div class="flex items-center"><span class="font-semibold mr-1">Araştırma durumu:</span> Hesaplamalı Keşif</div>
+            </div>
+        </div>
+
+        <div class="prose prose-blue max-w-none text-gray-800 space-y-12">
+            
+            <section>
+                <h2 class="text-xl font-semibold text-gray-900 border-b border-subtle pb-2 mb-4">Motif HALDSLE olarak kesinleştirildi</h2>
+                <div class="mb-2"><strong>Karar (Decision):</strong> MACS, HALKSLE yerine HALDSLE tekrarları kullanacaktır.</div>
+                <div class="mb-2"><strong>Gerekçe (Reason):</strong> Hedeflenen pH-switch mekanizması Asp/Glu destekli histidin pKa mühendisliğine bağlıdır. Aspartat, 6.8 civarındaki hedef pH eşiğine yakın histidin protonasyon eğilimini artırabilecek yerel negatif bir elektrostatik ortam sağlar. Lizin pozitif bir yük getirecek ve histidin protonasyonuna karşı koyarak hedeflenen histidin fermuarı (histidine-zipper) mekanizmasını zayıflatabilecektir.</div>
+                <div class="mb-2 text-gray-600"><strong>Değerlendirilen alternatif:</strong> Daha önceki sekans dosyalarında ve AlphaFold girdisinde yer alan HALKSLE.</div>
+                <div class="text-amber-800 bg-amber-50 p-3 rounded-sm mt-3 text-sm border border-amber-200"><strong>Risk / sınırlama:</strong> pKa kayması (shift) bir tasarım hipotezidir. HALDSLE, PROPKA/H++ ve MD ile doğrulanmalıdır. Sadece tasarım sezgisine (intuition) dayanılarak doğru olduğu varsayılmamalıdır.</div>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-semibold text-gray-900 border-b border-subtle pb-2 mb-4">pH 6.8 histidin protonasyon aday seti</h2>
+                <div class="mb-2"><strong>Karar:</strong> pH 6.8 için tüm histidinleri protonlamayın. PROPKA pKa değerlerine ve yapısal incelemeye dayanan seçici bir sınırda (borderline) histidin seti kullanın.</div>
+                <div class="mb-2"><strong>Birincil pH 6.8 adayları:</strong> A:282, A:289, A:296, B:272, B:293, B:324, B:329, B:332.</div>
+                <div class="mb-2"><strong>Gerekçe:</strong> Bu kalıntılar (residues) hedef pH aralığına yakın PROPKA öngörülü pKa değerlerine sahiptir ve/veya yapısal olarak HALDSLE/arayüz bölgesine yakındır.</div>
+                <div class="mb-2 text-gray-600"><strong>pH 7.4 kuralı:</strong> Kalıntıya özgü (residue-specific) güçlü bir neden bulunmadıkça histidinler nötr kalacaktır.</div>
+                <div class="text-amber-800 bg-amber-50 p-3 rounded-sm mt-3 text-sm border border-amber-200"><strong>Risk / sınırlama:</strong> AlphaFold modeli üzerinde statik PROPKA dinamik pKa kaymalarını yakalayamaz. Bu sabit protonasyonlu (fixed-protonation) bir yaklaşımdır, sabit pH'lı MD değildir.</div>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-semibold text-gray-900 border-b border-subtle pb-2 mb-4">pH 7.4 histidin ataması</h2>
+                <div class="mb-2"><strong>Karar:</strong> pH 7.4 modelindeki tüm histidinler nötr HIE olarak atandı.</div>
+                <div class="mb-2"><strong>Gerekçe:</strong> pH 7.4, çoğu histidin için öngörülen pKa değerlerinin üzerindedir. Bu nedenle çift protonlanmış HIP kullanılmamıştır.</div>
+                <div class="mb-2 text-gray-600"><strong>Değerlendirilen alternatif:</strong> Karışık HID/HIE tautomer ataması. Basitlik için ertelendi; bu model tekdüze (uniform) bir nötr HIE ataması kullanır.</div>
+                <div class="text-amber-800 bg-amber-50 p-3 rounded-sm mt-3 text-sm border border-amber-200"><strong>Risk / sınırlama:</strong> HIE/HID tautomer seçimi yerel hidrojen bağlarını etkileyebilir. Bu, sabit protonasyonlu bir yaklaşım olarak kabul edilmelidir.</div>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-semibold text-gray-900 border-b border-subtle pb-2 mb-4">pH 6.8 topolojisi kesinleştirildi</h2>
+                <div class="mb-2"><strong>Karar:</strong> pH 6.8 topolojisi seçici HIP atamaları ile oluşturuldu: A:282, A:289, A:296, B:272, B:293, B:324, B:329, B:332. Diğer tüm histidinler nötr HIE olarak atandı.</div>
+                <div class="mb-2"><strong>Gerekçe:</strong> Seçilen kalıntılar, PROPKA ve yapısal incelemeye dayalı olarak sınırda (borderline) pKa/arayüz/motif adaylarıdır.</div>
+                <div class="text-amber-800 bg-amber-50 p-3 rounded-sm mt-3 text-sm border border-amber-200"><strong>Risk / sınırlama:</strong> Bu hâlâ sabit protonasyonlu bir modeldir. pH'a bağlı davranışı yaklaşık olarak hesaplar ancak sabit pH'lı MD'nin yerini almaz.</div>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-semibold text-gray-900 border-b border-subtle pb-2 mb-4">pH 6.8 için sabit protonasyonlu yaklaşım</h2>
+                <div class="mb-2"><strong>Karar:</strong> pH 6.8 modeli, sekiz sınırda (borderline) histidin için seçici HIP atamaları kullanır.</div>
+                <div class="mb-2"><strong>Gerekçe:</strong> PROPKA/Henderson-Hasselbalch analizi, bu kalıntıların pH 6.8'de pH 7.4'ten daha yüksek protonasyon eğilimine sahip olduğunu göstermektedir. Seçilen set için ortalama öngörülen protonlanmış fraksiyon, pH 6.8'de pH 7.4'ten önemli ölçüde daha yüksektir ve bu durum pH'a bağlı bir protonasyon gradyanını destekler.</div>
+                <div class="mb-2 text-gray-600"><strong>Değerlendirilen alternatif:</strong> Dinamik protonasyon/deprotonasyona izin verecek olan sabit pH'lı MD. Bu daha titizdir (rigorous) ancak mevcut hesaplama/yazılım kapsamının dışındadır.</div>
+                <div class="text-amber-800 bg-amber-50 p-3 rounded-sm mt-3 text-sm border border-amber-200"><strong>Önemli sınırlama:</strong> Klasik sabit protonasyonlu GROMACS MD, kısmi protonasyonu temsil edemez. Bu kalıntıların HIP olarak atanması, bunların deneysel olarak pH 6.8'de %100 protonlanmış olduklarının bilindiği anlamına gelmez. Daha ziyade bu, pH'a en duyarlı HALDSLE ile ilişkili histidinlerin protonasyonunun hedeflenen konformasyonel anahtarı (switch) yönlendirip yönlendiremeyeceğini test etmek için kullanılan ayrık (discrete) bir yaklaşımdır. Herhangi bir raporda veya makalede, bu model pH 6.8'de tam fizyolojik protonasyonun doğrudan bir kanıtı olarak değil, sabit protonasyonlu bir yaklaşım olarak tanımlanmalıdır.</div>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-semibold text-gray-900 border-b border-subtle pb-2 mb-4">Yerel 1 ns doğrulama tamamlandı</h2>
+                <div class="mb-2"><strong>Karar:</strong> Hem pH 6.8 hem de pH 7.4 sistemleri EM/NVT/NPT sonrası yerel 1 ns doğrulama MD'sini geçmiştir.</div>
+                <div class="mb-2"><strong>Sonuçlar:</strong> Her iki MD trajektorisi de başarıyla tamamlanmış, nihai koordinatlar üretilmiş ve standart doğrulama kontrollerinden geçmiştir.</div>
+                <div class="mb-2"><strong>Yorum (Interpretation):</strong> Sistemler daha uzun üretim MD'sine geçecek kadar kararlıdır.</div>
+                <div class="text-amber-800 bg-amber-50 p-3 rounded-sm mt-3 text-sm border border-amber-200"><strong>Risk / sınırlama:</strong> 1 ns doğrulama yalnızca büyük (gross) kurulum kararsızlıklarını tespit eder. Uzun zaman ölçekli (long-timescale) yakınsamayı veya biyolojik doğruluğu kanıtlamaz.</div>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-semibold text-gray-900 border-b border-subtle pb-2 mb-4">GROMACS 2026.1 üretim TPR yenilenmesi</h2>
+                <div class="mb-2"><strong>Karar:</strong> Nihai 300 ns üretim TPR dosyaları GROMACS 2026.1 ile yeniden oluşturulmuştur.</div>
+                <div class="mb-2"><strong>Sonuç:</strong> Hem pH 6.8 hem de pH 7.4 300 ns TPR dosyaları GROMACS 2026.1 ile başarıyla oluşturulmuştur.</div>
+                <div class="mb-2"><strong>Çıktı politikası:</strong> TRR çıktısı devre dışı bırakılmıştır. MD trajektorisi depolaması için sıkıştırılmış XTC çıktısı kullanılmaktadır.</div>
+            </section>
+
+        </div>
+
+        <div class="mt-12 pt-8 border-t border-subtle flex flex-col sm:flex-row justify-between items-center gap-4">
+            <a href="/tr/macs-project.html" class="text-accent hover:text-blue-900 font-medium flex items-center transition-colors">
+                &larr; MACS Projesi'ne Dön
+            </a>
+            <div class="flex gap-4 text-sm">
+                <a href="/tr/macs-evidence-summary.html" class="text-secondary hover:text-gray-900">Kanıt Özeti</a>
+                <a href="/tr/macs-evidence-matrix.html" class="text-secondary hover:text-gray-900">Kanıt Matrisi</a>
+                <a href="/tr/macs-mdp-consistency.html" class="text-secondary hover:text-gray-900">MDP Tutarlılığı</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
