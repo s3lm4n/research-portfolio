@@ -398,11 +398,11 @@
         // Hero Media Loader
         if (siteConfig.media.heroVideo.available) {
             const container = document.getElementById('hero-media-container');
-            container.innerHTML = \`
-                <video autoplay loop muted playsinline poster="\${siteConfig.media.heroVideo.poster}" class="w-full h-full object-cover">
-                    <source src="\${siteConfig.media.heroVideo.src}" type="video/mp4">
+            container.innerHTML = `
+                <video autoplay loop muted playsinline poster="${siteConfig.media.heroVideo.poster}" class="w-full h-full object-cover">
+                    <source src="${siteConfig.media.heroVideo.src}" type="video/mp4">
                 </video>
-            \`;
+            `;
             const caption = document.getElementById('hero-media-caption');
             caption.textContent = siteConfig.media.heroVideo.caption;
         }
