@@ -13,7 +13,7 @@
     <meta property="og:image" content="https://research-portfolio-kappa-blush.vercel.app/assets/macs/overlay.png">
     <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="tr_TR">
-    
+
     <link rel="canonical" href="https://research-portfolio-kappa-blush.vercel.app/index.html">
     <link rel="alternate" hreflang="en" href="https://research-portfolio-kappa-blush.vercel.app/index.html">
     <link rel="alternate" hreflang="tr" href="https://research-portfolio-kappa-blush.vercel.app/tr/index.html">
@@ -23,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Tailwind CSS (Local) -->
     <link href="/assets/css/style.css" rel="stylesheet">
 
@@ -65,7 +65,7 @@
     <nav class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-gray-200/70 h-14 flex items-center transition-all">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex justify-between items-center">
             <a href="index.html" class="text-base font-semibold tracking-tight text-anthracite" id="nav-name">Selman Ali Dokumacı</a>
-            
+
             <!-- Desktop Nav -->
             <div class="hidden md:flex items-center space-x-2">
                 <a href="#home" class="px-3 py-1.5 rounded-full text-sm font-medium text-secondary hover:text-anthracite hover:bg-gray-100/70 transition-colors">Home</a>
@@ -136,59 +136,57 @@
         <hr class="border-border">
 
         <!-- Featured Research -->
-        <section id="research" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 reveal">
-            <h2 class="text-2xl font-bold mb-10 tracking-tight">Featured Research</h2>
-            <article class="group relative bg-white border border-border rounded-sm hover:border-gray-300 transition-colors duration-200">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
-                    <!-- Left -->
-                    <div class="p-8 md:p-10">
-                        <p class="text-xs font-semibold tracking-wider uppercase text-accent mb-3">Condition-Responsive Therapeutic Platform</p>
-                        <h3 class="text-xl font-bold mb-4 text-anthracite">
-                            <a href="macs-project.html" class="before:absolute before:inset-0">MACS: Modular Activated Cancer Suppressor</a>
-                        </h3>
-                        <p class="text-secondary text-base mb-4">A single-mRNA-encoded, 947-residue multi-domain protein system with acidic microenvironment-responsive logic gating, targeting non-small cell lung cancer (NSCLC) and pancreatic ductal adenocarcinoma (PDAC).</p>
-                        <p class="text-secondary text-base">Supported by 600 ns cumulative all-atom molecular dynamics (300 ns per pH condition) and multi-scale computational evidence analyzing pH-dependent quaternary structural compaction.</p>
-                    </div>
-                    <!-- Right -->
-                    <div class="border-t md:border-t-0 md:border-l border-border bg-gray-50 p-8 flex flex-col items-center justify-center">
-                        <img src="/assets/macs/overlay.png" alt="Structural superposition of MACS under pH 6.8 and pH 7.4 conditions, interpreted as proposed activated and proposed quiescent states, respectively" class="w-full object-contain mix-blend-multiply max-h-80">
-                        <p class="text-xs text-secondary text-center mt-4 px-4">Structural superposition of MACS under pH 6.8 and pH 7.4 conditions, interpreted as proposed activated and proposed quiescent states, respectively.</p>
-                    </div>
-                </div>
-            </article>
+        <!-- Featured Research -->
+        <section id="research" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 reveal">
+            <h2 class="text-2xl font-bold mb-12 tracking-tight border-b border-border pb-4">Featured Research</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
 
-            <article class="group relative bg-white border border-border rounded-sm hover:border-gray-300 transition-colors duration-200 mt-8">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
-                    <!-- Left -->
-                    <div class="p-8 md:p-10">
-                        <p class="text-xs font-semibold tracking-wider uppercase text-accent mb-3">Domain-Specific Accelerator Architecture</p>
-                        <h3 class="text-xl font-bold mb-4 text-anthracite">
-                            <a href="mdx-project.html" class="before:absolute before:inset-0">MDX: Molecular Dynamics Accelerator</a>
-                        </h3>
-                        <p class="text-secondary text-base mb-4">A correctness-first, pre-silicon domain-specific accelerator architecture for classical molecular-dynamics workloads (MDX-1 &middot; 4 &times; 4 &middot; 16-tile fabric).</p>
-                        <p class="text-secondary text-base">Current baseline spans specifications through v0.12 and executable reference models encompassing nonbonded interactions, Verlet-list reuse, and spatial periodic geometry. <em>(Note: Pre-silicon. No validated RTL or measured hardware results.)</em></p>
-                    </div>
-                    <!-- Right -->
-                    <div class="border-t md:border-t-0 md:border-l border-border bg-gray-50 p-8 flex flex-col items-center justify-center">
-                        <div class="bg-white border border-gray-200/70 rounded-xl p-6 shadow-[0_2px_8px_rgba(0,0,0,0.02)] w-full max-w-sm space-y-4">
-                            <div>
-                                <h4 class="text-[11px] font-semibold uppercase tracking-wider text-gray-500 mb-2">MDX-1</h4>
-                                <div class="text-[13px] text-gray-900 font-medium">4 &times; 4 / 16 tiles</div>
+                <!-- MACS Item -->
+                <a href="macs-project.html" class="group block cursor-pointer">
+                    <div class="flex flex-col sm:flex-row gap-6 items-start">
+                        <!-- Thumbnail -->
+                        <div class="w-full sm:w-28 sm:h-28 lg:w-32 lg:h-32 shrink-0 bg-white border border-gray-100 flex items-center justify-center p-3 rounded-sm shadow-sm overflow-hidden">
+                            <img src="/assets/macs/overlay.png" alt="MACS Structural Superposition" class="w-full h-full object-contain mix-blend-multiply opacity-90 group-hover:scale-105 group-hover:opacity-100 transition-all duration-300">
+                        </div>
+                        <!-- Text -->
+                        <div class="flex flex-col">
+                            <p class="text-[10px] font-bold tracking-widest uppercase text-accent mb-2">Condition-Responsive Therapeutic</p>
+                            <h3 class="text-lg font-bold text-anthracite mb-2 group-hover:text-blue-700 transition-colors">MACS: Modular Activated Cancer Suppressor</h3>
+                            <p class="text-secondary text-sm leading-relaxed mb-4 line-clamp-2">A single-mRNA-encoded multi-domain protein system with acidic microenvironment-responsive logic gating.</p>
+                            <div class="text-[11px] font-medium text-gray-500 mb-4 uppercase tracking-wider">
+                                ~600 ns all-atom MD &middot; pH 6.8 &harr; 7.4
                             </div>
-                            <hr class="border-gray-200/70">
-                            <div>
-                                <h4 class="text-[11px] font-semibold uppercase tracking-wider text-gray-500 mb-2">Stage</h4>
-                                <div class="text-[13px] text-gray-900 font-medium">Pre-silicon</div>
-                            </div>
-                            <hr class="border-gray-200/70">
-                            <div>
-                                <h4 class="text-[11px] font-semibold uppercase tracking-wider text-gray-500 mb-2">Baseline</h4>
-                                <div class="text-[13px] text-gray-900 font-medium">Reference baseline v0.1&ndash;v0.12</div>
-                            </div>
+                            <span class="text-sm font-medium text-blue-600 group-hover:text-blue-800 transition-colors">View project &rarr;</span>
                         </div>
                     </div>
-                </div>
-            </article>
+                </a>
+
+                <!-- MDX Item -->
+                <a href="mdx-project.html" class="group block cursor-pointer">
+                    <div class="flex flex-col sm:flex-row gap-6 items-start">
+                        <!-- Thumbnail -->
+                        <div class="w-full sm:w-28 sm:h-28 lg:w-32 lg:h-32 shrink-0 bg-gray-50 border border-gray-100 flex flex-col items-center justify-center p-3 rounded-sm shadow-sm overflow-hidden">
+                            <div class="grid grid-cols-4 gap-[2px] w-12 h-12 lg:w-16 lg:h-16 opacity-75 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300">
+                                <div class="bg-white border border-gray-300"></div><div class="bg-white border border-gray-300"></div><div class="bg-blue-100 border border-blue-200"></div><div class="bg-white border border-gray-300"></div>
+                                <div class="bg-white border border-gray-300"></div><div class="bg-blue-600 border border-blue-700"></div><div class="bg-white border border-gray-300"></div><div class="bg-white border border-gray-300"></div>
+                                <div class="bg-white border border-gray-300"></div><div class="bg-white border border-gray-300"></div><div class="bg-white border border-gray-300"></div><div class="bg-blue-100 border border-blue-200"></div>
+                                <div class="bg-blue-100 border border-blue-200"></div><div class="bg-white border border-gray-300"></div><div class="bg-white border border-gray-300"></div><div class="bg-white border border-gray-300"></div>
+                            </div>
+                        </div>
+                        <!-- Text -->
+                        <div class="flex flex-col">
+                            <p class="text-[10px] font-bold tracking-widest uppercase text-accent mb-2">Domain-Specific Architecture</p>
+                            <h3 class="text-lg font-bold text-anthracite mb-2 group-hover:text-blue-700 transition-colors">MDX: Molecular Dynamics Accelerator</h3>
+                            <p class="text-secondary text-sm leading-relaxed mb-4 line-clamp-2">A correctness-first, pre-silicon domain-specific accelerator architecture for classical MD workloads.</p>
+                            <div class="text-[11px] font-medium text-gray-500 mb-4 uppercase tracking-wider">
+                                RTL simulation evidence &middot; Phase 8J.3B mapping
+                            </div>
+                            <span class="text-sm font-medium text-blue-600 group-hover:text-blue-800 transition-colors">View project &rarr;</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
         </section>
 
         <!-- Research Areas / Pillars -->
@@ -311,7 +309,7 @@
                     <p class="text-lg mb-4">Independent researcher focusing on computational biophysics and molecular engineering.</p>
                     <p class="text-secondary mb-4">Current work centers on designing condition-responsive protein systems using atomistic simulation, elastic network analysis, and thermodynamic modeling.</p>
                     <p class="text-secondary mb-8">Research conducted independently, with computational resources including local GPU workstations and high-performance computing access.</p>
-                    
+
                     <div class="border-t border-border pt-6">
                         <h3 class="text-sm font-semibold uppercase tracking-wider text-secondary mb-4">PROFILES</h3>
                         <div class="flex flex-wrap gap-4">

@@ -12,7 +12,7 @@
     <meta property="og:url" content="https://research-portfolio-kappa-blush.vercel.app/tr/mdx-project.html">
     <meta property="og:locale" content="tr_TR">
     <meta property="og:locale:alternate" content="en_US">
-    
+
     <link rel="canonical" href="https://research-portfolio-kappa-blush.vercel.app/tr/mdx-project.html">
     <link rel="alternate" hreflang="en" href="https://research-portfolio-kappa-blush.vercel.app/mdx-project.html">
     <link rel="alternate" hreflang="tr" href="https://research-portfolio-kappa-blush.vercel.app/tr/mdx-project.html">
@@ -22,7 +22,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Tailwind CSS (Local) -->
     <link href="/assets/css/style.css" rel="stylesheet">
 
@@ -71,7 +71,7 @@
     </header>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12 flex flex-col lg:flex-row lg:flex-wrap xl:flex-nowrap lg:items-start gap-8 lg:gap-12 relative">
-        
+
         <!-- Left Sidebar Navigation -->
         <aside class="hidden lg:block w-52 shrink-0 sticky top-24 self-start max-h-[calc(100vh-6rem)] overflow-y-auto pb-8">
             <h3 class="text-xs font-semibold uppercase tracking-wider text-secondary mb-3">İÇİNDEKİLER</h3>
@@ -81,6 +81,7 @@
                 <a href="#correctness-first" class="toc-link">Doğruluk-Öncelikli Tasarım</a>
                 <a href="#reference-progression" class="toc-link">Referans-Model Gelişimi</a>
                 <a href="#validation-strategy" class="toc-link">Doğrulama Stratejisi</a>
+                <a href="#rtl-verification-evidence" class="toc-link">RTL Doğrulama Kanıtları</a>
                 <a href="#current-boundaries" class="toc-link">Mevcut Sınırlar</a>
                 <a href="#engineering-roadmap" class="toc-link">Mühendislik Yol Haritası</a>
             </nav>
@@ -88,7 +89,7 @@
 
         <!-- Main Content Column -->
         <main class="flex-1 max-w-3xl mx-auto lg:mx-0 w-full space-y-16 lg:space-y-24">
-            
+
             <!-- 1. Project Header -->
             <section aria-labelledby="project-title" class="reveal">
                 <div class="flex flex-wrap gap-2 mb-4">
@@ -106,7 +107,7 @@
                     <p class="text-sm text-secondary">Bağımsız Donanım Araştırma Projesi | 2026</p>
                 </div>
                 <div class="bg-blue-50 border border-blue-200 rounded-sm p-4 text-sm text-blue-900 shadow-sm">
-                    <strong>Mevcut Kanıt:</strong> v0.12'ye kadar mimari spesifikasyonlar ve çalıştırılabilir altın/referans modeller.
+                    <strong>Mevcut Kanıt:</strong> v0.12'ye kadar referans modelleri, alt sistem ve entegre yol RTL doğrulaması, sınırlandırılmış doğrulama iş yükü tekrarı (replay) ve Aşama 8J.3B deterministik gerçek iş yükü haritalaması.
                 </div>
             </section>
 
@@ -182,6 +183,49 @@
                 </div>
             </section>
 
+            <!-- RTL Verification Evidence -->
+            <section id="rtl-verification-evidence" class="reveal">
+                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">RTL Doğrulama Kanıtları</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                    <div class="border border-gray-200 rounded p-4 shadow-sm text-sm">
+                        <h4 class="font-semibold text-gray-900 mb-2">Bankalı kuvvet birikimi (Banked force accumulator)</h4>
+                        <ul class="list-none space-y-1 text-gray-700">
+                            <li>• RTL simülasyonu BAŞARILI (PASS)</li>
+                            <li>• 110,089 toplam kabul edilen</li>
+                            <li>• 0 hata</li>
+                        </ul>
+                    </div>
+                    <div class="border border-gray-200 rounded p-4 shadow-sm text-sm">
+                        <h4 class="font-semibold text-gray-900 mb-2">Doğrulama iş yükü tekrarı (Validation-workload replay)</h4>
+                        <ul class="list-none space-y-1 text-gray-700">
+                            <li>• Verilator BAŞARILI (PASS)</li>
+                            <li>• 238,528 kabul edilen güncelleme</li>
+                            <li>• 0 kuvvet/durum/dönem(epoch) uyumsuzluğu</li>
+                            <li>• 0 N3L/protokol hatası</li>
+                        </ul>
+                    </div>
+                    <div class="border border-gray-200 rounded p-4 shadow-sm text-sm">
+                        <h4 class="font-semibold text-gray-900 mb-2">Geri yazma koruması (Writeback conservation)</h4>
+                        <ul class="list-none space-y-1 text-gray-700">
+                            <li>• 67,957 kuyruğa alınan (enqueued)</li>
+                            <li>• 67,957 tamamlanan (committed)</li>
+                        </ul>
+                    </div>
+                    <div class="border border-gray-200 rounded p-4 shadow-sm text-sm">
+                        <h4 class="font-semibold text-gray-900 mb-2">Gerçek iş yükü haritalama (Real-workload mapping)</h4>
+                        <ul class="list-none space-y-1 text-gray-700">
+                            <li>• Aşama 8J.3B</li>
+                            <li>• GROMACS türevli durum &rarr; deterministik MDX haritalaması</li>
+                            <li>• 16 yoğun kaynak / 0 boşluk / 0 kopya</li>
+                            <li class="text-xs text-gray-500 mt-2 font-medium uppercase tracking-wider">Haritalama kanıtıdır, RTL tekrarı değildir</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="text-xs text-gray-500 italic">
+                    Doğrulama sonuçları simülasyon/test tezgahı (testbench) kanıtlarıdır ve ölçülmüş fiziksel donanım performansı değildir.
+                </p>
+            </section>
+
             <!-- Current Boundaries -->
             <section id="current-boundaries" class="reveal">
                 <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">Mevcut Sınırlar</h2>
@@ -190,7 +234,7 @@
                     <p class="mb-3">MDX projesi katı kanıta dayalı raporlama standartlarına uyar. Aşağıdaki sınırlar, spesifikasyon v0.12 itibarıyla mimarinin mevcut durumunu tanımlamaktadır:</p>
                     <ul class="list-disc pl-5 space-y-1">
                         <li><strong>Silikon Durumu:</strong> Silikon öncesi. Proje mimari tanımlama ve referans modelleme aşamasındadır.</li>
-                        <li><strong>Uygulama:</strong> Şu anda doğrulanmış bir RTL uygulaması bulunmamaktadır.</li>
+                        <li><strong>RTL Kapsamı:</strong> Alt sistem ve entegre yol RTL doğrulama kanıtları mevcuttur; tam MDX-1 gerçek iş yükü RTL entegrasyonu devam etmektedir.</li>
                         <li><strong>Performans:</strong> Doğrulanmış bir donanım performans modeli yoktur.</li>
                         <li><strong>Metrikler:</strong> Şu anda bildirilen hiçbir ölçülmüş donanım performansı, hızlanma (speedup), iş çıkarma yeteneği (throughput), frekans, güç, alan, FPGA veya ASIC sonucu yoktur.</li>
                     </ul>
@@ -204,56 +248,80 @@
                     <div class="flex items-center gap-4">
                         <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm shrink-0">1</div>
                         <div>
-                            <h4 class="font-semibold text-gray-900">Spesifikasyon</h4>
-                            <p class="text-xs text-gray-500">v0.12'ye kadar tanımlandı</p>
+                            <h4 class="font-semibold text-gray-900">Referans Spesifikasyonları ve Altın Modeller</h4>
+                            <p class="text-xs text-blue-600 font-medium">Oluşturuldu</p>
                         </div>
                     </div>
-                    <div class="ml-4 w-0.5 h-6 bg-gray-200"></div>
+                    <div class="ml-4 w-0.5 h-6 bg-blue-200"></div>
                     <div class="flex items-center gap-4">
                         <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm shrink-0">2</div>
                         <div>
-                            <h4 class="font-semibold text-gray-900">Çalıştırılabilir Altın Model</h4>
-                            <p class="text-xs text-gray-500">Mevcut Aşama</p>
+                            <h4 class="font-semibold text-gray-900">Kuvvet Aritmetiği RTL</h4>
+                            <p class="text-xs text-blue-600 font-medium">Doğrulanmış bloklar</p>
                         </div>
                     </div>
-                    <div class="ml-4 w-0.5 h-6 bg-gray-200"></div>
+                    <div class="ml-4 w-0.5 h-6 bg-blue-200"></div>
                     <div class="flex items-center gap-4">
-                        <div class="w-8 h-8 rounded-full bg-gray-100 text-gray-500 flex items-center justify-center font-bold text-sm shrink-0">3</div>
+                        <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm shrink-0">3</div>
                         <div>
-                            <h4 class="font-semibold text-gray-500">RTL Doğrulaması</h4>
-                            <p class="text-xs text-gray-400">Gelecek Aşama</p>
+                            <h4 class="font-semibold text-gray-900">Bankalı Kuvvet Birikimi (Banked Force Accumulator)</h4>
+                            <p class="text-xs text-blue-600 font-medium">RTL simülasyonu doğrulandı</p>
                         </div>
                     </div>
-                    <div class="ml-4 w-0.5 h-6 bg-gray-200"></div>
+                    <div class="ml-4 w-0.5 h-6 bg-blue-200"></div>
                     <div class="flex items-center gap-4">
-                        <div class="w-8 h-8 rounded-full bg-gray-100 text-gray-500 flex items-center justify-center font-bold text-sm shrink-0">4</div>
+                        <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm shrink-0">4</div>
                         <div>
-                            <h4 class="font-semibold text-gray-500">Sentez Odaklı Değerlendirme</h4>
-                            <p class="text-xs text-gray-400">Gelecek Aşama</p>
+                            <h4 class="font-semibold text-gray-900">Doğrulama İş Yükü Tekrarı</h4>
+                            <p class="text-xs text-blue-600 font-medium">Verilator BAŞARILI (PASS)</p>
+                        </div>
+                    </div>
+                    <div class="ml-4 w-0.5 h-6 bg-blue-200"></div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm shrink-0">5</div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900">Karo / Karolar Arası Yapı (Tile Fabric)</h4>
+                            <p class="text-xs text-blue-600 font-medium">Prototip ve entegrasyon kanıtı</p>
+                        </div>
+                    </div>
+                    <div class="ml-4 w-0.5 h-6 bg-blue-200"></div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm shrink-0">6</div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900">GROMACS-Türevli İş Yükü Haritalaması</h4>
+                            <p class="text-xs text-blue-600 font-medium">Aşama 8J.3B oluşturuldu</p>
                         </div>
                     </div>
                     <div class="ml-4 w-0.5 h-6 bg-gray-200"></div>
                     <div class="flex items-center gap-4">
-                        <div class="w-8 h-8 rounded-full bg-gray-100 text-gray-500 flex items-center justify-center font-bold text-sm shrink-0">5</div>
+                        <div class="w-8 h-8 rounded-full border-2 border-blue-500 bg-white text-blue-700 flex items-center justify-center font-bold text-sm shrink-0">7</div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900">Gerçek İş Yükü RTL Tekrarı</h4>
+                            <p class="text-xs text-gray-500 font-medium">Devam ediyor</p>
+                        </div>
+                    </div>
+                    <div class="ml-4 w-0.5 h-6 bg-gray-200"></div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-8 h-8 rounded-full bg-gray-100 text-gray-500 flex items-center justify-center font-bold text-sm shrink-0">8</div>
                         <div>
                             <h4 class="font-semibold text-gray-500">FPGA Gösterimi</h4>
-                            <p class="text-xs text-gray-400">Gelecek Aşama</p>
+                            <p class="text-xs text-gray-400">Gelecek</p>
                         </div>
                     </div>
                     <div class="ml-4 w-0.5 h-6 bg-gray-200"></div>
                     <div class="flex items-center gap-4">
-                        <div class="w-8 h-8 rounded-full bg-gray-100 text-gray-500 flex items-center justify-center font-bold text-sm shrink-0">6</div>
+                        <div class="w-8 h-8 rounded-full bg-gray-100 text-gray-500 flex items-center justify-center font-bold text-sm shrink-0">9</div>
                         <div>
-                            <h4 class="font-semibold text-gray-500">Ölçülen Performans/Enerji Değerlendirmesi</h4>
-                            <p class="text-xs text-gray-400">Gelecek Aşama</p>
+                            <h4 class="font-semibold text-gray-500">Ölçülen Donanım Performansı / Enerji</h4>
+                            <p class="text-xs text-gray-400">Gelecek</p>
                         </div>
                     </div>
                     <div class="ml-4 w-0.5 h-6 bg-gray-200"></div>
                     <div class="flex items-center gap-4">
-                        <div class="w-8 h-8 rounded-full bg-gray-100 text-gray-500 flex items-center justify-center font-bold text-sm shrink-0">7</div>
+                        <div class="w-8 h-8 rounded-full bg-gray-100 text-gray-500 flex items-center justify-center font-bold text-sm shrink-0">10</div>
                         <div>
-                            <h4 class="font-semibold text-gray-500">Olası ASIC Fizibilitesi</h4>
-                            <p class="text-xs text-gray-400">Uzun Vadeli Vizyon</p>
+                            <h4 class="font-semibold text-gray-500">ASIC Fizibilitesi</h4>
+                            <p class="text-xs text-gray-400">Gelecek</p>
                         </div>
                     </div>
                 </div>
@@ -264,7 +332,7 @@
         <!-- Right Metadata Panel -->
         <aside class="w-full xl:w-64 shrink-0 mt-12 xl:mt-0 xl:sticky xl:top-24 xl:self-start">
             <div class="bg-white border border-gray-200/70 rounded-xl p-6 shadow-[0_2px_8px_rgba(0,0,0,0.02)] space-y-6">
-                
+
                 <div>
                     <h4 class="text-[11px] font-semibold uppercase tracking-wider text-gray-500 mb-4 px-1">Araştırma Durumu</h4>
                     <div class="flex items-center gap-2 px-1">
@@ -283,8 +351,8 @@
                         <span class="text-[13px] text-gray-900">v0.1 &ndash; v0.12</span>
                     </div>
                     <div class="flex flex-col">
-                        <span class="text-[10px] uppercase tracking-wider text-gray-500 mb-0.5">RTL</span>
-                        <span class="text-[13px] text-gray-900">Henüz doğrulanmadı</span>
+                        <span class="text-[10px] uppercase tracking-wider text-gray-500 mb-0.5">RTL Doğrulaması</span>
+                        <span class="text-[13px] text-gray-900 leading-tight">Alt sistem ve entegre yol doğrulama kanıtları mevcut.<br><span class="text-xs text-gray-500 mt-1 block">Tam MDX-1 gerçek iş yükü RTL entegrasyonu devam etmektedir.</span></span>
                     </div>
                     <div class="flex flex-col">
                         <span class="text-[10px] uppercase tracking-wider text-gray-500 mb-0.5">Donanım Performansı</span>
@@ -342,7 +410,7 @@
         }, { threshold: 0.1, rootMargin: '-80px 0px -60% 0px' });
 
         sections.forEach(s => spyObserver.observe(s.el));
-        
+
         // Setup initial active state if loaded at top
         if(window.scrollY === 0 && sections.length > 0) {
             sections[0].link.classList.add('active');
