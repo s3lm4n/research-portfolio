@@ -34,13 +34,6 @@
         .accent-blue { color: #1e40af; }
         .bg-accent-blue { background-color: #1e40af; }
 
-        /* CSS Lightbox */
-        .lightbox { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(255, 255, 255, 0.98); backdrop-filter: blur(8px); }
-        .lightbox:target { display: flex; align-items: center; justify-content: center; }
-        .lightbox img { max-width: 90vw; max-height: 90vh; border: 1px solid #e5e7eb; box-shadow: 0 10px 30px -10px rgba(0,0,0,0.1); }
-        .lightbox-close { position: absolute; top: 24px; right: 36px; color: #111827; font-size: 40px; font-weight: 300; text-decoration: none; transition: color 0.2s, transform 0.2s; }
-        .lightbox-close:hover { color: #1e40af; transform: scale(1.1); }
-
         .card { border: 1px solid #e5e7eb; background: #ffffff; border-radius: 4px; transition: border-color 0.2s ease, box-shadow 0.2s ease; }
         .card:hover { border-color: #d1d5db; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03); }
 
@@ -226,9 +219,9 @@
                 <h3 class="text-xl font-medium text-gray-900 mb-4">Module B Compaction</h3>
                 
                 <div class="mb-6">
-                    <a href="#img-moduleB" class="block border border-border p-1 hover:border-gray-400 transition-colors bg-gray-50">
+                    <button class="block w-full border border-border p-1 hover:border-gray-400 transition-colors bg-gray-50 text-left focus:outline-none focus:ring-2 focus:ring-accent" data-viewer-src="/assets/macs/overlay.png" data-viewer-alt="Trajectory-averaged conformations" data-viewer-caption="Trajectory-averaged conformations (pH 6.8 Module A light blue, Module B blue; pH 7.4 Module A dark gray, Module B orange)">
                         <img src="/assets/macs/overlay.png" alt="Trajectory-averaged conformations" class="w-full h-auto" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2YxZjVmOSIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iSW50ZXIiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM2YjcyODAiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPk92ZXJsYXkgSW1hZ2UgUGVuZGluZzwvdGV4dD48L3N2Zz4='"/>
-                    </a>
+                    </button>
                     <p class="text-xs text-gray-500 mt-2">Trajectory-averaged conformations (pH 6.8 Module A light blue, Module B blue; pH 7.4 Module A dark gray, Module B orange; histidines purple, hotspots yellow)</p>
                 </div>
 
@@ -286,39 +279,56 @@
                     <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs font-medium border border-gray-200">Simulation Gallery</span>
                 </div>
                 
-                <div class="grid md:grid-cols-2 gap-8">
-                    <!-- Figure 1 -->
-                    <div>
-                        <a href="#img-integrated" class="block border border-border p-1 hover:border-gray-400 transition-colors bg-gray-50 mb-3">
-                            <img src="/assets/macs/integrated-mechanism.png" alt="Conceptual Overview" class="w-full aspect-video object-cover" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2YxZjVmOSIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iSW50ZXIiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM2YjcyODAiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkltYWdlIFBlbmRpbmc8L3RleHQ+PC9zdmc+'"/>
-                        </a>
-                        <h4 class="font-medium text-sm text-gray-900 mb-1">Conceptual Overview</h4>
-                        <p class="text-xs text-gray-600">Integrated mechanism overview: six-panel visualization combining global structural comparison, candidate residue microenvironments (B293, B324), and histidine network context.</p>
+                <div class="mb-8">
+                    <div class="grid md:grid-cols-2 gap-4 mb-3">
+                        <button class="block w-full border border-border p-1 hover:border-gray-400 transition-colors bg-gray-50 text-left focus:outline-none focus:ring-2 focus:ring-accent" data-viewer-src="/assets/macs/gallery/interface-ph68.png" data-viewer-alt="Representative interface configuration — pH 6.8" data-viewer-caption="Representative interface configuration — pH 6.8">
+                            <img loading="lazy" decoding="async" src="/assets/macs/gallery/interface-ph68.png" alt="Interface pH 6.8" class="w-full aspect-video object-cover" />
+                            <div class="p-2">
+                                <p class="text-sm text-gray-900">Representative interface configuration — pH 6.8</p>
+                            </div>
+                        </button>
+                        <button class="block w-full border border-border p-1 hover:border-gray-400 transition-colors bg-gray-50 text-left focus:outline-none focus:ring-2 focus:ring-accent" data-viewer-src="/assets/macs/gallery/interface-ph74.png" data-viewer-alt="Representative interface configuration — pH 7.4" data-viewer-caption="Representative interface configuration — pH 7.4">
+                            <img loading="lazy" decoding="async" src="/assets/macs/gallery/interface-ph74.png" alt="Interface pH 7.4" class="w-full aspect-video object-cover" />
+                            <div class="p-2">
+                                <p class="text-sm text-gray-900">Representative interface configuration — pH 7.4</p>
+                            </div>
+                        </button>
                     </div>
-                    <!-- Figure 2 -->
-                    <div>
-                        <a href="#img-network" class="block border border-border p-1 hover:border-gray-400 transition-colors bg-gray-50 mb-3">
-                            <img src="/assets/macs/histidine-network.png" alt="Protonation Topology" class="w-full aspect-video object-cover" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2YxZjVmOSIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iSW50ZXIiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM2YjcyODAiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkltYWdlIFBlbmRpbmc8L3RleHQ+PC9zdmc+'"/>
-                        </a>
-                        <h4 class="font-medium text-sm text-gray-900 mb-1">Protonation Topology</h4>
-                        <p class="text-xs text-gray-600">Histidine network overlay showing pH-dependent reorganization of protonation-sensitive residue clusters.</p>
+                    <p class="text-xs text-gray-500 italic px-1">Representative structures selected from the analyzed MD trajectories. Conformational differences are computational observations and do not constitute experimental validation.</p>
+                </div>
+
+                <div class="mb-8">
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <button class="block w-full border border-border p-1 hover:border-gray-400 transition-colors bg-gray-50 text-left focus:outline-none focus:ring-2 focus:ring-accent" data-viewer-src="/assets/macs/gallery/register-ph68.png" data-viewer-alt="Representative interface-register state — pH 6.8" data-viewer-caption="Representative interface-register state — pH 6.8">
+                            <img loading="lazy" decoding="async" src="/assets/macs/gallery/register-ph68.png" alt="Register pH 6.8" class="w-full aspect-video object-cover" />
+                            <div class="p-2">
+                                <p class="text-sm text-gray-900">Representative interface-register state — pH 6.8</p>
+                            </div>
+                        </button>
+                        <button class="block w-full border border-border p-1 hover:border-gray-400 transition-colors bg-gray-50 text-left focus:outline-none focus:ring-2 focus:ring-accent" data-viewer-src="/assets/macs/gallery/register-ph74.png" data-viewer-alt="Representative interface-register state — pH 7.4" data-viewer-caption="Representative interface-register state — pH 7.4">
+                            <img loading="lazy" decoding="async" src="/assets/macs/gallery/register-ph74.png" alt="Register pH 7.4" class="w-full aspect-video object-cover" />
+                            <div class="p-2">
+                                <p class="text-sm text-gray-900">Representative interface-register state — pH 7.4</p>
+                            </div>
+                        </button>
                     </div>
-                    <!-- Figure 3 -->
-                    <div>
-                        <a href="#img-dccm" class="block border border-border p-1 hover:border-gray-400 transition-colors bg-gray-50 mb-3">
-                            <img src="/assets/macs/dccm-difference.png" alt="Allosteric Relay" class="w-full aspect-video object-cover" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2YxZjVmOSIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iSW50ZXIiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM2YjcyODAiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkltYWdlIFBlbmRpbmc8L3RleHQ+PC9zdmc+'"/>
-                        </a>
-                        <h4 class="font-medium text-sm text-gray-900 mb-1">Allosteric Relay</h4>
-                        <p class="text-xs text-gray-600">Dynamic cross-correlation difference map (pH 6.8 minus pH 7.4). Reveals condition-dependent changes in residue-residue correlated motion.</p>
-                    </div>
-                    <!-- Figure 4 -->
-                    <div>
-                        <a href="#img-exposure" class="block border border-border p-1 hover:border-gray-400 transition-colors bg-gray-50 mb-3">
-                            <img src="/assets/macs/sensor-exposure.png" alt="Conformational Register" class="w-full aspect-video object-cover" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2YxZjVmOSIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iSW50ZXIiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM2YjcyODAiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkltYWdlIFBlbmRpbmc8L3RleHQ+PC9zdmc+'"/>
-                        </a>
-                        <h4 class="font-medium text-sm text-gray-900 mb-1">Conformational Register</h4>
-                        <p class="text-xs text-gray-600">Key chemical switch residues: time-resolved analysis of sensor exposure and conformational register across the full 300 ns trajectory.</p>
-                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-4">
+                    <button class="block w-full border border-border p-1 hover:border-gray-400 transition-colors bg-gray-50 text-left focus:outline-none focus:ring-2 focus:ring-accent" data-viewer-src="/assets/macs/histidine-network.png" data-viewer-alt="Protonation Topology" data-viewer-caption="Protonation Topology: Histidine network overlay showing pH-dependent reorganization of protonation-sensitive residue clusters.">
+                        <img loading="lazy" decoding="async" src="/assets/macs/histidine-network.png" alt="Protonation Topology" class="w-full aspect-video object-cover" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2YxZjVmOSIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iSW50ZXIiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM2YjcyODAiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkltYWdlIFBlbmRpbmc8L3RleHQ+PC9zdmc+'"/>
+                        <div class="p-2">
+                            <h4 class="font-medium text-sm text-gray-900 mb-1">Protonation Topology</h4>
+                            <p class="text-xs text-gray-600">Histidine network overlay showing pH-dependent reorganization of protonation-sensitive residue clusters.</p>
+                        </div>
+                    </button>
+                    <button class="block w-full border border-border p-1 hover:border-gray-400 transition-colors bg-gray-50 text-left focus:outline-none focus:ring-2 focus:ring-accent" data-viewer-src="/assets/macs/dccm-difference.png" data-viewer-alt="Allosteric Relay" data-viewer-caption="Allosteric Relay: Dynamic cross-correlation difference map (pH 6.8 minus pH 7.4). Reveals condition-dependent changes in residue-residue correlated motion.">
+                        <img loading="lazy" decoding="async" src="/assets/macs/dccm-difference.png" alt="Allosteric Relay" class="w-full aspect-video object-cover" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2YxZjVmOSIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iSW50ZXIiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM2YjcyODAiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkltYWdlIFBlbmRpbmc8L3RleHQ+PC9zdmc+'"/>
+                        <div class="p-2">
+                            <h4 class="font-medium text-sm text-gray-900 mb-1">Allosteric Relay</h4>
+                            <p class="text-xs text-gray-600">Dynamic cross-correlation difference map (pH 6.8 minus pH 7.4). Reveals condition-dependent changes in residue-residue correlated motion.</p>
+                        </div>
+                    </button>
                 </div>
             </section>
 
@@ -489,39 +499,12 @@
         </div>
     </footer>
 
-    <!-- CSS Lightboxes (Using :target) -->
-    
-    <div id="img-moduleB" class="lightbox">
-        <a href="#findings-title" class="lightbox-close" title="Close">&times;</a>
-        <img src="/assets/macs/overlay.png" alt="Trajectory-averaged conformations overlay" />
-    </div>
-
-    <div id="img-integrated" class="lightbox">
-        <a href="#motion-title" class="lightbox-close" title="Close">&times;</a>
-        <img src="/assets/macs/integrated-mechanism.png" alt="Conceptual Overview" />
-    </div>
-
-    <div id="img-network" class="lightbox">
-        <a href="#motion-title" class="lightbox-close" title="Close">&times;</a>
-        <img src="/assets/macs/histidine-network.png" alt="Protonation Topology" />
-    </div>
-
-    <div id="img-dccm" class="lightbox">
-        <a href="#motion-title" class="lightbox-close" title="Close">&times;</a>
-        <img src="/assets/macs/dccm-difference.png" alt="Allosteric Relay" />
-    </div>
-
-    <div id="img-exposure" class="lightbox">
-        <a href="#motion-title" class="lightbox-close" title="Close">&times;</a>
-        <img src="/assets/macs/sensor-exposure.png" alt="Conformational Register" />
-    </div>
-
     <!-- JavaScript -->
+    <script src="/assets/js/site-ui.js" defer></script>
     <script>
         // Site Configuration
         const siteConfig = {
             media: {
-                integratedMechanism: { available: false, src: 'assets/macs/integrated_mechanism_loop.mp4', poster: 'assets/macs/integrated-mechanism.png' },
                 histidineNetwork: { available: false, src: 'assets/macs/histidine_network_loop.mp4', poster: 'assets/macs/histidine-network.png' },
                 dccm: { available: false, src: 'assets/macs/dccm_loop.mp4', poster: 'assets/macs/dccm-difference.png' },
                 sensorExposure: { available: false, src: 'assets/macs/sensor_exposure_loop.mp4', poster: 'assets/macs/sensor-exposure.png' }
@@ -566,23 +549,6 @@
         if(window.scrollY === 0 && sections.length > 0) {
             sections[0].link.classList.add('active');
         }
-        
-        // Close lightbox on escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && window.location.hash.startsWith('#img-')) {
-                // Find where to return to
-                const lightbox = document.querySelector(window.location.hash);
-                if(lightbox) {
-                    const closeLink = lightbox.querySelector('.lightbox-close');
-                    if(closeLink) {
-                        window.location.hash = closeLink.getAttribute('href');
-                        return;
-                    }
-                }
-                // Fallback
-                window.location.hash = '';
-            }
-        });
     </script>
 </body>
 </html>
