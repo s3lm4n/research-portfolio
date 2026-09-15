@@ -146,57 +146,59 @@
             
             <section>
                 <h2 class="text-xl font-semibold text-gray-900 border-b border-subtle pb-2 mb-4">Motif HALDSLE olarak kesinleştirildi</h2>
-                <div class="mb-2"><strong>Karar (Decision):</strong> MACS, HALKSLE yerine HALDSLE tekrarları kullanacaktır.</div>
-                <div class="mb-2"><strong>Gerekçe (Reason):</strong> Hedeflenen pH-switch mekanizması Asp/Glu destekli histidin pKa mühendisliğine bağlıdır. Aspartat, 6.8 civarındaki hedef pH eşiğine yakın histidin protonasyon eğilimini artırabilecek yerel negatif bir elektrostatik ortam sağlar. Lizin pozitif bir yük getirecek ve histidin protonasyonuna karşı koyarak hedeflenen histidin fermuarı (histidine-zipper) mekanizmasını zayıflatabilecektir.</div>
+                <div class="mb-2"><strong>Karar:</strong> MACS, HALKSLE yerine HALDSLE tekrarları kullanacaktır.</div>
+                <div class="mb-2"><strong>Gerekçe:</strong> Hedeflenen pH-anahtarlama mekanizması Asp/Glu destekli histidin pKa mühendisliğine bağlıdır. Aspartat, 6.8 civarındaki hedef pH eşiğine yakın histidin protonasyon eğilimini artırabilecek yerel negatif bir elektrostatik ortam sağlar. Lizin pozitif bir yük getirecek ve histidin protonasyonuna karşı koyarak hedeflenen histidin fermuarı mekanizmasını zayıflatabilecektir.</div>
                 <div class="mb-2 text-gray-600"><strong>Değerlendirilen alternatif:</strong> Daha önceki sekans dosyalarında ve AlphaFold girdisinde yer alan HALKSLE.</div>
-                <div class="text-amber-800 bg-amber-50 p-3 rounded-sm mt-3 text-sm border border-amber-200"><strong>Risk / sınırlama:</strong> pKa kayması (shift) bir tasarım hipotezidir. HALDSLE, PROPKA/H++ ve MD ile doğrulanmalıdır. Sadece tasarım sezgisine (intuition) dayanılarak doğru olduğu varsayılmamalıdır.</div>
+                <div class="mb-2 text-gray-600 text-sm"><strong>Yorumlama notu:</strong> HALDSLE çevresine atfedilen pH-anahtarlama işlevi bir tasarım hipotezi olarak kalmaktadır. Dizi düzeyindeki gerekçe ve hesaplamalı analiz deneysel doğrulamanın yerini tutmaz.</div>
             </section>
 
             <section>
                 <h2 class="text-xl font-semibold text-gray-900 border-b border-subtle pb-2 mb-4">pH 6.8 histidin protonasyon aday seti</h2>
-                <div class="mb-2"><strong>Karar:</strong> pH 6.8 için tüm histidinleri protonlamayın. PROPKA pKa değerlerine ve yapısal incelemeye dayanan seçici bir sınırda (borderline) histidin seti kullanın.</div>
+                <div class="mb-2"><strong>Karar:</strong> pH 6.8 için tüm histidinleri protonlamayın. PROPKA pKa değerlerine ve yapısal incelemeye dayanan seçici bir sınırda histidin seti kullanın.</div>
                 <div class="mb-2"><strong>Birincil pH 6.8 adayları:</strong> A:282, A:289, A:296, B:272, B:293, B:324, B:329, B:332.</div>
-                <div class="mb-2"><strong>Gerekçe:</strong> Bu kalıntılar (residues) hedef pH aralığına yakın PROPKA öngörülü pKa değerlerine sahiptir ve/veya yapısal olarak HALDSLE/arayüz bölgesine yakındır.</div>
-                <div class="mb-2 text-gray-600"><strong>pH 7.4 kuralı:</strong> Kalıntıya özgü (residue-specific) güçlü bir neden bulunmadıkça histidinler nötr kalacaktır.</div>
-                <div class="text-amber-800 bg-amber-50 p-3 rounded-sm mt-3 text-sm border border-amber-200"><strong>Risk / sınırlama:</strong> AlphaFold modeli üzerinde statik PROPKA dinamik pKa kaymalarını yakalayamaz. Bu sabit protonasyonlu (fixed-protonation) bir yaklaşımdır, sabit pH'lı MD değildir.</div>
+                <div class="mb-2"><strong>Gerekçe:</strong> Bu kalıntılar hedef pH aralığına yakın PROPKA öngörülü pKa değerlerine sahiptir ve/veya yapısal olarak HALDSLE/arayüz bölgesine yakındır.</div>
+                <div class="mb-2 text-gray-600"><strong>pH 7.4 kuralı:</strong> Kalıntıya özgü güçlü bir neden bulunmadıkça histidinler nötr kalacaktır.</div>
+                <div class="mb-2 text-gray-600 text-sm"><strong>Metodolojik not:</strong> AlphaFold modeli üzerindeki statik PROPKA hesaplamaları, çözeltideki dinamik ve çözücüyle etkileşimli pKa değerleri yerine sezgisel bir rehberlik sağlar.</div>
             </section>
 
             <section>
                 <h2 class="text-xl font-semibold text-gray-900 border-b border-subtle pb-2 mb-4">pH 7.4 histidin ataması</h2>
                 <div class="mb-2"><strong>Karar:</strong> pH 7.4 modelindeki tüm histidinler nötr HIE olarak atandı.</div>
                 <div class="mb-2"><strong>Gerekçe:</strong> pH 7.4, çoğu histidin için öngörülen pKa değerlerinin üzerindedir. Bu nedenle çift protonlanmış HIP kullanılmamıştır.</div>
-                <div class="mb-2 text-gray-600"><strong>Değerlendirilen alternatif:</strong> Karışık HID/HIE tautomer ataması. Basitlik için ertelendi; bu model tekdüze (uniform) bir nötr HIE ataması kullanır.</div>
-                <div class="text-amber-800 bg-amber-50 p-3 rounded-sm mt-3 text-sm border border-amber-200"><strong>Risk / sınırlama:</strong> HIE/HID tautomer seçimi yerel hidrojen bağlarını etkileyebilir. Bu, sabit protonasyonlu bir yaklaşım olarak kabul edilmelidir.</div>
+                <div class="mb-2 text-gray-600"><strong>Değerlendirilen alternatif:</strong> Karışık HID/HIE tautomer ataması. Basitlik amacıyla ertelendi; bu model tekdüze bir nötr HIE ataması kullanır.</div>
+                <div class="mb-2 text-gray-600 text-sm"><strong>Metodolojik not:</strong> HIE/HID tautomer seçimi yerel hidrojen bağı ağlarını etkileyebilir, ancak nötr histidin topluluğu içinde ikincil bir varyasyonu temsil eder.</div>
             </section>
 
             <section>
                 <h2 class="text-xl font-semibold text-gray-900 border-b border-subtle pb-2 mb-4">pH 6.8 topolojisi kesinleştirildi</h2>
                 <div class="mb-2"><strong>Karar:</strong> pH 6.8 topolojisi seçici HIP atamaları ile oluşturuldu: A:282, A:289, A:296, B:272, B:293, B:324, B:329, B:332. Diğer tüm histidinler nötr HIE olarak atandı.</div>
-                <div class="mb-2"><strong>Gerekçe:</strong> Seçilen kalıntılar, PROPKA ve yapısal incelemeye dayalı olarak sınırda (borderline) pKa/arayüz/motif adaylarıdır.</div>
-                <div class="text-amber-800 bg-amber-50 p-3 rounded-sm mt-3 text-sm border border-amber-200"><strong>Risk / sınırlama:</strong> Bu hâlâ sabit protonasyonlu bir modeldir. pH'a bağlı davranışı yaklaşık olarak hesaplar ancak sabit pH'lı MD'nin yerini almaz.</div>
+                <div class="mb-2"><strong>Gerekçe:</strong> Seçilen kalıntılar, PROPKA ve yapısal incelemeye dayalı olarak sınırda pKa/arayüz/motif adaylarıdır.</div>
+                <div class="mb-2 text-gray-600 text-sm"><strong>Metodolojik not:</strong> Topoloji üretimi sonraki üretim örneklemesi aşaması için ayrık yük modelini kesinleştirmiştir.</div>
             </section>
 
             <section>
                 <h2 class="text-xl font-semibold text-gray-900 border-b border-subtle pb-2 mb-4">pH 6.8 için sabit protonasyonlu yaklaşım</h2>
-                <div class="mb-2"><strong>Karar:</strong> pH 6.8 modeli, sekiz sınırda (borderline) histidin için seçici HIP atamaları kullanır.</div>
-                <div class="mb-2"><strong>Gerekçe:</strong> PROPKA/Henderson-Hasselbalch analizi, bu kalıntıların pH 6.8'de pH 7.4'ten daha yüksek protonasyon eğilimine sahip olduğunu göstermektedir. Seçilen set için ortalama öngörülen protonlanmış fraksiyon, pH 6.8'de pH 7.4'ten önemli ölçüde daha yüksektir ve bu durum pH'a bağlı bir protonasyon gradyanını destekler.</div>
-                <div class="mb-2 text-gray-600"><strong>Değerlendirilen alternatif:</strong> Dinamik protonasyon/deprotonasyona izin verecek olan sabit pH'lı MD. Bu daha titizdir (rigorous) ancak mevcut hesaplama/yazılım kapsamının dışındadır.</div>
-                <div class="text-amber-800 bg-amber-50 p-3 rounded-sm mt-3 text-sm border border-amber-200"><strong>Önemli sınırlama:</strong> Klasik sabit protonasyonlu GROMACS MD, kısmi protonasyonu temsil edemez. Bu kalıntıların HIP olarak atanması, bunların deneysel olarak pH 6.8'de %100 protonlanmış olduklarının bilindiği anlamına gelmez. Daha ziyade bu, pH'a en duyarlı HALDSLE ile ilişkili histidinlerin protonasyonunun hedeflenen konformasyonel anahtarı (switch) yönlendirip yönlendiremeyeceğini test etmek için kullanılan ayrık (discrete) bir yaklaşımdır. Herhangi bir raporda veya makalede, bu model pH 6.8'de tam fizyolojik protonasyonun doğrudan bir kanıtı olarak değil, sabit protonasyonlu bir yaklaşım olarak tanımlanmalıdır.</div>
+                <div class="mb-2"><strong>Karar:</strong> pH 6.8 modeli, sekiz sınırda histidin için seçici HIP atamaları kullanır.</div>
+                <div class="mb-2"><strong>Gerekçe:</strong> PROPKA/Henderson–Hasselbalch analizi, bu kalıntıların pH 6.8'de pH 7.4'e kıyasla daha yüksek protonasyon eğilimine sahip olduğunu göstermektedir. Seçilen set için ortalama öngörülen protonlanmış fraksiyon pH 6.8'de pH 7.4'ten daha yüksektir ve bu durum pH'a bağlı bir protonasyon gradyanını destekler.</div>
+                <div class="mb-2 text-gray-600"><strong>Değerlendirilen alternatif:</strong> Dinamik protonasyon/deprotonasyona izin verecek olan sabit pH'lı MD. Bu yaklaşım mevcut hesaplama ve yazılım kapsamının dışındadır.</div>
+                <div class="text-amber-800 bg-amber-50 p-3 rounded-sm mt-3 text-sm border border-amber-200"><strong>Önemli metodolojik sınırlama:</strong> Bu simülasyonlarda sabit protonasyon atamaları kullanılmıştır. Klasik sabit-protonasyonlu GROMACS MD, sürekli protonasyon/deprotonasyon olaylarını veya kesirli protonasyon popülasyonlarını modellemez. Bu nedenle pH 6.8 ve pH 7.4 sistemleri sabit-pH yörüngeleri değil, ayrık hesaplamalı protonasyon modelleridir. Kalıntı atamaları fizyolojik protonasyon doluluğunun doğrudan kanıtı olarak yorumlanmamalıdır.</div>
             </section>
 
             <section>
-                <h2 class="text-xl font-semibold text-gray-900 border-b border-subtle pb-2 mb-4">Yerel 1 ns doğrulama tamamlandı</h2>
-                <div class="mb-2"><strong>Karar:</strong> Hem pH 6.8 hem de pH 7.4 sistemleri EM/NVT/NPT sonrası yerel 1 ns doğrulama MD'sini geçmiştir.</div>
-                <div class="mb-2"><strong>Sonuçlar:</strong> Her iki MD trajektorisi de başarıyla tamamlanmış, nihai koordinatlar üretilmiş ve standart doğrulama kontrollerinden geçmiştir.</div>
-                <div class="mb-2"><strong>Yorum (Interpretation):</strong> Sistemler daha uzun üretim MD'sine geçecek kadar kararlıdır.</div>
-                <div class="text-amber-800 bg-amber-50 p-3 rounded-sm mt-3 text-sm border border-amber-200"><strong>Risk / sınırlama:</strong> 1 ns doğrulama yalnızca büyük (gross) kurulum kararsızlıklarını tespit eder. Uzun zaman ölçekli (long-timescale) yakınsamayı veya biyolojik doğruluğu kanıtlamaz.</div>
+                <h2 class="text-xl font-semibold text-gray-900 border-b border-subtle pb-2 mb-4">GROMACS 2026.1 üretim kurulumu ve örnekleme</h2>
+                <div class="mb-2"><strong>Karar:</strong> Birincil üretim örneklemesi için (toplam ~600 ns) GROMACS 2026.1 kullanılarak hem pH 6.8 hem de pH 7.4 koşulları için 300 ns üretim TPR dosyaları oluşturulmuştur.</div>
+                <div class="mb-2"><strong>Kurulum sağlamlık kontrolü:</strong> Uzun üretim koşularından önce, her iki hazırlanmış sistem de EM/NVT/NPT hazırlığının ardından kısa bir yerel post-equilibrasyon sağlamlık kontrolünü tamamladı. Bu kontrol yalnızca belirgin kurulum kararsızlıklarını saptamak için kullanıldı; yakınsama veya mekanistik geçerlilik kanıtı olarak değerlendirilmedi.</div>
+                <div class="mb-2"><strong>Örnekleme yapısı:</strong> Birincil üretim örneklemesi, klasik sabit protonasyon koşulları altında her pH durumu (pH 6.8 ve pH 7.4) için yaklaşık 300 ns süren birer birincil yörüngeden oluşmakta ve toplamda yaklaşık 600 ns birincil örnekleme sağlamaktadır. Tamamlanmış bağımsız üretim kopyaları (replika) bulunmamaktadır. Yörünge uzunluğu konformasyonel keşif amaçlı örnekleme için seçilmiştir ve istatistiksel yakınsama anlamına gelmez.</div>
+                <div class="mb-2 text-gray-600"><strong>Çıktı politikası:</strong> TRR çıktısı devre dışı bırakılmıştır. Yörünge depolaması için sıkıştırılmış XTC çıktısı kullanılmaktadır.</div>
             </section>
 
             <section>
-                <h2 class="text-xl font-semibold text-gray-900 border-b border-subtle pb-2 mb-4">GROMACS 2026.1 üretim TPR yenilenmesi</h2>
-                <div class="mb-2"><strong>Karar:</strong> Nihai 300 ns üretim TPR dosyaları GROMACS 2026.1 ile yeniden oluşturulmuştur.</div>
-                <div class="mb-2"><strong>Sonuç:</strong> Hem pH 6.8 hem de pH 7.4 300 ns TPR dosyaları GROMACS 2026.1 ile başarıyla oluşturulmuştur.</div>
-                <div class="mb-2"><strong>Çıktı politikası:</strong> TRR çıktısı devre dışı bırakılmıştır. MD trajektorisi depolaması için sıkıştırılmış XTC çıktısı kullanılmaktadır.</div>
+                <h2 class="text-xl font-semibold text-gray-900 border-b border-subtle pb-2 mb-4">PB-MMPBSA uç-nokta karşılaştırması</h2>
+                <div class="mb-2"><strong>Karar:</strong> Modül A ile Modül B arasındaki eşleştirilmiş bir PB-MMPBSA uç-nokta karşılaştırması için her birincil üretim yörüngesinin son 100 ns'lik penceresini kullanın.</div>
+                <div class="mb-2"><strong>Yöntem:</strong> Son 100 ns'lik pencere (yaklaşık 200–300 ns), her pH koşulu için 100 ps kare aralığına sahip 1001 kare üzerinden analiz edildi. gmx_MMPBSA 1.6.5 ve AmberTools 23.6 PB çözücüsü kullanılarak Modül A reseptör, Modül B ise ligant olarak ele alındı.</div>
+                <div class="mb-2"><strong>Sonuç:</strong> Koşul başına 1001 kare genelinde, ortalama PB-MMPBSA ΔTOTAL değeri pH 6.8'de +61.43 kcal/mol (SD 59.38; SEM 1.88) ve pH 7.4'te +71.15 kcal/mol (SD 41.03; SEM 1.30) olarak hesaplandı. pH 6.8 − pH 7.4 ortalama farkı −9.72 kcal/mol oldu.</div>
+                <div class="mb-2"><strong>Yorum:</strong> Bu uç-nokta enerji modeli çerçevesinde, pH 6.8 topluluğu pH 7.4 topluluğuna kıyasla daha düşük bir ortalama Modül A–Modül B ΔTOTAL değerine sahiptir. Bu durum modellenen arayüz enerjilerinde pH'a bağlı bir farklılıkla yönsel olarak tutarlıdır.</div>
+                <div class="text-amber-800 bg-amber-50 p-3 rounded-sm mt-3 text-sm border border-amber-200"><strong>Yorumlama sınırlaması:</strong> PB-MMPBSA, ilişkili MD karelerine uygulanan bir uç-nokta enerji modelidir; doğrudan deneysel afinite ölçümü veya titiz bir alşimik serbest-enerji hesabı değildir. Raporlanan ΔTOTAL dağılımları geniştir ve her pH koşulu tek bir birincil üretim yörüngesiyle temsil edilmektedir. Bu nedenle sonuç kesin bir termodinamik ölçümden ziyade karşılaştırmalı hesaplamalı kanıt olarak değerlendirilmelidir.</div>
             </section>
 
         </div>

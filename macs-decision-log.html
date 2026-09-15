@@ -149,7 +149,7 @@
                 <div class="mb-2"><strong>Decision:</strong> MACS will use HALDSLE repeats instead of HALKSLE.</div>
                 <div class="mb-2"><strong>Reason:</strong> The intended pH-switch mechanism depends on Asp/Glu-assisted histidine pKa engineering. Aspartate provides a local negative electrostatic environment that may increase histidine protonation propensity near the target pH threshold around 6.8. Lysine would introduce a positive charge and may oppose histidine protonation, weakening the intended histidine-zipper mechanism.</div>
                 <div class="mb-2 text-gray-600"><strong>Alternative considered:</strong> HALKSLE, which appeared in earlier sequence files and AlphaFold input.</div>
-                <div class="text-amber-800 bg-amber-50 p-3 rounded-sm mt-3 text-sm border border-amber-200"><strong>Risk / limitation:</strong> The pKa shift is a design hypothesis. HALDSLE must be validated by PROPKA/H++ and MD. It must not be assumed correct solely from design intuition.</div>
+                <div class="mb-2 text-gray-600 text-sm"><strong>Interpretive note:</strong> The intended pH-switching role of the HALDSLE environment remains a design hypothesis. Sequence-level rationale and computational analysis do not substitute for experimental validation.</div>
             </section>
 
             <section>
@@ -158,7 +158,7 @@
                 <div class="mb-2"><strong>Primary pH 6.8 candidates:</strong> A:282, A:289, A:296, B:272, B:293, B:324, B:329, B:332.</div>
                 <div class="mb-2"><strong>Reason:</strong> These residues have PROPKA-predicted pKa values near the target pH range and/or are structurally close to the HALDSLE/interface region.</div>
                 <div class="mb-2 text-gray-600"><strong>pH 7.4 rule:</strong> Histidines will remain neutral unless a strong residue-specific reason exists.</div>
-                <div class="text-amber-800 bg-amber-50 p-3 rounded-sm mt-3 text-sm border border-amber-200"><strong>Risk / limitation:</strong> Static PROPKA on an AlphaFold model cannot capture dynamic pKa shifts. This is a fixed-protonation approximation, not constant-pH MD.</div>
+                <div class="mb-2 text-gray-600 text-sm"><strong>Methodological note:</strong> Static PROPKA on an initial structural model provides heuristic guidance rather than dynamic, solvent-coupled pKa values in solution.</div>
             </section>
 
             <section>
@@ -166,37 +166,39 @@
                 <div class="mb-2"><strong>Decision:</strong> All histidines in the pH 7.4 model were assigned as neutral HIE.</div>
                 <div class="mb-2"><strong>Reason:</strong> pH 7.4 is above the predicted pKa values for most histidines. Therefore, doubly protonated HIP was not used.</div>
                 <div class="mb-2 text-gray-600"><strong>Alternative considered:</strong> Mixed HID/HIE tautomer assignment. Deferred for simplicity; this model uses a uniform neutral HIE assignment.</div>
-                <div class="text-amber-800 bg-amber-50 p-3 rounded-sm mt-3 text-sm border border-amber-200"><strong>Risk / limitation:</strong> HIE/HID tautomer choice can affect local hydrogen-bonding. This should be acknowledged as a fixed-protonation approximation.</div>
+                <div class="mb-2 text-gray-600 text-sm"><strong>Methodological note:</strong> HIE/HID tautomer choice can affect local hydrogen-bonding networks but represents a secondary variation within a neutral histidine ensemble.</div>
             </section>
 
             <section>
                 <h2 class="text-xl font-semibold text-gray-900 border-b border-subtle pb-2 mb-4">pH 6.8 topology finalized</h2>
                 <div class="mb-2"><strong>Decision:</strong> pH 6.8 topology was generated with selective HIP assignments: A:282, A:289, A:296, B:272, B:293, B:324, B:329, B:332. All other histidines were assigned as neutral HIE.</div>
                 <div class="mb-2"><strong>Reason:</strong> Selected residues are borderline pKa/interface/motif candidates based on PROPKA and structural inspection.</div>
-                <div class="text-amber-800 bg-amber-50 p-3 rounded-sm mt-3 text-sm border border-amber-200"><strong>Risk / limitation:</strong> This is still a fixed-protonation model. It approximates pH-dependent behavior but does not replace constant-pH MD.</div>
+                <div class="mb-2 text-gray-600 text-sm"><strong>Methodological note:</strong> Topology generation finalized the discrete charge model for subsequent production sampling.</div>
             </section>
 
             <section>
                 <h2 class="text-xl font-semibold text-gray-900 border-b border-subtle pb-2 mb-4">Fixed-protonation approximation for pH 6.8</h2>
                 <div class="mb-2"><strong>Decision:</strong> The pH 6.8 model uses selective HIP assignments for eight borderline histidines.</div>
                 <div class="mb-2"><strong>Reason:</strong> PROPKA/Henderson–Hasselbalch analysis indicates that these residues have higher protonation propensity at pH 6.8 than at pH 7.4. The average predicted protonated fraction for the selected set is substantially higher at pH 6.8 than at pH 7.4, supporting a pH-dependent protonation gradient.</div>
-                <div class="mb-2 text-gray-600"><strong>Alternative considered:</strong> Constant-pH MD, which would allow dynamic protonation/deprotonation. This is more rigorous but outside the current compute/software scope.</div>
-                <div class="text-amber-800 bg-amber-50 p-3 rounded-sm mt-3 text-sm border border-amber-200"><strong>Important limitation:</strong> Classical fixed-protonation GROMACS MD cannot represent partial protonation. Assigning these residues as HIP does not mean that they are experimentally known to be 100% protonated at pH 6.8. Rather, this is a discrete approximation used to test whether protonation of the most pH-sensitive HALDSLE-associated histidines can drive the intended conformational switch. In any report or manuscript, this model must be described as a fixed-protonation approximation, not as direct proof of physiological full protonation at pH 6.8.</div>
+                <div class="mb-2 text-gray-600"><strong>Alternative considered:</strong> Constant-pH MD, which would allow dynamic protonation/deprotonation. This is outside the current compute and software scope.</div>
+                <div class="text-amber-800 bg-amber-50 p-3 rounded-sm mt-3 text-sm border border-amber-200"><strong>Important methodological limitation:</strong> These simulations use fixed protonation assignments. Classical fixed-protonation GROMACS MD does not model continuous protonation/deprotonation events or fractional protonation populations. The pH 6.8 and pH 7.4 systems therefore represent discrete computational protonation models rather than constant-pH trajectories. Residue assignments should not be interpreted as direct evidence of physiological protonation occupancy.</div>
             </section>
 
             <section>
-                <h2 class="text-xl font-semibold text-gray-900 border-b border-subtle pb-2 mb-4">Local 1 ns validation completed</h2>
-                <div class="mb-2"><strong>Decision:</strong> Both pH 6.8 and pH 7.4 systems passed local 1 ns validation MD after EM/NVT/NPT.</div>
-                <div class="mb-2"><strong>Results:</strong> Both trajectories completed successfully, produced final coordinates, and passed standard validation checks.</div>
-                <div class="mb-2"><strong>Interpretation:</strong> The systems are stable enough to proceed to longer production MD.</div>
-                <div class="text-amber-800 bg-amber-50 p-3 rounded-sm mt-3 text-sm border border-amber-200"><strong>Risk / limitation:</strong> 1 ns validation only detects gross setup instability. It does not prove long-timescale convergence or biological correctness.</div>
+                <h2 class="text-xl font-semibold text-gray-900 border-b border-subtle pb-2 mb-4">GROMACS 2026.1 production setup and sampling</h2>
+                <div class="mb-2"><strong>Decision:</strong> Generate 300 ns production TPR files for both pH 6.8 and pH 7.4 conditions using GROMACS 2026.1 for primary production sampling (~600 ns total).</div>
+                <div class="mb-2"><strong>Setup sanity check:</strong> Before long production runs, both prepared systems completed a short local post-equilibration sanity check following EM/NVT/NPT preparation. This check was used to detect gross setup instability and was not treated as evidence of convergence or mechanistic validity.</div>
+                <div class="mb-2"><strong>Sampling structure:</strong> Primary production sampling consists of one primary trajectory of approximately 300 ns per pH condition (pH 6.8 and pH 7.4) under classical fixed-protonation conditions, yielding approximately 600 ns total primary sampling. No completed independent production replicas were generated. Trajectory length was selected for exploratory conformational sampling and does not imply statistical convergence.</div>
+                <div class="mb-2 text-gray-600"><strong>Output policy:</strong> TRR output remains disabled. Compressed XTC output is used for trajectory storage.</div>
             </section>
 
             <section>
-                <h2 class="text-xl font-semibold text-gray-900 border-b border-subtle pb-2 mb-4">GROMACS 2026.1 production TPR regeneration</h2>
-                <div class="mb-2"><strong>Decision:</strong> Final 300 ns production TPR files were regenerated with GROMACS 2026.1.</div>
-                <div class="mb-2"><strong>Result:</strong> Both pH 6.8 and pH 7.4 300 ns TPR files were generated successfully with GROMACS 2026.1.</div>
-                <div class="mb-2"><strong>Output policy:</strong> TRR output remains disabled. Compressed XTC output is used for trajectory storage.</div>
+                <h2 class="text-xl font-semibold text-gray-900 border-b border-subtle pb-2 mb-4">PB-MMPBSA endpoint comparison</h2>
+                <div class="mb-2"><strong>Decision:</strong> Use the final 100 ns of each primary production trajectory for a matched PB-MMPBSA endpoint comparison between Module A and Module B.</div>
+                <div class="mb-2"><strong>Method:</strong> Analyzed the final 100 ns window (approximately 200–300 ns) using 1001 frames per condition at 100 ps frame spacing. Module A was treated as receptor and Module B as ligand using gmx_MMPBSA 1.6.5 with AmberTools 23.6 PB solver.</div>
+                <div class="mb-2"><strong>Result:</strong> Across 1001 frames per condition, mean PB-MMPBSA ΔTOTAL was +61.43 kcal/mol at pH 6.8 (SD 59.38; SEM 1.88) and +71.15 kcal/mol at pH 7.4 (SD 41.03; SEM 1.30). The mean difference, pH 6.8 − pH 7.4, was −9.72 kcal/mol.</div>
+                <div class="mb-2"><strong>Interpretation:</strong> Within this endpoint-energy model, the pH 6.8 ensemble has a lower mean Module A–Module B ΔTOTAL than the pH 7.4 ensemble. This is directionally consistent with a pH-dependent difference in the modeled interface energetics.</div>
+                <div class="text-amber-800 bg-amber-50 p-3 rounded-sm mt-3 text-sm border border-amber-200"><strong>Interpretive limitation:</strong> PB-MMPBSA is an endpoint energy model applied to correlated MD frames, not a direct experimental affinity measurement or a rigorous alchemical free-energy calculation. The reported ΔTOTAL distributions are broad, and the two pH conditions are represented by one primary production trajectory each. The result should therefore be treated as comparative computational evidence rather than a definitive thermodynamic measurement.</div>
             </section>
 
         </div>
