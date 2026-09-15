@@ -135,6 +135,139 @@
     color: #000;
   }
 
+  /* =========================================================
+     Precision Image Zoom (MDX Architecture)
+     ========================================================= */
+  .site-image-viewer:not(.viewer-zoom-enabled) .viewer-zoom-toolbar {
+    display: none !important;
+  }
+
+  .site-image-viewer:not(.viewer-zoom-enabled) .viewer-zoom-viewport {
+    display: contents;
+  }
+
+  .viewer-zoom-toolbar {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 0.25rem 0.5rem;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    z-index: 20;
+    flex-shrink: 0;
+  }
+
+  .viewer-zoom-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem 0.5rem;
+    font-size: 12px;
+    font-weight: 500;
+    color: #374151;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    cursor: pointer;
+    line-height: 1;
+    min-width: 24px;
+    height: 24px;
+    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  }
+
+  .viewer-zoom-btn:hover {
+    background-color: #f3f4f6;
+    border-color: #d1d5db;
+    color: #111827;
+  }
+
+  .viewer-zoom-btn:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 1px;
+  }
+
+  .viewer-zoom-value {
+    display: inline-block;
+    min-width: 44px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace;
+    color: #111827;
+    padding: 0 0.25rem;
+  }
+
+  .site-image-viewer.viewer-zoom-enabled .viewer-content {
+    justify-content: flex-start;
+    padding: 1.25rem 1rem;
+  }
+
+  .site-image-viewer.viewer-zoom-enabled .viewer-zoom-viewport {
+    display: block;
+    overflow: auto;
+    overscroll-behavior: contain;
+    width: 94vw;
+    max-width: 1400px;
+    height: calc(88vh - 4.5rem);
+    max-height: 88vh;
+    border: 1px solid #e5e7eb;
+    background: #f9fafb;
+    border-radius: 4px;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .site-image-viewer.viewer-zoom-enabled .viewer-img {
+    display: block;
+    max-width: none;
+    max-height: none;
+    object-fit: fill;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    cursor: default;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: pan-x pan-y;
+  }
+
+  .site-image-viewer.viewer-zoom-enabled.is-pannable .viewer-zoom-viewport,
+  .site-image-viewer.viewer-zoom-enabled.is-pannable .viewer-img {
+    cursor: grab;
+  }
+
+  .site-image-viewer.viewer-zoom-enabled .viewer-img.is-panning,
+  .site-image-viewer.viewer-zoom-enabled.is-dragging .viewer-zoom-viewport,
+  .site-image-viewer.viewer-zoom-enabled.is-dragging .viewer-img {
+    cursor: grabbing !important;
+  }
+
+  body.viewer-panning-active {
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  @media (max-width: 639px) {
+    .site-image-viewer.viewer-zoom-enabled .viewer-content {
+      padding: 0.75rem 0.5rem;
+    }
+    .site-image-viewer.viewer-zoom-enabled .viewer-zoom-viewport {
+      width: 96vw;
+      height: calc(84vh - 4rem);
+    }
+    .site-image-viewer.viewer-zoom-enabled .viewer-caption {
+      font-size: 12px;
+      margin-top: 6px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .viewer-zoom-btn {
+      transition: none;
+    }
+  }
+
   /* Document Readability Improvements */
   .prose p,
   .prose ul,

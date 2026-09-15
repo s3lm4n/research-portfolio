@@ -106,6 +106,7 @@
             <nav class="space-y-1">
                 <a href="/mdx-project" class="toc-link" data-page-scroll-target="overview">Overview</a>
                 <a href="/mdx-project" class="toc-link" data-page-scroll-target="architecture-baseline">Architecture Baseline</a>
+                <a href="/mdx-project" class="toc-link" data-page-scroll-target="architecture-map">Architecture Map</a>
                 <a href="/mdx-project" class="toc-link" data-page-scroll-target="correctness-first">Correctness-First Design</a>
                 <a href="/mdx-project" class="toc-link" data-page-scroll-target="reference-progression">Reference-Model Progression</a>
                 <a href="/mdx-project" class="toc-link" data-page-scroll-target="validation-strategy">Validation Strategy</a>
@@ -208,6 +209,23 @@
                 <p class="text-sm text-gray-700">
                     The MDX-1 baseline defines a 4 &times; 4, 16-tile architectural namespace. At the current evidence level, the executable models specify architectural accounting and correctness semantics. Concrete routing topology, physical mapping, queueing, memory organization, timing, and datapath choices remain unresolved.
                 </p>
+            </section>
+
+            <!-- MDX-1 Architecture Map -->
+            <section id="architecture-map" class="reveal">
+                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">MDX-1 Architecture Map</h2>
+
+                <div class="mb-6">
+                    <button class="block w-full border border-border p-1 hover:border-gray-400 transition-colors bg-gray-50 text-left focus:outline-none focus:ring-2 focus:ring-accent" data-viewer-src="/assets/mdx/mdx1-architecture.png" data-viewer-zoom="true" data-viewer-alt="MDX-1 molecular dynamics accelerator architecture diagram" data-viewer-caption="MDX-1 pre-silicon architecture overview showing the control, memory, molecular tile array, reduction, force-accumulation, and planned integration paths.">
+                        <div class="viewer-thumbnail-frame bg-white">
+                            <img src="/assets/mdx/mdx1-architecture.png" alt="MDX-1 molecular dynamics accelerator architecture diagram" class="w-full h-auto" loading="lazy" decoding="async">
+                            <span class="viewer-affordance">Enlarge image <span aria-hidden="true">↗</span></span>
+                        </div>
+                    </button>
+                    <p class="text-xs text-gray-500 mt-2">
+                        Architecture-level representation of the current MDX-1 design. Diagram labels indicate architectural scope and development state; they do not imply full-system physical hardware implementation.
+                    </p>
+                </div>
             </section>
 
             <!-- Correctness-First Design -->
