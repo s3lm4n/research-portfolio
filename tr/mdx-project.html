@@ -106,6 +106,7 @@
             <nav class="space-y-1">
                 <a href="/tr/mdx-project" class="toc-link" data-page-scroll-target="overview">Genel Bakış</a>
                 <a href="/tr/mdx-project" class="toc-link" data-page-scroll-target="architecture-baseline">Mimari Temeli</a>
+                <a href="/tr/mdx-project" class="toc-link" data-page-scroll-target="architecture-map">Mimari Harita</a>
                 <a href="/tr/mdx-project" class="toc-link" data-page-scroll-target="correctness-first">Doğruluk-Öncelikli Tasarım</a>
                 <a href="/tr/mdx-project" class="toc-link" data-page-scroll-target="reference-progression">Referans-Model Gelişimi</a>
                 <a href="/tr/mdx-project" class="toc-link" data-page-scroll-target="validation-strategy">Doğrulama Stratejisi</a>
@@ -210,7 +211,24 @@
                 </p>
             </section>
 
-            <!-- Correctness-First Design -->
+            <!-- MDX-1 Mimari Haritası -->
+            <section id="architecture-map" class="reveal">
+                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">MDX-1 Mimari Haritası</h2>
+
+                <div class="mb-6">
+                    <button class="block w-full border border-border p-1 hover:border-gray-400 transition-colors bg-gray-50 text-left focus:outline-none focus:ring-2 focus:ring-accent" data-viewer-src="/assets/mdx/mdx1-architecture.png" data-viewer-zoom="true" data-viewer-alt="MDX-1 moleküler dinamik hızlandırıcı mimarisi diyagramı" data-viewer-caption="Kontrol, bellek, moleküler karo dizisi, indirgeme, kuvvet birikimi ve planlanan entegrasyon yollarını gösteren MDX-1 ön-silikon mimari genel görünümü.">
+                        <div class="viewer-thumbnail-frame bg-white">
+                            <img src="/assets/mdx/mdx1-architecture.png" alt="MDX-1 moleküler dinamik hızlandırıcı mimarisi diyagramı" class="w-full h-auto" loading="lazy" decoding="async">
+                            <span class="viewer-affordance">Görseli büyüt <span aria-hidden="true">↗</span></span>
+                        </div>
+                    </button>
+                    <p class="text-xs text-gray-500 mt-2">
+                        Mevcut MDX-1 tasarımının mimari düzeyde gösterimidir. Diyagram etiketleri mimari kapsamı ve geliştirme durumunu gösterir; tam sistem fiziksel donanım uygulamasını ifade etmez.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Doğruluk-Öncelikli Tasarım -->
             <section id="correctness-first" class="reveal">
                 <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">Doğruluk-Öncelikli Tasarım</h2>
                 <div class="prose prose-gray max-w-none space-y-4 text-gray-700">
