@@ -36,3 +36,4 @@ temp/
 
 # Local QA scratch files
 scratch_qa.py
+.vercel

@@ -425,5 +425,18 @@
       padding-top: 1.25rem;
     }
   }
+
+  /* =========================================================
+     HOMEPAGE SCROLLSPY NAVIGATION
+     ========================================================= */
+  .section-nav-link {
+    transition: color 0.15s ease, background-color 0.15s ease;
+  }
+
+  .section-nav-link.is-active {
+    color: #111827;
+    background-color: rgba(243, 244, 246, 0.7);
+    border-radius: 9999px;
+  }
 }
 
