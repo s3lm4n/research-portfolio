@@ -50,7 +50,7 @@
         }
     </style>
 </head>
-<body class="antialiased selection:bg-blue-100 selection:text-blue-900">
+<body class="mdx-hardware-theme antialiased selection:bg-blue-100 selection:text-blue-900">
 
     <!-- Compact Header -->
     <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200/70 h-14 flex items-center transition-all">
@@ -91,10 +91,10 @@
         <main class="flex-1 max-w-3xl mx-auto lg:mx-0 w-full space-y-16 lg:space-y-24">
 
             <!-- 1. Project Header -->
-            <section aria-labelledby="project-title" class="reveal">
+            <section aria-labelledby="project-title" class="reveal mdx-hero-grid relative">
                 <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="px-2.5 py-1 bg-gray-100 text-gray-600 rounded text-xs font-medium border border-gray-200">Donanım Mimarisi</span>
-                    <span class="px-2.5 py-1 bg-gray-100 text-gray-600 rounded text-xs font-medium border border-gray-200">Alana Özgü Hızlandırıcı</span>
+                    <span class="mdx-tech-tag">Donanım Mimarisi</span>
+                    <span class="mdx-tech-tag">Alana Özgü Hızlandırıcı</span>
                 </div>
                 <h1 id="project-title" class="text-3xl md:text-4xl font-bold tracking-tight text-anthracite mb-4">
                     MDX &mdash; Moleküler Dinamik Hızlandırıcı Mimarisi
@@ -106,14 +106,15 @@
                     <p class="text-sm font-medium text-anthracite">Selman Ali Dokumacı</p>
                     <p class="text-sm text-secondary">Bağımsız Donanım Araştırma Projesi | 2026</p>
                 </div>
-                <div class="bg-blue-50 border border-blue-200 rounded-sm p-4 text-sm text-blue-900 shadow-sm">
-                    <strong>Mevcut Kanıt:</strong> v0.12'ye kadar referans modelleri, alt sistem ve entegre yol RTL doğrulaması, sınırlandırılmış doğrulama iş yükü tekrarı (replay) ve Aşama 8J.3B deterministik gerçek iş yükü haritalaması.
+                <div class="mdx-status-strip">
+                    <span class="mdx-status-strip-eyebrow">MEVCUT KANIT</span>
+                    <p class="text-sm text-gray-700 leading-relaxed">v0.12'ye kadar referans modelleri, alt sistem ve entegre yol RTL doğrulaması, sınırlandırılmış doğrulama iş yükü tekrarı (replay) ve Aşama 8J.3B deterministik gerçek iş yükü haritalaması.</p>
                 </div>
             </section>
 
             <!-- Overview -->
             <section id="overview" class="reveal">
-                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">Genel Bakış</h2>
+                <h2 class="mdx-section-heading">Genel Bakış</h2>
                 <div class="prose prose-gray max-w-none space-y-4 text-gray-700">
                     <p>MDX, klasik moleküler dinamik iş yükleri için bağımsız olarak geliştirilmiş, silikon öncesi, alana özgü bir hızlandırıcı mimarisidir. Mevcut MDX-1 temeli, bağsız etkileşimlerin işlenmesi, katkı üretimi, kuvvet birikimi/indirgenmesi ve sahipliğe duyarlı yönlendirme ve kalıcılık için çok karolu (multi-tile) bir mimariyi araştırmaktadır.</p>
                     <p>Mimarinin üst düzey kapsamı ayrıca, periyodik geometrinin işlenmesi, uzamsal çift seçimi, Verlet-listesinin yeniden kullanımı ve yeniden oluşturulması ve açık yaşam döngüsü orkestrasyonu gibi MD hesaplamalarının kritik yönlerini içerir.</p>
@@ -123,8 +124,8 @@
 
             <!-- Architecture Baseline -->
             <section id="architecture-baseline" class="reveal">
-                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">Mimari Temeli</h2>
-                <div class="card p-6 border-l-4 border-l-accent mb-6">
+                <h2 class="mdx-section-heading">Mimari Temeli</h2>
+                <div class="mdx-tech-surface p-6 border-l-4 border-l-accent mb-6">
                     <h3 class="text-lg font-semibold mb-2">MDX-1 Mimarisi</h3>
                     <ul class="list-disc pl-5 space-y-2 text-sm text-gray-700">
                         <li><strong>Yapılandırma:</strong> 4 &times; 4</li>
@@ -139,7 +140,7 @@
 
             <!-- Correctness-First Design -->
             <section id="correctness-first" class="reveal">
-                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">Doğruluk-Öncelikli Tasarım</h2>
+                <h2 class="mdx-section-heading">Doğruluk-Öncelikli Tasarım</h2>
                 <div class="prose prose-gray max-w-none space-y-4 text-gray-700">
                     <p>MDX geliştirme metodolojisi kesinlikle doğruluk-öncelikli bir yaklaşıma dayanmaktadır. Bilimsel hesaplamalara yönelik donanım hızlandırıcı tasarımında, sessiz sayısal hatalar veya hassasiyet sapmaları, uzun süren simülasyonları tamamen geçersiz kılabilir. Bu nedenle mimari, spekülatif performans optimizasyonlarından ziyade deterministik sayısal doğruluğa mutlak öncelik verilerek geliştirilmektedir.</p>
                     <p>Etkileşim hesabından periyodik geometri ve yaşam döngüsü davranışına kadar şu anda modellenen her doğruluk alanı, açık sözleşmeler aracılığıyla tanımlanmakta ve çalıştırılabilir referans modellerine karşı kontrol edilmektedir.</p>
@@ -148,26 +149,26 @@
 
             <!-- Reference-Model Progression -->
             <section id="reference-progression" class="reveal">
-                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">Referans-Model Gelişimi (v0.1 &ndash; v0.12)</h2>
+                <h2 class="mdx-section-heading">Referans-Model Gelişimi (v0.1 &ndash; v0.12)</h2>
                 <p class="text-sm text-gray-700 mb-6">Mimari spesifikasyonlar v0.12'ye kadar sistematik olarak evrimleşmiş ve ardışık kavramsal aşamalar aracılığıyla doğrulanmış bir temel oluşturmuştur:</p>
                 <div class="grid gap-4">
-                    <div class="card p-4">
+                    <div class="mdx-tech-surface p-4">
                         <h4 class="font-semibold text-gray-900 mb-1">Mimari muhasebe ve yaşam döngüsü</h4>
                         <p class="text-sm text-gray-600">Mimaride parçacık atamaları ve görev dağıtımı için temel durum makinesi ve yaşam döngüsü takibi oluşturuldu.</p>
                     </div>
-                    <div class="card p-4">
+                    <div class="mdx-tech-surface p-4">
                         <h4 class="font-semibold text-gray-900 mb-1">Sayısal çift ve iş yükü referansı</h4>
                         <p class="text-sm text-gray-600">İkili etkileşimler için deterministik değerlendirme mantığı tanımlandı, kuvvet ve enerji hesaplamaları için sayısal temel oluşturuldu.</p>
                     </div>
-                    <div class="card p-4">
+                    <div class="mdx-tech-surface p-4">
                         <h4 class="font-semibold text-gray-900 mb-1">Uzamsal ve periyodik geometri</h4>
                         <p class="text-sm text-gray-600">Yoğun moleküler sistemlerde periyodik sınır koşullarını (PBC) doğru bir şekilde işlemek için gereken minimum-görüntü kuralları ve uzamsal haritalama kuralları entegre edildi.</p>
                     </div>
-                    <div class="card p-4">
+                    <div class="mdx-tech-surface p-4">
                         <h4 class="font-semibold text-gray-900 mb-1">Verlet-listesinin yeniden kullanımı ve periyodik iş yükü entegrasyonu</h4>
                         <p class="text-sm text-gray-600">Depolanmış liste oluşturma, muhafazakâr yeniden kullanım/yeniden oluşturma uygunluğu için doğruluk modelleri tanıtıldı ve doğrulanmış periyodik iş yükü kompozisyonu sağlandı.</p>
                     </div>
-                    <div class="card p-4">
+                    <div class="mdx-tech-surface p-4">
                         <h4 class="font-semibold text-gray-900 mb-1">Açık yaşam döngüsü ve konfigürasyon-geçiş orkestrasyonu</h4>
                         <p class="text-sm text-gray-600">Önceki yaşam döngüsü sınırlarını korurken, zorunlu taze yeniden oluşturma ve isteğe bağlı anında değerlendirme ile açık çağırıcı kontrollü periyodik konfigürasyon geçişi ekler (v0.12 temeli).</p>
                     </div>
@@ -176,7 +177,7 @@
 
             <!-- Validation Strategy -->
             <section id="validation-strategy" class="reveal">
-                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">Doğrulama Stratejisi</h2>
+                <h2 class="mdx-section-heading">Doğrulama Stratejisi</h2>
                 <div class="prose prose-gray max-w-none space-y-4 text-gray-700">
                     <p>Doğrulama stratejisi, her spesifikasyon tarafından tanımlanan davranışlar için çalıştırılabilir altın/referans modelleri yazılım doğruluğu kâhinleri (oracles) olarak kullanır. Bunlar gelecekteki uygulama çalışmaları için deterministik karşılaştırma hedefleri sağlarlar, ancak zamanlama modelleri veya fiziksel donanım kanıtı değildirler.</p>
                     <p>Algoritmik doğruluk sözleşmelerini gelecekteki RTL'den ayrı tutmak, sonraki uygulamaların RTL veya silikonun zaten doğrulandığını ima etmeden açık referans davranışına karşı kontrol edilmesini sağlar.</p>
@@ -185,9 +186,9 @@
 
             <!-- RTL Verification Evidence -->
             <section id="rtl-verification-evidence" class="reveal">
-                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">RTL Doğrulama Kanıtları</h2>
+                <h2 class="mdx-section-heading">RTL Doğrulama Kanıtları</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-                    <div class="border border-gray-200 rounded p-4 shadow-sm text-sm">
+                    <div class="mdx-tech-surface p-4 text-sm">
                         <h4 class="font-semibold text-gray-900 mb-2">Bankalı kuvvet birikimi (Banked force accumulator)</h4>
                         <ul class="list-none space-y-1 text-gray-700">
                             <li>• RTL simülasyonu BAŞARILI (PASS)</li>
@@ -195,7 +196,7 @@
                             <li>• 0 hata</li>
                         </ul>
                     </div>
-                    <div class="border border-gray-200 rounded p-4 shadow-sm text-sm">
+                    <div class="mdx-tech-surface p-4 text-sm">
                         <h4 class="font-semibold text-gray-900 mb-2">Doğrulama iş yükü tekrarı (Validation-workload replay)</h4>
                         <ul class="list-none space-y-1 text-gray-700">
                             <li>• Verilator BAŞARILI (PASS)</li>
@@ -204,20 +205,20 @@
                             <li>• 0 N3L/protokol hatası</li>
                         </ul>
                     </div>
-                    <div class="border border-gray-200 rounded p-4 shadow-sm text-sm">
+                    <div class="mdx-tech-surface p-4 text-sm">
                         <h4 class="font-semibold text-gray-900 mb-2">Geri yazma koruması (Writeback conservation)</h4>
                         <ul class="list-none space-y-1 text-gray-700">
                             <li>• 67,957 kuyruğa alınan (enqueued)</li>
                             <li>• 67,957 tamamlanan (committed)</li>
                         </ul>
                     </div>
-                    <div class="border border-gray-200 rounded p-4 shadow-sm text-sm">
+                    <div class="mdx-tech-surface p-4 text-sm">
                         <h4 class="font-semibold text-gray-900 mb-2">Gerçek iş yükü haritalama (Real-workload mapping)</h4>
                         <ul class="list-none space-y-1 text-gray-700">
                             <li>• Aşama 8J.3B</li>
                             <li>• GROMACS türevli durum &rarr; deterministik MDX haritalaması</li>
                             <li>• 16 yoğun kaynak / 0 boşluk / 0 kopya</li>
-                            <li class="text-xs text-gray-500 mt-2 font-medium uppercase tracking-wider">Haritalama kanıtıdır, RTL tekrarı değildir</li>
+                            <li class="text-xs text-gray-500 mt-1 font-medium uppercase tracking-wider">Haritalama kanıtıdır, RTL tekrarı değildir</li>
                         </ul>
                     </div>
                 </div>
@@ -228,8 +229,8 @@
 
             <!-- Current Boundaries -->
             <section id="current-boundaries" class="reveal">
-                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">Mevcut Sınırlar</h2>
-                <div class="bg-gray-50 border border-gray-200 rounded-sm p-5 text-sm text-gray-700 shadow-sm">
+                <h2 class="mdx-section-heading">Mevcut Sınırlar</h2>
+                <div class="mdx-tech-surface p-5 text-sm text-gray-700">
                     <h4 class="font-semibold text-gray-900 mb-2">Kanıt Sınırı Kısıtlamaları</h4>
                     <p class="mb-3">MDX projesi katı kanıta dayalı raporlama standartlarına uyar. Aşağıdaki sınırlar, spesifikasyon v0.12 itibarıyla mimarinin mevcut durumunu tanımlamaktadır:</p>
                     <ul class="list-disc pl-5 space-y-1">
@@ -243,85 +244,99 @@
 
             <!-- Engineering Roadmap -->
             <section id="engineering-roadmap" class="reveal">
-                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">Mühendislik Yol Haritası</h2>
-                <div class="space-y-4">
-                    <div class="flex items-center gap-4">
-                        <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm shrink-0">1</div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">Referans Spesifikasyonları ve Altın Modeller</h4>
-                            <p class="text-xs text-blue-600 font-medium">Oluşturuldu</p>
+                <h2 class="mdx-section-heading">Mühendislik Yol Haritası</h2>
+                <div class="mdx-roadmap">
+                    <div class="mdx-roadmap-rail">
+                        <div class="mdx-roadmap-progress"></div>
+                    </div>
+
+                    <!-- Step 1 (Completed) -->
+                    <div class="mdx-roadmap-step mdx-roadmap-step--completed" data-step="1">
+                        <div class="mdx-roadmap-node">01</div>
+                        <div class="mdx-roadmap-content">
+                            <h4 class="mdx-roadmap-title">Referans Spesifikasyonları ve Altın Modeller</h4>
+                            <p class="mdx-roadmap-status">Oluşturuldu</p>
                         </div>
                     </div>
-                    <div class="ml-4 w-0.5 h-6 bg-blue-200"></div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm shrink-0">2</div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">Kuvvet Aritmetiği RTL</h4>
-                            <p class="text-xs text-blue-600 font-medium">Doğrulanmış bloklar</p>
+
+                    <!-- Step 2 (Completed) -->
+                    <div class="mdx-roadmap-step mdx-roadmap-step--completed" data-step="2">
+                        <div class="mdx-roadmap-node">02</div>
+                        <div class="mdx-roadmap-content">
+                            <h4 class="mdx-roadmap-title">Kuvvet Aritmetiği RTL</h4>
+                            <p class="mdx-roadmap-status">Doğrulanmış bloklar</p>
                         </div>
                     </div>
-                    <div class="ml-4 w-0.5 h-6 bg-blue-200"></div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm shrink-0">3</div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">Bankalı Kuvvet Birikimi (Banked Force Accumulator)</h4>
-                            <p class="text-xs text-blue-600 font-medium">RTL simülasyonu doğrulandı</p>
+
+                    <!-- Step 3 (Completed) -->
+                    <div class="mdx-roadmap-step mdx-roadmap-step--completed" data-step="3">
+                        <div class="mdx-roadmap-node">03</div>
+                        <div class="mdx-roadmap-content">
+                            <h4 class="mdx-roadmap-title">Bankalı Kuvvet Birikimi (Banked Force Accumulator)</h4>
+                            <p class="mdx-roadmap-status">RTL simülasyonu doğrulandı</p>
                         </div>
                     </div>
-                    <div class="ml-4 w-0.5 h-6 bg-blue-200"></div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm shrink-0">4</div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">Doğrulama İş Yükü Tekrarı</h4>
-                            <p class="text-xs text-blue-600 font-medium">Verilator BAŞARILI (PASS)</p>
+
+                    <!-- Step 4 (Completed) -->
+                    <div class="mdx-roadmap-step mdx-roadmap-step--completed" data-step="4">
+                        <div class="mdx-roadmap-node">04</div>
+                        <div class="mdx-roadmap-content">
+                            <h4 class="mdx-roadmap-title">Doğrulama İş Yükü Tekrarı</h4>
+                            <p class="mdx-roadmap-status">Verilator BAŞARILI (PASS)</p>
                         </div>
                     </div>
-                    <div class="ml-4 w-0.5 h-6 bg-blue-200"></div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm shrink-0">5</div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">Karo / Karolar Arası Yapı (Tile Fabric)</h4>
-                            <p class="text-xs text-blue-600 font-medium">Prototip ve entegrasyon kanıtı</p>
+
+                    <!-- Step 5 (Completed) -->
+                    <div class="mdx-roadmap-step mdx-roadmap-step--completed" data-step="5">
+                        <div class="mdx-roadmap-node">05</div>
+                        <div class="mdx-roadmap-content">
+                            <h4 class="mdx-roadmap-title">Karo / Karolar Arası Yapı (Tile Fabric)</h4>
+                            <p class="mdx-roadmap-status">Prototip ve entegrasyon kanıtı</p>
                         </div>
                     </div>
-                    <div class="ml-4 w-0.5 h-6 bg-blue-200"></div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm shrink-0">6</div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">GROMACS-Türevli İş Yükü Haritalaması</h4>
-                            <p class="text-xs text-blue-600 font-medium">Aşama 8J.3B oluşturuldu</p>
+
+                    <!-- Step 6 (Completed) -->
+                    <div class="mdx-roadmap-step mdx-roadmap-step--completed" data-step="6">
+                        <div class="mdx-roadmap-node">06</div>
+                        <div class="mdx-roadmap-content">
+                            <h4 class="mdx-roadmap-title">GROMACS-Türevli İş Yükü Haritalaması</h4>
+                            <p class="mdx-roadmap-status">Aşama 8J.3B oluşturuldu</p>
                         </div>
                     </div>
-                    <div class="ml-4 w-0.5 h-6 bg-gray-200"></div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-8 h-8 rounded-full border-2 border-blue-500 bg-white text-blue-700 flex items-center justify-center font-bold text-sm shrink-0">7</div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">Gerçek İş Yükü RTL Tekrarı</h4>
-                            <p class="text-xs text-gray-500 font-medium">Devam ediyor</p>
+
+                    <!-- Step 7 (Current) -->
+                    <div class="mdx-roadmap-step mdx-roadmap-step--current" data-step="7">
+                        <div class="mdx-roadmap-node">07</div>
+                        <div class="mdx-roadmap-content">
+                            <h4 class="mdx-roadmap-title">Gerçek İş Yükü RTL Tekrarı</h4>
+                            <p class="mdx-roadmap-status">Devam ediyor</p>
                         </div>
                     </div>
-                    <div class="ml-4 w-0.5 h-6 bg-gray-200"></div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-8 h-8 rounded-full bg-gray-100 text-gray-500 flex items-center justify-center font-bold text-sm shrink-0">8</div>
-                        <div>
-                            <h4 class="font-semibold text-gray-500">FPGA Gösterimi</h4>
-                            <p class="text-xs text-gray-400">Gelecek</p>
+
+                    <!-- Step 8 (Future) -->
+                    <div class="mdx-roadmap-step mdx-roadmap-step--future" data-step="8">
+                        <div class="mdx-roadmap-node">08</div>
+                        <div class="mdx-roadmap-content">
+                            <h4 class="mdx-roadmap-title">FPGA Gösterimi</h4>
+                            <p class="mdx-roadmap-status">Gelecek</p>
                         </div>
                     </div>
-                    <div class="ml-4 w-0.5 h-6 bg-gray-200"></div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-8 h-8 rounded-full bg-gray-100 text-gray-500 flex items-center justify-center font-bold text-sm shrink-0">9</div>
-                        <div>
-                            <h4 class="font-semibold text-gray-500">Ölçülen Donanım Performansı / Enerji</h4>
-                            <p class="text-xs text-gray-400">Gelecek</p>
+
+                    <!-- Step 9 (Future) -->
+                    <div class="mdx-roadmap-step mdx-roadmap-step--future" data-step="9">
+                        <div class="mdx-roadmap-node">09</div>
+                        <div class="mdx-roadmap-content">
+                            <h4 class="mdx-roadmap-title">Ölçülen Donanım Performansı / Enerji</h4>
+                            <p class="mdx-roadmap-status">Gelecek</p>
                         </div>
                     </div>
-                    <div class="ml-4 w-0.5 h-6 bg-gray-200"></div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-8 h-8 rounded-full bg-gray-100 text-gray-500 flex items-center justify-center font-bold text-sm shrink-0">10</div>
-                        <div>
-                            <h4 class="font-semibold text-gray-500">ASIC Fizibilitesi</h4>
-                            <p class="text-xs text-gray-400">Gelecek</p>
+
+                    <!-- Step 10 (Future) -->
+                    <div class="mdx-roadmap-step mdx-roadmap-step--future" data-step="10">
+                        <div class="mdx-roadmap-node">10</div>
+                        <div class="mdx-roadmap-content">
+                            <h4 class="mdx-roadmap-title">ASIC Fizibilitesi</h4>
+                            <p class="mdx-roadmap-status">Gelecek</p>
                         </div>
                     </div>
                 </div>
@@ -331,32 +346,32 @@
 
         <!-- Right Metadata Panel -->
         <aside class="w-full xl:w-64 shrink-0 mt-12 xl:mt-0 xl:sticky xl:top-24 xl:self-start">
-            <div class="bg-white border border-gray-200/70 rounded-xl p-6 shadow-[0_2px_8px_rgba(0,0,0,0.02)] space-y-6">
+            <div class="mdx-spec-panel space-y-6">
 
                 <div>
-                    <h4 class="text-[11px] font-semibold uppercase tracking-wider text-gray-500 mb-4 px-1">Araştırma Durumu</h4>
-                    <div class="flex items-center gap-2 px-1">
-                        <span class="w-2 h-2 rounded-full bg-blue-500"></span>
-                        <span class="text-[13px] font-medium text-gray-900">Silikon Öncesi</span>
+                    <h4 class="mdx-spec-label mb-2">Araştırma Durumu</h4>
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-blue-600"></span>
+                        <span class="mdx-spec-value">Silikon Öncesi</span>
                     </div>
                 </div>
 
-                <div class="space-y-3 px-1">
-                    <div class="flex flex-col">
-                        <span class="text-[10px] uppercase tracking-wider text-gray-500 mb-0.5">Temel (Baseline)</span>
-                        <span class="text-[13px] text-gray-900">MDX-1, 16 karo</span>
+                <div class="space-y-4 pt-4 border-t border-gray-200/60">
+                    <div>
+                        <span class="mdx-spec-label">Temel (Baseline)</span>
+                        <span class="mdx-spec-value">MDX-1, 16 karo</span>
                     </div>
-                    <div class="flex flex-col">
-                        <span class="text-[10px] uppercase tracking-wider text-gray-500 mb-0.5">Referans Modeller</span>
-                        <span class="text-[13px] text-gray-900">v0.1 &ndash; v0.12</span>
+                    <div>
+                        <span class="mdx-spec-label">Referans Modeller</span>
+                        <span class="mdx-spec-value">v0.1 &ndash; v0.12</span>
                     </div>
-                    <div class="flex flex-col">
-                        <span class="text-[10px] uppercase tracking-wider text-gray-500 mb-0.5">RTL Doğrulaması</span>
-                        <span class="text-[13px] text-gray-900 leading-tight">Alt sistem ve entegre yol doğrulama kanıtları mevcut.<br><span class="text-xs text-gray-500 mt-1 block">Tam MDX-1 gerçek iş yükü RTL entegrasyonu devam etmektedir.</span></span>
+                    <div>
+                        <span class="mdx-spec-label">RTL Doğrulaması</span>
+                        <span class="mdx-spec-value leading-tight block">Alt sistem ve entegre yol doğrulama kanıtları mevcut.<span class="text-xs text-secondary mt-1 block font-normal">Tam MDX-1 gerçek iş yükü RTL entegrasyonu devam etmektedir.</span></span>
                     </div>
-                    <div class="flex flex-col">
-                        <span class="text-[10px] uppercase tracking-wider text-gray-500 mb-0.5">Donanım Performansı</span>
-                        <span class="text-[13px] text-gray-900">Henüz ölçülmedi</span>
+                    <div>
+                        <span class="mdx-spec-label">Donanım Performansı</span>
+                        <span class="mdx-spec-value">Henüz ölçülmedi</span>
                     </div>
                 </div>
             </div>
@@ -444,6 +459,24 @@
         // Setup initial active state if loaded at top
         if (window.scrollY === 0 && sections.length > 0) {
             setActiveLink(sections[0]);
+        }
+
+        // Engineering Roadmap entrance animation observer
+        const roadmapEl = document.querySelector('.mdx-roadmap');
+        if (roadmapEl) {
+            if (prefersReducedMotion) {
+                roadmapEl.classList.add('roadmap-visible');
+            } else {
+                const roadmapObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('roadmap-visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
+                roadmapObserver.observe(roadmapEl);
+            }
         }
     </script>
 </body>

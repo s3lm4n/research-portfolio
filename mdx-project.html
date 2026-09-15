@@ -50,7 +50,7 @@
         }
     </style>
 </head>
-<body class="antialiased selection:bg-blue-100 selection:text-blue-900">
+<body class="mdx-hardware-theme antialiased selection:bg-blue-100 selection:text-blue-900">
 
     <!-- Compact Header -->
     <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200/70 h-14 flex items-center transition-all">
@@ -91,10 +91,10 @@
         <main class="flex-1 max-w-3xl mx-auto lg:mx-0 w-full space-y-16 lg:space-y-24">
 
             <!-- 1. Project Header -->
-            <section aria-labelledby="project-title" class="reveal">
+            <section aria-labelledby="project-title" class="reveal mdx-hero-grid relative">
                 <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="px-2.5 py-1 bg-gray-100 text-gray-600 rounded text-xs font-medium border border-gray-200">Hardware Architecture</span>
-                    <span class="px-2.5 py-1 bg-gray-100 text-gray-600 rounded text-xs font-medium border border-gray-200">Domain-Specific Accelerator</span>
+                    <span class="mdx-tech-tag">Hardware Architecture</span>
+                    <span class="mdx-tech-tag">Domain-Specific Accelerator</span>
                 </div>
                 <h1 id="project-title" class="text-3xl md:text-4xl font-bold tracking-tight text-anthracite mb-4">
                     MDX &mdash; Molecular Dynamics Accelerator Architecture
@@ -106,14 +106,15 @@
                     <p class="text-sm font-medium text-anthracite">Selman Ali Dokumacı</p>
                     <p class="text-sm text-secondary">Independent Hardware Research Project | 2026</p>
                 </div>
-                <div class="bg-blue-50 border border-blue-200 rounded-sm p-4 text-sm text-blue-900 shadow-sm">
-                    <strong>Current Evidence:</strong> Reference models through v0.12, subsystem and integrated-path RTL verification, bounded validation-workload replay, and Phase 8J.3B deterministic real-workload mapping.
+                <div class="mdx-status-strip">
+                    <span class="mdx-status-strip-eyebrow">CURRENT EVIDENCE</span>
+                    <p class="text-sm text-gray-700 leading-relaxed">Reference models through v0.12, subsystem and integrated-path RTL verification, bounded validation-workload replay, and Phase 8J.3B deterministic real-workload mapping.</p>
                 </div>
             </section>
 
             <!-- Overview -->
             <section id="overview" class="reveal">
-                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">Overview</h2>
+                <h2 class="mdx-section-heading">Overview</h2>
                 <div class="prose prose-gray max-w-none space-y-4 text-gray-700">
                     <p>MDX is an independently developed, pre-silicon domain-specific accelerator architecture for classical molecular-dynamics workloads. The current MDX-1 baseline explores a multi-tile architecture for nonbonded interaction processing, contribution generation, force accumulation/reduction, and ownership-aware routing and persistence.</p>
                     <p>The high-level scope of the architecture also encompasses critical aspects of MD computations, including periodic geometry handling, spatial pair selection, Verlet-list reuse and rebuild logic, and explicit lifecycle orchestration.</p>
@@ -123,8 +124,8 @@
 
             <!-- Architecture Baseline -->
             <section id="architecture-baseline" class="reveal">
-                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">Architecture Baseline</h2>
-                <div class="card p-6 border-l-4 border-l-accent mb-6">
+                <h2 class="mdx-section-heading">Architecture Baseline</h2>
+                <div class="mdx-tech-surface p-6 border-l-4 border-l-accent mb-6">
                     <h3 class="text-lg font-semibold mb-2">MDX-1 Fabric</h3>
                     <ul class="list-disc pl-5 space-y-2 text-sm text-gray-700">
                         <li><strong>Fabric Configuration:</strong> 4 &times; 4</li>
@@ -139,7 +140,7 @@
 
             <!-- Correctness-First Design -->
             <section id="correctness-first" class="reveal">
-                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">Correctness-First Design</h2>
+                <h2 class="mdx-section-heading">Correctness-First Design</h2>
                 <div class="prose prose-gray max-w-none space-y-4 text-gray-700">
                     <p>The MDX development methodology relies strictly on a correctness-first paradigm. In hardware accelerator design for scientific computing, silent numerical errors or precision drift can render long-running simulations completely invalid. Therefore, the architecture is being developed with absolute priority on deterministic numerical correctness over speculative performance optimizations.</p>
                     <p>Each currently modeled correctness domain, from interaction accounting to periodic geometry and lifecycle behavior, is defined through explicit contracts and checked against executable reference models.</p>
@@ -148,26 +149,26 @@
 
             <!-- Reference-Model Progression -->
             <section id="reference-progression" class="reveal">
-                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">Reference-Model Progression (v0.1 &ndash; v0.12)</h2>
+                <h2 class="mdx-section-heading">Reference-Model Progression (v0.1 &ndash; v0.12)</h2>
                 <p class="text-sm text-gray-700 mb-6">The architectural specifications have evolved systematically through version 0.12, establishing a verified baseline through successive conceptual stages:</p>
                 <div class="grid gap-4">
-                    <div class="card p-4">
+                    <div class="mdx-tech-surface p-4">
                         <h4 class="font-semibold text-gray-900 mb-1">Architectural accounting and lifecycle</h4>
                         <p class="text-sm text-gray-600">Established the foundational state machine and lifecycle tracking for particle assignments and task distribution across the fabric.</p>
                     </div>
-                    <div class="card p-4">
+                    <div class="mdx-tech-surface p-4">
                         <h4 class="font-semibold text-gray-900 mb-1">Numerical pair/workload reference</h4>
                         <p class="text-sm text-gray-600">Defined deterministic evaluation logic for pairwise interactions, establishing the numerical baseline for force and energy calculations.</p>
                     </div>
-                    <div class="card p-4">
+                    <div class="mdx-tech-surface p-4">
                         <h4 class="font-semibold text-gray-900 mb-1">Spatial and periodic geometry</h4>
                         <p class="text-sm text-gray-600">Integrated minimum-image conventions and spatial mapping rules required for accurately handling periodic boundary conditions in dense molecular systems.</p>
                     </div>
-                    <div class="card p-4">
+                    <div class="mdx-tech-surface p-4">
                         <h4 class="font-semibold text-gray-900 mb-1">Verlet-list reuse and periodic workload integration</h4>
                         <p class="text-sm text-gray-600">Introduced correctness models for stored-list construction, conservative reuse/rebuild eligibility, and validated periodic workload composition.</p>
                     </div>
-                    <div class="card p-4">
+                    <div class="mdx-tech-surface p-4">
                         <h4 class="font-semibold text-gray-900 mb-1">Explicit lifecycle and configuration-transition orchestration</h4>
                         <p class="text-sm text-gray-600">Adds explicit caller-controlled periodic configuration transition with mandatory fresh rebuild and optional immediate evaluation, while preserving earlier lifecycle boundaries.</p>
                     </div>
@@ -176,7 +177,7 @@
 
             <!-- Validation Strategy -->
             <section id="validation-strategy" class="reveal">
-                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">Validation Strategy</h2>
+                <h2 class="mdx-section-heading">Validation Strategy</h2>
                 <div class="prose prose-gray max-w-none space-y-4 text-gray-700">
                     <p>The validation strategy uses executable golden/reference models as software correctness oracles for the behaviors defined by each specification. They provide deterministic comparison targets for future implementation work, but they are not timing models or evidence of physical hardware.</p>
                     <p>Keeping algorithmic correctness contracts separate from future RTL allows later implementations to be checked against explicit reference behavior without implying that RTL or silicon has already been validated.</p>
@@ -185,9 +186,9 @@
 
             <!-- RTL Verification Evidence -->
             <section id="rtl-verification-evidence" class="reveal">
-                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">RTL Verification Evidence</h2>
+                <h2 class="mdx-section-heading">RTL Verification Evidence</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-                    <div class="border border-gray-200 rounded p-4 shadow-sm text-sm">
+                    <div class="mdx-tech-surface p-4 text-sm">
                         <h4 class="font-semibold text-gray-900 mb-2">Banked force accumulator</h4>
                         <ul class="list-none space-y-1 text-gray-700">
                             <li>• RTL simulation PASS</li>
@@ -195,7 +196,7 @@
                             <li>• 0 errors</li>
                         </ul>
                     </div>
-                    <div class="border border-gray-200 rounded p-4 shadow-sm text-sm">
+                    <div class="mdx-tech-surface p-4 text-sm">
                         <h4 class="font-semibold text-gray-900 mb-2">Validation-workload replay</h4>
                         <ul class="list-none space-y-1 text-gray-700">
                             <li>• Verilator PASS</li>
@@ -204,20 +205,20 @@
                             <li>• 0 N3L/protocol errors</li>
                         </ul>
                     </div>
-                    <div class="border border-gray-200 rounded p-4 shadow-sm text-sm">
+                    <div class="mdx-tech-surface p-4 text-sm">
                         <h4 class="font-semibold text-gray-900 mb-2">Writeback conservation</h4>
                         <ul class="list-none space-y-1 text-gray-700">
                             <li>• 67,957 enqueued</li>
                             <li>• 67,957 committed</li>
                         </ul>
                     </div>
-                    <div class="border border-gray-200 rounded p-4 shadow-sm text-sm">
+                    <div class="mdx-tech-surface p-4 text-sm">
                         <h4 class="font-semibold text-gray-900 mb-2">Real-workload mapping</h4>
                         <ul class="list-none space-y-1 text-gray-700">
                             <li>• Phase 8J.3B</li>
                             <li>• GROMACS-derived state &rarr; deterministic MDX mapping</li>
                             <li>• 16 dense sources / 0 gaps / 0 duplicates</li>
-                            <li class="text-xs text-gray-500 mt-2 font-medium uppercase tracking-wider">Mapping evidence, not RTL replay</li>
+                            <li class="text-xs text-gray-500 mt-1 font-medium uppercase tracking-wider">Mapping evidence, not RTL replay</li>
                         </ul>
                     </div>
                 </div>
@@ -228,8 +229,8 @@
 
             <!-- Current Boundaries -->
             <section id="current-boundaries" class="reveal">
-                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">Current Boundaries</h2>
-                <div class="bg-gray-50 border border-gray-200 rounded-sm p-5 text-sm text-gray-700 shadow-sm">
+                <h2 class="mdx-section-heading">Current Boundaries</h2>
+                <div class="mdx-tech-surface p-5 text-sm text-gray-700">
                     <h4 class="font-semibold text-gray-900 mb-2">Evidence Boundary Constraints</h4>
                     <p class="mb-3">The MDX project adheres to strict evidence-based reporting. The following boundaries define the current state of the architecture as of specification v0.12:</p>
                     <ul class="list-disc pl-5 space-y-1">
@@ -243,85 +244,99 @@
 
             <!-- Engineering Roadmap -->
             <section id="engineering-roadmap" class="reveal">
-                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">Engineering Roadmap</h2>
-                <div class="space-y-4">
-                    <div class="flex items-center gap-4">
-                        <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm shrink-0">1</div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">Reference Specifications &amp; Golden Models</h4>
-                            <p class="text-xs text-blue-600 font-medium">Established</p>
+                <h2 class="mdx-section-heading">Engineering Roadmap</h2>
+                <div class="mdx-roadmap">
+                    <div class="mdx-roadmap-rail">
+                        <div class="mdx-roadmap-progress"></div>
+                    </div>
+
+                    <!-- Step 1 (Completed) -->
+                    <div class="mdx-roadmap-step mdx-roadmap-step--completed" data-step="1">
+                        <div class="mdx-roadmap-node">01</div>
+                        <div class="mdx-roadmap-content">
+                            <h4 class="mdx-roadmap-title">Reference Specifications &amp; Golden Models</h4>
+                            <p class="mdx-roadmap-status">Established</p>
                         </div>
                     </div>
-                    <div class="ml-4 w-0.5 h-6 bg-blue-200"></div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm shrink-0">2</div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">Force Arithmetic RTL</h4>
-                            <p class="text-xs text-blue-600 font-medium">Verified blocks</p>
+
+                    <!-- Step 2 (Completed) -->
+                    <div class="mdx-roadmap-step mdx-roadmap-step--completed" data-step="2">
+                        <div class="mdx-roadmap-node">02</div>
+                        <div class="mdx-roadmap-content">
+                            <h4 class="mdx-roadmap-title">Force Arithmetic RTL</h4>
+                            <p class="mdx-roadmap-status">Verified blocks</p>
                         </div>
                     </div>
-                    <div class="ml-4 w-0.5 h-6 bg-blue-200"></div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm shrink-0">3</div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">Banked Force Accumulator</h4>
-                            <p class="text-xs text-blue-600 font-medium">RTL simulation verified</p>
+
+                    <!-- Step 3 (Completed) -->
+                    <div class="mdx-roadmap-step mdx-roadmap-step--completed" data-step="3">
+                        <div class="mdx-roadmap-node">03</div>
+                        <div class="mdx-roadmap-content">
+                            <h4 class="mdx-roadmap-title">Banked Force Accumulator</h4>
+                            <p class="mdx-roadmap-status">RTL simulation verified</p>
                         </div>
                     </div>
-                    <div class="ml-4 w-0.5 h-6 bg-blue-200"></div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm shrink-0">4</div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">Validation-Workload Replay</h4>
-                            <p class="text-xs text-blue-600 font-medium">Verilator PASS</p>
+
+                    <!-- Step 4 (Completed) -->
+                    <div class="mdx-roadmap-step mdx-roadmap-step--completed" data-step="4">
+                        <div class="mdx-roadmap-node">04</div>
+                        <div class="mdx-roadmap-content">
+                            <h4 class="mdx-roadmap-title">Validation-Workload Replay</h4>
+                            <p class="mdx-roadmap-status">Verilator PASS</p>
                         </div>
                     </div>
-                    <div class="ml-4 w-0.5 h-6 bg-blue-200"></div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm shrink-0">5</div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">Tile / Cross-Tile Fabric</h4>
-                            <p class="text-xs text-blue-600 font-medium">Prototype &amp; integration evidence</p>
+
+                    <!-- Step 5 (Completed) -->
+                    <div class="mdx-roadmap-step mdx-roadmap-step--completed" data-step="5">
+                        <div class="mdx-roadmap-node">05</div>
+                        <div class="mdx-roadmap-content">
+                            <h4 class="mdx-roadmap-title">Tile / Cross-Tile Fabric</h4>
+                            <p class="mdx-roadmap-status">Prototype &amp; integration evidence</p>
                         </div>
                     </div>
-                    <div class="ml-4 w-0.5 h-6 bg-blue-200"></div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm shrink-0">6</div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">GROMACS-Derived Workload Mapping</h4>
-                            <p class="text-xs text-blue-600 font-medium">Phase 8J.3B established</p>
+
+                    <!-- Step 6 (Completed) -->
+                    <div class="mdx-roadmap-step mdx-roadmap-step--completed" data-step="6">
+                        <div class="mdx-roadmap-node">06</div>
+                        <div class="mdx-roadmap-content">
+                            <h4 class="mdx-roadmap-title">GROMACS-Derived Workload Mapping</h4>
+                            <p class="mdx-roadmap-status">Phase 8J.3B established</p>
                         </div>
                     </div>
-                    <div class="ml-4 w-0.5 h-6 bg-gray-200"></div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-8 h-8 rounded-full border-2 border-blue-500 bg-white text-blue-700 flex items-center justify-center font-bold text-sm shrink-0">7</div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">Real-Workload RTL Replay</h4>
-                            <p class="text-xs text-gray-500 font-medium">In progress</p>
+
+                    <!-- Step 7 (Current) -->
+                    <div class="mdx-roadmap-step mdx-roadmap-step--current" data-step="7">
+                        <div class="mdx-roadmap-node">07</div>
+                        <div class="mdx-roadmap-content">
+                            <h4 class="mdx-roadmap-title">Real-Workload RTL Replay</h4>
+                            <p class="mdx-roadmap-status">In progress</p>
                         </div>
                     </div>
-                    <div class="ml-4 w-0.5 h-6 bg-gray-200"></div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-8 h-8 rounded-full bg-gray-100 text-gray-500 flex items-center justify-center font-bold text-sm shrink-0">8</div>
-                        <div>
-                            <h4 class="font-semibold text-gray-500">FPGA Demonstration</h4>
-                            <p class="text-xs text-gray-400">Future</p>
+
+                    <!-- Step 8 (Future) -->
+                    <div class="mdx-roadmap-step mdx-roadmap-step--future" data-step="8">
+                        <div class="mdx-roadmap-node">08</div>
+                        <div class="mdx-roadmap-content">
+                            <h4 class="mdx-roadmap-title">FPGA Demonstration</h4>
+                            <p class="mdx-roadmap-status">Future</p>
                         </div>
                     </div>
-                    <div class="ml-4 w-0.5 h-6 bg-gray-200"></div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-8 h-8 rounded-full bg-gray-100 text-gray-500 flex items-center justify-center font-bold text-sm shrink-0">9</div>
-                        <div>
-                            <h4 class="font-semibold text-gray-500">Measured Hardware Performance / Energy</h4>
-                            <p class="text-xs text-gray-400">Future</p>
+
+                    <!-- Step 9 (Future) -->
+                    <div class="mdx-roadmap-step mdx-roadmap-step--future" data-step="9">
+                        <div class="mdx-roadmap-node">09</div>
+                        <div class="mdx-roadmap-content">
+                            <h4 class="mdx-roadmap-title">Measured Hardware Performance / Energy</h4>
+                            <p class="mdx-roadmap-status">Future</p>
                         </div>
                     </div>
-                    <div class="ml-4 w-0.5 h-6 bg-gray-200"></div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-8 h-8 rounded-full bg-gray-100 text-gray-500 flex items-center justify-center font-bold text-sm shrink-0">10</div>
-                        <div>
-                            <h4 class="font-semibold text-gray-500">ASIC Feasibility</h4>
-                            <p class="text-xs text-gray-400">Future</p>
+
+                    <!-- Step 10 (Future) -->
+                    <div class="mdx-roadmap-step mdx-roadmap-step--future" data-step="10">
+                        <div class="mdx-roadmap-node">10</div>
+                        <div class="mdx-roadmap-content">
+                            <h4 class="mdx-roadmap-title">ASIC Feasibility</h4>
+                            <p class="mdx-roadmap-status">Future</p>
                         </div>
                     </div>
                 </div>
@@ -331,32 +346,32 @@
 
         <!-- Right Metadata Panel -->
         <aside class="w-full xl:w-64 shrink-0 mt-12 xl:mt-0 xl:sticky xl:top-24 xl:self-start">
-            <div class="bg-white border border-gray-200/70 rounded-xl p-6 shadow-[0_2px_8px_rgba(0,0,0,0.02)] space-y-6">
+            <div class="mdx-spec-panel space-y-6">
 
                 <div>
-                    <h4 class="text-[11px] font-semibold uppercase tracking-wider text-gray-500 mb-4 px-1">Research Status</h4>
-                    <div class="flex items-center gap-2 px-1">
-                        <span class="w-2 h-2 rounded-full bg-blue-500"></span>
-                        <span class="text-[13px] font-medium text-gray-900">Pre-silicon</span>
+                    <h4 class="mdx-spec-label mb-2">Research Status</h4>
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-blue-600"></span>
+                        <span class="mdx-spec-value">Pre-silicon</span>
                     </div>
                 </div>
 
-                <div class="space-y-3 px-1">
-                    <div class="flex flex-col">
-                        <span class="text-[10px] uppercase tracking-wider text-gray-500 mb-0.5">Baseline</span>
-                        <span class="text-[13px] text-gray-900">MDX-1, 16 tiles</span>
+                <div class="space-y-4 pt-4 border-t border-gray-200/60">
+                    <div>
+                        <span class="mdx-spec-label">Baseline</span>
+                        <span class="mdx-spec-value">MDX-1, 16 tiles</span>
                     </div>
-                    <div class="flex flex-col">
-                        <span class="text-[10px] uppercase tracking-wider text-gray-500 mb-0.5">Reference Models</span>
-                        <span class="text-[13px] text-gray-900">v0.1 &ndash; v0.12</span>
+                    <div>
+                        <span class="mdx-spec-label">Reference Models</span>
+                        <span class="mdx-spec-value">v0.1 &ndash; v0.12</span>
                     </div>
-                    <div class="flex flex-col">
-                        <span class="text-[10px] uppercase tracking-wider text-gray-500 mb-0.5">RTL Verification</span>
-                        <span class="text-[13px] text-gray-900 leading-tight">Subsystem and integrated-path verification evidence available.<br><span class="text-xs text-gray-500 mt-1 block">Full MDX-1 real-workload RTL integration remains in progress.</span></span>
+                    <div>
+                        <span class="mdx-spec-label">RTL Verification</span>
+                        <span class="mdx-spec-value leading-tight block">Subsystem and integrated-path verification evidence available.<span class="text-xs text-secondary mt-1 block font-normal">Full MDX-1 real-workload RTL integration remains in progress.</span></span>
                     </div>
-                    <div class="flex flex-col">
-                        <span class="text-[10px] uppercase tracking-wider text-gray-500 mb-0.5">Hardware Performance</span>
-                        <span class="text-[13px] text-gray-900">Not yet measured</span>
+                    <div>
+                        <span class="mdx-spec-label">Hardware Performance</span>
+                        <span class="mdx-spec-value">Not yet measured</span>
                     </div>
                 </div>
             </div>
@@ -444,6 +459,24 @@
         // Setup initial active state if loaded at top
         if (window.scrollY === 0 && sections.length > 0) {
             setActiveLink(sections[0]);
+        }
+
+        // Engineering Roadmap entrance animation observer
+        const roadmapEl = document.querySelector('.mdx-roadmap');
+        if (roadmapEl) {
+            if (prefersReducedMotion) {
+                roadmapEl.classList.add('roadmap-visible');
+            } else {
+                const roadmapObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('roadmap-visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
+                roadmapObserver.observe(roadmapEl);
+            }
         }
     </script>
 </body>
