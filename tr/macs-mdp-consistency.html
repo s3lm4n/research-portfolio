@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MDP Tutarlılık Raporu - MACS Araştırma Dokümantasyonu</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <meta name="description" content="MACS trajektorilerindeki Moleküler Dinamik Parametre (MDP) ayarları için tutarlılık doğrulama raporu.">
     <meta property="og:title" content="MDP Tutarlılık Raporu - MACS Araştırma Dokümantasyonu">
     <meta property="og:description" content="MACS trajektorilerindeki Moleküler Dinamik Parametre (MDP) ayarları için tutarlılık doğrulama raporu.">
@@ -12,13 +13,12 @@
     <meta property="og:image" content="https://selmandokumaci.com/assets/macs/overlay.png">
     <meta property="og:locale" content="tr_TR">
     <meta property="og:locale:alternate" content="en_US">
-    
+
     <link rel="canonical" href="https://selmandokumaci.com/tr/macs-mdp-consistency">
     <link rel="alternate" hreflang="en" href="https://selmandokumaci.com/macs-mdp-consistency">
     <link rel="alternate" hreflang="tr" href="https://selmandokumaci.com/tr/macs-mdp-consistency">
     <link rel="alternate" hreflang="x-default" href="https://selmandokumaci.com/macs-mdp-consistency">
 
-    <!-- Schema.org JSON-LD BreadcrumbList -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -27,182 +27,202 @@
             {
                 "@type": "ListItem",
                 "position": 1,
-                "name": "Ana Sayfa",
-                "item": "https://selmandokumaci.com/tr/"
+                "name": "Home",
+                "item": "https://selmandokumaci.com/"
             },
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Araştırma",
-                "item": "https://selmandokumaci.com/tr/"
+                "name": "Research",
+                "item": "https://selmandokumaci.com/"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
                 "name": "MACS",
-                "item": "https://selmandokumaci.com/tr/macs-project"
+                "item": "https://selmandokumaci.com/macs-project"
             },
             {
                 "@type": "ListItem",
                 "position": 4,
-                "name": "MDP Tutarlılık Raporu",
+                "name": "MDP Consistency",
                 "item": "https://selmandokumaci.com/tr/macs-mdp-consistency"
             }
         ]
     }
     </script>
 
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+
     <link href="/assets/css/style.css" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #111827; }
-        .text-secondary { color: #6b7280; }
-        .border-subtle { border-color: #e5e7eb; }
-    </style>
 </head>
-<body class="antialiased selection:bg-blue-100 selection:text-blue-900">
-    <header data-smart-header class="site-header sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200/70 h-14 flex items-center transition-all">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-between">
-            <a href="/tr/macs-project" class="px-3 py-1.5 rounded-full text-sm font-medium text-secondary hover:text-gray-900 hover:bg-gray-100/70 flex items-center transition-colors">
-                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
-                MACS'a Dön
+<body class="report-page">
+    <a href="#main-content" class="skip-link">İçeriğe atla</a>
+
+    <header class="masthead">
+        <div class="masthead__inner">
+            <a href="/tr/macs-project" class="backlink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7 7-7m-7 7h18"/></svg>
+                MACS
             </a>
-            <div class="flex items-center space-x-2">
-                <div class="px-3 py-1.5 text-[11px] font-semibold tracking-widest uppercase text-gray-900 hidden lg:block">MDP Tutarlılık Raporu</div>
-                <div class="h-4 w-px bg-gray-200 hidden lg:block mx-2"></div>
-                <div class="flex items-center bg-gray-50/80 border border-gray-200/70 rounded-full p-0.5 text-[11px] font-semibold tracking-wide">
-                    <a href="/macs-mdp-consistency" class="px-2.5 py-1 text-gray-500 hover:text-gray-900 hover:bg-gray-100/50 rounded-full transition-colors">EN</a>
-                    <span class="px-2.5 py-1 bg-white rounded-full shadow-[0_1px_2px_rgba(0,0,0,0.04)] text-gray-900">TR</span>
-                </div>
+            <div class="masthead__nav">
+                <span class="masthead__context">MDP Tutarlılığı</span>
+                <p class="lang">
+                    <a href="/macs-mdp-consistency" class="lang__link" hreflang="en" lang="en">EN</a>
+                    <span class="lang__sep" aria-hidden="true">/</span>
+                    <span class="lang__current" aria-current="true">TR</span>
+                </p>
             </div>
         </div>
     </header>
 
-    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <main class="report" id="main-content" tabindex="-1">
 
-        <!-- Editorial Breadcrumbs -->
         <nav class="research-breadcrumb" aria-label="Ekmek kırıntısı">
             <ol class="research-breadcrumb-list">
-                <li class="research-breadcrumb-item">
-                    <a href="/tr/" class="research-breadcrumb-link">Ana Sayfa</a>
-                </li>
-                <li class="research-breadcrumb-separator" aria-hidden="true">›</li>
-                <li class="research-breadcrumb-item">
-                    <a href="/tr/" class="research-breadcrumb-link">Araştırma</a>
-                </li>
-                <li class="research-breadcrumb-separator" aria-hidden="true">›</li>
-                <li class="research-breadcrumb-item">
-                    <a href="/tr/macs-project" class="research-breadcrumb-link">MACS</a>
-                </li>
-                <li class="research-breadcrumb-separator" aria-hidden="true">›</li>
-                <li class="research-breadcrumb-item">
-                    <span class="research-breadcrumb-current" aria-current="page">MDP Tutarlılığı</span>
-                </li>
+                <li><a href="/tr/" class="research-breadcrumb-link">Ana Sayfa</a></li>
+                <li class="research-breadcrumb-separator" aria-hidden="true">/</li>
+                <li><a href="/tr/" class="research-breadcrumb-link">Araştırma</a></li>
+                <li class="research-breadcrumb-separator" aria-hidden="true">/</li>
+                <li><a href="/tr/macs-project" class="research-breadcrumb-link">MACS</a></li>
+                <li class="research-breadcrumb-separator" aria-hidden="true">/</li>
+                <li><span class="research-breadcrumb-current" aria-current="page">MDP Tutarlılığı</span></li>
             </ol>
         </nav>
 
-        <div class="mb-10 pb-6 border-b border-subtle">
-            <h1 class="text-3xl font-bold text-gray-900 mb-4">MDP Tutarlılık Raporu</h1>
-            <div class="flex flex-wrap items-center justify-between gap-4 text-sm text-secondary">
-                <div class="flex flex-wrap gap-4">
-                    <div class="flex items-center"><span class="font-semibold mr-1">Proje:</span> MACS</div>
-                    <div class="flex items-center"><span class="font-semibold mr-1">Doküman türü:</span> Teknik Dokümantasyon</div>
-                    <div class="flex items-center"><span class="font-semibold mr-1">Yıl:</span> 2026</div>
-                    <div class="flex items-center"><span class="font-semibold mr-1">Araştırma durumu:</span> Hesaplamalı Keşif</div>
-                </div>
-                <div class="share-container">
-                    <button type="button" class="share-trigger" aria-haspopup="dialog" aria-expanded="false" data-share-title="MACS Sürekli Durum MDP Tutarlılığı" data-share-url="https://selmandokumaci.com/tr/macs-mdp-consistency">
-                        <svg class="share-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
-                        </svg>
-                        Paylaş
-                    </button>
-                    <div class="share-popover" role="dialog" aria-label="Paylaşım seçenekleri">
-                        <a href="#" class="share-option" data-share-action="linkedin" target="_blank" rel="noopener noreferrer">
-                            <svg class="w-4 h-4 text-[#0a66c2]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.2a1.64 1.64 0 0 0-1.66 1.64 1.63 1.63 0 0 0 1.66 1.63 1.63 1.63 0 0 0 1.65-1.63A1.64 1.64 0 0 0 7.83 6.2Z"/></svg>
-                            <span>LinkedIn</span>
-                        </a>
-                        <a href="#" class="share-option" data-share-action="twitter" target="_blank" rel="noopener noreferrer">
-                            <svg class="w-4 h-4 text-gray-900" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                            <span>X (Twitter)</span>
-                        </a>
-                        <a href="#" class="share-option" data-share-action="email">
-                            <svg class="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                            <span>E-posta</span>
-                        </a>
-                        <button type="button" class="share-option" data-share-action="copy">
-                            <svg class="w-4 h-4 text-gray-700 share-copy-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
-                            <span class="share-copy-text">Bağlantıyı kopyala</span>
-                        </button>
+        <div class="page-head" style="padding-top:0">
+            <p class="eyebrow">MACS Araştırma Dokümantasyonu</p>
+            <h1 class="page-title">MDP Tutarlılık Raporu</h1>
+            <div class="byline">
+                <dl class="docmeta">
+                    <div>
+                        <dt class="meta-key">Proje</dt>
+                        <dd class="meta-val">MACS</dd>
                     </div>
-                </div>
+                    <div>
+                        <dt class="meta-key">Doküman türü</dt>
+                        <dd class="meta-val">Teknik Dokümantasyon</dd>
+                    </div>
+                    <div>
+                        <dt class="meta-key">Yıl</dt>
+                        <dd class="meta-val">2026</dd>
+                    </div>
+                    <div>
+                        <dt class="meta-key">Araştırma durumu</dt>
+                        <dd class="meta-val">Hesaplamalı Keşif</dd>
+                    </div>
+                </dl>
+                <div class="share-container">
+                        <button type="button" class="share-trigger" aria-haspopup="dialog" aria-expanded="false" data-share-title="MACS Sürekli Durum MDP Tutarlılığı" data-share-url="https://selmandokumaci.com/tr/macs-mdp-consistency">
+                            <svg class="share-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/>
+                            </svg>
+                            Paylaş
+                        </button>
+                        <div class="share-popover" role="dialog" aria-label="Paylaşım seçenekleri">
+                            <a href="#" class="share-option" data-share-action="linkedin" target="_blank" rel="noopener noreferrer">
+                                <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.2a1.64 1.64 0 0 0-1.66 1.64 1.63 1.63 0 0 0 1.66 1.63 1.63 1.63 0 0 0 1.65-1.63A1.64 1.64 0 0 0 7.83 6.2Z"/></svg>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="#" class="share-option" data-share-action="twitter" target="_blank" rel="noopener noreferrer">
+                                <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                                <span>X (Twitter)</span>
+                            </a>
+                            <a href="#" class="share-option" data-share-action="email">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                                <span>E-posta</span>
+                            </a>
+                            <button type="button" class="share-option" data-share-action="copy">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                                <span class="share-copy-text">Bağlantıyı kopyala</span>
+                            </button>
+                        </div>
+                    </div>
             </div>
         </div>
 
-        <div class="prose prose-blue max-w-none text-gray-800">
-            <p class="mb-6">
-                Bu rapor, MACS simülasyon sistemleri genelinde kullanılan Moleküler Dinamik parametre (MDP) ayarlarının tutarlılığını doğrular. pH 6.8 ve pH 7.4 koşulları arasında adil bir karşılaştırma sağlamak için temel üretim (production) parametreleri denetlenmiştir.
-            </p>
+        <div class="prose-col" style="margin-bottom:0.5rem">
+            <p>Bu rapor, MACS simülasyon sistemleri genelinde kullanılan Moleküler Dinamik parametre (MDP) ayarlarının tutarlılığını doğrular. pH 6.8 ve pH 7.4 koşulları arasında adil bir karşılaştırma sağlamak için temel üretim (production) parametreleri denetlenmiştir.</p>
+        </div>
 
-            <h2 class="text-2xl font-semibold text-gray-900 mt-8 mb-4">Üretim (Production) MD Parametreleri (300 ns)</h2>
-            <p class="mb-4 text-sm text-gray-600">Karşılaştırılan ayarlar için denetlenen üretim parametreleri, pH 6.8 ve pH 7.4 sistemleri arasında eşleşmiştir.</p>
-            
-            <div class="overflow-x-auto border border-subtle rounded-sm bg-white shadow-sm mb-8">
-                <table class="min-w-full text-sm text-left text-gray-700">
-                    <thead class="bg-gray-50 border-b border-subtle">
+        <section class="sec" aria-labelledby="h-params">
+            <div class="sec__head">
+                <span class="sec__num" aria-hidden="true">01</span>
+                <h2 class="sec__title" id="h-params">Üretim (Production) MD Parametreleri (300 ns)</h2>
+            </div>
+            <div class="prose-col">
+                <p>Karşılaştırılan ayarlar için denetlenen üretim parametreleri, pH 6.8 ve pH 7.4 sistemleri arasında eşleşmiştir.</p>
+            </div>
+            <div class="table-scroll" tabindex="0" role="region" aria-label="Tablo: Üretim (Production) MD Parametreleri (300 ns)">
+                <table class="dtable">
+                    <caption class="figure__cap" style="caption-side:top;text-align:left;padding-bottom:0.75rem"><span class="figure__num">Tablo&nbsp;1 &mdash; Denetlenen üretim MD parametreleri</span></caption>
+                    <thead>
                         <tr>
-                            <th scope="col" class="px-6 py-3 font-semibold text-gray-900 w-1/3">Parametre Grubu (Parameter Group)</th>
-                            <th scope="col" class="px-6 py-3 font-semibold text-gray-900">Ayar (Setting) (pH 6.8 &amp; pH 7.4)</th>
+                            <th scope="col">Parametre Grubu (Parameter Group)</th>
+                            <th scope="col">Ayar (Setting) (pH 6.8 &amp; pH 7.4)</th>
                         </tr>
                     </thead>
-                    <tbody class="divide-y divide-border">
+                    <tbody>
                         <tr>
-                            <td class="px-6 py-4 font-medium">Çalıştırma Kontrolü (Run Control)</td>
-                            <td class="px-6 py-4 font-mono text-xs">integrator = md<br>dt = 0.002<br>nsteps = 150000000 (300 ns)<br>continuation = yes</td>
+                            <th scope="row">Çalıştırma Kontrolü (Run Control)</th>
+                            <td class="params">integrator = md<br>dt = 0.002<br>nsteps = 150000000 (300 ns)<br>continuation = yes</td>
                         </tr>
                         <tr>
-                            <td class="px-6 py-4 font-medium">Kısıtlamalar (Constraints)</td>
-                            <td class="px-6 py-4 font-mono text-xs">constraint_algorithm = lincs<br>constraints = h-bonds</td>
+                            <th scope="row">Kısıtlamalar (Constraints)</th>
+                            <td class="params">constraint_algorithm = lincs<br>constraints = h-bonds</td>
                         </tr>
                         <tr>
-                            <td class="px-6 py-4 font-medium">Bağsız (Non-bonded) ve Elektrostatik</td>
-                            <td class="px-6 py-4 font-mono text-xs">cutoff-scheme = Verlet<br>coulombtype = PME<br>rcoulomb = 1.0<br>vdwtype = Cut-off<br>rvdw = 1.0</td>
+                            <th scope="row">Bağsız (Non-bonded) ve Elektrostatik</th>
+                            <td class="params">cutoff-scheme = Verlet<br>coulombtype = PME<br>rcoulomb = 1.0<br>vdwtype = Cut-off<br>rvdw = 1.0</td>
                         </tr>
                         <tr>
-                            <td class="px-6 py-4 font-medium">Sıcaklık kuplajı</td>
-                            <td class="px-6 py-4 font-mono text-xs">tcoupl = V-rescale<br>tc-grps = Protein Non-Protein<br>ref_t = 310<br>tau_t = 0.1</td>
+                            <th scope="row">Sıcaklık kuplajı</th>
+                            <td class="params">tcoupl = V-rescale<br>tc-grps = Protein Non-Protein<br>ref_t = 310<br>tau_t = 0.1</td>
                         </tr>
                         <tr>
-                            <td class="px-6 py-4 font-medium">Basınç kuplajı</td>
-                            <td class="px-6 py-4 font-mono text-xs">pcoupl = C-rescale<br>pcoupltype = isotropic<br>ref_p = 1.0<br>tau_p = 5.0<br>compressibility = 4.5e-5</td>
+                            <th scope="row">Basınç kuplajı</th>
+                            <td class="params">pcoupl = C-rescale<br>pcoupltype = isotropic<br>ref_p = 1.0<br>tau_p = 5.0<br>compressibility = 4.5e-5</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+        </section>
+        <section class="sec" aria-labelledby="h-conclusion">
+            <div class="sec__head">
+                <span class="sec__num" aria-hidden="true">02</span>
+                <h2 class="sec__title" id="h-conclusion">Doğrulama Sonucu</h2>
+            </div>
+            <div class="prose-col">
+                <p>Karşılaştırmalı MD trajektorileri için kullanılan denetlenmiş üretim-MD ayarları arasında maddi bir fark tespit edilmemiştir. Her iki koşul da V-rescale sıcaklık kuplajı, C-rescale basınç kuplajı ve PME elektrostatik dâhil olmak üzere aynı temel üretim kurulumunu kullanmış ve önceki NPT dengeleme (equilibration) adımlarından devam etmiştir.</p>
+                <p>Ara (intermediate) <code>mdout.mdp</code> dosyalarında gözlemlenen geçici farklılıklar (örneğin, minimizasyona karşı MD adımları) kesinlikle dengeleme (equilibration) dizisine karşılık gelir ve nihai 300 ns'lik karşılaştırmalı MD trajektorilerini kapsamaz.</p>
+            </div>
+        </section>
 
-            <h2 class="text-2xl font-semibold text-gray-900 mt-8 mb-4">Doğrulama Sonucu</h2>
-            <p class="mb-4">
-                Karşılaştırmalı MD trajektorileri için kullanılan denetlenmiş üretim-MD ayarları arasında maddi bir fark tespit edilmemiştir. Her iki koşul da V-rescale sıcaklık kuplajı, C-rescale basınç kuplajı ve PME elektrostatik dâhil olmak üzere aynı temel üretim kurulumunu kullanmış ve önceki NPT dengeleme (equilibration) adımlarından devam etmiştir.
-            </p>
-            <p class="mb-4">
-                Ara (intermediate) <code>mdout.mdp</code> dosyalarında gözlemlenen geçici farklılıklar (örneğin, minimizasyona karşı MD adımları) kesinlikle dengeleme (equilibration) dizisine karşılık gelir ve nihai 300 ns'lik karşılaştırmalı MD trajektorilerini kapsamaz.
-            </p>
-        </div>
 
-        <div class="mt-12 pt-8 border-t border-subtle flex flex-col sm:flex-row justify-between items-center gap-4">
-            <a href="/tr/macs-project" class="text-accent hover:text-blue-900 font-medium flex items-center transition-colors">
-                &larr; MACS Projesi'ne Dön
-            </a>
-            <div class="flex gap-4 text-sm">
-                <a href="/tr/macs-evidence-summary" class="text-secondary hover:text-gray-900">Kanıt Özeti</a>
-                <a href="/tr/macs-evidence-matrix" class="text-secondary hover:text-gray-900">Kanıt Matrisi</a>
-                <a href="/tr/macs-decision-log" class="text-secondary hover:text-gray-900">Karar Günlüğü</a>
+        <nav class="docnav" aria-label="Doküman gezinmesi">
+            <a href="/tr/macs-project" class="textlink"><span aria-hidden="true">&larr;</span> MACS Projesi'ne Dön</a>
+            <div class="docnav__links">
+                <a href="/tr/macs-evidence-summary">Kanıt Özeti</a>
+                <a href="/tr/macs-evidence-matrix">Kanıt Matrisi</a>
+                <a href="/tr/macs-decision-log">Karar Günlüğü</a>
+            </div>
+        </nav>
+
+    </main>
+
+    <footer class="site-foot">
+        <div class="site-foot__inner">
+            <p>&copy; <span id="year">2026</span> Selman Ali Dokumacı. Tüm hakları saklıdır.</p>
+            <div class="site-foot__links">
+                <a href="/tr/">Ana Sayfa</a>
+                <a href="https://www.linkedin.com/in/selman-ali-dokumac%C4%B1-4a6ba630a/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/s3lm4n" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
         </div>
-    </main>
+    </footer>
+
     <script src="/assets/js/site-ui.js" defer></script>
 </body>
 </html>

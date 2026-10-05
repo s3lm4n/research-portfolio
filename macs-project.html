@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,13 +13,12 @@
     <meta property="og:image" content="https://selmandokumaci.com/assets/macs/overlay.png">
     <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="tr_TR">
-    
+
     <link rel="canonical" href="https://selmandokumaci.com/macs-project">
     <link rel="alternate" hreflang="en" href="https://selmandokumaci.com/macs-project">
     <link rel="alternate" hreflang="tr" href="https://selmandokumaci.com/tr/macs-project">
     <link rel="alternate" hreflang="x-default" href="https://selmandokumaci.com/macs-project">
 
-    <!-- Schema.org JSON-LD BreadcrumbList -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -47,632 +46,535 @@
     }
     </script>
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS (Local) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+
     <link href="/assets/css/style.css" rel="stylesheet">
-
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #111827; }
-        .text-secondary { color: #6b7280; }
-        .border-subtle { border-color: #e5e7eb; }
-        .accent-blue { color: #1e40af; }
-        .bg-accent-blue { background-color: #1e40af; }
-
-        .card { border: 1px solid #e5e7eb; background: #ffffff; border-radius: 4px; transition: border-color 0.2s ease, box-shadow 0.2s ease; }
-        .card:hover { border-color: #d1d5db; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03); }
-
-        [id] { scroll-margin-top: 5rem; }
-
-        .toc-link { display: block; padding: 0.375rem 0.75rem; font-size: 0.8125rem; color: #6b7280; border-left: 2px solid transparent; transition: color 0.15s, border-color 0.15s; }
-        .toc-link:hover, .toc-link.active { color: #111827; border-left-color: #1e40af; }
-
-        .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); will-change: opacity, transform; }
-        .reveal.active { opacity: 1; transform: translateY(0); }
-
-        @media (prefers-reduced-motion: reduce) {
-            .reveal { transition: none; opacity: 1; transform: none; }
-            .card:hover { transform: none !important; }
-        }
-    </style>
 </head>
-<body class="antialiased selection:bg-blue-100 selection:text-blue-900">
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
 
-    <!-- Compact Header -->
-    <header data-smart-header class="site-header sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200/70 h-14 flex items-center transition-all">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-between">
-            <a href="/" class="px-3 py-1.5 rounded-full text-sm font-medium text-secondary hover:text-gray-900 hover:bg-gray-100/70 flex items-center transition-colors">
-                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
-                Back to Portfolio
+    <header class="masthead">
+        <div class="masthead__inner">
+            <a href="/" class="backlink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7 7-7m-7 7h18"/></svg>
+                Selman Ali Dokumacı
             </a>
-            <div class="flex items-center space-x-2">
-                <div class="px-3 py-1.5 text-[11px] font-semibold tracking-widest uppercase text-gray-900 hidden sm:block">MACS PLATFORM</div>
-                <div class="h-4 w-px bg-gray-200 hidden sm:block mx-2"></div>
-                <div class="flex items-center bg-gray-50/80 border border-gray-200/70 rounded-full p-0.5 text-[11px] font-semibold tracking-wide">
-                    <span class="px-2.5 py-1 bg-white rounded-full shadow-[0_1px_2px_rgba(0,0,0,0.04)] text-gray-900">EN</span>
-                    <a href="/tr/macs-project" class="px-2.5 py-1 text-gray-500 hover:text-gray-900 hover:bg-gray-100/50 rounded-full transition-colors">TR</a>
-                </div>
+            <div class="masthead__nav">
+                <span class="masthead__context">MACS</span>
+                <p class="lang">
+                    <span class="lang__current" aria-current="true">EN</span>
+                    <span class="lang__sep" aria-hidden="true">/</span>
+                    <a href="/tr/macs-project" class="lang__link" hreflang="tr" lang="tr">TR</a>
+                </p>
             </div>
         </div>
     </header>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12 flex flex-col lg:flex-row lg:flex-wrap xl:flex-nowrap lg:items-start gap-8 lg:gap-12 relative">
-        
-        <!-- Left Sidebar Navigation -->
-        <aside class="hidden lg:block w-52 shrink-0 sticky top-24 self-start max-h-[calc(100vh-6rem)] overflow-y-auto pb-8">
-            <h3 class="text-xs font-semibold uppercase tracking-wider text-secondary mb-3">CONTENTS</h3>
-            <nav class="space-y-1">
-                <a href="/macs-project" class="toc-link" data-page-scroll-target="unmet-need-title">Overview</a>
-                <a href="/macs-project" class="toc-link" data-page-scroll-target="architecture-title">Architecture</a>
-                <a href="/macs-project" class="toc-link" data-page-scroll-target="mechanism-title">Mechanism</a>
-                <a href="/macs-project" class="toc-link" data-page-scroll-target="methods-title">Methods</a>
-                <a href="/macs-project" class="toc-link" data-page-scroll-target="findings-title">Key Findings</a>
-                <a href="/macs-project" class="toc-link" data-page-scroll-target="motion-title">Visual Evidence</a>
-                <a href="/macs-project" class="toc-link" data-page-scroll-target="limitations-title">Limitations</a>
-                <a href="/macs-project" class="toc-link" data-page-scroll-target="documents-title">Documents</a>
-            </nav>
-        </aside>
+    <div class="dossier">
 
-        <!-- Main Content Column -->
-        <main class="flex-1 max-w-3xl mx-auto lg:mx-0 w-full space-y-16 lg:space-y-24">
-            
-            <!-- Editorial Breadcrumbs -->
+        <!-- Sticky table of contents (desktop) -->
+        <nav class="dossier__toc toc" aria-label="Contents">
+            <p class="toc__label">Contents</p>
+            <ul class="toc__list">
+                <li><a href="/macs-project#unmet-need-title" class="toc-link" data-page-scroll-target="unmet-need-title">01 &nbsp;Overview</a></li>
+                <li><a href="/macs-project#architecture-title" class="toc-link" data-page-scroll-target="architecture-title">02 &nbsp;Architecture</a></li>
+                <li><a href="/macs-project#mechanism-title" class="toc-link" data-page-scroll-target="mechanism-title">03 &nbsp;Mechanism</a></li>
+                <li><a href="/macs-project#methods-title" class="toc-link" data-page-scroll-target="methods-title">04 &nbsp;Methods</a></li>
+                <li><a href="/macs-project#findings-title" class="toc-link" data-page-scroll-target="findings-title">05 &nbsp;Findings</a></li>
+                <li><a href="/macs-project#motion-title" class="toc-link" data-page-scroll-target="motion-title">06 &nbsp;Visual Evidence</a></li>
+                <li><a href="/macs-project#limitations-title" class="toc-link" data-page-scroll-target="limitations-title">07 &nbsp;Limitations</a></li>
+                <li><a href="/macs-project#documents-title" class="toc-link" data-page-scroll-target="documents-title">08 &nbsp;Documentation</a></li>
+            </ul>
+        </nav>
+
+        <main class="dossier__article" id="main-content" tabindex="-1">
+
             <nav class="research-breadcrumb" aria-label="Breadcrumb">
                 <ol class="research-breadcrumb-list">
-                    <li class="research-breadcrumb-item">
-                        <a href="/" class="research-breadcrumb-link">Home</a>
-                    </li>
-                    <li class="research-breadcrumb-separator" aria-hidden="true">›</li>
-                    <li class="research-breadcrumb-item">
-                        <a href="/" class="research-breadcrumb-link">Research</a>
-                    </li>
-                    <li class="research-breadcrumb-separator" aria-hidden="true">›</li>
-                    <li class="research-breadcrumb-item">
-                        <span class="research-breadcrumb-current" aria-current="page">MACS</span>
-                    </li>
+                    <li><a href="/" class="research-breadcrumb-link">Home</a></li>
+                    <li class="research-breadcrumb-separator" aria-hidden="true">/</li>
+                    <li><a href="/" class="research-breadcrumb-link">Research</a></li>
+                    <li class="research-breadcrumb-separator" aria-hidden="true">/</li>
+                    <li><span class="research-breadcrumb-current" aria-current="page">MACS</span></li>
                 </ol>
             </nav>
 
-            <!-- 1. Project Header -->
-            <section aria-labelledby="project-title" class="reveal">
-                <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="px-2.5 py-1 bg-gray-100 text-gray-600 rounded text-xs font-medium border border-gray-200">Condition-Responsive RNA Therapeutic</span>
-                    <span class="px-2.5 py-1 bg-gray-100 text-gray-600 rounded text-xs font-medium border border-gray-200">Pre-Cell Discovery</span>
-                </div>
-                <h1 id="project-title" class="text-3xl md:text-4xl font-bold tracking-tight text-anthracite mb-4">
-                    MACS: Modular Activated Cancer Suppressor
-                </h1>
-                <p class="text-lg font-light text-secondary mb-8">
-                    Single-mRNA-Encoded Multi-Domain Protein System with Acidic Microenvironment-Responsive Logic Gating
-                </p>
-                <div class="border-t border-subtle pt-6 mb-8 flex items-center justify-between">
+            <!-- Project header -->
+            <div class="page-head" style="padding-top:0">
+                <ul class="taglist" style="margin-bottom:1rem">
+                    <li><span class="tag">Condition-Responsive RNA Therapeutic</span></li>
+                    <li><span class="tag">Pre-Cell Discovery</span></li>
+                </ul>
+                <h1 class="page-title" id="project-title">MACS: Modular Activated Cancer Suppressor</h1>
+                <p class="page-subtitle">Single-mRNA-Encoded Multi-Domain Protein System with Acidic Microenvironment-Responsive Logic Gating</p>
+
+                <div class="byline">
                     <div>
-                        <p class="text-sm font-medium text-anthracite">Selman Ali Dokumacı</p>
-                        <p class="text-sm text-secondary">Independent Computational Biophysics Project | 2026</p>
+                        <p class="byline__who">Selman Ali Dokumacı</p>
+                        <p class="byline__what">Independent Computational Biophysics Project &middot; 2026</p>
                     </div>
                     <div class="share-container">
                         <button type="button" class="share-trigger" aria-haspopup="dialog" aria-expanded="false" data-share-title="MACS: Modular Activated Cancer Suppressor" data-share-url="https://selmandokumaci.com/macs-project">
                             <svg class="share-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/>
                             </svg>
                             Share
                         </button>
                         <div class="share-popover" role="dialog" aria-label="Share options">
                             <a href="#" class="share-option" data-share-action="linkedin" target="_blank" rel="noopener noreferrer">
-                                <svg class="w-4 h-4 text-[#0a66c2]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.2a1.64 1.64 0 0 0-1.66 1.64 1.63 1.63 0 0 0 1.66 1.63 1.63 1.63 0 0 0 1.65-1.63A1.64 1.64 0 0 0 7.83 6.2Z"/></svg>
+                                <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.2a1.64 1.64 0 0 0-1.66 1.64 1.63 1.63 0 0 0 1.66 1.63 1.63 1.63 0 0 0 1.65-1.63A1.64 1.64 0 0 0 7.83 6.2Z"/></svg>
                                 <span>LinkedIn</span>
                             </a>
                             <a href="#" class="share-option" data-share-action="twitter" target="_blank" rel="noopener noreferrer">
-                                <svg class="w-4 h-4 text-gray-900" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                                <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                                 <span>X (Twitter)</span>
                             </a>
                             <a href="#" class="share-option" data-share-action="email">
-                                <svg class="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                                 <span>Email</span>
                             </a>
                             <button type="button" class="share-option" data-share-action="copy">
-                                <svg class="w-4 h-4 text-gray-700 share-copy-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
                                 <span class="share-copy-text">Copy link</span>
                             </button>
                         </div>
                     </div>
                 </div>
-                <div class="bg-blue-50 border border-blue-200 rounded-sm p-4 text-sm text-blue-900 shadow-sm">
+
+                <div class="note note--status">
                     <strong>Current Stage:</strong> Computational Discovery (In Silico). Experimental validation pending.
                 </div>
-            </section>
+            </div>
 
-            <!-- 2. Unmet Need -->
-            <section id="unmet-need-title" class="reveal">
-                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">The Selectivity Barrier in Solid Oncology</h2>
-                <div class="prose prose-gray max-w-none space-y-4 text-gray-700">
+            <!-- Collapsible TOC (below lg) -->
+            <details class="toc-collapse toc">
+                <summary>Contents</summary>
+                <ul class="toc__list">
+                    <li><a href="/macs-project#unmet-need-title" class="toc-link" data-page-scroll-target="unmet-need-title">01 &nbsp;Overview</a></li>
+                    <li><a href="/macs-project#architecture-title" class="toc-link" data-page-scroll-target="architecture-title">02 &nbsp;Architecture</a></li>
+                    <li><a href="/macs-project#mechanism-title" class="toc-link" data-page-scroll-target="mechanism-title">03 &nbsp;Mechanism</a></li>
+                    <li><a href="/macs-project#methods-title" class="toc-link" data-page-scroll-target="methods-title">04 &nbsp;Methods</a></li>
+                    <li><a href="/macs-project#findings-title" class="toc-link" data-page-scroll-target="findings-title">05 &nbsp;Findings</a></li>
+                    <li><a href="/macs-project#motion-title" class="toc-link" data-page-scroll-target="motion-title">06 &nbsp;Visual Evidence</a></li>
+                    <li><a href="/macs-project#limitations-title" class="toc-link" data-page-scroll-target="limitations-title">07 &nbsp;Limitations</a></li>
+                    <li><a href="/macs-project#documents-title" class="toc-link" data-page-scroll-target="documents-title">08 &nbsp;Documentation</a></li>
+                </ul>
+            </details>
+
+            <!-- 01 Overview -->
+            <section class="sec" id="unmet-need-title" aria-labelledby="h-overview">
+                <div class="sec__head">
+                    <span class="sec__num" aria-hidden="true">01</span>
+                    <h2 class="sec__title" id="h-overview">The Selectivity Barrier in Solid Oncology</h2>
+                </div>
+                <div class="prose-col">
                     <p>Highly potent modalities (ADCs, T-cell engagers, cytokine fusions) often fail due to severe dose-limiting toxicities in normal organs expressing baseline target levels. Single-target constitutively active biologics are vulnerable to target downregulation, antigen loss, and stromal barriers in NSCLC and PDAC.</p>
                     <p>MACS addresses this by ensuring the biotherapeutic remains shielded in healthy circulation (pH 7.4) and activates selectively within the acidic tumor milieu (pH &lt;= 6.8).</p>
                 </div>
             </section>
 
+            <!-- 02 Architecture -->
+            <section class="sec" id="architecture-title" aria-labelledby="h-architecture">
+                <div class="sec__head">
+                    <span class="sec__num" aria-hidden="true">02</span>
+                    <h2 class="sec__title" id="h-architecture">System Architecture</h2>
+                </div>
 
-            <!-- 4. System Architecture -->
-            <section id="architecture-title" class="reveal">
-                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">System Architecture</h2>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="space-y-4">
-                        <div class="card p-4">
-                            <h4 class="font-semibold text-sm mb-1 text-gray-900">Chain Definition</h4>
-                            <p class="text-sm text-gray-600">947 amino acids encoded sequentially.</p>
-                        </div>
-                        <div class="card p-4">
-                            <h4 class="font-semibold text-sm mb-1 text-gray-900">Module A (1-587)</h4>
-                            <p class="text-sm text-gray-600">Effector and structural scaffold components.</p>
-                        </div>
-                        <div class="card p-4">
-                            <h4 class="font-semibold text-sm mb-1 text-gray-900">Module B (588-947)</h4>
-                            <p class="text-sm text-gray-600">pH-responsive shielding module.</p>
-                        </div>
-                        <div class="card p-4">
-                            <h4 class="font-semibold text-sm mb-1 text-gray-900">Translational Advantage</h4>
-                            <p class="text-sm text-gray-600">Single mRNA construct delivery potential.</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="bg-blue-50 border border-blue-200 rounded-sm p-5 text-sm text-blue-900 h-full">
-                            <h4 class="font-semibold mb-2">Design Hypothesis & Scope</h4>
-                            <p class="mb-3">The architecture leverages specific domain pairings designed to conditionally occlude functional interfaces.</p>
-                            <p><strong>Note:</strong> While designed as a generalized platform, computational validation currently applies only to the specific prototype construct modeled here. Broad modularity remains a design hypothesis requiring diverse empirical testing.</p>
-                        </div>
-                    </div>
+                <div class="table-scroll" tabindex="0" role="region" aria-label="Table: System Architecture">
+                    <table class="dtable">
+                        <caption class="sr-only">System architecture components</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Component</th>
+                                <th scope="col">Definition</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Chain Definition</th>
+                                <td>947 amino acids encoded sequentially.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Module A (1-587)</th>
+                                <td>Effector and structural scaffold components.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Module B (588-947)</th>
+                                <td>pH-responsive shielding module.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Translational Advantage</th>
+                                <td>Single mRNA construct delivery potential.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="note note--scope">
+                    <p class="note__title">Design Hypothesis &amp; Scope</p>
+                    <p>The architecture leverages specific domain pairings designed to conditionally occlude functional interfaces.</p>
+                    <p><strong>Note:</strong> While designed as a generalized platform, computational validation currently applies only to the specific prototype construct modeled here. Broad modularity remains a design hypothesis requiring diverse empirical testing.</p>
                 </div>
             </section>
 
-            <!-- 5. Mechanistic Hypothesis -->
-            <section id="mechanism-title" class="reveal">
-                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">Mechanistic Hypothesis: Acidosis-Driven Quaternary Gating</h2>
-                <div class="border-l-4 border-accent pl-4 space-y-6 mb-6">
-                    <div>
-                        <h4 class="font-semibold text-gray-900 mb-1">pH 7.4 — Proposed quiescent state</h4>
-                        <p class="text-gray-700 text-sm">Histidine residues neutral (HIE). Intermodular latch disengaged. Module B flexible, extended. Effector interface proposed to remain shielded.</p>
-                    </div>
-                    <div>
-                        <h4 class="font-semibold text-gray-900 mb-1">pH 6.8 — Proposed activated state</h4>
-                        <p class="text-gray-700 text-sm">Protonation of calibrated histidine clusters (HIP). Module B compaction (+29.5 internal contacts). Candidate unmasking of effector binding register.</p>
-                    </div>
+            <!-- 03 Mechanism -->
+            <section class="sec" id="mechanism-title" aria-labelledby="h-mechanism">
+                <div class="sec__head">
+                    <span class="sec__num" aria-hidden="true">03</span>
+                    <h2 class="sec__title" id="h-mechanism">Mechanistic Hypothesis: Acidosis-Driven Quaternary Gating</h2>
                 </div>
-                <p class="text-gray-700 text-sm mb-4">
-                    The simulations support a distributed, multiresidue pH-response model rather than a single-residue mechanism. Strongest convergence: B293 alternative microenvironments, B324 pKa-coupled remodeling.
-                </p>
-                <div class="bg-gray-100 border border-gray-300 rounded-sm p-4 text-xs text-gray-600">
+
+                <div class="table-scroll" tabindex="0" role="region" aria-label="Table: Mechanistic Hypothesis: Acidosis-Driven Quaternary Gating">
+                    <table class="dtable">
+                        <caption class="sr-only">Proposed states by pH condition</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Condition</th>
+                                <th scope="col">Proposed state</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">pH 7.4 &mdash; Proposed quiescent state</th>
+                                <td>Histidine residues neutral (HIE). Intermodular latch disengaged. Module B flexible, extended. Effector interface proposed to remain shielded.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">pH 6.8 &mdash; Proposed activated state</th>
+                                <td>Protonation of calibrated histidine clusters (HIP). Module B compaction (+29.5 internal contacts). Candidate unmasking of effector binding register.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="prose-col" style="margin-top:1.5rem">
+                    <p>The simulations support a distributed, multiresidue pH-response model rather than a single-residue mechanism. Strongest convergence: B293 alternative microenvironments, B324 pKa-coupled remodeling.</p>
+                </div>
+
+                <div class="note">
                     <strong>Caveat:</strong> This is formulated as a structural hypothesis supported by all-atom MD simulations. Biological activation requires experimental testing.
                 </div>
             </section>
 
-            <!-- 6. Computational Evidence Stack -->
-            <section id="methods-title" class="reveal">
-                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">Computational Evidence Stack</h2>
-                <div class="grid md:grid-cols-3 gap-6 mb-6">
-                    <div class="card p-6 border-t-2 border-t-accent">
-                        <h3 class="font-semibold text-gray-900 mb-3 text-sm">Conformational & MD</h3>
-                        <ul class="text-xs text-gray-600 space-y-2 list-disc pl-4">
+            <!-- 04 Methods -->
+            <section class="sec" id="methods-title" aria-labelledby="h-methods">
+                <div class="sec__head">
+                    <span class="sec__num" aria-hidden="true">04</span>
+                    <h2 class="sec__title" id="h-methods">Computational Evidence Stack</h2>
+                </div>
+
+                <ul class="spec-list">
+                    <li class="spec">
+                        <h3 class="spec__name">Conformational &amp; MD</h3>
+                        <ul class="ul-tight">
                             <li>All-Atom MD via GROMACS 2026.1</li>
                             <li>300 ns per pH condition (600 ns cumulative)</li>
                             <li>Fixed-protonation approximation (specific residues modeled)</li>
                             <li>Conformational descriptors</li>
                             <li>Contact topology</li>
                         </ul>
-                    </div>
-                    <div class="card p-6 border-t-2 border-t-accent">
-                        <h3 class="font-semibold text-gray-900 mb-3 text-sm">Dynamics & Networks</h3>
-                        <ul class="text-xs text-gray-600 space-y-2 list-disc pl-4">
+                    </li>
+                    <li class="spec">
+                        <h3 class="spec__name">Dynamics &amp; Networks</h3>
+                        <ul class="ul-tight">
                             <li>Elastic Network Models (ANM/GNM)</li>
                             <li>20-mode mobility profiles</li>
                             <li>Dynamic Cross-Correlation Matrices (DCCM) with Louvain clustering</li>
                             <li>Network analysis</li>
                             <li>Sensor exposure mapping</li>
                         </ul>
-                    </div>
-                    <div class="card p-6 border-t-2 border-t-accent">
-                        <h3 class="font-semibold text-gray-900 mb-3 text-sm">Energetics & Titration</h3>
-                        <ul class="text-xs text-gray-600 space-y-2 list-disc pl-4">
+                    </li>
+                    <li class="spec">
+                        <h3 class="spec__name">Energetics &amp; Titration</h3>
+                        <ul class="ul-tight">
                             <li>Ensemble PROPKA 3.4 (101-frame ensembles)</li>
                             <li>PB-MMPBSA: 1001-frame endpoint binding energy</li>
                         </ul>
-                    </div>
-                </div>
-                <div class="text-xs text-gray-500 italic">
-                    Note: All analyses derive from fixed-protonation classical MD. Frame-level uncertainties are within-trajectory distributions, not independent replicate-level statistics.
-                </div>
+                    </li>
+                </ul>
+
+                <p class="footnote">Note: All analyses derive from fixed-protonation classical MD. Frame-level uncertainties are within-trajectory distributions, not independent replicate-level statistics.</p>
             </section>
 
-            <!-- 7. Key Structural Findings -->
-            <section id="findings-title" class="reveal">
-                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">Key Structural Findings</h2>
-                
-                <h3 class="text-xl font-medium text-gray-900 mb-4">Module B Compaction</h3>
-                
-                <div class="mb-6">
-                    <button class="block w-full border border-border p-1 hover:border-gray-400 transition-colors bg-gray-50 text-left focus:outline-none focus:ring-2 focus:ring-accent" data-viewer-src="/assets/macs/overlay.png" data-viewer-alt="Trajectory-averaged conformations" data-viewer-caption="Trajectory-averaged conformations (pH 6.8 Module A light blue, Module B blue; pH 7.4 Module A dark gray, Module B orange)">
-                        <div class="viewer-thumbnail-frame">
-                            <img src="/assets/macs/overlay.png" alt="Trajectory-averaged conformations" class="w-full h-auto" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2YxZjVmOSIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iSW50ZXIiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM2YjcyODAiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPk92ZXJsYXkgSW1hZ2UgUGVuZGluZzwvdGV4dD48L3N2Zz4='"/>
-                            <span class="viewer-affordance">Enlarge image <span aria-hidden="true">↗</span></span>
-                        </div>
-                    </button>
-                    <p class="text-xs text-gray-500 mt-2">Trajectory-averaged conformations (pH 6.8 Module A light blue, Module B blue; pH 7.4 Module A dark gray, Module B orange; histidines purple, hotspots yellow)</p>
+            <!-- 05 Findings -->
+            <section class="sec" id="findings-title" aria-labelledby="h-findings">
+                <div class="sec__head">
+                    <span class="sec__num" aria-hidden="true">05</span>
+                    <h2 class="sec__title" id="h-findings">Key Structural Findings</h2>
                 </div>
 
-                <div class="overflow-x-auto mb-4 border border-border rounded-sm">
-                    <table class="w-full text-sm text-left">
-                        <thead class="text-xs text-gray-700 uppercase bg-gray-50 border-b border-border">
+                <h3 class="sec__sub">Module B Compaction</h3>
+
+                <figure class="figure">
+                    <button type="button" class="figure__frame" data-viewer-src="/assets/macs/overlay.png" data-viewer-alt="Trajectory-averaged conformations" data-viewer-caption="Trajectory-averaged conformations (pH 6.8 Module A light blue, Module B blue; pH 7.4 Module A dark gray, Module B orange; histidines purple, hotspots yellow)">
+                        <span class="viewer-thumbnail-frame">
+                            <img src="/assets/macs/overlay.png" alt="Trajectory-averaged conformations" width="2600" height="2000" loading="lazy" decoding="async">
+                            <span class="viewer-affordance">Enlarge <span aria-hidden="true">&#8599;</span></span>
+                        </span>
+                    </button>
+                    <figcaption class="figure__cap"><span class="figure__num">Figure&nbsp;1</span> &mdash; Trajectory-averaged conformations (pH 6.8 Module A light blue, Module B blue; pH 7.4 Module A dark gray, Module B orange; histidines purple, hotspots yellow)</figcaption>
+                </figure>
+
+                <div class="table-scroll" tabindex="0" role="region" aria-label="Table: Key Structural Findings">
+                    <table class="dtable">
+                        <caption class="figure__cap" style="caption-side:top;text-align:left;padding-bottom:0.75rem"><span class="figure__num">Table&nbsp;1</span> &mdash; Module B conformational descriptors by pH condition</caption>
+                        <thead>
                             <tr>
-                                <th scope="col" class="px-4 py-3">Metric</th>
-                                <th scope="col" class="px-4 py-3">pH 6.8</th>
-                                <th scope="col" class="px-4 py-3">pH 7.4</th>
-                                <th scope="col" class="px-4 py-3">Observation</th>
+                                <th scope="col">Metric</th>
+                                <th scope="col">pH 6.8</th>
+                                <th scope="col">pH 7.4</th>
+                                <th scope="col">Observation</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="bg-white border-b border-subtle">
-                                <td class="px-4 py-3 font-medium text-gray-900">Internal Contacts</td>
-                                <td class="px-4 py-3 text-gray-600">778.09 &plusmn; 13.89</td>
-                                <td class="px-4 py-3 text-gray-600">748.63 &plusmn; 14.51</td>
-                                <td class="px-4 py-3 text-accent">+29.46 contacts</td>
+                            <tr>
+                                <th scope="row">Internal Contacts</th>
+                                <td class="num">778.09 &plusmn; 13.89</td>
+                                <td class="num">748.63 &plusmn; 14.51</td>
+                                <td class="obs">+29.46 contacts</td>
                             </tr>
-                            <tr class="bg-gray-50 border-b border-subtle">
-                                <td class="px-4 py-3 font-medium text-gray-900">Ca Rg (nm)</td>
-                                <td class="px-4 py-3 text-gray-600">2.6284 &plusmn; 0.0159</td>
-                                <td class="px-4 py-3 text-gray-600">2.6481 &plusmn; 0.0186</td>
-                                <td class="px-4 py-3">Slight contraction</td>
+                            <tr>
+                                <th scope="row">Ca Rg (nm)</th>
+                                <td class="num">2.6284 &plusmn; 0.0159</td>
+                                <td class="num">2.6481 &plusmn; 0.0186</td>
+                                <td>Slight contraction</td>
                             </tr>
-                            <tr class="bg-white border-b border-subtle">
-                                <td class="px-4 py-3 font-medium text-gray-900">Asphericity (nm&sup2;)</td>
-                                <td class="px-4 py-3 text-gray-600">1.4226 &plusmn; 0.0717</td>
-                                <td class="px-4 py-3 text-gray-600">1.6061 &plusmn; 0.1141</td>
-                                <td class="px-4 py-3">More spherical at pH 6.8</td>
+                            <tr>
+                                <th scope="row">Asphericity (nm&sup2;)</th>
+                                <td class="num">1.4226 &plusmn; 0.0717</td>
+                                <td class="num">1.6061 &plusmn; 0.1141</td>
+                                <td>More spherical at pH 6.8</td>
                             </tr>
-                            <tr class="bg-gray-50">
-                                <td class="px-4 py-3 font-medium text-gray-900">Kappa-squared</td>
-                                <td class="px-4 py-3 text-gray-600">0.0989 &plusmn; 0.0035</td>
-                                <td class="px-4 py-3 text-gray-600">0.0625 &plusmn; 0.0070</td>
-                                <td class="px-4 py-3">Anisotropy change</td>
+                            <tr>
+                                <th scope="row">Kappa-squared</th>
+                                <td class="num">0.0989 &plusmn; 0.0035</td>
+                                <td class="num">0.0625 &plusmn; 0.0070</td>
+                                <td>Anisotropy change</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                <div class="text-xs text-gray-500 mb-6">
-                    <p>Source: moduleB_full_vs_last100ns.tsv (Data from Module B, last 100 ns)</p>
-                </div>
-                
-                <div class="bg-gray-100 border border-gray-300 rounded-sm p-4 text-xs text-gray-600">
+                <p class="table-source">Source: moduleB_full_vs_last100ns.tsv (Data from Module B, last 100 ns)</p>
+
+                <div class="note">
                     <strong>Caveat:</strong> Single primary trajectory per condition. Values describe within-trajectory distributions, not replicate-level uncertainty.
                 </div>
             </section>
 
-            <!-- 8. Visual Evidence -->
-            <section id="motion-title" class="reveal">
-                <div class="flex items-center gap-3 mb-6">
-                    <h2 class="text-2xl font-semibold m-0">Visual Evidence</h2>
-                    <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs font-medium border border-gray-200">Simulation Gallery</span>
-                </div>
-                
-                <div class="mb-8">
-                    <div class="grid md:grid-cols-2 gap-4 mb-3">
-                        <button class="block w-full border border-border p-1 hover:border-gray-400 transition-colors bg-gray-50 text-left focus:outline-none focus:ring-2 focus:ring-accent" data-viewer-src="/assets/macs/gallery/interface-ph68.png" data-viewer-alt="Representative interface configuration — pH 6.8" data-viewer-caption="Representative interface configuration — pH 6.8">
-                            <div class="viewer-thumbnail-frame">
-                                <img loading="lazy" decoding="async" src="/assets/macs/gallery/interface-ph68.png" alt="Interface pH 6.8" class="w-full aspect-video object-cover" />
-                                <span class="viewer-affordance">Enlarge image <span aria-hidden="true">↗</span></span>
-                            </div>
-                            <div class="p-2">
-                                <p class="text-sm text-gray-900">Representative interface configuration — pH 6.8</p>
-                            </div>
-                        </button>
-                        <button class="block w-full border border-border p-1 hover:border-gray-400 transition-colors bg-gray-50 text-left focus:outline-none focus:ring-2 focus:ring-accent" data-viewer-src="/assets/macs/gallery/interface-ph74.png" data-viewer-alt="Representative interface configuration — pH 7.4" data-viewer-caption="Representative interface configuration — pH 7.4">
-                            <div class="viewer-thumbnail-frame">
-                                <img loading="lazy" decoding="async" src="/assets/macs/gallery/interface-ph74.png" alt="Interface pH 7.4" class="w-full aspect-video object-cover" />
-                                <span class="viewer-affordance">Enlarge image <span aria-hidden="true">↗</span></span>
-                            </div>
-                            <div class="p-2">
-                                <p class="text-sm text-gray-900">Representative interface configuration — pH 7.4</p>
-                            </div>
-                        </button>
-                    </div>
-                    <p class="text-xs text-gray-500 italic px-1">Representative structures selected from the analyzed MD trajectories. Conformational differences are computational observations and do not constitute experimental validation.</p>
+            <!-- 06 Visual Evidence -->
+            <section class="sec" id="motion-title" aria-labelledby="h-visual">
+                <div class="sec__head">
+                    <span class="sec__num" aria-hidden="true">06</span>
+                    <h2 class="sec__title" id="h-visual">Visual Evidence</h2>
                 </div>
 
-                <div class="mb-8">
-                    <div class="grid md:grid-cols-2 gap-4">
-                        <button class="block w-full border border-border p-1 hover:border-gray-400 transition-colors bg-gray-50 text-left focus:outline-none focus:ring-2 focus:ring-accent" data-viewer-src="/assets/macs/gallery/register-ph68.png" data-viewer-alt="Representative interface-register state — pH 6.8" data-viewer-caption="Representative interface-register state — pH 6.8">
-                            <div class="viewer-thumbnail-frame">
-                                <img loading="lazy" decoding="async" src="/assets/macs/gallery/register-ph68.png" alt="Register pH 6.8" class="w-full aspect-video object-cover" />
-                                <span class="viewer-affordance">Enlarge image <span aria-hidden="true">↗</span></span>
-                            </div>
-                            <div class="p-2">
-                                <p class="text-sm text-gray-900">Representative interface-register state — pH 6.8</p>
-                            </div>
+                <div class="figure-grid">
+                    <figure class="figure">
+                        <button type="button" class="figure__frame" data-viewer-src="/assets/macs/gallery/interface-ph68.png" data-viewer-alt="Representative interface configuration — pH 6.8" data-viewer-caption="Representative interface configuration — pH 6.8">
+                            <span class="viewer-thumbnail-frame">
+                                <img class="is-cover" src="/assets/macs/gallery/interface-ph68.png" alt="Representative interface configuration — pH 6.8" width="2400" height="1800" loading="lazy" decoding="async">
+                                <span class="viewer-affordance">Enlarge <span aria-hidden="true">&#8599;</span></span>
+                            </span>
                         </button>
-                        <button class="block w-full border border-border p-1 hover:border-gray-400 transition-colors bg-gray-50 text-left focus:outline-none focus:ring-2 focus:ring-accent" data-viewer-src="/assets/macs/gallery/register-ph74.png" data-viewer-alt="Representative interface-register state — pH 7.4" data-viewer-caption="Representative interface-register state — pH 7.4">
-                            <div class="viewer-thumbnail-frame">
-                                <img loading="lazy" decoding="async" src="/assets/macs/gallery/register-ph74.png" alt="Register pH 7.4" class="w-full aspect-video object-cover" />
-                                <span class="viewer-affordance">Enlarge image <span aria-hidden="true">↗</span></span>
-                            </div>
-                            <div class="p-2">
-                                <p class="text-sm text-gray-900">Representative interface-register state — pH 7.4</p>
-                            </div>
+                        <figcaption class="figure__cap"><span class="figure__num">Figure&nbsp;2</span> &mdash; Representative interface configuration &mdash; pH 6.8</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <button type="button" class="figure__frame" data-viewer-src="/assets/macs/gallery/interface-ph74.png" data-viewer-alt="Representative interface configuration — pH 7.4" data-viewer-caption="Representative interface configuration — pH 7.4">
+                            <span class="viewer-thumbnail-frame">
+                                <img class="is-cover" src="/assets/macs/gallery/interface-ph74.png" alt="Representative interface configuration — pH 7.4" width="2400" height="1800" loading="lazy" decoding="async">
+                                <span class="viewer-affordance">Enlarge <span aria-hidden="true">&#8599;</span></span>
+                            </span>
                         </button>
-                    </div>
+                        <figcaption class="figure__cap"><span class="figure__num">Figure&nbsp;3</span> &mdash; Representative interface configuration &mdash; pH 7.4</figcaption>
+                    </figure>
                 </div>
 
-                <div class="grid md:grid-cols-2 gap-4">
-                    <button class="block w-full border border-border p-1 hover:border-gray-400 transition-colors bg-gray-50 text-left focus:outline-none focus:ring-2 focus:ring-accent" data-viewer-src="/assets/macs/histidine-network.png" data-viewer-alt="Protonation Topology" data-viewer-caption="Protonation Topology: Histidine network overlay showing pH-dependent reorganization of protonation-sensitive residue clusters.">
-                        <div class="viewer-thumbnail-frame">
-                            <img loading="lazy" decoding="async" src="/assets/macs/histidine-network.png" alt="Protonation Topology" class="w-full aspect-video object-cover" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2YxZjVmOSIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iSW50ZXIiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM2YjcyODAiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkltYWdlIFBlbmRpbmc8L3RleHQ+PC9zdmc+'"/>
-                            <span class="viewer-affordance">Enlarge image <span aria-hidden="true">↗</span></span>
-                        </div>
-                        <div class="p-2">
-                            <h4 class="font-medium text-sm text-gray-900 mb-1">Protonation Topology</h4>
-                            <p class="text-xs text-gray-600">Histidine network overlay showing pH-dependent reorganization of protonation-sensitive residue clusters.</p>
-                        </div>
-                    </button>
-                    <button class="block w-full border border-border p-1 hover:border-gray-400 transition-colors bg-gray-50 text-left focus:outline-none focus:ring-2 focus:ring-accent" data-viewer-src="/assets/macs/dccm-difference.png" data-viewer-alt="Allosteric Relay" data-viewer-caption="Allosteric Relay: Dynamic cross-correlation difference map (pH 6.8 minus pH 7.4). Reveals condition-dependent changes in residue-residue correlated motion.">
-                        <div class="viewer-thumbnail-frame">
-                            <img loading="lazy" decoding="async" src="/assets/macs/dccm-difference.png" alt="Allosteric Relay" class="w-full aspect-video object-cover" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2YxZjVmOSIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iSW50ZXIiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM2YjcyODAiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkltYWdlIFBlbmRpbmc8L3RleHQ+PC9zdmc+'"/>
-                            <span class="viewer-affordance">Enlarge image <span aria-hidden="true">↗</span></span>
-                        </div>
-                        <div class="p-2">
-                            <h4 class="font-medium text-sm text-gray-900 mb-1">Allosteric Relay</h4>
-                            <p class="text-xs text-gray-600">Dynamic cross-correlation difference map (pH 6.8 minus pH 7.4). Reveals condition-dependent changes in residue-residue correlated motion.</p>
-                        </div>
-                    </button>
+                <p class="footnote">Representative structures selected from the analyzed MD trajectories. Conformational differences are computational observations and do not constitute experimental validation.</p>
+
+                <div class="figure-grid">
+                    <figure class="figure">
+                        <button type="button" class="figure__frame" data-viewer-src="/assets/macs/gallery/register-ph68.png" data-viewer-alt="Representative interface-register state — pH 6.8" data-viewer-caption="Representative interface-register state — pH 6.8">
+                            <span class="viewer-thumbnail-frame">
+                                <img class="is-cover" src="/assets/macs/gallery/register-ph68.png" alt="Representative interface-register state — pH 6.8" width="2400" height="1800" loading="lazy" decoding="async">
+                                <span class="viewer-affordance">Enlarge <span aria-hidden="true">&#8599;</span></span>
+                            </span>
+                        </button>
+                        <figcaption class="figure__cap"><span class="figure__num">Figure&nbsp;4</span> &mdash; Representative interface-register state &mdash; pH 6.8</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <button type="button" class="figure__frame" data-viewer-src="/assets/macs/gallery/register-ph74.png" data-viewer-alt="Representative interface-register state — pH 7.4" data-viewer-caption="Representative interface-register state — pH 7.4">
+                            <span class="viewer-thumbnail-frame">
+                                <img class="is-cover" src="/assets/macs/gallery/register-ph74.png" alt="Representative interface-register state — pH 7.4" width="2400" height="1800" loading="lazy" decoding="async">
+                                <span class="viewer-affordance">Enlarge <span aria-hidden="true">&#8599;</span></span>
+                            </span>
+                        </button>
+                        <figcaption class="figure__cap"><span class="figure__num">Figure&nbsp;5</span> &mdash; Representative interface-register state &mdash; pH 7.4</figcaption>
+                    </figure>
+                </div>
+
+                <div class="figure-grid">
+                    <figure class="figure">
+                        <button type="button" class="figure__frame" data-viewer-src="/assets/macs/histidine-network.png" data-viewer-alt="Protonation Topology" data-viewer-caption="Protonation Topology: Histidine network overlay showing pH-dependent reorganization of protonation-sensitive residue clusters.">
+                            <span class="viewer-thumbnail-frame">
+                                <img class="is-cover" src="/assets/macs/histidine-network.png" alt="Protonation Topology" width="4200" height="3400" loading="lazy" decoding="async">
+                                <span class="viewer-affordance">Enlarge <span aria-hidden="true">&#8599;</span></span>
+                            </span>
+                        </button>
+                        <figcaption class="figure__cap"><span class="figure__num">Figure&nbsp;6</span> &mdash; Protonation Topology: Histidine network overlay showing pH-dependent reorganization of protonation-sensitive residue clusters.</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <button type="button" class="figure__frame" data-viewer-src="/assets/macs/dccm-difference.png" data-viewer-alt="Allosteric Relay" data-viewer-caption="Allosteric Relay: Dynamic cross-correlation difference map (pH 6.8 minus pH 7.4). Reveals condition-dependent changes in residue-residue correlated motion.">
+                            <span class="viewer-thumbnail-frame">
+                                <img class="is-cover" src="/assets/macs/dccm-difference.png" alt="Allosteric Relay" width="2190" height="1889" loading="lazy" decoding="async">
+                                <span class="viewer-affordance">Enlarge <span aria-hidden="true">&#8599;</span></span>
+                            </span>
+                        </button>
+                        <figcaption class="figure__cap"><span class="figure__num">Figure&nbsp;7</span> &mdash; Allosteric Relay: Dynamic cross-correlation difference map (pH 6.8 minus pH 7.4). Reveals condition-dependent changes in residue-residue correlated motion.</figcaption>
+                    </figure>
                 </div>
             </section>
 
-            <!-- 9. Limitations & Planned Validation -->
-            <section id="limitations-title" class="reveal">
-                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">Limitations & Planned Validation</h2>
-                <div class="grid md:grid-cols-2 gap-8 mb-6">
-                    <div>
-                        <h3 class="text-lg font-medium text-gray-900 mb-4">Current Limitations</h3>
-                        <ol class="list-decimal pl-5 space-y-2 text-sm text-gray-700">
-                            <li>Most analyses originate from one 300 ns trajectory per pH condition</li>
-                            <li>Fixed-protonation classical MD approximates pH effects through assigned protonation states</li>
-                            <li>PROPKA is an empirical structure-based estimator, not constant-pH MD</li>
-                            <li>ANM is a coarse-grained normal-mode approach</li>
-                            <li>PB-MMPBSA excludes configurational entropy</li>
-                            <li>No experimental validation exists in the current dataset</li>
-                        </ol>
-                    </div>
-                    <div>
-                        <h3 class="text-lg font-medium text-gray-900 mb-4">Next Steps</h3>
-                        <ol class="list-decimal pl-5 space-y-2 text-sm text-gray-700">
-                            <li>Planned independent MD replicas: 4 per condition (8 total; 2.4–4.8 μs cumulative)</li>
-                            <li>Construct synthesis and expression in HEK293 / E. coli</li>
-                            <li>pH-dependent CD spectroscopy (folding stability)</li>
-                            <li>SPR/BLI binding kinetics (pH 6.8 vs 7.4)</li>
-                            <li>Selectivity in spheroid models (NSCLC & PDAC)</li>
-                        </ol>
-                    </div>
+            <!-- 07 Limitations -->
+            <section class="sec" id="limitations-title" aria-labelledby="h-limitations">
+                <div class="sec__head">
+                    <span class="sec__num" aria-hidden="true">07</span>
+                    <h2 class="sec__title" id="h-limitations">Limitations &amp; Planned Validation</h2>
                 </div>
-                
-                <div class="bg-red-50 border border-red-200 rounded-sm p-5 text-sm text-red-900 shadow-sm">
-                    <h4 class="font-semibold mb-2">Important Note on Scope</h4>
+
+                <h3 class="sec__sub">Current Limitations</h3>
+                <ol class="ol-tight">
+                    <li>Most analyses originate from one 300 ns trajectory per pH condition</li>
+                    <li>Fixed-protonation classical MD approximates pH effects through assigned protonation states</li>
+                    <li>PROPKA is an empirical structure-based estimator, not constant-pH MD</li>
+                    <li>ANM is a coarse-grained normal-mode approach</li>
+                    <li>PB-MMPBSA excludes configurational entropy</li>
+                    <li>No experimental validation exists in the current dataset</li>
+                </ol>
+
+                <h3 class="sec__sub">Next Steps</h3>
+                <ol class="ol-tight">
+                    <li>Planned independent MD replicas: 4 per condition (8 total; 2.4&ndash;4.8 μs cumulative)</li>
+                    <li>Construct synthesis and expression in HEK293 / E. coli</li>
+                    <li>pH-dependent CD spectroscopy (folding stability)</li>
+                    <li>SPR/BLI binding kinetics (pH 6.8 vs 7.4)</li>
+                    <li>Selectivity in spheroid models (NSCLC &amp; PDAC)</li>
+                </ol>
+
+                <div class="note note--scope">
+                    <p class="note__title">Important Note on Scope</p>
                     <p>The following claims are <strong>NOT supported</strong> by current data: that the pH-switch is experimentally proven; that a single histidine controls the entire mechanism; that Module B completely closes at pH 6.8; that PB-MMPBSA difference constitutes replicate-level statistical proof.</p>
                 </div>
             </section>
 
-            <!-- 10. Research Documentation -->
-            <section id="documents-title" class="reveal">
-                <div class="border-b border-subtle pb-2 mb-4">
-                    <h2 class="text-2xl font-semibold m-0">Research Documentation</h2>
+            <!-- 08 Documentation -->
+            <section class="sec" id="documents-title" aria-labelledby="h-documents">
+                <div class="sec__head">
+                    <span class="sec__num" aria-hidden="true">08</span>
+                    <h2 class="sec__title" id="h-documents">Research Documentation</h2>
                 </div>
-                <p class="text-sm text-gray-600 mb-6">Technical documentation, evidence summaries, and methodological records supporting the MACS computational research program.</p>
-                
-                <div class="grid sm:grid-cols-2 gap-4">
-                    <a href="/macs-evidence-summary" class="group block p-4 border border-subtle rounded-sm bg-gray-50 hover:bg-white hover:border-gray-300 hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-accent transition-all text-left">
-                        <div class="flex items-start justify-between">
-                            <div class="flex items-center">
-                                <svg class="w-5 h-5 mr-3 text-secondary shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                                <div>
-                                    <h3 class="font-medium text-gray-900 group-hover:text-accent transition-colors">Mechanistic Evidence Summary</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mt-3 text-xs text-accent font-medium flex items-center">
-                            Read document <span class="ml-1 transition-transform group-hover:translate-x-0.5">→</span>
-                        </div>
-                    </a>
+                <div class="prose-col">
+                    <p>Technical documentation, evidence summaries, and methodological records supporting the MACS computational research program.</p>
+                </div>
 
-                    <a href="/macs-evidence-matrix" class="group block p-4 border border-subtle rounded-sm bg-gray-50 hover:bg-white hover:border-gray-300 hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-accent transition-all text-left">
-                        <div class="flex items-start justify-between">
-                            <div class="flex items-center">
-                                <svg class="w-5 h-5 mr-3 text-secondary shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
-                                <div>
-                                    <h3 class="font-medium text-gray-900 group-hover:text-accent transition-colors">Mechanistic Evidence Matrix</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mt-3 text-xs text-accent font-medium flex items-center">
-                            View matrix <span class="ml-1 transition-transform group-hover:translate-x-0.5">→</span>
-                        </div>
-                    </a>
-
-                    <a href="/macs-decision-log" class="group block p-4 border border-subtle rounded-sm bg-gray-50 hover:bg-white hover:border-gray-300 hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-accent transition-all text-left">
-                        <div class="flex items-start justify-between">
-                            <div class="flex items-center">
-                                <svg class="w-5 h-5 mr-3 text-secondary shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                                <div>
-                                    <h3 class="font-medium text-gray-900 group-hover:text-accent transition-colors">Methodological Decision Log</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mt-3 text-xs text-accent font-medium flex items-center">
-                            Read document <span class="ml-1 transition-transform group-hover:translate-x-0.5">→</span>
-                        </div>
-                    </a>
-
-                    <a href="/macs-mdp-consistency" class="group block p-4 border border-subtle rounded-sm bg-gray-50 hover:bg-white hover:border-gray-300 hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-accent transition-all text-left">
-                        <div class="flex items-start justify-between">
-                            <div class="flex items-center">
-                                <svg class="w-5 h-5 mr-3 text-secondary shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                                <div>
-                                    <h3 class="font-medium text-gray-900 group-hover:text-accent transition-colors">MDP Consistency Report</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mt-3 text-xs text-accent font-medium flex items-center">
-                            Read report <span class="ml-1 transition-transform group-hover:translate-x-0.5">→</span>
-                        </div>
-                    </a>
+                <div class="table-scroll" style="margin-top:1.5rem" tabindex="0" role="region" aria-label="Table: Research Documentation">
+                    <table class="biblio">
+                        <thead>
+                            <tr>
+                                <th scope="col">Year</th>
+                                <th scope="col">Title</th>
+                                <th scope="col">Document type</th>
+                                <th scope="col">Access</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="biblio__year">2026</td>
+                                <td class="biblio__title">Mechanistic Evidence Summary</td>
+                                <td>Technical Report</td>
+                                <td class="biblio__access"><a href="/macs-evidence-summary">Read</a></td>
+                            </tr>
+                            <tr>
+                                <td class="biblio__year">2026</td>
+                                <td class="biblio__title">Mechanistic Evidence Matrix</td>
+                                <td>Technical Documentation</td>
+                                <td class="biblio__access"><a href="/macs-evidence-matrix">Read</a></td>
+                            </tr>
+                            <tr>
+                                <td class="biblio__year">2026</td>
+                                <td class="biblio__title">Methodological Decision Log</td>
+                                <td>Technical Documentation</td>
+                                <td class="biblio__access"><a href="/macs-decision-log">Read</a></td>
+                            </tr>
+                            <tr>
+                                <td class="biblio__year">2026</td>
+                                <td class="biblio__title">MDP Consistency Report</td>
+                                <td>Technical Documentation</td>
+                                <td class="biblio__access"><a href="/macs-mdp-consistency">Read</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </section>
 
         </main>
 
-        <!-- Right Metadata Panel -->
-        <aside class="w-full xl:w-64 shrink-0 mt-12 xl:mt-0 xl:sticky xl:top-24 xl:self-start">
-            <div class="bg-white border border-gray-200/70 rounded-xl p-6 shadow-[0_2px_8px_rgba(0,0,0,0.02)] space-y-6">
-                
-                <div>
-                    <h4 class="text-[11px] font-semibold uppercase tracking-wider text-gray-500 mb-4 px-1">Research Snapshot</h4>
-                    <div class="flex items-center gap-2 px-1">
-                        <span class="w-2 h-2 rounded-full bg-blue-500"></span>
-                        <span class="text-[13px] font-medium text-gray-900">Computational Discovery</span>
-                    </div>
-                    <div class="text-[13px] text-gray-500 mt-0.5 px-1 pl-4">Pre-cell discovery</div>
+        <!-- Metadata rail -->
+        <aside class="dossier__aside" aria-label="Project metadata">
+            <div class="rail">
+                <div class="rail__group">
+                    <p class="rail__label">Research Snapshot</p>
+                    <p class="status">Computational Discovery</p>
+                    <p class="rail__note">Pre-cell discovery</p>
                 </div>
 
-                <div class="space-y-3 px-1">
-                    <div class="flex flex-col">
-                        <span class="text-[10px] uppercase tracking-wider text-gray-500 mb-0.5">Validation</span>
-                        <span class="text-[13px] text-gray-900">Experimental pending</span>
-                    </div>
-                    <div class="flex flex-col">
-                        <span class="text-[10px] uppercase tracking-wider text-gray-500 mb-0.5">Replicates</span>
-                        <span class="text-[13px] text-gray-900">1 primary trajectory / condition</span>
-                    </div>
+                <div class="rail__group">
+                    <dl class="rail__list">
+                        <dt>Validation</dt>
+                        <dd>Experimental pending</dd>
+                        <dt>Replicates</dt>
+                        <dd>1 primary trajectory / condition</dd>
+                    </dl>
                 </div>
 
-                <hr class="border-gray-200/70">
-
-                <div class="px-1">
-                    <h4 class="text-[11px] font-semibold uppercase tracking-wider text-gray-500 mb-3">Simulation</h4>
-                    <div class="space-y-2 text-[13px] text-gray-900">
-                        <div>GROMACS 2026.1</div>
-                        <div>CHARMM36m &middot; TIP3P</div>
-                        <div>pH 6.8 &middot; pH 7.4</div>
-                        <div>~300 ns / condition</div>
-                    </div>
+                <div class="rail__group">
+                    <p class="rail__label">Simulation</p>
+                    <ul class="list-reset rail__list">
+                        <li>GROMACS 2026.1</li>
+                        <li>CHARMM36m &middot; TIP3P</li>
+                        <li>pH 6.8 &middot; pH 7.4</li>
+                        <li>~300 ns / condition</li>
+                    </ul>
                 </div>
 
-                <hr class="border-gray-200/70">
-
-                <div class="px-1">
-                    <h4 class="text-[11px] font-semibold uppercase tracking-wider text-gray-500 mb-3">Analysis</h4>
-                    <div class="flex flex-wrap gap-1.5">
-                        <span class="px-2.5 py-1 bg-gray-50/80 border border-gray-200 text-gray-600 rounded-full text-[11px] font-medium">RMSD / Rg</span>
-                        <span class="px-2.5 py-1 bg-gray-50/80 border border-gray-200 text-gray-600 rounded-full text-[11px] font-medium">PCA / Cluster</span>
-                        <span class="px-2.5 py-1 bg-gray-50/80 border border-gray-200 text-gray-600 rounded-full text-[11px] font-medium">DCCM</span>
-                        <span class="px-2.5 py-1 bg-gray-50/80 border border-gray-200 text-gray-600 rounded-full text-[11px] font-medium">ANM / GNM</span>
-                        <span class="px-2.5 py-1 bg-gray-50/80 border border-gray-200 text-gray-600 rounded-full text-[11px] font-medium">PB-MMPBSA</span>
-                        <span class="px-2.5 py-1 bg-gray-50/80 border border-gray-200 text-gray-600 rounded-full text-[11px] font-medium">PROPKA</span>
-                        <span class="px-2.5 py-1 bg-gray-50/80 border border-gray-200 text-gray-600 rounded-full text-[11px] font-medium">Contact Analysis</span>
-                    </div>
+                <div class="rail__group">
+                    <p class="rail__label">Analysis</p>
+                    <ul class="taglist">
+                        <li><span class="tag">RMSD / Rg</span></li>
+                        <li><span class="tag">PCA / Cluster</span></li>
+                        <li><span class="tag">DCCM</span></li>
+                        <li><span class="tag">ANM / GNM</span></li>
+                        <li><span class="tag">PB-MMPBSA</span></li>
+                        <li><span class="tag">PROPKA</span></li>
+                        <li><span class="tag">Contact Analysis</span></li>
+                    </ul>
                 </div>
             </div>
         </aside>
 
     </div>
 
-    <!-- Footer -->
-    <footer class="border-t border-subtle mt-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-600">
-            <p>&copy; 2026 Selman Ali Dokumacı. All rights reserved.</p>
-            <div class="flex items-center gap-6">
-                <a href="https://www.linkedin.com/in/selman-ali-dokumac%C4%B1-4a6ba630a/" target="_blank" rel="noopener noreferrer" class="hover:text-gray-900 transition-colors">LinkedIn</a>
-                <a href="https://github.com/s3lm4n" target="_blank" rel="noopener noreferrer" class="hover:text-gray-900 transition-colors">GitHub</a>
+    <footer class="site-foot">
+        <div class="site-foot__inner">
+            <p>&copy; <span id="year">2026</span> Selman Ali Dokumacı. All rights reserved.</p>
+            <div class="site-foot__links">
+                <a href="/">Home</a>
+                <a href="https://www.linkedin.com/in/selman-ali-dokumac%C4%B1-4a6ba630a/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/s3lm4n" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script src="/assets/js/site-ui.js" defer></script>
-    <script>
-        // Site Configuration
-        const siteConfig = {
-            media: {
-                histidineNetwork: { available: false, src: 'assets/macs/histidine_network_loop.mp4', poster: 'assets/macs/histidine-network.png' },
-                dccm: { available: false, src: 'assets/macs/dccm_loop.mp4', poster: 'assets/macs/dccm-difference.png' },
-                sensorExposure: { available: false, src: 'assets/macs/sensor_exposure_loop.mp4', poster: 'assets/macs/sensor-exposure.png' }
-            }
-        };
-
-        // Scroll reveal animation observer
-        const revealElements = document.querySelectorAll('.reveal');
-        const revealObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
-
-        revealElements.forEach(el => revealObserver.observe(el));
-
-        // Smooth in-page TOC navigation without URL hashes
-        const tocLinks = document.querySelectorAll('.toc-link');
-        const navHeight = 80;
-        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-        tocLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const targetId = link.dataset.pageScrollTarget;
-                const targetEl = document.getElementById(targetId);
-                if (targetEl) {
-                    const targetTop = targetEl.getBoundingClientRect().top + window.pageYOffset - navHeight;
-                    window.scrollTo({
-                        top: Math.max(0, targetTop),
-                        behavior: prefersReducedMotion ? 'auto' : 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Scroll spy for sidebar navigation
-        const sections = [];
-        tocLinks.forEach(link => {
-            const id = link.dataset.pageScrollTarget;
-            const section = document.getElementById(id);
-            if (section) sections.push({ id, el: section, link });
-        });
-
-        function setActiveLink(activeMatch) {
-            tocLinks.forEach(l => {
-                const isActive = activeMatch && l === activeMatch.link;
-                l.classList.toggle('active', isActive);
-                if (isActive) {
-                    l.setAttribute('aria-current', 'location');
-                } else {
-                    l.removeAttribute('aria-current');
-                }
-            });
-        }
-
-        const spyObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const match = sections.find(s => s.id === entry.target.id);
-                    if (match) setActiveLink(match);
-                }
-            });
-        }, { threshold: 0.1, rootMargin: '-80px 0px -60% 0px' });
-
-        sections.forEach(s => spyObserver.observe(s.el));
-        
-        // Setup initial active state if loaded at top
-        if (window.scrollY === 0 && sections.length > 0) {
-            setActiveLink(sections[0]);
-        }
-    </script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +10,7 @@
     <meta property="og:description" content="Technical documentation and architectural specifications for MDX: Molecular Dynamics Accelerator Architecture.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://selmandokumaci.com/mdx-project">
+    <meta property="og:image" content="https://selmandokumaci.com/assets/mdx/mdx1-architecture.png">
     <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="tr_TR">
 
@@ -18,7 +19,6 @@
     <link rel="alternate" hreflang="tr" href="https://selmandokumaci.com/tr/mdx-project">
     <link rel="alternate" hreflang="x-default" href="https://selmandokumaci.com/mdx-project">
 
-    <!-- Schema.org JSON-LD BreadcrumbList -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -46,284 +46,339 @@
     }
     </script>
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
 
-    <!-- Tailwind CSS (Local) -->
     <link href="/assets/css/style.css" rel="stylesheet">
-
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #111827; }
-        .text-secondary { color: #6b7280; }
-        .border-subtle { border-color: #e5e7eb; }
-        .accent-blue { color: #1e40af; }
-        .bg-accent-blue { background-color: #1e40af; }
-
-        .card { border: 1px solid #e5e7eb; background: #ffffff; border-radius: 4px; transition: border-color 0.2s ease, box-shadow 0.2s ease; }
-        .card:hover { border-color: #d1d5db; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03); }
-
-        [id] { scroll-margin-top: 5rem; }
-
-        .toc-link { display: block; padding: 0.375rem 0.75rem; font-size: 0.8125rem; color: #6b7280; border-left: 2px solid transparent; transition: color 0.15s, border-color 0.15s; }
-        .toc-link:hover, .toc-link.active { color: #111827; border-left-color: #1e40af; }
-
-        .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); will-change: opacity, transform; }
-        .reveal.active { opacity: 1; transform: translateY(0); }
-
-        @media (prefers-reduced-motion: reduce) {
-            .reveal { transition: none; opacity: 1; transform: none; }
-            .card:hover { transform: none !important; }
-        }
-    </style>
 </head>
-<body class="antialiased selection:bg-blue-100 selection:text-blue-900">
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
 
-    <!-- Compact Header -->
-    <header data-smart-header class="site-header sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200/70 h-14 flex items-center transition-all">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-between">
-            <a href="/" class="px-3 py-1.5 rounded-full text-sm font-medium text-secondary hover:text-gray-900 hover:bg-gray-100/70 flex items-center transition-colors">
-                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
-                Back to Portfolio
+    <header class="masthead">
+        <div class="masthead__inner">
+            <a href="/" class="backlink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7 7-7m-7 7h18"/></svg>
+                Selman Ali Dokumacı
             </a>
-            <div class="flex items-center space-x-2">
-                <div class="px-3 py-1.5 text-[11px] font-semibold tracking-widest uppercase text-gray-900 hidden sm:block">MDX ARCHITECTURE</div>
-                <div class="h-4 w-px bg-gray-200 hidden sm:block mx-2"></div>
-                <div class="flex items-center bg-gray-50/80 border border-gray-200/70 rounded-full p-0.5 text-[11px] font-semibold tracking-wide">
-                    <span class="px-2.5 py-1 bg-white rounded-full shadow-[0_1px_2px_rgba(0,0,0,0.04)] text-gray-900">EN</span>
-                    <a href="/tr/mdx-project" class="px-2.5 py-1 text-gray-500 hover:text-gray-900 hover:bg-gray-100/50 rounded-full transition-colors">TR</a>
-                </div>
+            <div class="masthead__nav">
+                <span class="masthead__context">MDX</span>
+                <p class="lang">
+                    <span class="lang__current" aria-current="true">EN</span>
+                    <span class="lang__sep" aria-hidden="true">/</span>
+                    <a href="/tr/mdx-project" class="lang__link" hreflang="tr" lang="tr">TR</a>
+                </p>
             </div>
         </div>
     </header>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12 flex flex-col lg:flex-row lg:flex-wrap xl:flex-nowrap lg:items-start gap-8 lg:gap-12 relative">
+    <div class="dossier">
 
-        <!-- Left Sidebar Navigation -->
-        <aside class="hidden lg:block w-52 shrink-0 sticky top-24 self-start max-h-[calc(100vh-6rem)] overflow-y-auto pb-8">
-            <h3 class="text-xs font-semibold uppercase tracking-wider text-secondary mb-3">CONTENTS</h3>
-            <nav class="space-y-1">
-                <a href="/mdx-project" class="toc-link" data-page-scroll-target="overview">Overview</a>
-                <a href="/mdx-project" class="toc-link" data-page-scroll-target="architecture-baseline">Architecture Baseline</a>
-                <a href="/mdx-project" class="toc-link" data-page-scroll-target="architecture-map">Architecture Map</a>
-                <a href="/mdx-project" class="toc-link" data-page-scroll-target="correctness-first">Correctness-First Design</a>
-                <a href="/mdx-project" class="toc-link" data-page-scroll-target="reference-progression">Reference-Model Progression</a>
-                <a href="/mdx-project" class="toc-link" data-page-scroll-target="validation-strategy">Validation Strategy</a>
-                <a href="/mdx-project" class="toc-link" data-page-scroll-target="rtl-verification-evidence">RTL Verification Evidence</a>
-                <a href="/mdx-project" class="toc-link" data-page-scroll-target="current-boundaries">Current Boundaries</a>
-                <a href="/mdx-project" class="toc-link" data-page-scroll-target="engineering-roadmap">Engineering Roadmap</a>
-            </nav>
-        </aside>
+        <nav class="dossier__toc toc" aria-label="Contents">
+            <p class="toc__label">Contents</p>
+            <ul class="toc__list">
+                <li><a href="/mdx-project#overview" class="toc-link" data-page-scroll-target="overview">01 &nbsp;Overview</a></li>
+                <li><a href="/mdx-project#architecture-baseline" class="toc-link" data-page-scroll-target="architecture-baseline">02 &nbsp;Architecture Baseline</a></li>
+                <li><a href="/mdx-project#architecture-map" class="toc-link" data-page-scroll-target="architecture-map">03 &nbsp;Architecture Map</a></li>
+                <li><a href="/mdx-project#correctness-first" class="toc-link" data-page-scroll-target="correctness-first">04 &nbsp;Correctness-First Design</a></li>
+                <li><a href="/mdx-project#reference-progression" class="toc-link" data-page-scroll-target="reference-progression">05 &nbsp;Reference Models</a></li>
+                <li><a href="/mdx-project#validation-strategy" class="toc-link" data-page-scroll-target="validation-strategy">06 &nbsp;Validation Strategy</a></li>
+                <li><a href="/mdx-project#rtl-verification-evidence" class="toc-link" data-page-scroll-target="rtl-verification-evidence">07 &nbsp;RTL Verification</a></li>
+                <li><a href="/mdx-project#current-boundaries" class="toc-link" data-page-scroll-target="current-boundaries">08 &nbsp;Current Boundaries</a></li>
+                <li><a href="/mdx-project#engineering-roadmap" class="toc-link" data-page-scroll-target="engineering-roadmap">09 &nbsp;Roadmap</a></li>
+            </ul>
+        </nav>
 
-        <!-- Main Content Column -->
-        <main class="flex-1 max-w-3xl mx-auto lg:mx-0 w-full space-y-16 lg:space-y-24">
+        <main class="dossier__article" id="main-content" tabindex="-1">
 
-            <!-- Editorial Breadcrumbs -->
             <nav class="research-breadcrumb" aria-label="Breadcrumb">
                 <ol class="research-breadcrumb-list">
-                    <li class="research-breadcrumb-item">
-                        <a href="/" class="research-breadcrumb-link">Home</a>
-                    </li>
-                    <li class="research-breadcrumb-separator" aria-hidden="true">›</li>
-                    <li class="research-breadcrumb-item">
-                        <a href="/" class="research-breadcrumb-link">Research</a>
-                    </li>
-                    <li class="research-breadcrumb-separator" aria-hidden="true">›</li>
-                    <li class="research-breadcrumb-item">
-                        <span class="research-breadcrumb-current" aria-current="page">MDX</span>
-                    </li>
+                    <li><a href="/" class="research-breadcrumb-link">Home</a></li>
+                    <li class="research-breadcrumb-separator" aria-hidden="true">/</li>
+                    <li><a href="/" class="research-breadcrumb-link">Research</a></li>
+                    <li class="research-breadcrumb-separator" aria-hidden="true">/</li>
+                    <li><span class="research-breadcrumb-current" aria-current="page">MDX</span></li>
                 </ol>
             </nav>
 
-            <!-- 1. Project Header -->
-            <section aria-labelledby="project-title" class="reveal">
-                <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="px-2.5 py-1 bg-gray-100 text-gray-600 rounded text-xs font-medium border border-gray-200">Hardware Architecture</span>
-                    <span class="px-2.5 py-1 bg-gray-100 text-gray-600 rounded text-xs font-medium border border-gray-200">Domain-Specific Accelerator</span>
-                </div>
-                <h1 id="project-title" class="text-3xl md:text-4xl font-bold tracking-tight text-anthracite mb-4">
-                    MDX &mdash; Molecular Dynamics Accelerator Architecture
-                </h1>
-                <p class="text-lg font-light text-secondary mb-8">
-                    A correctness-first, pre-silicon domain-specific accelerator architecture for classical molecular-dynamics workloads.
-                </p>
-                <div class="border-t border-subtle pt-6 mb-8 flex items-center justify-between">
+            <div class="page-head" style="padding-top:0">
+                <ul class="taglist" style="margin-bottom:1rem">
+                    <li><span class="tag">Hardware Architecture</span></li>
+                    <li><span class="tag">Domain-Specific Accelerator</span></li>
+                </ul>
+                <h1 class="page-title" id="project-title">MDX &mdash; Molecular Dynamics Accelerator Architecture</h1>
+                <p class="page-subtitle">A correctness-first, pre-silicon domain-specific accelerator architecture for classical molecular-dynamics workloads.</p>
+
+                <div class="byline">
                     <div>
-                        <p class="text-sm font-medium text-anthracite">Selman Ali Dokumacı</p>
-                        <p class="text-sm text-secondary">Independent Hardware Research Project | 2026</p>
+                        <p class="byline__who">Selman Ali Dokumacı</p>
+                        <p class="byline__what">Independent Hardware Research Project &middot; 2026</p>
                     </div>
                     <div class="share-container">
                         <button type="button" class="share-trigger" aria-haspopup="dialog" aria-expanded="false" data-share-title="MDX — Molecular Dynamics Accelerator Architecture" data-share-url="https://selmandokumaci.com/mdx-project">
                             <svg class="share-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/>
                             </svg>
                             Share
                         </button>
                         <div class="share-popover" role="dialog" aria-label="Share options">
                             <a href="#" class="share-option" data-share-action="linkedin" target="_blank" rel="noopener noreferrer">
-                                <svg class="w-4 h-4 text-[#0a66c2]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.2a1.64 1.64 0 0 0-1.66 1.64 1.63 1.63 0 0 0 1.66 1.63 1.63 1.63 0 0 0 1.65-1.63A1.64 1.64 0 0 0 7.83 6.2Z"/></svg>
+                                <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.2a1.64 1.64 0 0 0-1.66 1.64 1.63 1.63 0 0 0 1.66 1.63 1.63 1.63 0 0 0 1.65-1.63A1.64 1.64 0 0 0 7.83 6.2Z"/></svg>
                                 <span>LinkedIn</span>
                             </a>
                             <a href="#" class="share-option" data-share-action="twitter" target="_blank" rel="noopener noreferrer">
-                                <svg class="w-4 h-4 text-gray-900" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                                <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                                 <span>X (Twitter)</span>
                             </a>
                             <a href="#" class="share-option" data-share-action="email">
-                                <svg class="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                                 <span>Email</span>
                             </a>
                             <button type="button" class="share-option" data-share-action="copy">
-                                <svg class="w-4 h-4 text-gray-700 share-copy-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
                                 <span class="share-copy-text">Copy link</span>
                             </button>
                         </div>
                     </div>
                 </div>
-                <div class="bg-blue-50 border border-blue-200 rounded-sm p-4 text-sm text-blue-900 shadow-sm">
+
+                <div class="note note--status">
+                    <p class="engineering-status__title">Current engineering stage</p>
+                    <p class="engineering-status__current">Full MDX-1 real-workload RTL integration remains in progress.</p>
                     <strong>Current Evidence:</strong> Reference models through v0.12, subsystem and integrated-path RTL verification, bounded validation-workload replay, and Phase 8J.3B deterministic real-workload mapping.
                 </div>
-            </section>
 
-            <!-- Overview -->
-            <section id="overview" class="reveal">
-                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">Overview</h2>
-                <div class="prose prose-gray max-w-none space-y-4 text-gray-700">
+                <div class="engineering-status" role="group" aria-labelledby="engineering-status-title">
+                    <p class="engineering-status__title" id="engineering-status-title">Engineering progression</p>
+                    <ol class="engineering-status__list">
+                        <li class="engineering-status__step engineering-status__step--established"><strong>Reference models</strong><span>Established · v0.12</span></li>
+                        <li class="engineering-status__step engineering-status__step--verified"><strong>Subsystem / integrated-path RTL</strong><span>Simulation verified</span></li>
+                        <li class="engineering-status__step engineering-status__step--established"><strong>Real-workload mapping</strong><span>Established · Phase 8J.3B</span></li>
+                        <li class="engineering-status__step engineering-status__step--current"><strong>Real-Workload RTL Replay</strong><span>In progress · Current stage</span></li>
+                        <li class="engineering-status__step engineering-status__step--future"><strong>FPGA Demonstration</strong><span>Future</span></li>
+                        <li class="engineering-status__step engineering-status__step--future"><strong>Measured Hardware Performance / Energy</strong><span>Future</span></li>
+                        <li class="engineering-status__step engineering-status__step--future"><strong>ASIC Feasibility</strong><span>Future</span></li>
+                    </ol>
+                    <p class="footnote">Phase 8J.3B is mapping evidence, not RTL replay. Simulation verification is not measured physical-hardware performance.</p>
+                </div>
+            </div>
+
+            <details class="toc-collapse toc">
+                <summary>Contents</summary>
+                <ul class="toc__list">
+                    <li><a href="/mdx-project#overview" class="toc-link" data-page-scroll-target="overview">01 &nbsp;Overview</a></li>
+                    <li><a href="/mdx-project#architecture-baseline" class="toc-link" data-page-scroll-target="architecture-baseline">02 &nbsp;Architecture Baseline</a></li>
+                    <li><a href="/mdx-project#architecture-map" class="toc-link" data-page-scroll-target="architecture-map">03 &nbsp;Architecture Map</a></li>
+                    <li><a href="/mdx-project#correctness-first" class="toc-link" data-page-scroll-target="correctness-first">04 &nbsp;Correctness-First Design</a></li>
+                    <li><a href="/mdx-project#reference-progression" class="toc-link" data-page-scroll-target="reference-progression">05 &nbsp;Reference Models</a></li>
+                    <li><a href="/mdx-project#validation-strategy" class="toc-link" data-page-scroll-target="validation-strategy">06 &nbsp;Validation Strategy</a></li>
+                    <li><a href="/mdx-project#rtl-verification-evidence" class="toc-link" data-page-scroll-target="rtl-verification-evidence">07 &nbsp;RTL Verification</a></li>
+                    <li><a href="/mdx-project#current-boundaries" class="toc-link" data-page-scroll-target="current-boundaries">08 &nbsp;Current Boundaries</a></li>
+                    <li><a href="/mdx-project#engineering-roadmap" class="toc-link" data-page-scroll-target="engineering-roadmap">09 &nbsp;Roadmap</a></li>
+                </ul>
+            </details>
+
+            <!-- 01 Overview -->
+            <section class="sec" id="overview" aria-labelledby="h-overview">
+                <div class="sec__head">
+                    <span class="sec__num" aria-hidden="true">01</span>
+                    <h2 class="sec__title" id="h-overview">Overview</h2>
+                </div>
+                <div class="prose-col">
                     <p>MDX is an independently developed, pre-silicon domain-specific accelerator architecture for classical molecular-dynamics workloads. The current MDX-1 baseline explores a multi-tile architecture for nonbonded interaction processing, contribution generation, force accumulation/reduction, and ownership-aware routing and persistence.</p>
                     <p>The high-level scope of the architecture also encompasses critical aspects of MD computations, including periodic geometry handling, spatial pair selection, Verlet-list reuse and rebuild logic, and explicit lifecycle orchestration.</p>
                     <p>It is important to emphasize that while MDX is designed for classical MD algorithms, the architecture is intrinsically generalized and is <strong>not inherently GROMACS-specific</strong>, allowing potential integration with a wide variety of molecular dynamics engines and software ecosystems.</p>
                 </div>
             </section>
 
-            <!-- Architecture Baseline -->
-            <section id="architecture-baseline" class="reveal">
-                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">Architecture Baseline</h2>
-                <div class="card p-6 border-l-4 border-l-accent mb-6">
-                    <h3 class="text-lg font-semibold mb-2">MDX-1 Fabric</h3>
-                    <ul class="list-disc pl-5 space-y-2 text-sm text-gray-700">
-                        <li><strong>Fabric Configuration:</strong> 4 &times; 4</li>
-                        <li><strong>Scale:</strong> 4 &times; 4 / 16-tile architectural baseline</li>
-                        <li><strong>Target Workload:</strong> Classical Molecular Dynamics</li>
-                    </ul>
+            <!-- 02 Architecture Baseline -->
+            <section class="sec" id="architecture-baseline" aria-labelledby="h-baseline">
+                <div class="sec__head">
+                    <span class="sec__num" aria-hidden="true">02</span>
+                    <h2 class="sec__title" id="h-baseline">Architecture Baseline</h2>
                 </div>
-                <p class="text-sm text-gray-700">
-                    The MDX-1 baseline defines a 4 &times; 4, 16-tile architectural namespace. At the current evidence level, the executable models specify architectural accounting and correctness semantics. Concrete routing topology, physical mapping, queueing, memory organization, timing, and datapath choices remain unresolved.
-                </p>
+
+                <div class="table-scroll" tabindex="0" role="region" aria-label="Table: Architecture Baseline">
+                    <table class="dtable">
+                        <caption class="figure__cap" style="caption-side:top;text-align:left;padding-bottom:0.75rem"><span class="figure__num">Table&nbsp;1</span> &mdash; MDX-1 Fabric</caption>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Fabric Configuration</th>
+                                <td class="num">4 &times; 4</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Scale</th>
+                                <td>4 &times; 4 / 16-tile architectural baseline</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Target Workload</th>
+                                <td>Classical Molecular Dynamics</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="prose-col" style="margin-top:1.5rem">
+                    <p>The MDX-1 baseline defines a 4 &times; 4, 16-tile architectural namespace. At the current evidence level, the executable models specify architectural accounting and correctness semantics. Concrete routing topology, physical mapping, queueing, memory organization, timing, and datapath choices remain unresolved.</p>
+                </div>
             </section>
 
-            <!-- MDX-1 Architecture Map -->
-            <section id="architecture-map" class="reveal">
-                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">MDX-1 Architecture Map</h2>
+            <!-- 03 Architecture Map -->
+            <section class="sec" id="architecture-map" aria-labelledby="h-map">
+                <div class="sec__head">
+                    <span class="sec__num" aria-hidden="true">03</span>
+                    <h2 class="sec__title" id="h-map">MDX-1 Architecture Map</h2>
+                </div>
 
-                <div class="mb-6">
-                    <button class="block w-full border border-border p-1 hover:border-gray-400 transition-colors bg-gray-50 text-left focus:outline-none focus:ring-2 focus:ring-accent" data-viewer-src="/assets/mdx/mdx1-architecture.png" data-viewer-zoom="true" data-viewer-alt="MDX-1 molecular dynamics accelerator architecture diagram" data-viewer-caption="MDX-1 pre-silicon architecture overview showing the control, memory, molecular tile array, reduction, force-accumulation, and planned integration paths.">
-                        <div class="viewer-thumbnail-frame bg-white">
-                            <img src="/assets/mdx/mdx1-architecture.png" alt="MDX-1 molecular dynamics accelerator architecture diagram" class="w-full h-auto" loading="lazy" decoding="async">
-                            <span class="viewer-affordance">Enlarge image <span aria-hidden="true">↗</span></span>
-                        </div>
+                <figure class="figure">
+                    <button type="button" class="figure__frame" data-viewer-src="/assets/mdx/mdx1-architecture.png" data-viewer-zoom="true" data-viewer-alt="MDX-1 molecular dynamics accelerator architecture diagram" data-viewer-caption="MDX-1 pre-silicon architecture overview showing the control, memory, molecular tile array, reduction, force-accumulation, and planned integration paths.">
+                        <span class="viewer-thumbnail-frame">
+                            <img src="/assets/mdx/mdx1-architecture.png" alt="MDX-1 molecular dynamics accelerator architecture diagram" width="3840" height="2160" loading="lazy" decoding="async">
+                            <span class="viewer-affordance">Enlarge &amp; zoom <span aria-hidden="true">&#8599;</span></span>
+                        </span>
                     </button>
-                    <p class="text-xs text-gray-500 mt-2">
-                        Architecture-level representation of the current MDX-1 design. Diagram labels indicate architectural scope and development state; they do not imply full-system physical hardware implementation.
-                    </p>
-                </div>
+                    <figcaption class="figure__cap"><span class="figure__num">Figure&nbsp;1</span> &mdash; Architecture-level representation of the current MDX-1 design. Diagram labels indicate architectural scope and development state; they do not imply full-system physical hardware implementation.</figcaption>
+                </figure>
+
+                <h3 class="sec__sub">Vivado implementation views</h3>
+
+                <figure class="figure figure--device">
+                    <button type="button" class="figure__frame" data-viewer-src="/assets/mdx/mdx-vivado-device-floorplan.png" data-viewer-zoom="true" data-viewer-alt="Vivado device view with highlighted placement structures in the lower region" data-viewer-caption="Vivado device/floorplan overview, with highlighted structures concentrated in the lower device region.">
+                        <span class="viewer-thumbnail-frame">
+                            <img src="/assets/mdx/mdx-vivado-device-floorplan.png" alt="Vivado device view with highlighted placement structures in the lower region" width="902" height="890" loading="lazy" decoding="async">
+                            <span class="viewer-affordance">Enlarge &amp; zoom <span aria-hidden="true">&#8599;</span></span>
+                        </span>
+                    </button>
+                    <figcaption class="figure__cap"><span class="figure__num">Figure&nbsp;2</span> &mdash; Vivado device/floorplan overview, with highlighted structures concentrated in the lower device region.</figcaption>
+                </figure>
+
+                <figure class="figure figure--logic">
+                    <button type="button" class="figure__frame" data-viewer-src="/assets/mdx/mdx-vivado-slice-logic.png" data-viewer-zoom="true" data-viewer-alt="Vivado SLICE_X18Y25 view with highlighted local logic elements and connections" data-viewer-caption="Vivado local slice view showing logic elements and connections within SLICE_X18Y25.">
+                        <span class="viewer-thumbnail-frame">
+                            <img src="/assets/mdx/mdx-vivado-slice-logic.png" alt="Vivado SLICE_X18Y25 view with highlighted local logic elements and connections" width="1867" height="892" loading="lazy" decoding="async">
+                            <span class="viewer-affordance">Enlarge &amp; zoom <span aria-hidden="true">&#8599;</span></span>
+                        </span>
+                    </button>
+                    <figcaption class="figure__cap"><span class="figure__num">Figure&nbsp;3</span> &mdash; Vivado local slice view showing logic elements and connections within SLICE_X18Y25.</figcaption>
+                </figure>
+                <p class="footnote">These images show Vivado implementation artifacts. FPGA demonstration and measured hardware performance remain future stages in the roadmap below.</p>
             </section>
 
-            <!-- Correctness-First Design -->
-            <section id="correctness-first" class="reveal">
-                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">Correctness-First Design</h2>
-                <div class="prose prose-gray max-w-none space-y-4 text-gray-700">
+            <!-- 04 Correctness-First Design -->
+            <section class="sec" id="correctness-first" aria-labelledby="h-correctness">
+                <div class="sec__head">
+                    <span class="sec__num" aria-hidden="true">04</span>
+                    <h2 class="sec__title" id="h-correctness">Correctness-First Design</h2>
+                </div>
+                <div class="prose-col">
                     <p>The MDX development methodology relies strictly on a correctness-first paradigm. In hardware accelerator design for scientific computing, silent numerical errors or precision drift can render long-running simulations completely invalid. Therefore, the architecture is being developed with absolute priority on deterministic numerical correctness over speculative performance optimizations.</p>
                     <p>Each currently modeled correctness domain, from interaction accounting to periodic geometry and lifecycle behavior, is defined through explicit contracts and checked against executable reference models.</p>
                 </div>
             </section>
 
-            <!-- Reference-Model Progression -->
-            <section id="reference-progression" class="reveal">
-                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">Reference-Model Progression (v0.1 &ndash; v0.12)</h2>
-                <p class="text-sm text-gray-700 mb-6">The architectural specifications have evolved systematically through version 0.12, establishing a verified baseline through successive conceptual stages:</p>
-                <div class="grid gap-4">
-                    <div class="card p-4">
-                        <h4 class="font-semibold text-gray-900 mb-1">Architectural accounting and lifecycle</h4>
-                        <p class="text-sm text-gray-600">Established the foundational state machine and lifecycle tracking for particle assignments and task distribution across the fabric.</p>
-                    </div>
-                    <div class="card p-4">
-                        <h4 class="font-semibold text-gray-900 mb-1">Numerical pair/workload reference</h4>
-                        <p class="text-sm text-gray-600">Defined deterministic evaluation logic for pairwise interactions, establishing the numerical baseline for force and energy calculations.</p>
-                    </div>
-                    <div class="card p-4">
-                        <h4 class="font-semibold text-gray-900 mb-1">Spatial and periodic geometry</h4>
-                        <p class="text-sm text-gray-600">Integrated minimum-image conventions and spatial mapping rules required for accurately handling periodic boundary conditions in dense molecular systems.</p>
-                    </div>
-                    <div class="card p-4">
-                        <h4 class="font-semibold text-gray-900 mb-1">Verlet-list reuse and periodic workload integration</h4>
-                        <p class="text-sm text-gray-600">Introduced correctness models for stored-list construction, conservative reuse/rebuild eligibility, and validated periodic workload composition.</p>
-                    </div>
-                    <div class="card p-4">
-                        <h4 class="font-semibold text-gray-900 mb-1">Explicit lifecycle and configuration-transition orchestration</h4>
-                        <p class="text-sm text-gray-600">Adds explicit caller-controlled periodic configuration transition with mandatory fresh rebuild and optional immediate evaluation, while preserving earlier lifecycle boundaries.</p>
-                    </div>
+            <!-- 05 Reference-Model Progression -->
+            <section class="sec" id="reference-progression" aria-labelledby="h-reference">
+                <div class="sec__head">
+                    <span class="sec__num" aria-hidden="true">05</span>
+                    <h2 class="sec__title" id="h-reference">Reference-Model Progression (v0.1 &ndash; v0.12)</h2>
                 </div>
+                <div class="prose-col">
+                    <p>The architectural specifications have evolved systematically through version 0.12, establishing a verified baseline through successive conceptual stages:</p>
+                </div>
+
+                <ul class="spec-list reference-track" style="margin-top:1.5rem">
+                    <li class="spec">
+                        <h3 class="spec__name">Architectural accounting and lifecycle</h3>
+                        <p class="spec__body">Established the foundational state machine and lifecycle tracking for particle assignments and task distribution across the fabric.</p>
+                    </li>
+                    <li class="spec">
+                        <h3 class="spec__name">Numerical pair/workload reference</h3>
+                        <p class="spec__body">Defined deterministic evaluation logic for pairwise interactions, establishing the numerical baseline for force and energy calculations.</p>
+                    </li>
+                    <li class="spec">
+                        <h3 class="spec__name">Spatial and periodic geometry</h3>
+                        <p class="spec__body">Integrated minimum-image conventions and spatial mapping rules required for accurately handling periodic boundary conditions in dense molecular systems.</p>
+                    </li>
+                    <li class="spec">
+                        <h3 class="spec__name">Verlet-list reuse and periodic workload integration</h3>
+                        <p class="spec__body">Introduced correctness models for stored-list construction, conservative reuse/rebuild eligibility, and validated periodic workload composition.</p>
+                    </li>
+                    <li class="spec">
+                        <h3 class="spec__name">Explicit lifecycle and configuration-transition orchestration</h3>
+                        <p class="spec__body">Adds explicit caller-controlled periodic configuration transition with mandatory fresh rebuild and optional immediate evaluation, while preserving earlier lifecycle boundaries.</p>
+                    </li>
+                </ul>
             </section>
 
-            <!-- Validation Strategy -->
-            <section id="validation-strategy" class="reveal">
-                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">Validation Strategy</h2>
-                <div class="prose prose-gray max-w-none space-y-4 text-gray-700">
+            <!-- 06 Validation Strategy -->
+            <section class="sec" id="validation-strategy" aria-labelledby="h-validation">
+                <div class="sec__head">
+                    <span class="sec__num" aria-hidden="true">06</span>
+                    <h2 class="sec__title" id="h-validation">Validation Strategy</h2>
+                </div>
+                <div class="prose-col">
                     <p>The validation strategy uses executable golden/reference models as software correctness oracles for the behaviors defined by each specification. They provide deterministic comparison targets for future implementation work, but they are not timing models or evidence of physical hardware.</p>
                     <p>Keeping algorithmic correctness contracts separate from future RTL allows later implementations to be checked against explicit reference behavior without implying that RTL or silicon has already been validated.</p>
                 </div>
             </section>
 
-            <!-- RTL Verification Evidence -->
-            <section id="rtl-verification-evidence" class="reveal">
-                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">RTL Verification Evidence</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-                    <div class="border border-gray-200 rounded p-4 shadow-sm text-sm">
-                        <h4 class="font-semibold text-gray-900 mb-2">Banked force accumulator</h4>
-                        <ul class="list-none space-y-1 text-gray-700">
-                            <li>• RTL simulation PASS</li>
-                            <li>• 110,089 total accepted</li>
-                            <li>• 0 errors</li>
-                        </ul>
-                    </div>
-                    <div class="border border-gray-200 rounded p-4 shadow-sm text-sm">
-                        <h4 class="font-semibold text-gray-900 mb-2">Validation-workload replay</h4>
-                        <ul class="list-none space-y-1 text-gray-700">
-                            <li>• Verilator PASS</li>
-                            <li>• 238,528 accepted updates</li>
-                            <li>• 0 force/status/epoch mismatches</li>
-                            <li>• 0 N3L/protocol errors</li>
-                        </ul>
-                    </div>
-                    <div class="border border-gray-200 rounded p-4 shadow-sm text-sm">
-                        <h4 class="font-semibold text-gray-900 mb-2">Writeback conservation</h4>
-                        <ul class="list-none space-y-1 text-gray-700">
-                            <li>• 67,957 enqueued</li>
-                            <li>• 67,957 committed</li>
-                        </ul>
-                    </div>
-                    <div class="border border-gray-200 rounded p-4 shadow-sm text-sm">
-                        <h4 class="font-semibold text-gray-900 mb-2">Real-workload mapping</h4>
-                        <ul class="list-none space-y-1 text-gray-700">
-                            <li>• Phase 8J.3B</li>
-                            <li>• GROMACS-derived state &rarr; deterministic MDX mapping</li>
-                            <li>• 16 dense sources / 0 gaps / 0 duplicates</li>
-                            <li class="text-xs text-gray-500 mt-2 font-medium uppercase tracking-wider">Mapping evidence, not RTL replay</li>
-                        </ul>
-                    </div>
+            <!-- 07 RTL Verification Evidence -->
+            <section class="sec" id="rtl-verification-evidence" aria-labelledby="h-rtl">
+                <div class="sec__head">
+                    <span class="sec__num" aria-hidden="true">07</span>
+                    <h2 class="sec__title" id="h-rtl">RTL Verification Evidence</h2>
                 </div>
-                <p class="text-xs text-gray-500 italic">
-                    Verification results are simulation/testbench evidence and are not measured physical-hardware performance.
-                </p>
+
+                <ul class="spec-list">
+                    <li class="spec">
+                        <h3 class="spec__name">Banked force accumulator</h3>
+                        <ul class="spec__data">
+                            <li>RTL simulation PASS</li>
+                            <li><span class="num">110,089</span> total accepted</li>
+                            <li><span class="num">0</span> errors</li>
+                        </ul>
+                    </li>
+                    <li class="spec">
+                        <h3 class="spec__name">Validation-workload replay</h3>
+                        <ul class="spec__data">
+                            <li>Verilator PASS</li>
+                            <li><span class="num">238,528</span> accepted updates</li>
+                            <li><span class="num">0</span> force/status/epoch mismatches</li>
+                            <li><span class="num">0</span> N3L/protocol errors</li>
+                        </ul>
+                    </li>
+                    <li class="spec">
+                        <h3 class="spec__name">Writeback conservation</h3>
+                        <ul class="spec__data">
+                            <li><span class="num">67,957</span> enqueued</li>
+                            <li><span class="num">67,957</span> committed</li>
+                        </ul>
+                    </li>
+                    <li class="spec">
+                        <h3 class="spec__name">Real-workload mapping</h3>
+                        <ul class="spec__data">
+                            <li>Phase 8J.3B</li>
+                            <li>GROMACS-derived state &rarr; deterministic MDX mapping</li>
+                            <li><span class="num">16</span> dense sources / <span class="num">0</span> gaps / <span class="num">0</span> duplicates</li>
+                        </ul>
+                        <p class="footnote">Mapping evidence, not RTL replay</p>
+                    </li>
+                </ul>
+
+                <p class="footnote">Verification results are simulation/testbench evidence and are not measured physical-hardware performance.</p>
             </section>
 
-            <!-- Current Boundaries -->
-            <section id="current-boundaries" class="reveal">
-                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">Current Boundaries</h2>
-                <div class="bg-gray-50 border border-gray-200 rounded-sm p-5 text-sm text-gray-700 shadow-sm">
-                    <h4 class="font-semibold text-gray-900 mb-2">Evidence Boundary Constraints</h4>
-                    <p class="mb-3">The MDX project adheres to strict evidence-based reporting. The following boundaries define the current state of the architecture as of specification v0.12:</p>
-                    <ul class="list-disc pl-5 space-y-1">
+            <!-- 08 Current Boundaries -->
+            <section class="sec" id="current-boundaries" aria-labelledby="h-boundaries">
+                <div class="sec__head">
+                    <span class="sec__num" aria-hidden="true">08</span>
+                    <h2 class="sec__title" id="h-boundaries">Current Boundaries</h2>
+                </div>
+
+                <div class="note note--scope">
+                    <p class="note__title">Evidence Boundary Constraints</p>
+                    <p>The MDX project adheres to strict evidence-based reporting. The following boundaries define the current state of the architecture as of specification v0.12:</p>
+                    <ul class="ul-tight" style="margin-top:0.75rem">
                         <li><strong>Silicon Status:</strong> Pre-silicon. The project is in the architectural definition and reference modeling phase.</li>
                         <li><strong>RTL Scope:</strong> Subsystem and integrated-path RTL verification evidence is available; full MDX-1 real-workload RTL integration remains in progress.</li>
                         <li><strong>Performance:</strong> There is no validated hardware performance model.</li>
@@ -332,211 +387,126 @@
                 </div>
             </section>
 
-            <!-- Engineering Roadmap -->
-            <section id="engineering-roadmap" class="reveal">
-                <h2 class="text-2xl font-semibold border-b border-subtle pb-2 mb-6">Engineering Roadmap</h2>
-                <div class="space-y-4">
-                    <div class="flex items-center gap-4">
-                        <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm shrink-0">1</div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">Reference Specifications &amp; Golden Models</h4>
-                            <p class="text-xs text-blue-600 font-medium">Established</p>
-                        </div>
-                    </div>
-                    <div class="ml-4 w-0.5 h-6 bg-blue-200"></div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm shrink-0">2</div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">Force Arithmetic RTL</h4>
-                            <p class="text-xs text-blue-600 font-medium">Verified blocks</p>
-                        </div>
-                    </div>
-                    <div class="ml-4 w-0.5 h-6 bg-blue-200"></div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm shrink-0">3</div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">Banked Force Accumulator</h4>
-                            <p class="text-xs text-blue-600 font-medium">RTL simulation verified</p>
-                        </div>
-                    </div>
-                    <div class="ml-4 w-0.5 h-6 bg-blue-200"></div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm shrink-0">4</div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">Validation-Workload Replay</h4>
-                            <p class="text-xs text-blue-600 font-medium">Verilator PASS</p>
-                        </div>
-                    </div>
-                    <div class="ml-4 w-0.5 h-6 bg-blue-200"></div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm shrink-0">5</div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">Tile / Cross-Tile Fabric</h4>
-                            <p class="text-xs text-blue-600 font-medium">Prototype &amp; integration evidence</p>
-                        </div>
-                    </div>
-                    <div class="ml-4 w-0.5 h-6 bg-blue-200"></div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm shrink-0">6</div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">GROMACS-Derived Workload Mapping</h4>
-                            <p class="text-xs text-blue-600 font-medium">Phase 8J.3B established</p>
-                        </div>
-                    </div>
-                    <div class="ml-4 w-0.5 h-6 bg-gray-200"></div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-8 h-8 rounded-full border-2 border-blue-500 bg-white text-blue-700 flex items-center justify-center font-bold text-sm shrink-0">7</div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">Real-Workload RTL Replay</h4>
-                            <p class="text-xs text-gray-500 font-medium">In progress</p>
-                        </div>
-                    </div>
-                    <div class="ml-4 w-0.5 h-6 bg-gray-200"></div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-8 h-8 rounded-full bg-gray-100 text-gray-500 flex items-center justify-center font-bold text-sm shrink-0">8</div>
-                        <div>
-                            <h4 class="font-semibold text-gray-500">FPGA Demonstration</h4>
-                            <p class="text-xs text-gray-400">Future</p>
-                        </div>
-                    </div>
-                    <div class="ml-4 w-0.5 h-6 bg-gray-200"></div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-8 h-8 rounded-full bg-gray-100 text-gray-500 flex items-center justify-center font-bold text-sm shrink-0">9</div>
-                        <div>
-                            <h4 class="font-semibold text-gray-500">Measured Hardware Performance / Energy</h4>
-                            <p class="text-xs text-gray-400">Future</p>
-                        </div>
-                    </div>
-                    <div class="ml-4 w-0.5 h-6 bg-gray-200"></div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-8 h-8 rounded-full bg-gray-100 text-gray-500 flex items-center justify-center font-bold text-sm shrink-0">10</div>
-                        <div>
-                            <h4 class="font-semibold text-gray-500">ASIC Feasibility</h4>
-                            <p class="text-xs text-gray-400">Future</p>
-                        </div>
-                    </div>
+            <!-- 09 Engineering Roadmap -->
+            <section class="sec" id="engineering-roadmap" aria-labelledby="h-roadmap">
+                <div class="sec__head">
+                    <span class="sec__num" aria-hidden="true">09</span>
+                    <h2 class="sec__title" id="h-roadmap">Engineering Roadmap</h2>
                 </div>
+
+                <ol class="stage-list">
+                    <li class="stage stage--established">
+                        <span class="stage__num" aria-hidden="true">01</span>
+                        <div>
+                            <p class="stage__name">Reference Specifications &amp; Golden Models</p>
+                            <p class="stage__state">Established</p>
+                        </div>
+                    </li>
+                    <li class="stage stage--verified">
+                        <span class="stage__num" aria-hidden="true">02</span>
+                        <div>
+                            <p class="stage__name">Force Arithmetic RTL</p>
+                            <p class="stage__state">Verified blocks</p>
+                        </div>
+                    </li>
+                    <li class="stage stage--verified">
+                        <span class="stage__num" aria-hidden="true">03</span>
+                        <div>
+                            <p class="stage__name">Banked Force Accumulator</p>
+                            <p class="stage__state">RTL simulation verified</p>
+                        </div>
+                    </li>
+                    <li class="stage stage--verified">
+                        <span class="stage__num" aria-hidden="true">04</span>
+                        <div>
+                            <p class="stage__name">Validation-Workload Replay</p>
+                            <p class="stage__state">Verilator PASS</p>
+                        </div>
+                    </li>
+                    <li class="stage stage--prototype">
+                        <span class="stage__num" aria-hidden="true">05</span>
+                        <div>
+                            <p class="stage__name">Tile / Cross-Tile Fabric</p>
+                            <p class="stage__state">Prototype &amp; integration evidence</p>
+                        </div>
+                    </li>
+                    <li class="stage stage--established">
+                        <span class="stage__num" aria-hidden="true">06</span>
+                        <div>
+                            <p class="stage__name">GROMACS-Derived Workload Mapping</p>
+                            <p class="stage__state">Phase 8J.3B established</p>
+                        </div>
+                    </li>
+                    <li class="stage stage--current">
+                        <span class="stage__num" aria-hidden="true">07</span>
+                        <div>
+                            <p class="stage__name">Real-Workload RTL Replay</p>
+                            <p class="stage__state">In progress</p>
+                        </div>
+                    </li>
+                    <li class="stage stage--future">
+                        <span class="stage__num" aria-hidden="true">08</span>
+                        <div>
+                            <p class="stage__name">FPGA Demonstration</p>
+                            <p class="stage__state">Future</p>
+                        </div>
+                    </li>
+                    <li class="stage stage--future">
+                        <span class="stage__num" aria-hidden="true">09</span>
+                        <div>
+                            <p class="stage__name">Measured Hardware Performance / Energy</p>
+                            <p class="stage__state">Future</p>
+                        </div>
+                    </li>
+                    <li class="stage stage--future">
+                        <span class="stage__num" aria-hidden="true">10</span>
+                        <div>
+                            <p class="stage__name">ASIC Feasibility</p>
+                            <p class="stage__state">Future</p>
+                        </div>
+                    </li>
+                </ol>
             </section>
 
         </main>
 
-        <!-- Right Metadata Panel -->
-        <aside class="w-full xl:w-64 shrink-0 mt-12 xl:mt-0 xl:sticky xl:top-24 xl:self-start">
-            <div class="bg-white border border-gray-200/70 rounded-xl p-6 shadow-[0_2px_8px_rgba(0,0,0,0.02)] space-y-6">
-
-                <div>
-                    <h4 class="text-[11px] font-semibold uppercase tracking-wider text-gray-500 mb-4 px-1">Research Status</h4>
-                    <div class="flex items-center gap-2 px-1">
-                        <span class="w-2 h-2 rounded-full bg-blue-500"></span>
-                        <span class="text-[13px] font-medium text-gray-900">Pre-silicon</span>
-                    </div>
+        <aside class="dossier__aside" aria-label="Project metadata">
+            <div class="rail">
+                <div class="rail__group">
+                    <p class="rail__label">Research Status</p>
+                    <p class="status">Pre-silicon</p>
                 </div>
 
-                <div class="space-y-3 px-1">
-                    <div class="flex flex-col">
-                        <span class="text-[10px] uppercase tracking-wider text-gray-500 mb-0.5">Baseline</span>
-                        <span class="text-[13px] text-gray-900">MDX-1, 16 tiles</span>
-                    </div>
-                    <div class="flex flex-col">
-                        <span class="text-[10px] uppercase tracking-wider text-gray-500 mb-0.5">Reference Models</span>
-                        <span class="text-[13px] text-gray-900">v0.1 &ndash; v0.12</span>
-                    </div>
-                    <div class="flex flex-col">
-                        <span class="text-[10px] uppercase tracking-wider text-gray-500 mb-0.5">RTL Verification</span>
-                        <span class="text-[13px] text-gray-900 leading-tight">Subsystem and integrated-path verification evidence available.<br><span class="text-xs text-gray-500 mt-1 block">Full MDX-1 real-workload RTL integration remains in progress.</span></span>
-                    </div>
-                    <div class="flex flex-col">
-                        <span class="text-[10px] uppercase tracking-wider text-gray-500 mb-0.5">Hardware Performance</span>
-                        <span class="text-[13px] text-gray-900">Not yet measured</span>
-                    </div>
+                <div class="rail__group">
+                    <dl class="rail__list">
+                        <dt>Baseline</dt>
+                        <dd>MDX-1, 16 tiles</dd>
+                        <dt>Reference Models</dt>
+                        <dd>v0.1 &ndash; v0.12</dd>
+                        <dt>RTL Verification</dt>
+                        <dd>Subsystem and integrated-path verification evidence available.
+                            <span class="rail__note">Full MDX-1 real-workload RTL integration remains in progress.</span>
+                        </dd>
+                        <dt>Hardware Performance</dt>
+                        <dd>Not yet measured</dd>
+                    </dl>
                 </div>
             </div>
         </aside>
 
     </div>
 
-    <!-- Footer -->
-    <footer class="border-t border-subtle mt-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-600">
-            <p>&copy; 2026 Selman Ali Dokumacı. All rights reserved.</p>
-            <div class="flex items-center gap-6">
-                <a href="https://www.linkedin.com/in/selman-ali-dokumac%C4%B1-4a6ba630a/" target="_blank" rel="noopener noreferrer" class="hover:text-gray-900 transition-colors">LinkedIn</a>
-                <a href="https://github.com/s3lm4n" target="_blank" rel="noopener noreferrer" class="hover:text-gray-900 transition-colors">GitHub</a>
+    <footer class="site-foot">
+        <div class="site-foot__inner">
+            <p>&copy; <span id="year">2026</span> Selman Ali Dokumacı. All rights reserved.</p>
+            <div class="site-foot__links">
+                <a href="/">Home</a>
+                <a href="https://www.linkedin.com/in/selman-ali-dokumac%C4%B1-4a6ba630a/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/s3lm4n" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script src="/assets/js/site-ui.js" defer></script>
-    <script>
-        // Scroll reveal animation observer
-        const revealElements = document.querySelectorAll('.reveal');
-        const revealObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
-
-        revealElements.forEach(el => revealObserver.observe(el));
-
-        // Smooth in-page TOC navigation without URL hashes
-        const tocLinks = document.querySelectorAll('.toc-link');
-        const navHeight = 80;
-        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-        tocLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const targetId = link.dataset.pageScrollTarget;
-                const targetEl = document.getElementById(targetId);
-                if (targetEl) {
-                    const targetTop = targetEl.getBoundingClientRect().top + window.pageYOffset - navHeight;
-                    window.scrollTo({
-                        top: Math.max(0, targetTop),
-                        behavior: prefersReducedMotion ? 'auto' : 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Scroll spy for sidebar navigation
-        const sections = [];
-        tocLinks.forEach(link => {
-            const id = link.dataset.pageScrollTarget;
-            const section = document.getElementById(id);
-            if (section) sections.push({ id, el: section, link });
-        });
-
-        function setActiveLink(activeMatch) {
-            tocLinks.forEach(l => {
-                const isActive = activeMatch && l === activeMatch.link;
-                l.classList.toggle('active', isActive);
-                if (isActive) {
-                    l.setAttribute('aria-current', 'location');
-                } else {
-                    l.removeAttribute('aria-current');
-                }
-            });
-        }
-
-        const spyObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const match = sections.find(s => s.id === entry.target.id);
-                    if (match) setActiveLink(match);
-                }
-            });
-        }, { threshold: 0.1, rootMargin: '-80px 0px -60% 0px' });
-
-        sections.forEach(s => spyObserver.observe(s.el));
-
-        // Setup initial active state if loaded at top
-        if (window.scrollY === 0 && sections.length > 0) {
-            setActiveLink(sections[0]);
-        }
-    </script>
 </body>
 </html>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mekanistik Kanıt Matrisi - MACS Araştırma Dokümantasyonu</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <meta name="description" content="MACS için hesaplamalı iddiaları yapısal ve dinamik kanıtlarla ilişkilendiren matris.">
     <meta property="og:title" content="Mekanistik Kanıt Matrisi - MACS Araştırma Dokümantasyonu">
     <meta property="og:description" content="MACS için hesaplamalı iddiaları yapısal ve dinamik kanıtlarla ilişkilendiren matris.">
@@ -18,7 +19,6 @@
     <link rel="alternate" hreflang="tr" href="https://selmandokumaci.com/tr/macs-evidence-matrix">
     <link rel="alternate" hreflang="x-default" href="https://selmandokumaci.com/macs-evidence-matrix">
 
-    <!-- Schema.org JSON-LD BreadcrumbList -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -27,123 +27,122 @@
             {
                 "@type": "ListItem",
                 "position": 1,
-                "name": "Ana Sayfa",
-                "item": "https://selmandokumaci.com/tr/"
+                "name": "Home",
+                "item": "https://selmandokumaci.com/"
             },
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Araştırma",
-                "item": "https://selmandokumaci.com/tr/"
+                "name": "Research",
+                "item": "https://selmandokumaci.com/"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
                 "name": "MACS",
-                "item": "https://selmandokumaci.com/tr/macs-project"
+                "item": "https://selmandokumaci.com/macs-project"
             },
             {
                 "@type": "ListItem",
                 "position": 4,
-                "name": "Kanıt Matrisi",
+                "name": "Evidence Matrix",
                 "item": "https://selmandokumaci.com/tr/macs-evidence-matrix"
             }
         ]
     }
     </script>
 
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+
     <link href="/assets/css/style.css" rel="stylesheet">
 </head>
-<body class="antialiased selection:bg-blue-100 selection:text-blue-900">
+<body class="report-page">
+    <a href="#main-content" class="skip-link">İçeriğe atla</a>
 
-    <header data-smart-header class="site-header sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200/70 h-14 flex items-center transition-all">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-between">
-            <a href="/tr/macs-project" class="px-3 py-1.5 rounded-full text-sm font-medium text-secondary hover:text-gray-900 hover:bg-gray-100/70 flex items-center transition-colors">
-                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
-                MACS'a Dön
+    <header class="masthead">
+        <div class="masthead__inner">
+            <a href="/tr/macs-project" class="backlink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7 7-7m-7 7h18"/></svg>
+                MACS
             </a>
-            <div class="flex items-center space-x-2">
-                <div class="px-3 py-1.5 text-[11px] font-semibold tracking-widest uppercase text-gray-900 hidden lg:block">Mekanistik Kanıt Matrisi</div>
-                <div class="h-4 w-px bg-gray-200 hidden lg:block mx-2"></div>
-                <div class="flex items-center bg-gray-50/80 border border-gray-200/70 rounded-full p-0.5 text-[11px] font-semibold tracking-wide">
-                    <a href="/macs-evidence-matrix" class="px-2.5 py-1 text-gray-500 hover:text-gray-900 hover:bg-gray-100/50 rounded-full transition-colors">EN</a>
-                    <span class="px-2.5 py-1 bg-white rounded-full shadow-[0_1px_2px_rgba(0,0,0,0.04)] text-gray-900">TR</span>
-                </div>
+            <div class="masthead__nav">
+                <span class="masthead__context">Kanıt Matrisi</span>
+                <p class="lang">
+                    <a href="/macs-evidence-matrix" class="lang__link" hreflang="en" lang="en">EN</a>
+                    <span class="lang__sep" aria-hidden="true">/</span>
+                    <span class="lang__current" aria-current="true">TR</span>
+                </p>
             </div>
         </div>
     </header>
 
-    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <main class="report" id="main-content" tabindex="-1">
 
-        <!-- Editorial Breadcrumbs -->
         <nav class="research-breadcrumb" aria-label="Ekmek kırıntısı">
             <ol class="research-breadcrumb-list">
-                <li class="research-breadcrumb-item">
-                    <a href="/tr/" class="research-breadcrumb-link">Ana Sayfa</a>
-                </li>
-                <li class="research-breadcrumb-separator" aria-hidden="true">›</li>
-                <li class="research-breadcrumb-item">
-                    <a href="/tr/" class="research-breadcrumb-link">Araştırma</a>
-                </li>
-                <li class="research-breadcrumb-separator" aria-hidden="true">›</li>
-                <li class="research-breadcrumb-item">
-                    <a href="/tr/macs-project" class="research-breadcrumb-link">MACS</a>
-                </li>
-                <li class="research-breadcrumb-separator" aria-hidden="true">›</li>
-                <li class="research-breadcrumb-item">
-                    <span class="research-breadcrumb-current" aria-current="page">Kanıt Matrisi</span>
-                </li>
+                <li><a href="/tr/" class="research-breadcrumb-link">Ana Sayfa</a></li>
+                <li class="research-breadcrumb-separator" aria-hidden="true">/</li>
+                <li><a href="/tr/" class="research-breadcrumb-link">Araştırma</a></li>
+                <li class="research-breadcrumb-separator" aria-hidden="true">/</li>
+                <li><a href="/tr/macs-project" class="research-breadcrumb-link">MACS</a></li>
+                <li class="research-breadcrumb-separator" aria-hidden="true">/</li>
+                <li><span class="research-breadcrumb-current" aria-current="page">Kanıt Matrisi</span></li>
             </ol>
         </nav>
 
-        <!-- Sayfa girişi -->
-        <div class="mb-10 pb-8 border-b border-subtle">
-            <h1 class="text-3xl font-bold text-gray-900 mb-4">Mekanistik Kanıt Matrisi</h1>
-            <div class="flex flex-wrap items-center justify-between gap-4 text-sm text-secondary mb-5">
-                <div class="flex flex-wrap gap-4">
-                    <div><span class="font-semibold">Proje:</span> MACS</div>
-                    <div><span class="font-semibold">Doküman türü:</span> Teknik Dokümantasyon</div>
-                    <div><span class="font-semibold">Yıl:</span> 2026</div>
-                </div>
-                <div class="share-container">
-                    <button type="button" class="share-trigger" aria-haspopup="dialog" aria-expanded="false" data-share-title="MACS Mekanistik Kanıt Matrisi" data-share-url="https://selmandokumaci.com/tr/macs-evidence-matrix">
-                        <svg class="share-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
-                        </svg>
-                        Paylaş
-                    </button>
-                    <div class="share-popover" role="dialog" aria-label="Paylaşım seçenekleri">
-                        <a href="#" class="share-option" data-share-action="linkedin" target="_blank" rel="noopener noreferrer">
-                            <svg class="w-4 h-4 text-[#0a66c2]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.2a1.64 1.64 0 0 0-1.66 1.64 1.63 1.63 0 0 0 1.66 1.63 1.63 1.63 0 0 0 1.65-1.63A1.64 1.64 0 0 0 7.83 6.2Z"/></svg>
-                            <span>LinkedIn</span>
-                        </a>
-                        <a href="#" class="share-option" data-share-action="twitter" target="_blank" rel="noopener noreferrer">
-                            <svg class="w-4 h-4 text-gray-900" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                            <span>X (Twitter)</span>
-                        </a>
-                        <a href="#" class="share-option" data-share-action="email">
-                            <svg class="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                            <span>E-posta</span>
-                        </a>
-                        <button type="button" class="share-option" data-share-action="copy">
-                            <svg class="w-4 h-4 text-gray-700 share-copy-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
-                            <span class="share-copy-text">Bağlantıyı kopyala</span>
-                        </button>
+        <div class="page-head" style="padding-top:0">
+            <p class="eyebrow">MACS Araştırma Dokümantasyonu</p>
+            <h1 class="page-title">Mekanistik Kanıt Matrisi</h1>
+            <div class="byline">
+                <dl class="docmeta">
+                    <div>
+                        <dt class="meta-key">Proje</dt>
+                        <dd class="meta-val">MACS</dd>
                     </div>
-                </div>
+                    <div>
+                        <dt class="meta-key">Doküman türü</dt>
+                        <dd class="meta-val">Teknik Dokümantasyon</dd>
+                    </div>
+                    <div>
+                        <dt class="meta-key">Yıl</dt>
+                        <dd class="meta-val">2026</dd>
+                    </div>
+                </dl>
+                <div class="share-container">
+                        <button type="button" class="share-trigger" aria-haspopup="dialog" aria-expanded="false" data-share-title="MACS Mekanistik Kanıt Matrisi" data-share-url="https://selmandokumaci.com/tr/macs-evidence-matrix">
+                            <svg class="share-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/>
+                            </svg>
+                            Paylaş
+                        </button>
+                        <div class="share-popover" role="dialog" aria-label="Paylaşım seçenekleri">
+                            <a href="#" class="share-option" data-share-action="linkedin" target="_blank" rel="noopener noreferrer">
+                                <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.2a1.64 1.64 0 0 0-1.66 1.64 1.63 1.63 0 0 0 1.66 1.63 1.63 1.63 0 0 0 1.65-1.63A1.64 1.64 0 0 0 7.83 6.2Z"/></svg>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="#" class="share-option" data-share-action="twitter" target="_blank" rel="noopener noreferrer">
+                                <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                                <span>X (Twitter)</span>
+                            </a>
+                            <a href="#" class="share-option" data-share-action="email">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                                <span>E-posta</span>
+                            </a>
+                            <button type="button" class="share-option" data-share-action="copy">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                                <span class="share-copy-text">Bağlantıyı kopyala</span>
+                            </button>
+                        </div>
+                    </div>
             </div>
-            <p class="text-[15px] text-secondary" style="max-width:72ch;line-height:1.65;">
-                Her mekanistik iddiayı yapısal, dinamik, enerjetik, nicel ve belirsizlik kanıtlarıyla ilişkilendirir.
-            </p>
         </div>
 
-        <!-- ══════════════════════════════════════════════
-             M2
-        ══════════════════════════════════════════════ -->
+        <div class="prose-col" style="margin-bottom:0.5rem">
+            <p>Her mekanistik iddiayı yapısal, dinamik, enerjetik, nicel ve belirsizlik kanıtlarıyla ilişkilendirir.</p>
+        </div>
+
         <section class="evidence-record">
             <div class="evidence-record-head">
                 <div class="evidence-record-head-left">
@@ -174,10 +173,6 @@
             <span class="evidence-section-label">Ana Belirsizlik</span>
             <span class="evidence-uncertainty">PROPKA yapıya dayalı ampirik bir tahminleyicidir; temsili kareler tüm popülasyonları tanımlamaz</span>
         </section>
-
-        <!-- ══════════════════════════════════════════════
-             M3
-        ══════════════════════════════════════════════ -->
         <section class="evidence-record">
             <div class="evidence-record-head">
                 <div class="evidence-record-head-left">
@@ -208,10 +203,6 @@
             <span class="evidence-section-label">Ana Belirsizlik</span>
             <span class="evidence-uncertainty">Büyük pKa dağılımı (dispersion); yapısal durum popülasyonları, açık popülasyon analizi veya sabit pH'lı MD gerektirir</span>
         </section>
-
-        <!-- ══════════════════════════════════════════════
-             M4
-        ══════════════════════════════════════════════ -->
         <section class="evidence-record">
             <div class="evidence-record-head">
                 <div class="evidence-record-head-left">
@@ -242,10 +233,6 @@
             <span class="evidence-section-label">Ana Belirsizlik</span>
             <span class="evidence-uncertainty">Her pH koşulu için sadece bir MD trajektorisi; metrik farklılıkları yavaş konformasyonel sürüklenmeyi (drift) içerebilir ve bağımsız kopyalar değildir</span>
         </section>
-
-        <!-- ══════════════════════════════════════════════
-             M5
-        ══════════════════════════════════════════════ -->
         <section class="evidence-record">
             <div class="evidence-record-head">
                 <div class="evidence-record-head-left">
@@ -276,10 +263,6 @@
             <span class="evidence-section-label">Ana Belirsizlik</span>
             <span class="evidence-uncertainty">Ortalama yapı görselleştirmesi yan zincir detayından yoksundur; ANM kaba tanelidir (coarse-grained); PROPKA eşleşmiş titrasyonu doğrudan modellemez</span>
         </section>
-
-        <!-- ══════════════════════════════════════════════
-             M6
-        ══════════════════════════════════════════════ -->
         <section class="evidence-record">
             <div class="evidence-record-head">
                 <div class="evidence-record-head-left">
@@ -311,19 +294,29 @@
             <span class="evidence-uncertainty">Her pH için tek bir MD trajektorisi, korele kareler, konfigürasyonel entropi yok, büyük kareler arası dağılım (dispersion) ve kopya düzeyinde belirsizlik yok; rapor edilen kare bazındaki SEM, bağımsız kopya anlamlılığı olarak yorumlanmamalıdır</span>
         </section>
 
-        <!-- Footer nav -->
-        <div class="mt-12 pt-8 border-t border-subtle flex flex-col sm:flex-row justify-between items-center gap-4">
-            <a href="/tr/macs-project" class="text-accent hover:text-blue-900 font-medium flex items-center transition-colors">
-                &larr; MACS Projesi'ne Dön
-            </a>
-            <div class="flex gap-4 text-sm">
-                <a href="/tr/macs-evidence-summary" class="text-secondary hover:text-gray-900">Kanıt Özeti</a>
-                <a href="/tr/macs-decision-log" class="text-secondary hover:text-gray-900">Karar Günlüğü</a>
-                <a href="/tr/macs-mdp-consistency" class="text-secondary hover:text-gray-900">MDP Tutarlılığı</a>
+
+        <nav class="docnav" aria-label="Doküman gezinmesi">
+            <a href="/tr/macs-project" class="textlink"><span aria-hidden="true">&larr;</span> MACS Projesi'ne Dön</a>
+            <div class="docnav__links">
+                <a href="/tr/macs-evidence-summary">Kanıt Özeti</a>
+                <a href="/tr/macs-decision-log">Karar Günlüğü</a>
+                <a href="/tr/macs-mdp-consistency">MDP Tutarlılığı</a>
             </div>
-        </div>
+        </nav>
 
     </main>
+
+    <footer class="site-foot">
+        <div class="site-foot__inner">
+            <p>&copy; <span id="year">2026</span> Selman Ali Dokumacı. Tüm hakları saklıdır.</p>
+            <div class="site-foot__links">
+                <a href="/tr/">Ana Sayfa</a>
+                <a href="https://www.linkedin.com/in/selman-ali-dokumac%C4%B1-4a6ba630a/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/s3lm4n" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
     <script src="/assets/js/site-ui.js" defer></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,37 +19,19 @@
     <link rel="alternate" hreflang="tr" href="https://selmandokumaci.com/tr/">
     <link rel="alternate" hreflang="x-default" href="https://selmandokumaci.com/">
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
 
-    <!-- Tailwind CSS (Local) -->
     <link href="/assets/css/style.css" rel="stylesheet">
 
-    <!-- Custom Styles -->
-    <style>
-        @media (prefers-reduced-motion: no-preference) {
-            .reveal {
-                opacity: 0;
-                transform: translateY(20px);
-                transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-            }
-            .reveal.active {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
-
-    <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Selman Ali Dokumacı",
         "jobTitle": "Independent Computational Biophysics Researcher",
-        "url": "",
+        "url": "https://selmandokumaci.com/",
         "sameAs": [
             "https://github.com/s3lm4n",
             "https://www.linkedin.com/in/selman-ali-dokumac%C4%B1-4a6ba630a/"
@@ -57,461 +39,306 @@
     }
     </script>
 </head>
-<body class="font-sans text-anthracite bg-white antialiased">
-    <!-- Skip Link -->
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:p-4 focus:bg-white focus:text-accent focus:z-50 focus:top-0 focus:left-0">Skip to content</a>
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
 
-    <!-- Slim Editorial Top Navigation -->
-    <nav data-smart-header class="site-header sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-gray-200/70 h-14 flex items-center transition-all">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex justify-between items-center">
-            <a href="/" class="text-base font-semibold tracking-tight text-anthracite" id="nav-name">Selman Ali Dokumacı</a>
+    <header class="masthead">
+        <div class="masthead__inner">
+            <a href="/" class="masthead__name">Selman Ali Dokumacı</a>
 
-            <!-- Desktop Nav -->
-            <div class="hidden md:flex items-center space-x-2">
-                <a href="/" data-scroll-target="home" class="section-nav-link px-3 py-1.5 rounded-full text-sm font-medium text-secondary hover:text-anthracite hover:bg-gray-100/70 transition-colors">Home</a>
-                <a href="/" data-scroll-target="research" class="section-nav-link px-3 py-1.5 rounded-full text-sm font-medium text-secondary hover:text-anthracite hover:bg-gray-100/70 transition-colors">Research</a>
-                <div class="h-4 w-px bg-gray-200 mx-2"></div>
-                <div class="flex items-center bg-gray-50/80 border border-gray-200/70 rounded-full p-0.5 text-[11px] font-semibold tracking-wide mr-2">
-                    <span class="px-2.5 py-1 bg-white rounded-full shadow-[0_1px_2px_rgba(0,0,0,0.04)] text-gray-900">EN</span>
-                    <a href="/tr/" class="px-2.5 py-1 text-gray-500 hover:text-gray-900 hover:bg-gray-100/50 rounded-full transition-colors">TR</a>
-                </div>
-                <div class="h-4 w-px bg-gray-200 mx-2"></div>
-                <a href="/" data-scroll-target="reports" class="section-nav-link px-3 py-1.5 rounded-full text-sm font-medium text-secondary hover:text-anthracite hover:bg-gray-100/70 transition-colors">Publications & Reports</a>
-                <a href="/" data-scroll-target="inventions" class="section-nav-link px-3 py-1.5 rounded-full text-sm font-medium text-secondary hover:text-anthracite hover:bg-gray-100/70 transition-colors">Inventions</a>
-                <a href="/" data-scroll-target="about" class="section-nav-link px-3 py-1.5 rounded-full text-sm font-medium text-secondary hover:text-anthracite hover:bg-gray-100/70 transition-colors">About</a>
-                <a href="/" data-scroll-target="contact" class="section-nav-link px-3 py-1.5 rounded-full text-sm font-medium text-secondary hover:text-anthracite hover:bg-gray-100/70 transition-colors">Contact</a>
-            </div>
+            <nav class="masthead__nav masthead__nav--primary" aria-label="Main">
+                <a href="/#research" data-scroll-target="research" class="navlink">Research</a>
+                <a href="/#reports" data-scroll-target="reports" class="navlink">Reports</a>
+                <a href="/#inventions" data-scroll-target="inventions" class="navlink">Inventions</a>
+                <a href="/#about" data-scroll-target="about" class="navlink">About</a>
+                <a href="/#contact" data-scroll-target="contact" class="navlink">Contact</a>
+                <p class="lang">
+                    <span class="lang__current" aria-current="true">EN</span>
+                    <span class="lang__sep" aria-hidden="true">/</span>
+                    <a href="/tr/" class="lang__link" hreflang="tr" lang="tr">TR</a>
+                </p>
+            </nav>
 
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="md:hidden text-secondary hover:text-anthracite focus:outline-none" aria-label="Menu">
-                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path stroke-linecap="square" stroke-linejoin="miter" d="M4 6h16M4 12h16M4 18h16"/>
+            <button type="button" id="nav-toggle" class="masthead__toggle" aria-expanded="false" aria-controls="nav-drawer" aria-label="Menu">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                    <path d="M4 7h16M4 12h16M4 17h16"/>
                 </svg>
             </button>
         </div>
+    </header>
+
+    <nav id="nav-drawer" class="navdrawer" aria-label="Mobile navigation">
+        <div class="navdrawer__inner">
+            <a href="/#research" data-scroll-target="research" class="navlink">Research</a>
+            <a href="/#reports" data-scroll-target="reports" class="navlink">Reports</a>
+            <a href="/#inventions" data-scroll-target="inventions" class="navlink">Inventions</a>
+            <a href="/#about" data-scroll-target="about" class="navlink">About</a>
+            <a href="/#contact" data-scroll-target="contact" class="navlink">Contact</a>
+            <p class="lang navdrawer__lang">
+                <span class="lang__current" aria-current="true">EN</span>
+                <span class="lang__sep" aria-hidden="true">/</span>
+                <a href="/tr/" class="lang__link" hreflang="tr" lang="tr">TR</a>
+            </p>
+        </div>
     </nav>
 
-    <!-- Mobile Menu Dropdown -->
-    <div id="mobile-menu" class="hidden md:hidden fixed w-[calc(100%-2rem)] left-4 top-16 z-30 bg-white/95 backdrop-blur-md border border-gray-200/70 rounded-xl shadow-[0_4px_24px_rgba(0,0,0,0.04)] overflow-hidden">
-        <div class="px-3 py-4 space-y-1">
-            <a href="/" data-scroll-target="home" class="section-nav-link block px-4 py-2.5 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100/70 rounded-2xl">Home</a>
-            <a href="/" data-scroll-target="research" class="section-nav-link block px-4 py-2.5 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100/70 rounded-2xl">Research</a>
-            <a href="/" data-scroll-target="reports" class="section-nav-link block px-4 py-2.5 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100/70 rounded-2xl">Publications & Reports</a>
-            <a href="/" data-scroll-target="inventions" class="section-nav-link block px-4 py-2.5 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100/70 rounded-2xl">Inventions</a>
-            <a href="/" data-scroll-target="about" class="section-nav-link block px-4 py-2.5 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100/70 rounded-2xl">About</a>
-            <a href="/" data-scroll-target="contact" class="section-nav-link block px-4 py-2.5 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100/70 rounded-2xl">Contact</a>
-            <div class="border-t border-gray-200/70 mt-3 pt-3 px-4">
-                <div class="inline-flex items-center bg-gray-50/80 border border-gray-200/70 rounded-full p-0.5 text-[11px] font-semibold tracking-wide">
-                    <span class="px-3 py-1 bg-white rounded-full shadow-[0_1px_2px_rgba(0,0,0,0.04)] text-gray-900">EN</span>
-                    <a href="/tr/" class="px-3 py-1 text-gray-500 hover:text-gray-900 hover:bg-gray-100/50 rounded-full transition-colors">TR</a>
-                </div>
+    <main id="main-content" tabindex="-1">
+
+        <!-- Researcher identity -->
+        <div class="wrap">
+            <div class="page-head" id="home">
+                <h1 class="identity__name">Selman Ali Dokumacı</h1>
+                <p class="identity__role">Independent Researcher</p>
+                <p class="identity__fields">
+                    Computational Biophysics<span class="sep" aria-hidden="true">·</span>Molecular Engineering<span class="sep" aria-hidden="true">·</span>Scientific Computing
+                </p>
             </div>
         </div>
-    </div>
 
-    <main id="main-content">
-        <!-- Hero Section -->
-        <section id="home" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-28">
-            <div class="grid lg:grid-cols-12 gap-12 items-center">
-                <!-- Left -->
-                <div class="lg:col-span-7 order-2 lg:order-1">
-                    <p class="text-xs font-semibold tracking-wider uppercase text-accent mb-4">Computational Biophysics & Therapeutic Design</p>
-                    <h1 class="text-4xl md:text-5xl lg:text-[3.5rem] font-bold tracking-tight text-anthracite leading-[1.1] mb-6">Independent research in computational biophysics and condition-responsive therapeutic design.</h1>
-                    <p class="text-lg text-secondary mb-10 max-w-xl leading-relaxed">Designing intelligent biological systems through rigorous multi-scale simulation and physical chemistry principles — focusing on therapeutics that dynamically adapt to disease microenvironments.</p>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="/macs-project" class="bg-anthracite text-white px-6 py-3 font-medium rounded-sm hover:bg-gray-800 transition-colors">Explore research</a>
+        <div class="wrap">
+
+            <!-- 01 Introduction -->
+            <section class="sec" id="introduction" aria-labelledby="introduction-title">
+                <div class="sec__head">
+                    <span class="sec__num" aria-hidden="true">01</span>
+                    <h2 class="sec__title" id="introduction-title">Introduction</h2>
+                </div>
+                <div class="prose-col">
+                    <p class="lede">Independent researcher focusing on computational biophysics and molecular engineering.</p>
+                    <p>Current work centers on designing condition-responsive protein systems using atomistic simulation, elastic network analysis, and thermodynamic modeling.</p>
+                </div>
+            </section>
+
+            <!-- 02 Selected Research -->
+            <section class="sec" id="research" aria-labelledby="research-title">
+                <div class="sec__head">
+                    <span class="sec__num" aria-hidden="true">02</span>
+                    <h2 class="sec__title" id="research-title">Selected Research</h2>
+                </div>
+
+                <div class="entry-list">
+
+                    <article class="entry">
+                        <a class="entry__figure entry__figure--macs" href="/macs-project" tabindex="-1" aria-hidden="true">
+                            <img src="/assets/macs/overlay.png" alt="" width="2600" height="2000" loading="lazy" decoding="async">
+                        </a>
+                        <div class="entry__body">
+                            <p class="entry__field">Condition-Responsive Therapeutic</p>
+                            <h3 class="entry__title"><a href="/macs-project">MACS: Modular Activated Cancer Suppressor</a></h3>
+                            <p class="entry__expanded">Single-mRNA-Encoded Multi-Domain Protein System with Acidic Microenvironment-Responsive Logic Gating</p>
+                            <dl class="entry__meta">
+                                <div>
+                                    <dt>Field</dt>
+                                    <dd class="meta-val">Computational Biophysics</dd>
+                                </div>
+                                <div>
+                                    <dt>Year</dt>
+                                    <dd class="meta-val">2026</dd>
+                                </div>
+                                <div>
+                                    <dt>Status</dt>
+                                    <dd class="meta-val">Computational Discovery (In Silico)</dd>
+                                </div>
+                                <div>
+                                    <dt>Sampling</dt>
+                                    <dd class="meta-val">~600 ns all-atom MD &middot; pH 6.8 &harr; 7.4</dd>
+                                </div>
+                            </dl>
+                            <a href="/macs-project" class="textlink textlink--standalone">Full project record <span aria-hidden="true">&rarr;</span></a>
+                        </div>
+                    </article>
+
+                    <article class="entry">
+                        <a class="entry__figure entry__figure--mdx" href="/mdx-project" tabindex="-1" aria-hidden="true">
+                            <span class="entry__matte">
+                                <img src="/assets/mdx/mdx-vivado-device-floorplan.png" alt="" width="902" height="890" loading="lazy" decoding="async">
+                            </span>
+                        </a>
+                        <div class="entry__body">
+                            <p class="entry__field">Domain-Specific Architecture</p>
+                            <h3 class="entry__title"><a href="/mdx-project">MDX: Molecular Dynamics Accelerator</a></h3>
+                            <p class="entry__expanded">A correctness-first, pre-silicon domain-specific accelerator architecture for classical molecular-dynamics workloads.</p>
+                            <dl class="entry__meta">
+                                <div>
+                                    <dt>Field</dt>
+                                    <dd class="meta-val">Scientific Computing</dd>
+                                </div>
+                                <div>
+                                    <dt>Year</dt>
+                                    <dd class="meta-val">2026</dd>
+                                </div>
+                                <div>
+                                    <dt>Status</dt>
+                                    <dd class="meta-val">Pre-silicon</dd>
+                                </div>
+                                <div>
+                                    <dt>Evidence</dt>
+                                    <dd class="meta-val">RTL simulation evidence &middot; Phase 8J.3B mapping</dd>
+                                </div>
+                            </dl>
+                            <a href="/mdx-project" class="textlink textlink--standalone">Full project record <span aria-hidden="true">&rarr;</span></a>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- 03 Research Areas -->
+            <section class="sec" id="areas" aria-labelledby="areas-title">
+                <div class="sec__head">
+                    <span class="sec__num" aria-hidden="true">03</span>
+                    <h2 class="sec__title" id="areas-title">Research Areas</h2>
+                </div>
+                <div class="areas">
+                    <div class="area">
+                        <h3 class="area__title">Computational Structural Biology</h3>
+                        <p class="area__body">Atomistic molecular dynamics, conformational analysis, and structure-function relationships in engineered protein systems.</p>
+                    </div>
+                    <div class="area">
+                        <h3 class="area__title">Condition-Responsive Therapeutics</h3>
+                        <p class="area__body">Design principles for biotherapeutics that discriminate between healthy and diseased microenvironments through physicochemical gating.</p>
+                    </div>
+                    <div class="area">
+                        <h3 class="area__title">Scientific Computing &amp; Accelerator Architecture</h3>
+                        <p class="area__body">Correctness-first reference models and domain-specific architectures for molecular-dynamics and scientific-computing workloads.</p>
                     </div>
                 </div>
-                <!-- Right -->
-                <div class="lg:col-span-5 order-1 lg:order-2">
-                    <div id="hero-media-container" class="aspect-square md:aspect-video lg:aspect-square bg-white border border-border flex items-center justify-center p-4">
-                        <img src="/assets/macs/overlay.png" alt="MACS pH 6.8 / pH 7.4 structural overlay" class="w-full h-full object-contain mix-blend-multiply">
-                    </div>
-                    <p id="hero-media-caption" class="text-[0.65rem] text-secondary text-right mt-2 uppercase tracking-wide">Proposed activated state (pH 6.8) vs proposed quiescent state (pH 7.4)</p>
+            </section>
+
+            <!-- 04 Reports & Technical Documentation -->
+            <section class="sec" id="reports" aria-labelledby="reports-title">
+                <div class="sec__head">
+                    <span class="sec__num" aria-hidden="true">04</span>
+                    <h2 class="sec__title" id="reports-title">Reports &amp; Technical Documentation</h2>
                 </div>
-            </div>
-        </section>
-
-        <!-- Divider -->
-        <hr class="border-border">
-
-        <!-- Featured Research -->
-        <!-- Featured Research -->
-        <section id="research" class="scroll-mt-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 reveal">
-            <h2 class="text-2xl font-bold mb-12 tracking-tight border-b border-border pb-4">Featured Research</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
-
-                <!-- MACS Item -->
-                <a href="/macs-project" class="group block cursor-pointer bg-gray-50/80 hover:bg-gray-100/60 border border-gray-200/70 hover:border-gray-200 rounded-3xl p-6 sm:p-8 hover:shadow-[0_2px_12px_-4px_rgba(0,0,0,0.05)] transform hover:-translate-y-0.5 transition-all duration-300">
-                    <div class="flex flex-col sm:flex-row gap-6 items-start">
-                        <!-- Thumbnail -->
-                        <div class="w-full sm:w-28 sm:h-28 lg:w-32 lg:h-32 shrink-0 bg-white border border-gray-100 flex items-center justify-center p-3 rounded-2xl shadow-sm overflow-hidden transition-colors group-hover:border-gray-200">
-                            <img src="/assets/macs/overlay.png" alt="MACS Structural Superposition" class="w-full h-full object-contain mix-blend-multiply opacity-90 group-hover:scale-105 group-hover:opacity-100 transition-all duration-300">
-                        </div>
-                        <!-- Text -->
-                        <div class="flex flex-col">
-                            <p class="text-[10px] font-bold tracking-widest uppercase text-accent mb-2">Condition-Responsive Therapeutic</p>
-                            <h3 class="text-lg font-bold text-anthracite mb-2 group-hover:text-blue-700 transition-colors">MACS: Modular Activated Cancer Suppressor</h3>
-                            <p class="text-secondary text-sm leading-relaxed mb-4 line-clamp-2">A single-mRNA-encoded multi-domain protein system with acidic microenvironment-responsive logic gating.</p>
-                            <div class="text-[11px] font-medium text-gray-500 mb-4 uppercase tracking-wider">
-                                ~600 ns all-atom MD &middot; pH 6.8 &harr; 7.4
-                            </div>
-                            <span class="text-sm font-medium text-blue-600 group-hover:text-blue-800 transition-colors">View project &rarr;</span>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- MDX Item -->
-                <a href="/mdx-project" class="group block cursor-pointer bg-gray-50/80 hover:bg-gray-100/60 border border-gray-200/70 hover:border-gray-200 rounded-3xl p-6 sm:p-8 hover:shadow-[0_2px_12px_-4px_rgba(0,0,0,0.05)] transform hover:-translate-y-0.5 transition-all duration-300">
-                    <div class="flex flex-col sm:flex-row gap-6 items-start">
-                        <!-- Thumbnail -->
-                        <div class="w-full sm:w-28 sm:h-28 lg:w-32 lg:h-32 shrink-0 bg-white border border-gray-100 flex flex-col items-center justify-center p-2 rounded-2xl shadow-sm overflow-hidden transition-colors group-hover:border-gray-200">
-                            <div class="grid grid-cols-4 gap-[2px] w-14 h-14 lg:w-16 lg:h-16 opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300 mb-1.5">
-                                <div class="bg-gray-50 border border-gray-200 rounded-[1px]"></div><div class="bg-gray-50 border border-gray-200 rounded-[1px]"></div><div class="bg-blue-50 border border-blue-200 rounded-[1px]"></div><div class="bg-gray-50 border border-gray-200 rounded-[1px]"></div>
-                                <div class="bg-gray-50 border border-gray-200 rounded-[1px]"></div><div class="bg-blue-500 border border-blue-600 rounded-[1px] shadow-[inset_0_1px_2px_rgba(0,0,0,0.15)]"></div><div class="bg-gray-50 border border-gray-200 rounded-[1px]"></div><div class="bg-gray-50 border border-gray-200 rounded-[1px]"></div>
-                                <div class="bg-gray-50 border border-gray-200 rounded-[1px]"></div><div class="bg-gray-50 border border-gray-200 rounded-[1px]"></div><div class="bg-gray-50 border border-gray-200 rounded-[1px]"></div><div class="bg-blue-50 border border-blue-200 rounded-[1px]"></div>
-                                <div class="bg-blue-50 border border-blue-200 rounded-[1px]"></div><div class="bg-gray-50 border border-gray-200 rounded-[1px]"></div><div class="bg-gray-50 border border-gray-200 rounded-[1px]"></div><div class="bg-gray-50 border border-gray-200 rounded-[1px]"></div>
-                            </div>
-                            <span class="text-[7px] font-semibold text-gray-400 uppercase tracking-widest text-center leading-tight">Conceptual<br>MDX-1</span>
-                        </div>
-                        <!-- Text -->
-                        <div class="flex flex-col">
-                            <p class="text-[10px] font-bold tracking-widest uppercase text-accent mb-2">Domain-Specific Architecture</p>
-                            <h3 class="text-lg font-bold text-anthracite mb-2 group-hover:text-blue-700 transition-colors">MDX: Molecular Dynamics Accelerator</h3>
-                            <p class="text-secondary text-sm leading-relaxed mb-4 line-clamp-2">A correctness-first, pre-silicon domain-specific accelerator architecture for classical MD workloads.</p>
-                            <div class="text-[11px] font-medium text-gray-500 mb-4 uppercase tracking-wider">
-                                RTL simulation evidence &middot; Phase 8J.3B mapping
-                            </div>
-                            <span class="text-sm font-medium text-blue-600 group-hover:text-blue-800 transition-colors">View project &rarr;</span>
-                        </div>
-                    </div>
-                </a>
-
-            </div>
-        </section>
-
-        <!-- Research Areas / Pillars -->
-        <section class="bg-gray-50/50 border-y border-border">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 reveal">
-                <h2 class="text-2xl font-bold mb-10 tracking-tight">Research Pillars</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <!-- Card 1 -->
-                    <div class="bg-white border border-border p-6 rounded-sm border-t-2 border-t-accent">
-                        <h3 class="text-lg font-semibold mb-3">Computational Structural Biology</h3>
-                        <p class="text-secondary text-sm leading-relaxed">Atomistic molecular dynamics, conformational analysis, and structure-function relationships in engineered protein systems.</p>
-                    </div>
-                    <!-- Card 2 -->
-                    <div class="bg-white border border-border p-6 rounded-sm border-t-2 border-t-accent">
-                        <h3 class="text-lg font-semibold mb-3">Condition-Responsive Therapeutics</h3>
-                        <p class="text-secondary text-sm leading-relaxed">Design principles for biotherapeutics that discriminate between healthy and diseased microenvironments through physicochemical gating.</p>
-                    </div>
-                    <!-- Card 3 -->
-                    <div class="bg-white border border-border p-6 rounded-sm border-t-2 border-t-accent">
-                        <h3 class="text-lg font-semibold mb-3">Scientific Computing & Accelerator Architecture</h3>
-                        <p class="text-secondary text-sm leading-relaxed">Correctness-first reference models and domain-specific architectures for molecular-dynamics and scientific-computing workloads.</p>
-                    </div>
+                <div class="table-scroll" tabindex="0" role="region" aria-label="Table: Reports &amp; Technical Documentation">
+                    <table class="biblio">
+                        <caption>Technical documentation supporting the research records above.</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Year</th>
+                                <th scope="col">Title</th>
+                                <th scope="col">Document type</th>
+                                <th scope="col">Project</th>
+                                <th scope="col">Access</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="biblio__year">2026</td>
+                                <td class="biblio__title">MACS Mechanistic Evidence Summary</td>
+                                <td>Technical Report</td>
+                                <td>MACS</td>
+                                <td class="biblio__access"><a href="/macs-evidence-summary">Read</a></td>
+                            </tr>
+                            <tr>
+                                <td class="biblio__year">2026</td>
+                                <td class="biblio__title">MACS Methodological Decision Log</td>
+                                <td>Technical Documentation</td>
+                                <td>MACS</td>
+                                <td class="biblio__access"><a href="/macs-decision-log">Read</a></td>
+                            </tr>
+                            <tr>
+                                <td class="biblio__year">2026</td>
+                                <td class="biblio__title">MACS Mechanistic Evidence Matrix</td>
+                                <td>Technical Documentation</td>
+                                <td>MACS</td>
+                                <td class="biblio__access"><a href="/macs-evidence-matrix">Read</a></td>
+                            </tr>
+                            <tr>
+                                <td class="biblio__year">2026</td>
+                                <td class="biblio__title">MDP Consistency Report</td>
+                                <td>Technical Documentation</td>
+                                <td>MACS</td>
+                                <td class="biblio__access"><a href="/macs-mdp-consistency">Read</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Selected Reports & Documents -->
-        <section id="reports" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 reveal">
-            <h2 class="text-2xl font-bold mb-10 tracking-tight">Selected Reports & Documents</h2>
-            <div class="overflow-x-auto border border-border rounded-sm">
-                <table class="w-full text-left text-sm text-secondary">
-                    <thead class="text-xs uppercase bg-gray-50 text-anthracite border-b border-border">
-                        <tr>
-                            <th scope="col" class="px-6 py-4 font-semibold">Document Title</th>
-                            <th scope="col" class="px-6 py-4 font-semibold">Project</th>
-                            <th scope="col" class="px-6 py-4 font-semibold">Type</th>
-                            <th scope="col" class="px-6 py-4 font-semibold">Date</th>
-                            <th scope="col" class="px-6 py-4 font-semibold">Access</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-border">
-                        <tr class="hover:bg-gray-50 transition-colors">
-                            <td class="px-6 py-4 font-medium text-anthracite">MACS Mechanistic Evidence Summary</td>
-                            <td class="px-6 py-4">MACS</td>
-                            <td class="px-6 py-4">Technical Report</td>
-                            <td class="px-6 py-4">2026</td>
-                            <td class="px-6 py-4">
-                                <a href="/macs-evidence-summary" class="inline-flex items-center text-accent hover:text-blue-900 font-medium">
-                                    Read document &rarr;
-                                </a>
-                            </td>
-                        </tr>
-                        <tr class="hover:bg-gray-50 transition-colors">
-                            <td class="px-6 py-4 font-medium text-anthracite">MACS Methodological Decision Log</td>
-                            <td class="px-6 py-4">MACS</td>
-                            <td class="px-6 py-4">Technical Documentation</td>
-                            <td class="px-6 py-4">2026</td>
-                            <td class="px-6 py-4">
-                                <a href="/macs-decision-log" class="inline-flex items-center text-accent hover:text-blue-900 font-medium">
-                                    Read document &rarr;
-                                </a>
-                            </td>
-                        </tr>
-                        <tr class="hover:bg-gray-50 transition-colors">
-                            <td class="px-6 py-4 font-medium text-anthracite">MACS Mechanistic Evidence Matrix</td>
-                            <td class="px-6 py-4">MACS</td>
-                            <td class="px-6 py-4">Technical Documentation</td>
-                            <td class="px-6 py-4">2026</td>
-                            <td class="px-6 py-4">
-                                <a href="/macs-evidence-matrix" class="inline-flex items-center text-accent hover:text-blue-900 font-medium">
-                                    View matrix &rarr;
-                                </a>
-                            </td>
-                        </tr>
-                        <tr class="hover:bg-gray-50 transition-colors">
-                            <td class="px-6 py-4 font-medium text-anthracite">MDP Consistency Report</td>
-                            <td class="px-6 py-4">MACS</td>
-                            <td class="px-6 py-4">Technical Documentation</td>
-                            <td class="px-6 py-4">2026</td>
-                            <td class="px-6 py-4">
-                                <a href="/macs-mdp-consistency" class="inline-flex items-center text-accent hover:text-blue-900 font-medium">
-                                    Read report &rarr;
-                                </a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <!-- Inventions & Patents -->
-        <section id="inventions" class="bg-gray-50/50 border-t border-border">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 reveal">
-                <h2 class="text-2xl font-bold mb-10 tracking-tight">Inventions & Patents</h2>
-                <div class="bg-white border border-border rounded-sm border-l-4 border-l-accent p-6 md:p-8">
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-6">
-                        <h3 class="text-lg font-bold text-anthracite max-w-2xl">Modular Synthetic Transmembrane Biological System Enabling Conditional Activation and Protein Degradation Based on Molecular Marker Density</h3>
-                        <span class="inline-block px-2.5 py-1 text-xs font-semibold bg-blue-50 text-accent border border-blue-100 rounded-sm whitespace-nowrap">National Patent Application Filed</span>
-                    </div>
-                    <dl class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+            <!-- 05 Inventions & Intellectual Property -->
+            <section class="sec" id="inventions" aria-labelledby="inventions-title">
+                <div class="sec__head">
+                    <span class="sec__num" aria-hidden="true">05</span>
+                    <h2 class="sec__title" id="inventions-title">Inventions &amp; Intellectual Property</h2>
+                </div>
+                <div class="record">
+                    <h3 class="record__title">Modular Synthetic Transmembrane Biological System Enabling Conditional Activation and Protein Degradation Based on Molecular Marker Density</h3>
+                    <dl class="record__meta">
                         <div>
-                            <dt class="text-xs text-secondary uppercase font-semibold">Jurisdiction</dt>
-                            <dd class="text-sm font-medium">Turkey (TURKPATENT)</dd>
+                            <dt class="meta-key">Status</dt>
+                            <dd class="meta-val">National Patent Application Filed</dd>
                         </div>
                         <div>
-                            <dt class="text-xs text-secondary uppercase font-semibold">Inventor</dt>
-                            <dd class="text-sm font-medium">Selman Ali Dokumacı</dd>
+                            <dt class="meta-key">Jurisdiction</dt>
+                            <dd class="meta-val">Turkey (TURKPATENT)</dd>
+                        </div>
+                        <div>
+                            <dt class="meta-key">Inventor</dt>
+                            <dd class="meta-val">Selman Ali Dokumacı</dd>
                         </div>
                     </dl>
-                    <p class="italic text-xs text-secondary">Publicly available filing information. Details omitted pending publication.</p>
+                    <p class="footnote">Publicly available filing information. Details omitted pending publication.</p>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- About -->
-        <section id="about" class="border-t border-border">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 reveal">
-                <h2 class="text-2xl font-bold mb-8 tracking-tight">About</h2>
-                <div class="max-w-3xl">
-                    <p class="text-lg mb-4">Independent researcher focusing on computational biophysics and molecular engineering.</p>
-                    <p class="text-secondary mb-4">Current work centers on designing condition-responsive protein systems using atomistic simulation, elastic network analysis, and thermodynamic modeling.</p>
-                    <p class="text-secondary mb-8">Research conducted independently, with computational resources including local GPU workstations and high-performance computing access.</p>
-
-                    <div class="border-t border-border pt-6">
-                        <h3 class="text-sm font-semibold uppercase tracking-wider text-secondary mb-4">PROFILES</h3>
-                        <div class="flex flex-wrap gap-4">
-                            <a href="https://github.com/s3lm4n" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 border border-border rounded-sm text-sm font-medium hover:border-gray-400 hover:text-accent transition-colors">
-                                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                                GitHub
-                            </a>
-                            <a href="https://www.linkedin.com/in/selman-ali-dokumac%C4%B1-4a6ba630a/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 border border-border rounded-sm text-sm font-medium hover:border-gray-400 hover:text-accent transition-colors">
-                                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                                LinkedIn
-                            </a>
-                        </div>
-                    </div>
+            <!-- 06 About -->
+            <section class="sec" id="about" aria-labelledby="about-title">
+                <div class="sec__head">
+                    <span class="sec__num" aria-hidden="true">06</span>
+                    <h2 class="sec__title" id="about-title">About</h2>
                 </div>
-            </div>
-        </section>
+                <div class="prose-col">
+                    <p>Research conducted independently, with computational resources including local GPU workstations and high-performance computing access.</p>
+                </div>
+            </section>
 
-        <!-- Contact -->
-        <section id="contact" class="bg-gray-50 border-t border-border">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 reveal">
-                <div class="max-w-2xl">
-                    <h2 class="text-2xl font-bold mb-6 tracking-tight">Contact</h2>
-                    <p class="text-base text-anthracite mb-8">For academic collaboration, research inquiries, or professional communication, reach out through the following channels:</p>
-                    <div class="flex flex-wrap gap-4 mb-6">
-                        <a href="https://www.linkedin.com/in/selman-ali-dokumac%C4%B1-4a6ba630a/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-3 bg-anthracite text-white rounded-sm text-sm font-medium hover:bg-gray-800 transition-colors">
-                            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                            Connect on LinkedIn
+            <!-- 07 Profiles & Contact -->
+            <section class="sec" id="contact" aria-labelledby="contact-title">
+                <div class="sec__head">
+                    <span class="sec__num" aria-hidden="true">07</span>
+                    <h2 class="sec__title" id="contact-title">Profiles &amp; Contact</h2>
+                </div>
+                <div class="prose-col">
+                    <p>For academic collaboration, research inquiries, or professional communication, reach out through the following channels:</p>
+                </div>
+                <ul class="profiles" style="margin-top:1.5rem">
+                    <li>
+                        <a href="https://www.linkedin.com/in/selman-ali-dokumac%C4%B1-4a6ba630a/" target="_blank" rel="noopener noreferrer" class="profile-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            LinkedIn
                         </a>
-                        <a href="https://github.com/s3lm4n" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-3 border border-border bg-white rounded-sm text-sm font-medium hover:border-gray-400 hover:text-accent transition-colors">
-                            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                            View on GitHub
+                    </li>
+                    <li>
+                        <a href="https://github.com/s3lm4n" target="_blank" rel="noopener noreferrer" class="profile-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                            GitHub
                         </a>
-                    </div>
-                    <p class="text-sm text-secondary italic">Note: Research-related inquiries are prioritized. LinkedIn is recommended for initial contact.</p>
-                </div>
-            </div>
-        </section>
+                    </li>
+                    <li>
+                        <a href="mailto:selman_dokumaci@hotmail.com" class="profile-link" aria-label="Email Selman Ali Dokumacı">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            Email
+                        </a>
+                    </li>
+                </ul>
+                <p class="footnote">Note: Research-related inquiries are prioritized. LinkedIn is recommended for initial contact.</p>
+            </section>
+
+        </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-white border-t border-border py-6">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
-            <div class="text-sm text-secondary" id="footer-copyright">
-                &copy; <span id="year">2026</span> <span id="footer-name">Selman Ali Dokumacı</span>
-            </div>
-            <div class="text-sm text-secondary font-medium" id="footer-title">
-                Independent Computational Biophysics Researcher
-            </div>
-            <div class="flex space-x-4">
-                <a href="https://github.com/s3lm4n" class="text-secondary hover:text-anthracite transition-colors" aria-label="GitHub">
-                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                </a>
-                <a href="https://www.linkedin.com/in/selman-ali-dokumac%C4%B1-4a6ba630a/" class="text-secondary hover:text-anthracite transition-colors" aria-label="LinkedIn">
-                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                </a>
+    <footer class="site-foot">
+        <div class="site-foot__inner">
+            <p>&copy; <span id="year">2026</span> Selman Ali Dokumacı &middot; Independent Computational Biophysics Researcher</p>
+            <div class="site-foot__links">
+                <a href="https://github.com/s3lm4n" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/selman-ali-dokumac%C4%B1-4a6ba630a/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </div>
         </div>
     </footer>
 
-    <!-- Javascript -->
-    <script>
-        const siteConfig = {
-            name: 'Selman Ali Dokumacı',
-            title: 'Independent Computational Biophysics Researcher',
-            description: 'Research portfolio documenting computational biophysics, molecular dynamics, and condition-responsive therapeutic design.',
-            year: 2026,
-            socialLinks: {
-                github: 'https://github.com/s3lm4n',
-                linkedin: 'https://www.linkedin.com/in/selman-ali-dokumac%C4%B1-4a6ba630a/'
-            },
-            media: {
-                heroVideo: {
-                    available: false,
-                    src: 'assets/macs/macs_hero_loop.mp4',
-                    poster: 'assets/macs/overlay.png',
-                    caption: 'MD trajectory structural dynamics (pH 6.8)'
-                }
-            }
-        };
-
-        // Populate dynamic data
-        document.getElementById('year').textContent = siteConfig.year;
-        document.getElementById('footer-name').textContent = siteConfig.name;
-        document.getElementById('footer-title').textContent = siteConfig.title;
-
-        // Mobile Menu Toggle
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu on link click
-        menu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-            });
-        });
-
-        // In-page smooth navigation without URL hashes & Scrollspy
-        const navLinks = document.querySelectorAll('[data-scroll-target]');
-        const sectionIds = ['home', 'research', 'reports', 'inventions', 'about', 'contact'];
-        const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
-        const navHeight = 56;
-
-        function getElementTop(el) {
-            return el.getBoundingClientRect().top + window.pageYOffset;
-        }
-
-        navLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const targetId = link.getAttribute('data-scroll-target');
-                const targetEl = document.getElementById(targetId);
-                if (targetEl) {
-                    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-                    const behavior = prefersReducedMotion ? 'auto' : 'smooth';
-                    if (targetId === 'home') {
-                        window.scrollTo({ top: 0, behavior });
-                    } else {
-                        const targetTop = getElementTop(targetEl) - navHeight;
-                        window.scrollTo({ top: Math.max(0, targetTop), behavior });
-                    }
-                }
-                menu.classList.add('hidden');
-            });
-        });
-
-        function updateActiveSection() {
-            const scrollPos = window.scrollY;
-            const windowHeight = window.innerHeight;
-            const docHeight = document.documentElement.scrollHeight;
-
-            let currentId = 'home';
-            if (scrollPos + windowHeight >= docHeight - 50) {
-                currentId = 'contact';
-            } else if (scrollPos < 100) {
-                currentId = 'home';
-            } else {
-                for (const section of sections) {
-                    const top = getElementTop(section) - navHeight - 80;
-                    if (scrollPos >= top) {
-                        currentId = section.id;
-                    }
-                }
-            }
-
-            navLinks.forEach(link => {
-                const isTarget = link.getAttribute('data-scroll-target') === currentId;
-                link.classList.toggle('is-active', isTarget);
-                if (isTarget) {
-                    link.setAttribute('aria-current', 'page');
-                } else {
-                    link.removeAttribute('aria-current');
-                }
-            });
-        }
-
-        let scrollTicking = false;
-        window.addEventListener('scroll', () => {
-            if (!scrollTicking) {
-                window.requestAnimationFrame(() => {
-                    updateActiveSection();
-                    scrollTicking = false;
-                });
-                scrollTicking = true;
-            }
-        }, { passive: true });
-
-        // Initial active section check on page load
-        updateActiveSection();
-
-        // IntersectionObserver for reveal animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.1,
-            rootMargin: "0px 0px -50px 0px"
-        });
-
-        document.querySelectorAll('.reveal').forEach((element) => {
-            observer.observe(element);
-        });
-
-        // Hero Media Loader
-        if (siteConfig.media.heroVideo.available) {
-            const container = document.getElementById('hero-media-container');
-            container.innerHTML = `
-                <video autoplay loop muted playsinline poster="${siteConfig.media.heroVideo.poster}" class="w-full h-full object-cover">
-                    <source src="${siteConfig.media.heroVideo.src}" type="video/mp4">
-                </video>
-            `;
-            const caption = document.getElementById('hero-media-caption');
-            caption.textContent = siteConfig.media.heroVideo.caption;
-        }
-    </script>
     <script src="/assets/js/site-ui.js" defer></script>
 </body>
 </html>

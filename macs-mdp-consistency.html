@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MDP Consistency Report - MACS Research Documentation</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <meta name="description" content="Consistency verification report for Molecular Dynamics Parameter (MDP) settings in MACS trajectories.">
     <meta property="og:title" content="MDP Consistency Report - MACS Research Documentation">
     <meta property="og:description" content="Consistency verification report for Molecular Dynamics Parameter (MDP) settings in MACS trajectories.">
@@ -12,13 +13,12 @@
     <meta property="og:image" content="https://selmandokumaci.com/assets/macs/overlay.png">
     <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="tr_TR">
-    
+
     <link rel="canonical" href="https://selmandokumaci.com/macs-mdp-consistency">
     <link rel="alternate" hreflang="en" href="https://selmandokumaci.com/macs-mdp-consistency">
     <link rel="alternate" hreflang="tr" href="https://selmandokumaci.com/tr/macs-mdp-consistency">
     <link rel="alternate" hreflang="x-default" href="https://selmandokumaci.com/macs-mdp-consistency">
 
-    <!-- Schema.org JSON-LD BreadcrumbList -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -52,157 +52,177 @@
     }
     </script>
 
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+
     <link href="/assets/css/style.css" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #111827; }
-        .text-secondary { color: #6b7280; }
-        .border-subtle { border-color: #e5e7eb; }
-    </style>
 </head>
-<body class="antialiased selection:bg-blue-100 selection:text-blue-900">
-    <header data-smart-header class="site-header sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200/70 h-14 flex items-center transition-all">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-between">
-            <a href="/macs-project" class="px-3 py-1.5 rounded-full text-sm font-medium text-secondary hover:text-gray-900 hover:bg-gray-100/70 flex items-center transition-colors">
-                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
-                Back to MACS
+<body class="report-page">
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <header class="masthead">
+        <div class="masthead__inner">
+            <a href="/macs-project" class="backlink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7 7-7m-7 7h18"/></svg>
+                MACS
             </a>
-            <div class="flex items-center space-x-2">
-                <div class="px-3 py-1.5 text-[11px] font-semibold tracking-widest uppercase text-gray-900 hidden lg:block">MDP Consistency Report</div>
-                <div class="h-4 w-px bg-gray-200 hidden lg:block mx-2"></div>
-                <div class="flex items-center bg-gray-50/80 border border-gray-200/70 rounded-full p-0.5 text-[11px] font-semibold tracking-wide">
-                    <span class="px-2.5 py-1 bg-white rounded-full shadow-[0_1px_2px_rgba(0,0,0,0.04)] text-gray-900">EN</span>
-                    <a href="/tr/macs-mdp-consistency" class="px-2.5 py-1 text-gray-500 hover:text-gray-900 hover:bg-gray-100/50 rounded-full transition-colors">TR</a>
-                </div>
+            <div class="masthead__nav">
+                <span class="masthead__context">MDP Consistency</span>
+                <p class="lang">
+                    <span class="lang__current" aria-current="true">EN</span>
+                    <span class="lang__sep" aria-hidden="true">/</span>
+                    <a href="/tr/macs-mdp-consistency" class="lang__link" hreflang="tr" lang="tr">TR</a>
+                </p>
             </div>
         </div>
     </header>
 
-    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <main class="report" id="main-content" tabindex="-1">
 
-        <!-- Editorial Breadcrumbs -->
         <nav class="research-breadcrumb" aria-label="Breadcrumb">
             <ol class="research-breadcrumb-list">
-                <li class="research-breadcrumb-item">
-                    <a href="/" class="research-breadcrumb-link">Home</a>
-                </li>
-                <li class="research-breadcrumb-separator" aria-hidden="true">›</li>
-                <li class="research-breadcrumb-item">
-                    <a href="/" class="research-breadcrumb-link">Research</a>
-                </li>
-                <li class="research-breadcrumb-separator" aria-hidden="true">›</li>
-                <li class="research-breadcrumb-item">
-                    <a href="/macs-project" class="research-breadcrumb-link">MACS</a>
-                </li>
-                <li class="research-breadcrumb-separator" aria-hidden="true">›</li>
-                <li class="research-breadcrumb-item">
-                    <span class="research-breadcrumb-current" aria-current="page">MDP Consistency</span>
-                </li>
+                <li><a href="/" class="research-breadcrumb-link">Home</a></li>
+                <li class="research-breadcrumb-separator" aria-hidden="true">/</li>
+                <li><a href="/" class="research-breadcrumb-link">Research</a></li>
+                <li class="research-breadcrumb-separator" aria-hidden="true">/</li>
+                <li><a href="/macs-project" class="research-breadcrumb-link">MACS</a></li>
+                <li class="research-breadcrumb-separator" aria-hidden="true">/</li>
+                <li><span class="research-breadcrumb-current" aria-current="page">MDP Consistency</span></li>
             </ol>
         </nav>
 
-        <div class="mb-10 pb-6 border-b border-subtle">
-            <h1 class="text-3xl font-bold text-gray-900 mb-4">MDP Consistency Report</h1>
-            <div class="flex flex-wrap items-center justify-between gap-4 text-sm text-secondary">
-                <div class="flex flex-wrap gap-4">
-                    <div class="flex items-center"><span class="font-semibold mr-1">Project:</span> MACS</div>
-                    <div class="flex items-center"><span class="font-semibold mr-1">Document type:</span> Technical Documentation</div>
-                    <div class="flex items-center"><span class="font-semibold mr-1">Year:</span> 2026</div>
-                    <div class="flex items-center"><span class="font-semibold mr-1">Research status:</span> Computational Discovery</div>
-                </div>
-                <div class="share-container">
-                    <button type="button" class="share-trigger" aria-haspopup="dialog" aria-expanded="false" data-share-title="MACS Continuous State MDP Consistency" data-share-url="https://selmandokumaci.com/macs-mdp-consistency">
-                        <svg class="share-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
-                        </svg>
-                        Share
-                    </button>
-                    <div class="share-popover" role="dialog" aria-label="Share options">
-                        <a href="#" class="share-option" data-share-action="linkedin" target="_blank" rel="noopener noreferrer">
-                            <svg class="w-4 h-4 text-[#0a66c2]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.2a1.64 1.64 0 0 0-1.66 1.64 1.63 1.63 0 0 0 1.66 1.63 1.63 1.63 0 0 0 1.65-1.63A1.64 1.64 0 0 0 7.83 6.2Z"/></svg>
-                            <span>LinkedIn</span>
-                        </a>
-                        <a href="#" class="share-option" data-share-action="twitter" target="_blank" rel="noopener noreferrer">
-                            <svg class="w-4 h-4 text-gray-900" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                            <span>X (Twitter)</span>
-                        </a>
-                        <a href="#" class="share-option" data-share-action="email">
-                            <svg class="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                            <span>Email</span>
-                        </a>
-                        <button type="button" class="share-option" data-share-action="copy">
-                            <svg class="w-4 h-4 text-gray-700 share-copy-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
-                            <span class="share-copy-text">Copy link</span>
-                        </button>
+        <div class="page-head" style="padding-top:0">
+            <p class="eyebrow">MACS Research Documentation</p>
+            <h1 class="page-title">MDP Consistency Report</h1>
+            <div class="byline">
+                <dl class="docmeta">
+                    <div>
+                        <dt class="meta-key">Project</dt>
+                        <dd class="meta-val">MACS</dd>
                     </div>
-                </div>
+                    <div>
+                        <dt class="meta-key">Document type</dt>
+                        <dd class="meta-val">Technical Documentation</dd>
+                    </div>
+                    <div>
+                        <dt class="meta-key">Year</dt>
+                        <dd class="meta-val">2026</dd>
+                    </div>
+                    <div>
+                        <dt class="meta-key">Research status</dt>
+                        <dd class="meta-val">Computational Discovery</dd>
+                    </div>
+                </dl>
+                <div class="share-container">
+                        <button type="button" class="share-trigger" aria-haspopup="dialog" aria-expanded="false" data-share-title="MACS Continuous State MDP Consistency" data-share-url="https://selmandokumaci.com/macs-mdp-consistency">
+                            <svg class="share-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/>
+                            </svg>
+                            Share
+                        </button>
+                        <div class="share-popover" role="dialog" aria-label="Share options">
+                            <a href="#" class="share-option" data-share-action="linkedin" target="_blank" rel="noopener noreferrer">
+                                <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.2a1.64 1.64 0 0 0-1.66 1.64 1.63 1.63 0 0 0 1.66 1.63 1.63 1.63 0 0 0 1.65-1.63A1.64 1.64 0 0 0 7.83 6.2Z"/></svg>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="#" class="share-option" data-share-action="twitter" target="_blank" rel="noopener noreferrer">
+                                <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                                <span>X (Twitter)</span>
+                            </a>
+                            <a href="#" class="share-option" data-share-action="email">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                                <span>Email</span>
+                            </a>
+                            <button type="button" class="share-option" data-share-action="copy">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                                <span class="share-copy-text">Copy link</span>
+                            </button>
+                        </div>
+                    </div>
             </div>
         </div>
 
-        <div class="prose prose-blue max-w-none text-gray-800">
-            <p class="mb-6">
-                This report verifies the consistency of Molecular Dynamics parameter (MDP) settings used across the MACS simulation systems. Key production parameters were audited to ensure fair comparison between the pH 6.8 and pH 7.4 conditions.
-            </p>
+        <div class="prose-col" style="margin-bottom:0.5rem">
+            <p>This report verifies the consistency of Molecular Dynamics parameter (MDP) settings used across the MACS simulation systems. Key production parameters were audited to ensure fair comparison between the pH 6.8 and pH 7.4 conditions.</p>
+        </div>
 
-            <h2 class="text-2xl font-semibold text-gray-900 mt-8 mb-4">Production MD Parameters (300 ns)</h2>
-            <p class="mb-4 text-sm text-gray-600">The audited production parameters matched between the pH 6.8 and pH 7.4 systems for the compared settings.</p>
-            
-            <div class="overflow-x-auto border border-subtle rounded-sm bg-white shadow-sm mb-8">
-                <table class="min-w-full text-sm text-left text-gray-700">
-                    <thead class="bg-gray-50 border-b border-subtle">
+        <section class="sec" aria-labelledby="h-params">
+            <div class="sec__head">
+                <span class="sec__num" aria-hidden="true">01</span>
+                <h2 class="sec__title" id="h-params">Production MD Parameters (300 ns)</h2>
+            </div>
+            <div class="prose-col">
+                <p>The audited production parameters matched between the pH 6.8 and pH 7.4 systems for the compared settings.</p>
+            </div>
+            <div class="table-scroll" tabindex="0" role="region" aria-label="Table: Production MD Parameters (300 ns)">
+                <table class="dtable">
+                    <caption class="figure__cap" style="caption-side:top;text-align:left;padding-bottom:0.75rem"><span class="figure__num">Table&nbsp;1 &mdash; Audited production MD parameters</span></caption>
+                    <thead>
                         <tr>
-                            <th scope="col" class="px-6 py-3 font-semibold text-gray-900 w-1/3">Parameter Group</th>
-                            <th scope="col" class="px-6 py-3 font-semibold text-gray-900">Setting (pH 6.8 &amp; pH 7.4)</th>
+                            <th scope="col">Parameter Group</th>
+                            <th scope="col">Setting (pH 6.8 &amp; pH 7.4)</th>
                         </tr>
                     </thead>
-                    <tbody class="divide-y divide-border">
+                    <tbody>
                         <tr>
-                            <td class="px-6 py-4 font-medium">Run Control</td>
-                            <td class="px-6 py-4 font-mono text-xs">integrator = md<br>dt = 0.002<br>nsteps = 150000000 (300 ns)<br>continuation = yes</td>
+                            <th scope="row">Run Control</th>
+                            <td class="params">integrator = md<br>dt = 0.002<br>nsteps = 150000000 (300 ns)<br>continuation = yes</td>
                         </tr>
                         <tr>
-                            <td class="px-6 py-4 font-medium">Constraints</td>
-                            <td class="px-6 py-4 font-mono text-xs">constraint_algorithm = lincs<br>constraints = h-bonds</td>
+                            <th scope="row">Constraints</th>
+                            <td class="params">constraint_algorithm = lincs<br>constraints = h-bonds</td>
                         </tr>
                         <tr>
-                            <td class="px-6 py-4 font-medium">Non-bonded &amp; Electrostatics</td>
-                            <td class="px-6 py-4 font-mono text-xs">cutoff-scheme = Verlet<br>coulombtype = PME<br>rcoulomb = 1.0<br>vdwtype = Cut-off<br>rvdw = 1.0</td>
+                            <th scope="row">Non-bonded &amp; Electrostatics</th>
+                            <td class="params">cutoff-scheme = Verlet<br>coulombtype = PME<br>rcoulomb = 1.0<br>vdwtype = Cut-off<br>rvdw = 1.0</td>
                         </tr>
                         <tr>
-                            <td class="px-6 py-4 font-medium">Temperature Coupling</td>
-                            <td class="px-6 py-4 font-mono text-xs">tcoupl = V-rescale<br>tc-grps = Protein Non-Protein<br>ref_t = 310<br>tau_t = 0.1</td>
+                            <th scope="row">Temperature Coupling</th>
+                            <td class="params">tcoupl = V-rescale<br>tc-grps = Protein Non-Protein<br>ref_t = 310<br>tau_t = 0.1</td>
                         </tr>
                         <tr>
-                            <td class="px-6 py-4 font-medium">Pressure Coupling</td>
-                            <td class="px-6 py-4 font-mono text-xs">pcoupl = C-rescale<br>pcoupltype = isotropic<br>ref_p = 1.0<br>tau_p = 5.0<br>compressibility = 4.5e-5</td>
+                            <th scope="row">Pressure Coupling</th>
+                            <td class="params">pcoupl = C-rescale<br>pcoupltype = isotropic<br>ref_p = 1.0<br>tau_p = 5.0<br>compressibility = 4.5e-5</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+        </section>
+        <section class="sec" aria-labelledby="h-conclusion">
+            <div class="sec__head">
+                <span class="sec__num" aria-hidden="true">02</span>
+                <h2 class="sec__title" id="h-conclusion">Verification Conclusion</h2>
+            </div>
+            <div class="prose-col">
+                <p>No material differences were identified among the audited production-MD settings used for the comparative trajectories. Both conditions used the same core production setup, including V-rescale temperature coupling, C-rescale pressure coupling, and PME electrostatics, and continued from their preceding NPT equilibration steps.</p>
+                <p>Any transient differences observed in intermediate <code>mdout.mdp</code> files (e.g., minimization versus MD steps) strictly correspond to the equilibration sequence and not the final 300 ns comparative trajectories.</p>
+            </div>
+        </section>
 
-            <h2 class="text-2xl font-semibold text-gray-900 mt-8 mb-4">Verification Conclusion</h2>
-            <p class="mb-4">
-                No material differences were identified among the audited production-MD settings used for the comparative trajectories. Both conditions used the same core production setup, including V-rescale temperature coupling, C-rescale pressure coupling, and PME electrostatics, and continued from their preceding NPT equilibration steps.
-            </p>
-            <p class="mb-4">
-                Any transient differences observed in intermediate <code>mdout.mdp</code> files (e.g., minimization versus MD steps) strictly correspond to the equilibration sequence and not the final 300 ns comparative trajectories.
-            </p>
-        </div>
 
-        <div class="mt-12 pt-8 border-t border-subtle flex flex-col sm:flex-row justify-between items-center gap-4">
-            <a href="/macs-project" class="text-accent hover:text-blue-900 font-medium flex items-center transition-colors">
-                &larr; Back to MACS Project
-            </a>
-            <div class="flex gap-4 text-sm">
-                <a href="/macs-evidence-summary" class="text-secondary hover:text-gray-900">Evidence Summary</a>
-                <a href="/macs-evidence-matrix" class="text-secondary hover:text-gray-900">Evidence Matrix</a>
-                <a href="/macs-decision-log" class="text-secondary hover:text-gray-900">Decision Log</a>
+        <nav class="docnav" aria-label="Document navigation">
+            <a href="/macs-project" class="textlink"><span aria-hidden="true">&larr;</span> Back to MACS Project</a>
+            <div class="docnav__links">
+                <a href="/macs-evidence-summary">Evidence Summary</a>
+                <a href="/macs-evidence-matrix">Evidence Matrix</a>
+                <a href="/macs-decision-log">Decision Log</a>
+            </div>
+        </nav>
+
+    </main>
+
+    <footer class="site-foot">
+        <div class="site-foot__inner">
+            <p>&copy; <span id="year">2026</span> Selman Ali Dokumacı. All rights reserved.</p>
+            <div class="site-foot__links">
+                <a href="/">Home</a>
+                <a href="https://www.linkedin.com/in/selman-ali-dokumac%C4%B1-4a6ba630a/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/s3lm4n" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
         </div>
-    </main>
+    </footer>
+
     <script src="/assets/js/site-ui.js" defer></script>
 </body>
 </html>
