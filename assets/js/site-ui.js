@@ -220,11 +220,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
 
-            const x = popover.querySelector('[data-share-action="twitter"]');
-            if (x) {
-                x.addEventListener('click', (e) => {
+            const whatsapp = popover.querySelector('[data-share-action="whatsapp"]');
+            if (whatsapp) {
+                whatsapp.addEventListener('click', (e) => {
                     e.preventDefault();
-                    openWindow('https://twitter.com/intent/tweet?text=' + encodeURIComponent(pageTitle) + '&url=' + encodeURIComponent(pageUrl));
+                    const text = pageTitle ? `${pageTitle} ${pageUrl}` : pageUrl;
+                    openWindow('https://wa.me/?text=' + encodeURIComponent(text));
                     closeAll();
                 });
             }
