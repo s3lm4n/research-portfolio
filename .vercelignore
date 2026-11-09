@@ -1,0 +1,5 @@
+# Local-only material, never served. It is also excluded from Git by .gitignore, which is what keeps it
+# out of the public repository; these rules only matter for deployments made from a local working copy.
+src/mdx-sketchbook/
+mdx-sketchbook/opening-prototype/
+assets/mdx-sketchbook/opening-prototype/

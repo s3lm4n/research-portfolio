@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MDX — The Living Notebook · Selman Ali Dokumacı</title>
+<meta name="description" content="MDX — Molecular Dynamics Accelerator. A research notebook in twelve plates on specialised hardware for the short-range nonbonded force, by Selman Ali Dokumacı.">
+<meta property="og:title" content="MDX — The Living Notebook · Selman Ali Dokumacı">
+<meta property="og:description" content="MDX — Molecular Dynamics Accelerator. A research notebook in twelve plates on specialised hardware for the short-range nonbonded force, by Selman Ali Dokumacı.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://selmandokumaci.com/mdx-sketchbook/">
+<meta property="og:image" content="https://selmandokumaci.com/assets/mdx/mdx-notebook-og.png">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="tr_TR">
+<link rel="canonical" href="https://selmandokumaci.com/mdx-sketchbook/">
+<link rel="alternate" hreflang="en" href="https://selmandokumaci.com/mdx-sketchbook/">
+<link rel="alternate" hreflang="tr" href="https://selmandokumaci.com/tr/mdx-sketchbook/">
+<link rel="alternate" hreflang="x-default" href="https://selmandokumaci.com/mdx-sketchbook/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<link rel="stylesheet" href="/assets/mdx-sketchbook/sketchbook.css">
+<link rel="stylesheet" href="/assets/mdx-sketchbook/plates.css">
+<script>document.documentElement.classList.replace('no-js','js');</script>
+<script src="/assets/mdx-sketchbook/sketchbook.js" defer></script>
+</head>
+<body>
+<a class="nb-skip" href="#contents">Skip the animation</a>
+
+<header class="nb-bar">
+  <a class="nb-bar__back" href="/mdx-project">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7 7-7m-7 7h18"/></svg>
+    <span>MDX dossier</span>
+  </a>
+  <nav class="nb-bar__right" aria-label="View and language">
+    <a class="nb-bar__link" href="?static" data-static-toggle>Static view</a>
+    <p class="nb-lang"><span aria-current="true">EN</span><span aria-hidden="true">/</span><a href="/tr/mdx-sketchbook/" hreflang="tr" lang="tr">TR</a></p>
+  </nav>
+</header>
+
+<main id="main">
+<section class="opening" id="opening" aria-label="MDX — The Living Notebook">
+  <div class="stage" id="stage">
+
+    <!-- 1 · the introduction, in the register of the MDX project page -->
+    <div class="intro" id="intro">
+      <ul class="intro__tags">
+        <li>Hardware Architecture</li>
+        <li>Domain-Specific Accelerator</li>
+      </ul>
+      <h1 class="intro__title">MDX <span class="intro__dash">—</span> <span class="intro__name">Molecular Dynamics Accelerator</span></h1>
+      <p class="intro__lede">A research notebook in twelve plates, on ASIC-oriented hardware for the short-range nonbonded force. FPGA is an intermediate prototyping and validation platform, not the product.</p>
+      <p class="intro__by"><b>Selman Ali Dokumacı</b> <span aria-hidden="true">·</span> Researcher</p>
+      <p class="intro__cue" aria-hidden="true">
+        <span>Scroll to open the notebook</span>
+        <svg viewBox="0 0 40 48" width="20" height="24"><path d="M20 3 C19 16 21 28 20 42 M12 34 L20 43 L28 34" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </p>
+    </div>
+
+    <!-- 2–4 · the notebook: one world, moved by a single camera -->
+    <div class="world" id="world" aria-hidden="false">
+      <svg class="book book--back" id="bookBack" aria-hidden="true"></svg>
+      <div class="page" id="page">
+
+        <!-- the plate: V004 composition. 1280×720 landscape board; 720×1500 portrait board on narrow screens -->
+        <div class="frame" id="frame" data-o="l">
+
+          <!-- persistent: the terracotta margin rule (V004) -->
+          <svg id="rule" class="rule" viewBox="0 0 16 720" preserveAspectRatio="none" aria-hidden="true">
+            <path class="dw m" data-pre stroke="#B5552F" stroke-width="1.6" d="M6 0 C4 180 7 360 5 540 C4 620 6 680 5 720"></path>
+            <path class="dw m d1" data-pre stroke="#8F897E" stroke-width=".8" opacity=".7" d="M11 0 C12 240 10 480 11 720"></path>
+          </svg>
+
+          <!-- persistent: the lens (V004 · I → II, returns on XII) -->
+          <div id="lens" class="lens" aria-hidden="true">
+            <svg viewBox="0 0 400 400" width="100%" height="100%" style="position:absolute;inset:0;overflow:visible" id="lensArt" class="lens-art">
+              <path class="dw m d3" stroke="#1E1C19" stroke-width="1.8" d="M209.5 10 C310.2 6.2 391.9 95.5 390 203.8 C386.2 308.3 304.5 391.9 194.3 390 C86 386.2 6.2 298.8 11.9 192.4 C15.7 86 105 4.3 222.8 15.7"></path>
+              <path class="dw m d4" data-pre stroke="#8F897E" stroke-width=".9" d="M209 19 C305 15.4 382.8 100.5 381 203.6 C377.4 303.2 299.6 382.8 194.6 381 C91.4 377.4 15.3 294.1 20.8 192.8 C24.4 91.4 109.5 13.6 221.7 24.4"></path>
+              <g transform="translate(200 200) scale(1.1176) translate(-640 -290)">
+                <path class="dw s d6" stroke="#1E1C19" stroke-width="1.7" d="M576.5 260 C592.4 259.4 605.3 273.5 605 290.6 C604.4 307.1 591.5 320.3 574.1 320 C557 319.4 544.4 305.6 545.3 288.8 C545.9 272 560 259.1 578.6 260.9"></path>
+                <path class="dw s d7" stroke="#1E1C19" stroke-width="1.5" d="M528.8 225 C536.7 224.7 543.2 231.8 543 240.3 C542.7 248.6 536.3 255.2 527.6 255 C519 254.7 512.7 247.8 513.2 239.4 C513.5 231 520.5 224.6 529.8 225.5"></path>
+                <path class="dw s d7" stroke="#1E1C19" stroke-width="1.5" d="M533.8 327 C541.7 326.7 548.2 333.8 548 342.3 C547.7 350.6 541.3 357.2 532.6 357 C524 356.7 517.7 349.8 518.2 341.4 C518.5 333 525.5 326.6 534.8 327.5"></path>
+                <path class="dw s d8" stroke="#1E1C19" stroke-width="1.3" d="M556.7 266 L540.5 248.8 M552.3 270.2 L536.1 253"></path>
+                <path class="dw s d8" stroke="#1E1C19" stroke-width="1.3" d="M556 313 L542.5 330.3"></path>
+                <path class="dw s d8" stroke="#1E1C19" stroke-width="1.7" d="M713.4 268 C728.2 267.4 740.3 280.6 740 296.6 C739.4 312 727.4 324.3 711.2 324 C695.2 323.4 683.4 310.6 684.3 294.9 C684.8 279.2 698 267.2 715.4 268.8"></path>
+                <path class="dw s d9" stroke="#1E1C19" stroke-width="1.5" d="M750.7 238 C758.1 237.7 764.1 244.3 764 252.3 C763.7 260 757.7 266.1 749.6 266 C741.6 265.7 735.7 259.3 736.1 251.4 C736.4 243.6 743 237.6 751.7 238.4"></path>
+                <path class="dw s d9" stroke="#1E1C19" stroke-width="1.5" d="M748.7 328 C756.1 327.7 762.1 334.3 762 342.3 C761.7 350 755.7 356.1 747.6 356 C739.6 355.7 733.7 349.3 734.1 341.4 C734.4 333.6 741 327.6 749.7 328.4"></path>
+                <path class="dw s d10" stroke="#1E1C19" stroke-width="1.3" d="M730.3 274.8 L740.8 262.6 M729.3 318.1 L739.4 331"></path>
+                <path class="dw s d10" stroke="#57534B" stroke-width=".9" d="M562.5 311.7 A25 25 0 0 0 598.5 298.6 M565 307.3 A20 20 0 0 0 593.8 296.8 M567.5 303 A15 15 0 0 0 589.1 295.1"></path>
+                <path class="dw s d11" stroke="#57534B" stroke-width=".9" d="M700.5 315.9 A23 23 0 0 0 733.6 303.9 M703 311.6 A18 18 0 0 0 728.9 302.2 M705.5 307.3 A13 13 0 0 0 724.2 300.4"></path>
+                <path class="dw s d11" stroke="#57534B" stroke-width=".9" d="M523 248.7 A10 10 0 0 0 537.4 243.4 M528 350.7 A10 10 0 0 0 542.4 345.4 M745.5 259.8 A9 9 0 0 0 758.5 255.1 M743.5 349.8 A9 9 0 0 0 756.5 345.1"></path>
+                <path class="dw s d12" stroke="#B5552F" stroke-width="2.2" d="M610 291 q5 -9 10 0 t10 0 t10 0 t10 0 t10 0 t10 0 t10 0"></path>
+              </g>
+            </svg>
+            <svg viewBox="0 0 400 400" width="100%" height="100%" style="position:absolute;inset:0;overflow:visible" id="lensOverlay" class="lens-overlay">
+              <path class="dw m d6" stroke="#8F897E" stroke-width="1" d="M242.1 36.2 A200 200 0 0 1 242.1 363.8"></path>
+              <text class="wr d7" x="200" y="72" font-family="Caveat" font-size="19" fill="#57534B">cutoff</text>
+              <path class="dw s d7" stroke="#1E1C19" stroke-width="1.3" d="M230.7 307 C237.5 306.7 243.1 312.9 243 320.3 C242.7 327.4 237.2 333.1 229.6 333 C222.2 332.7 216.7 326.8 217.1 319.5 C217.4 312.2 223.5 306.6 231.6 307.4"></path>
+              <path class="dw s d8" stroke="#1E1C19" stroke-width="1" d="M152 228.5 Q182 272 219 307"></path>
+              <path class="dw s d8" stroke="#8F897E" stroke-width="1.1" d="M330.6 288 C337 287.8 342.1 293.4 342 300.2 C341.8 306.8 336.6 312.1 329.6 312 C322.8 311.8 317.8 306.2 318.1 299.5 C318.4 292.8 324 287.6 331.4 288.4"></path>
+              <text class="wr d9" x="318" y="286" font-family="Caveat" font-size="14" fill="#57534B">skipped</text>
+              <text class="wr d9" x="119" y="208" font-family="Caveat" font-size="22" fill="#1E1C19">i</text>
+              <text class="wr d9" x="275" y="214" font-family="Caveat" font-size="22" fill="#1E1C19">j</text>
+              <text class="wr d9" x="226" y="349" font-family="Caveat" font-size="17" fill="#1E1C19">j′</text>
+              <path class="dw s d11" stroke="#B5552F" stroke-width="1.8" d="M318 207 C330 206 343 208 356 207 M346 199 L357 207 L346 215"></path>
+              <path class="dw s d12" stroke="#B5552F" stroke-width="1.8" d="M90 200 C78 201 65 199 52 200 M62 192 L51 200 L62 208"></path>
+              <text class="wr d13" x="326" y="194" font-family="Caveat" font-size="17" fill="#93401F">F<tspan font-size="12" dy="4">ij</tspan></text>
+              <text class="wr d13" x="40" y="188" font-family="Caveat" font-size="17" fill="#93401F">−F<tspan font-size="12" dy="4">ij</tspan></text>
+            </svg>
+          </div>
+
+          <!-- persistent: the 7B accumulator (V004). Specimen on V, ledger row on VI, flies into the chip on VII -->
+          <div id="acc" class="acc hatch-light" aria-hidden="true"></div>
+
+          <!-- ================= PLATE I · Opening (V004 scene 1) ================= -->
+          <section class="scene" data-scene="1" aria-label="Plate I · MDX, Molecular Dynamics Accelerator">
+            <div class="note rise d14 s1-fig">fig. I — two molecules, one nonbonded pair</div>
+            <div class="note rise d15 s1-key">pencil = context<br>ink = the subject<br><span style="color:var(--kiln)">terracotta = the point</span></div>
+            <div class="abs kicker rise s1-kicker">PLATE I · A STUDY IN SPECIALISED HARDWARE · 2026</div>
+            <h2 class="abs rise d1 s1-mdx">MDX</h2>
+            <div class="abs rise d2 s1-sub">Molecular Dynamics Accelerator</div>
+            <svg class="abs s1-ul" viewBox="0 0 520 22" width="520" height="22" aria-hidden="true">
+              <path class="dw m d6" stroke="#B5552F" stroke-width="3" d="M4 13 C120 6 260 5 380 9 C440 11 480 14 512 10"></path>
+            </svg>
+            <p class="abs rise d3 s1-lede">A study of specialised hardware for the short-range nonbonded force: the pairwise calculation that a molecular simulation repeats at every timestep.</p>
+            <svg class="abs only-l" viewBox="0 0 1280 720" width="1280" height="720" aria-hidden="true" style="left:0;top:0;pointer-events:none">
+              <path class="dw s d14" stroke="#8F897E" stroke-width="1" d="M1006 334 C1007 410 1005 470 1006 529"></path>
+              <path class="dw s d15" stroke="#B5552F" stroke-width="1.4" d="M1006 529 C1013 529 1018 534 1018 541 C1018 548 1013 553 1006 553 C999 553 994 548 994 541 C994 534 999 529 1007 529.5"></path>
+              <text class="fd d15" x="1002" y="545.5" font-family="IBM Plex Mono" font-size="12" fill="#93401F">1</text>
+              <path class="dw s d16" stroke="#8F897E" stroke-width="1.1" d="M782 214 C812 222 842 238 866 256 M856 255 L867 257 L862 247"></path>
+              <text class="wr d16" x="676" y="208" font-family="Caveat" font-size="22" fill="#57534B">bond → host software</text>
+              <text class="wr d18" x="1080" y="104" font-family="Caveat" font-size="24" fill="#93401F" transform="rotate(4 1080 104)">every pair, every step</text>
+            </svg>
+            <svg class="abs only-p" viewBox="0 0 720 1500" width="720" height="1500" aria-hidden="true" style="left:0;top:0;pointer-events:none">
+              <path class="dw s d14" stroke="#8F897E" stroke-width="1.7" d="M351 1022 C352 1090 350 1140 351 1183"></path>
+              <path class="dw s d15" stroke="#B5552F" stroke-width="2.2" d="M351.8 1184 C360.3 1183.7 367.2 1191.2 367 1200.3 C366.7 1209.1 359.8 1216.2 350.5 1216 C341.4 1215.7 334.7 1208.3 335.2 1199.4 C335.5 1190.4 343 1183.5 352.9 1184.5"></path>
+              <text class="fd d15" x="345.5" y="1206.5" font-family="IBM Plex Mono" font-size="18" fill="#93401F">1</text>
+              <path class="dw s d16" stroke="#8F897E" stroke-width="1.7" d="M176 814 C190 846 202 880 214 916 M205.8 907.3 L214 916 L215.4 904.1"></path>
+              <text class="wr d16" x="84" y="800" font-family="Caveat" font-size="31" fill="#57534B">bond → host software</text>
+              <text class="wr d18" x="484" y="232" font-family="Caveat" font-size="35" fill="#93401F" transform="rotate(4 484 232)"><tspan x="484">every pair,</tspan><tspan x="484" dy="38">every step</tspan></text>
+            </svg>
+            <div class="abs cap rise d16 s1-cap"><span style="color:var(--kiln)">One nonbonded pair.</span> MDX studies hardware for computing this force, pair after pair.</div>
+            <div class="abs rise d5 s1-by"><b>Selman Ali Dokumacı</b><span>Researcher</span></div>
+          </section>
+
+          <!-- ================= PLATE II · Molecular dynamics (V004 scene 2) ================= -->
+          <section class="scene" data-scene="2" aria-label="Plate II · The loop">
+            <div class="note rise d14 s2-newton">Newton’s third law: one evaluation, two atoms</div>
+            <div class="abs kicker rise d1 s2-kicker">PLATE II · THE LOOP</div>
+            <h2 class="abs head rise d2 s2-head">Every pair, every timestep.</h2>
+            <svg class="abs only-l" viewBox="0 0 1280 720" width="1280" height="720" aria-hidden="true" style="left:0;top:0;pointer-events:none">
+              <path class="dw s d4" stroke="#1E1C19" stroke-width="1.2" d="M876 224 C883 224 888 229 888 236 C888 243 883 248 876 248 C869 248 864 243 864 236 C864 229 869 224 877 224.5"></path>
+              <path class="dw s d6" stroke="#B5552F" stroke-width="1.5" d="M876 282 C883 282 888 287 888 294 C888 301 883 306 876 306 C869 306 864 301 864 294 C864 287 869 282 877 282.5"></path>
+              <path class="dw s d8" stroke="#B5552F" stroke-width="1.5" d="M876 340 C883 340 888 345 888 352 C888 359 883 364 876 364 C869 364 864 359 864 352 C864 345 869 340 877 340.5"></path>
+              <path class="dw s d10" stroke="#1E1C19" stroke-width="1.2" d="M876 398 C883 398 888 403 888 410 C888 417 883 422 876 422 C869 422 864 417 864 410 C864 403 869 398 877 398.5"></path>
+              <text class="fd d4" x="872" y="240.5" font-family="IBM Plex Mono" font-size="12" fill="#1E1C19">1</text>
+              <text class="fd d6" x="872" y="298.5" font-family="IBM Plex Mono" font-size="12" fill="#93401F">2</text>
+              <text class="fd d8" x="872" y="356.5" font-family="IBM Plex Mono" font-size="12" fill="#93401F">3</text>
+              <text class="fd d10" x="872" y="414.5" font-family="IBM Plex Mono" font-size="12" fill="#1E1C19">4</text>
+              <path class="dw s d12" stroke="#B5552F" stroke-width="2.2" d="M850 276 C843 277 841 282 842 290 C843 310 841 336 842 356 C842 365 845 370 851 370"></path>
+              <path class="dw s d13" stroke="#B5552F" stroke-width="1.6" d="M842 323 C826 330 818 360 822 392 C824 420 836 440 858 452"></path>
+              <text class="wr d14" x="866" y="472" font-family="Caveat" font-size="25" fill="#93401F">② + ③ — the loop MDX studies in hardware</text>
+              <text class="wr d16" x="866" y="536" font-family="Caveat" font-size="29" fill="#1E1C19">F(r) = 24ε/r · [ 2(σ/r)¹² − (σ/r)⁶ ]</text>
+              <path class="dw s d17" stroke="#8F897E" stroke-width="1.2" d="M866 548 C960 545 1080 549 1190 546"></path>
+            </svg>
+            <svg class="abs only-p" viewBox="0 0 720 1500" width="720" height="1500" aria-hidden="true" style="left:0;top:0;pointer-events:none">
+              <path class="dw s d4" stroke="#1E1C19" stroke-width="1.8" d="M100.8 788 C109.9 787.7 117.2 795.6 117 805.3 C116.7 814.7 109.3 822.2 99.5 822 C89.8 821.7 82.7 813.8 83.2 804.3 C83.5 794.8 91.5 787.5 102 788.5"></path>
+              <path class="dw s d6" stroke="#B5552F" stroke-width="2.2" d="M100.8 868 C109.9 867.7 117.2 875.6 117 885.3 C116.7 894.7 109.3 902.2 99.5 902 C89.8 901.7 82.7 893.8 83.2 884.3 C83.5 874.8 91.5 867.5 102 868.5"></path>
+              <path class="dw s d8" stroke="#B5552F" stroke-width="2.2" d="M100.8 960 C109.9 959.7 117.2 967.6 117 977.3 C116.7 986.7 109.3 994.2 99.5 994 C89.8 993.7 82.7 985.8 83.2 976.3 C83.5 966.8 91.5 959.5 102 960.5"></path>
+              <path class="dw s d10" stroke="#1E1C19" stroke-width="1.8" d="M100.8 1040 C109.9 1039.7 117.2 1047.7 117 1057.3 C116.7 1066.7 109.3 1074.2 99.5 1074 C89.8 1073.7 82.7 1065.8 83.2 1056.3 C83.5 1046.8 91.5 1039.5 102 1040.5"></path>
+              <text class="fd d4" x="94.5" y="811.5" font-family="IBM Plex Mono" font-size="19" fill="#1E1C19">1</text>
+              <text class="fd d6" x="94.5" y="891.5" font-family="IBM Plex Mono" font-size="19" fill="#93401F">2</text>
+              <text class="fd d8" x="94.5" y="983.5" font-family="IBM Plex Mono" font-size="19" fill="#93401F">3</text>
+              <text class="fd d10" x="94.5" y="1063.5" font-family="IBM Plex Mono" font-size="19" fill="#1E1C19">4</text>
+              <path class="dw s d12" stroke="#B5552F" stroke-width="2.8" d="M80 862 C70 863 66 870 67 880 C68 910 66 960 67 990 C67 1000 71 1006 80 1006"></path>
+              <path class="dw s d13" stroke="#B5552F" stroke-width="2.2" d="M67 935 C49 951 41 1010 45 1070 C48 1110 58 1130 82 1146"></path>
+              <text class="wr d14" x="92" y="1162" font-family="Caveat" font-size="31" fill="#93401F">② + ③ — the loop MDX studies in hardware</text>
+              <text class="wr d16" x="84" y="1226" font-family="Caveat" font-size="36" fill="#1E1C19">F(r) = 24ε/r · [ 2(σ/r)¹² − (σ/r)⁶ ]</text>
+              <path class="dw m d17" stroke="#8F897E" stroke-width="1.7" d="M84 1240 C250 1237 450 1241 640 1238"></path>
+            </svg>
+            <div class="abs rise d4 s2-li s2-li1">Find neighbour pairs inside the cutoff.</div>
+            <div class="abs rise d6 s2-li s2-li2">Evaluate the Lennard-Jones force for each pair.</div>
+            <div class="abs rise d8 s2-li s2-li3">Add each pair’s force to both atoms.</div>
+            <div class="abs rise d10 s2-li s2-li4">Integrate positions, advance one timestep, repeat.</div>
+            <div class="abs cap rise d18 s2-cap">Bonded terms, long-range electrostatics, constraints and integration stay in host software.</div>
+          </section>
+
+          <!-- ================= SCENE III · Why the pair loop matters ================= -->
+  <section class="scene" data-scene="3" aria-label="Why repeated nonbonded-force calculations matter">
+    <svg class="abs only-p" viewBox="0 0 720 1500" width="720" height="1500" aria-hidden="true" style="left:0;top:0;pointer-events:none;overflow:visible"><g font-family="IBM Plex Mono" font-size="20" fill="#57534B" class="fd d9"><text x="145" y="660" text-anchor="middle">t</text><text x="365" y="660" text-anchor="middle">t + Δt</text><text x="585" y="660" text-anchor="middle">t + 2Δt</text><text x="255" y="870" text-anchor="middle">t + 3Δt</text><text x="475" y="870" text-anchor="middle">t + 4Δt …</text></g><path class="dw s d9" stroke="#8F897E" stroke-width="1.8" d="M236 568 C246 566 258 569 272 567 M264 561 L273 567 L264 573 M456 568 C466 566 478 569 492 567 M484 561 L493 567 L484 573 M346 778 C356 776 368 779 382 777 M374 771 L383 777 L374 783"></path><path class="dw m d16" stroke="#1E1C19" stroke-width="2" d="M84 1100 C250 1099 470 1101 636 1100"></path><path class="dw s d16" stroke="#1E1C19" stroke-width="1.8" d="M84 1092 L84 1108 M222 1092 L222 1108 M360 1092 L360 1108 M498 1092 L498 1108 M636 1092 L636 1108"></path><g font-family="IBM Plex Mono" font-size="20" fill="#57534B" class="fd d16"><text x="74" y="1082">10³</text><text x="212" y="1082">10⁴</text><text x="350" y="1082">10⁵</text><text x="488" y="1082">10⁶</text><text x="626" y="1082">10⁷</text><text x="636" y="1146" text-anchor="end">atoms</text></g><path class="dw m d17" stroke="#B5552F" stroke-width="2.6" d="M86 1058 L86 1048 C250 1046 470 1049 634 1047 L634 1058"></path><path class="dw s d19" stroke="#57534B" stroke-width="1.8" d="M85 1112 L85 1130 M459 1112 L459 1130 M636 1112 L636 1124"></path></svg>
+    <div data-i="0" class="abs kicker rise" style="left:64px;top:52px">PLATE III · WHY THE PAIR LOOP</div>
+    <h2 data-i="1" class="abs head rise d1" style="left:62px;top:76px;width:820px;font-size:56px">The same arithmetic, again, every timestep.</h2>
+    <p data-i="2" class="abs lede rise d2" style="left:64px;top:146px;width:600px">MDX starts from a premise: in many classical timesteps, short-range nonbonded pair forces are a large share of the work, and the pair loop is regular and numerically intensive.</p>
+    <div data-i="3" class="abs rise d3" style="left:730px;top:152px"><span class="stamp st-red">PREMISE · NOT AN MDX MEASUREMENT</span></div>
+
+    <svg data-i="4" class="abs" viewBox="0 0 1280 720" width="1280" height="720" aria-hidden="true" style="left:0;top:0;pointer-events:none">
+      <!-- five timesteps; atoms drift, the pair lines are drawn again in each frame -->
+      <g data-j="0" transform="translate(70 238)">
+        <path class="dw s d4" stroke="#1E1C19" stroke-width="1.5" d="M50.7 46 C58.1 45.7 64.1 52.3 64 60.3 C63.7 68 57.7 74.1 49.6 74 C41.6 73.7 35.7 67.3 36.1 59.4 C36.4 51.6 43 45.6 51.7 46.4"></path><path class="dw s d4" stroke="#1E1C19" stroke-width="1.4" d="M110.5 34 C116.4 33.8 121.1 39 121 45.2 C120.8 51.3 116 56.1 109.7 56 C103.4 55.8 98.8 50.7 99.1 44.6 C99.3 38.4 104.5 33.7 111.3 34.3"></path><path class="dw s d4" stroke="#1E1C19" stroke-width="1.4" d="M95.6 98 C102 97.8 107.1 103.4 107 110.2 C106.8 116.8 101.6 122.1 94.6 122 C87.8 121.8 82.8 116.2 83.1 109.5 C83.4 102.8 89 97.6 96.4 98.4"></path><path class="dw s d4" stroke="#1E1C19" stroke-width="1.3" d="M150.5 85 C155.8 84.8 160.1 89.5 160 95.2 C159.8 100.7 155.5 105.1 149.7 105 C144 104.8 139.8 100.2 140.1 94.6 C140.3 89 145 84.7 151.2 85.3"></path>
+        <path class="dw s d6" stroke="#B5552F" stroke-width="2" d="M63 55 L99 48 M60 71 L85 101 M106 56 L99 98 M107 106 L140 98"></path>
+      </g>
+      <g data-j="1" transform="translate(300 238)">
+        <path class="dw s d5" stroke="#1E1C19" stroke-width="1.5" d="M53.7 44 C61.1 43.7 67.1 50.3 67 58.3 C66.7 66 60.7 72.1 52.6 72 C44.6 71.7 38.7 65.3 39.1 57.4 C39.4 49.6 46 43.6 54.7 44.4"></path><path class="dw s d5" stroke="#1E1C19" stroke-width="1.4" d="M108.5 37 C114.4 36.8 119.1 42 119 48.2 C118.8 54.3 114 59.1 107.7 59 C101.4 58.8 96.8 53.7 97.1 47.6 C97.3 41.4 102.5 36.7 109.3 37.3"></path><path class="dw s d5" stroke="#1E1C19" stroke-width="1.4" d="M97.6 99 C104 98.8 109.1 104.4 109 111.2 C108.8 117.8 103.6 123.1 96.6 123 C89.8 122.8 84.8 117.2 85.1 110.5 C85.4 103.8 91 98.6 98.4 99.4"></path><path class="dw s d5" stroke="#1E1C19" stroke-width="1.3" d="M147.5 84 C152.8 83.8 157.1 88.5 157 94.2 C156.8 99.7 152.5 104.1 146.7 104 C141 103.8 136.8 99.2 137.1 93.6 C137.3 88 142 83.7 148.2 84.3"></path>
+        <path class="dw s d8" stroke="#B5552F" stroke-width="2" d="M66 54 L97 51 M62 69 L87 102 M105 59 L100 99 M109 107 L137 97"></path>
+      </g>
+      <g data-j="2" transform="translate(530 238)">
+        <path class="dw s d6" stroke="#1E1C19" stroke-width="1.5" d="M56.7 42 C64.1 41.7 70.1 48.3 70 56.3 C69.7 64 63.7 70.1 55.6 70 C47.6 69.7 41.7 63.3 42.1 55.4 C42.4 47.6 49 41.6 57.7 42.4"></path><path class="dw s d6" stroke="#1E1C19" stroke-width="1.4" d="M106.5 40 C112.4 39.8 117.1 45 117 51.2 C116.8 57.3 112 62.1 105.7 62 C99.4 61.8 94.8 56.7 95.1 50.6 C95.3 44.4 100.5 39.7 107.3 40.3"></path><path class="dw s d6" stroke="#1E1C19" stroke-width="1.4" d="M99.6 100 C106 99.8 111.1 105.4 111 112.2 C110.8 118.8 105.6 124.1 98.6 124 C91.8 123.8 86.8 118.2 87.1 111.5 C87.4 104.8 93 99.6 100.4 100.4"></path><path class="dw s d6" stroke="#1E1C19" stroke-width="1.3" d="M144.5 83 C149.8 82.8 154.1 87.5 154 93.2 C153.8 98.7 149.5 103.1 143.7 103 C138 102.8 133.8 98.2 134.1 92.6 C134.3 87 139 82.7 145.2 83.3"></path>
+        <path class="dw s d10" stroke="#B5552F" stroke-width="2" d="M69 53 L95 52 M65 67 L89 103 M104 62 L101 100 M111 108 L134 96"></path>
+      </g>
+      <g data-j="3" transform="translate(760 238)">
+        <path class="dw s d7" stroke="#1E1C19" stroke-width="1.5" d="M59.7 40 C67.1 39.7 73.1 46.3 73 54.3 C72.7 62 66.7 68.1 58.6 68 C50.6 67.7 44.7 61.3 45.1 53.4 C45.4 45.6 52 39.6 60.7 40.4"></path><path class="dw s d7" stroke="#1E1C19" stroke-width="1.4" d="M104.5 43 C110.4 42.8 115.1 48 115 54.2 C114.8 60.3 110 65.1 103.7 65 C97.4 64.8 92.8 59.7 93.1 53.6 C93.3 47.4 98.5 42.7 105.3 43.3"></path><path class="dw s d7" stroke="#1E1C19" stroke-width="1.4" d="M101.6 101 C108 100.8 113.1 106.4 113 113.2 C112.8 119.8 107.6 125.1 100.6 125 C93.8 124.8 88.8 119.2 89.1 112.5 C89.4 105.8 95 100.6 102.4 101.4"></path><path class="dw s d7" stroke="#1E1C19" stroke-width="1.3" d="M141.5 82 C146.8 81.8 151.1 86.5 151 92.2 C150.8 97.7 146.5 102.1 140.7 102 C135 101.8 130.8 97.2 131.1 91.6 C131.3 86 136 81.7 142.2 82.3"></path>
+        <path class="dw s d12" stroke="#B5552F" stroke-width="2" d="M72 53 L93 54 M67 66 L91 104 M103 65 L102 101 M113 108 L131 95"></path>
+      </g>
+      <g data-j="4" transform="translate(990 238)">
+        <path class="dw s d8" stroke="#1E1C19" stroke-width="1.5" d="M62.7 38 C70.1 37.7 76.1 44.3 76 52.3 C75.7 60 69.7 66.1 61.6 66 C53.6 65.7 47.7 59.3 48.1 51.4 C48.4 43.6 55 37.6 63.7 38.4"></path><path class="dw s d8" stroke="#1E1C19" stroke-width="1.4" d="M102.5 46 C108.4 45.8 113.1 51 113 57.2 C112.8 63.3 108 68.1 101.7 68 C95.4 67.8 90.8 62.7 91.1 56.6 C91.3 50.4 96.5 45.7 103.3 46.3"></path><path class="dw s d8" stroke="#1E1C19" stroke-width="1.4" d="M103.6 102 C110 101.8 115.1 107.4 115 114.2 C114.8 120.8 109.6 126.1 102.6 126 C95.8 125.8 90.8 120.2 91.1 113.5 C91.4 106.8 97 101.6 104.4 102.4"></path><path class="dw s d8" stroke="#1E1C19" stroke-width="1.3" d="M138.5 81 C143.8 80.8 148.1 85.5 148 91.2 C147.8 96.7 143.5 101.1 137.7 101 C132 100.8 127.8 96.2 128.1 90.6 C128.3 85 133 80.7 139.2 81.3"></path>
+        <path class="dw s d14" stroke="#B5552F" stroke-width="2" d="M75 53 L91 56 M68 65 L93 105 M102 68 L103 102 M115 108 L128 94"></path>
+      </g>
+      <path data-j="5" class="dw s d9" stroke="#8F897E" stroke-width="1.2" d="M246 318 C258 316 270 319 284 317 M276 311 L285 317 L276 323 M476 318 C488 316 500 319 514 317 M506 311 L515 317 L506 323 M706 318 C718 316 730 319 744 317 M736 311 L745 317 L736 323 M936 318 C948 316 960 319 974 317 M966 311 L975 317 L966 323"></path>
+      <g data-j="6" font-family="IBM Plex Mono" font-size="12" fill="#57534B" class="fd d9">
+        <text x="130" y="392">t</text><text x="350" y="392">t + Δt</text><text x="578" y="392">t + 2Δt</text><text x="808" y="392">t + 3Δt</text><text x="1036" y="392">t + 4Δt …</text>
+      </g>
+      <path data-j="7" class="dw s d15" stroke="#8F897E" stroke-width="1.1" d="M640 232 C650 214 676 200 700 196 M690 190 L701 196 L692 204"></path>
+      <text data-j="8" class="wr d15" x="706" y="200" font-family="Caveat" font-size="21" fill="#57534B">pairs re-checked and recomputed as atoms move</text>
+
+      <!-- scale: intended investigation range on a log axis (10^3 … 10^7 atoms) -->
+      <path data-j="9" class="dw m d16" stroke="#1E1C19" stroke-width="1.4" d="M120 590 C400 589 800 591 1080 590"></path>
+      <path data-j="10" class="dw s d16" stroke="#1E1C19" stroke-width="1.2" d="M120 584 L120 596 M360 584 L360 596 M600 584 L600 596 M840 584 L840 596 M1080 584 L1080 596"></path>
+      <g data-j="11" font-family="IBM Plex Mono" font-size="11" fill="#57534B" class="fd d16">
+        <text x="110" y="577">10³</text><text x="350" y="577">10⁴</text><text x="590" y="577">10⁵</text><text x="830" y="577">10⁶</text><text x="1070" y="577">10⁷ atoms</text>
+      </g>
+      <path data-j="12" class="dw m d17" stroke="#B5552F" stroke-width="2" d="M122 548 L122 538 C400 536 800 539 1078 537 L1078 548"></path>
+      <text data-j="13" class="wr d18" x="134" y="531" font-family="Caveat" font-size="21" fill="#93401F">intended investigation range: about 1,000 to 10,000,000 atoms</text>
+      <!-- identifier widths -->
+      <path data-j="14" class="dw s d19" stroke="#57534B" stroke-width="1.2" d="M121 598 L121 616 M773 598 L773 616 M1080 598 L1080 638"></path>
+    </svg>
+    <div data-i="5" class="abs rise d18" style="left:850px;top:500px"><span class="stamp st-no">NOT RUN ON MDX HARDWARE</span></div>
+    <div data-i="6" class="abs cap rise d19" style="left:112px;top:618px;width:330px;font-size:11.5px">10-bit IDs name 1,024 atoms <span style="color:var(--graphite)">· the 8B simulation</span></div>
+    <div data-i="7" class="abs cap rise d20" style="left:600px;top:618px;width:330px;font-size:11.5px;text-align:right">19-bit IDs: 524,288 <span style="color:var(--graphite)">· the nominal simulations</span></div>
+    <div data-i="8" class="abs cap rise d21" style="left:640px;top:640px;width:440px;font-size:11.5px;text-align:right;color:var(--kiln)">10 million atoms need ≥ 24 bits · not implemented</div>
+  </section>
+
+          <!-- ================= SCENE IV · Hypothesis ================= -->
+  <section class="scene" data-scene="4" aria-label="The research hypothesis">
+    <svg class="abs only-p" viewBox="0 0 720 1500" width="720" height="1500" aria-hidden="true" style="left:0;top:0;pointer-events:none;overflow:visible"><path class="dw L" stroke="#1E1C19" stroke-width="2" d="M41 40 C253.3 39 466.7 41 680 40 C681 513.3 679 986.7 681 1460 C466.7 1461 253.3 1459 40 1461 C39 986.7 41 513.3 41 40" pathLength="2400"></path><path class="dw L d1" stroke="#8F897E" stroke-width="1.1" d="M51 50 C256.7 49 463.3 51 670 50 C671 516.7 669 983.3 671 1450 C463.3 1451 256.7 1449 50 1451 C49 983.3 51 516.7 51 50" pathLength="2400"></path><path class="dw L d3" stroke="#1E1C19" stroke-width="2.2" d="M71 330 C263.3 329 456.7 331 650 330 C651 470 649 610 651 750 C456.7 751 263.3 749 70 751 C69 610 71 470 71 330" pathLength="2400"></path><path class="dw L d4" stroke="#8F897E" stroke-width="1.2" d="M79 338 C266 337 454 339 642 338 C643 472.7 641 607.3 643 742 C454 743 266 741 78 743 C77 607.3 79 472.7 79 338" pathLength="2400"></path><path class="dw s d12" stroke="#1E1C19" stroke-width="1.8" d="M100.9 860 C110.4 859.6 118.2 868.1 118 878.4 C117.6 888.3 109.9 896.2 99.5 896 C89.2 895.6 81.6 887.4 82.2 877.3 C82.5 867.2 91 859.5 102.2 860.5"></path><path class="dw s d14" stroke="#1E1C19" stroke-width="1.8" d="M100.9 1030 C110.4 1029.6 118.2 1038.1 118 1048.4 C117.6 1058.3 109.9 1066.2 99.5 1066 C89.2 1065.6 81.6 1057.4 82.2 1047.3 C82.5 1037.2 91 1029.5 102.2 1030.5"></path><path class="dw s d16" stroke="#1E1C19" stroke-width="1.8" d="M100.9 1200 C110.4 1199.6 118.2 1208.1 118 1218.4 C117.6 1228.3 109.9 1236.2 99.5 1236 C89.2 1235.6 81.6 1227.4 82.2 1217.3 C82.5 1207.2 91 1199.5 102.2 1200.5"></path><g font-family="IBM Plex Mono" font-size="20" fill="#1E1C19"><text class="fd d12" x="94" y="885">1</text><text class="fd d14" x="94" y="1055">2</text><text class="fd d16" x="94" y="1225">3</text></g><path class="dw s d18" stroke="#B5552F" stroke-width="2" d="M650 1300 C672 1330 668 1370 640 1396 M628 1388 L641 1397 L646 1383"></path></svg>
+    <svg data-i="0" class="abs" viewBox="0 0 1280 720" width="1280" height="720" aria-hidden="true" style="left:0;top:0;pointer-events:none">
+      <path data-j="0" class="dw L" stroke="#1E1C19" stroke-width="1.6" d="M41 36 C440 35 840 37 1240 36 C1241 237.3 1239 438.7 1241 640 C840 641 440 639 40 641 C39 438.7 41 237.3 41 36"></path>
+      <path data-j="1" class="dw L d1" stroke="#8F897E" stroke-width=".9" d="M51 46 C443.3 45 836.7 47 1230 46 C1231 240.7 1229 435.3 1231 630 C836.7 631 443.3 629 50 631 C49 435.3 51 240.7 51 46"></path>
+      <path data-j="2" class="dw L d3" stroke="#1E1C19" stroke-width="1.8" d="M251 150 C510 149 770 151 1030 150 C1031 223.3 1029 296.7 1031 370 C770 371 510 369 250 371 C249 296.7 251 223.3 251 150"></path>
+      <path data-j="3" class="dw L d4" stroke="#8F897E" stroke-width="1" d="M259 158 C512.7 157 767.3 159 1022 158 C1023 226 1021 294 1023 362 C767.3 363 512.7 361 258 363 C257 294 259 226 259 158"></path>
+      <!-- clock doodle: one pair per cycle -->
+      <path data-j="4" class="dw s d6" stroke="#B5552F" stroke-width="1.8" d="M151.8 184 C170.9 183.3 186.4 200.2 186 220.7 C185.3 240.5 169.8 256.4 148.9 256 C128.4 255.3 113.3 238.7 114.4 218.6 C115.1 198.4 132 182.9 154.3 185.1"></path>
+      <path data-j="5" class="dw s d7" stroke="#B5552F" stroke-width="2" d="M150 220 L150 196 M150 220 L168 230"></path>
+      <path data-j="6" class="dw s d7" stroke="#8F897E" stroke-width="1.1" d="M150 186 L150 190 M184 220 L180 220 M150 254 L150 250 M116 220 L120 220"></path>
+      <text data-j="7" class="wr d8" x="98" y="286" font-family="Caveat" font-size="20" fill="#93401F">one pair per cycle</text>
+      <path data-j="8" class="dw s d18" stroke="#B5552F" stroke-width="1.4" d="M1050 380 C1080 400 1092 430 1086 462 M1078 452 L1086 463 L1094 452"></path>
+      <!-- three tests -->
+      <path data-j="9" class="dw s d12" stroke="#1E1C19" stroke-width="1.2" d="M262.6 464 C269 463.8 274.1 469.4 274 476.2 C273.8 482.8 268.6 488.1 261.6 488 C254.8 487.8 249.8 482.2 250.1 475.5 C250.4 468.8 256 463.6 263.4 464.4"></path>
+      <path data-j="10" class="dw s d14" stroke="#1E1C19" stroke-width="1.2" d="M532.6 464 C539 463.8 544.1 469.4 544 476.2 C543.8 482.8 538.6 488.1 531.6 488 C524.8 487.8 519.8 482.2 520.1 475.5 C520.4 468.8 526 463.6 533.4 464.4"></path>
+      <path data-j="11" class="dw s d16" stroke="#1E1C19" stroke-width="1.2" d="M802.6 464 C809 463.8 814.1 469.4 814 476.2 C813.8 482.8 808.6 488.1 801.6 488 C794.8 487.8 789.8 482.2 790.1 475.5 C790.4 468.8 796 463.6 803.4 464.4"></path>
+      <g data-j="12" font-family="IBM Plex Mono" font-size="12" fill="#1E1C19"><text class="fd d12" x="258" y="480">1</text><text class="fd d14" x="528" y="480">2</text><text class="fd d16" x="798" y="480">3</text></g>
+    </svg>
+    <div data-i="1" class="abs kicker rise" style="left:0;right:0;top:84px;text-align:center">PLATE IV · THE HYPOTHESIS</div>
+    <p data-i="2" class="abs rise d5" style="left:300px;top:186px;width:680px;margin:0;text-align:center;font-family:var(--serif);font-style:italic;font-size:31px;line-height:1.2">If one candidate pair can enter a dedicated pipeline every clock cycle, and the force sums stay in on-chip memory, the pair loop becomes a stream of hardware operations instead of a program.</p>
+    <div data-i="3" class="abs rise d9" style="left:0;right:0;top:388px;text-align:center"><span class="stamp st-red">HYPOTHESIS · NOT YET TESTED AT SYSTEM LEVEL</span></div>
+    <div data-i="4" class="abs hand wr d18" style="left:990px;top:470px;width:200px;font-size:21px;line-height:1.1;color:var(--kiln)">a hypothesis, not a result</div>
+
+    <div data-i="5" class="abs rise d12" style="left:284px;top:466px;width:220px"><b style="font-size:15px;font-weight:600;line-height:1.3;display:block">Does it compute the right force?</b><span class="stamp st-red" style="margin-top:8px">PARTIAL</span><div class="mono" style="font-size:11px;line-height:1.45;color:#47443E;margin-top:6px">components agree with an internal integer model · no GROMACS comparison yet</div></div>
+    <div data-i="6" class="abs rise d14" style="left:554px;top:466px;width:220px"><b style="font-size:15px;font-weight:600;line-height:1.3;display:block">Does it fit a real device?</b><span class="stamp st-red" style="margin-top:8px">PARTIAL</span><div class="mono" style="font-size:11px;line-height:1.45;color:#47443E;margin-top:6px">3C and 5C fit in synthesis · the accumulator does not (plate VII)</div></div>
+    <div data-i="7" class="abs rise d16" style="left:824px;top:466px;width:200px"><b style="font-size:15px;font-weight:600;line-height:1.3;display:block">Is it faster on a board?</b><span class="stamp st-no" style="margin-top:8px">NOT MEASURED</span><div class="mono" style="font-size:11px;line-height:1.45;color:#47443E;margin-top:6px">no board, no throughput, no speedup claimed</div></div>
+  </section>
+
+          <!-- ================= SCENE V · Architecture as component evidence (B + A) ================= -->
+  <section class="scene" data-scene="5" aria-label="MDX architecture: six separately verified components">
+    <svg class="abs only-p" viewBox="0 0 720 1500" width="720" height="1500" aria-hidden="true" style="left:0;top:0;pointer-events:none;overflow:visible"><path class="dw m d3" stroke="#1E1C19" stroke-width="1.8" d="M85 506 C284 505 484 507 684 506 C685 550.7 683 595.3 685 640 C484 641 284 639 84 641 C83 595.3 85 550.7 85 506"></path><path class="dw s d3" stroke="#1E1C19" stroke-width="1.4" d="M106.7 514 C114.1 513.7 120.1 520.3 120 528.3 C119.7 536 113.7 542.1 105.6 542 C97.6 541.7 91.7 535.3 92.1 527.4 C92.4 519.6 99 513.6 107.7 514.4"></path><text class="fd d3" x="100.5" y="534.5" font-family="IBM Plex Mono" font-size="17" fill="#1E1C19">1</text><path class="dw m d4" stroke="#1E1C19" stroke-width="1.8" d="M85 648 C284 647 484 649 684 648 C685 692.7 683 737.3 685 782 C484 783 284 781 84 783 C83 737.3 85 692.7 85 648"></path><path class="dw s d4" stroke="#1E1C19" stroke-width="1.4" d="M106.7 656 C114.1 655.7 120.1 662.3 120 670.3 C119.7 678 113.7 684.1 105.6 684 C97.6 683.7 91.7 677.3 92.1 669.4 C92.4 661.6 99 655.6 107.7 656.4"></path><text class="fd d4" x="100.5" y="676.5" font-family="IBM Plex Mono" font-size="17" fill="#1E1C19">2</text><path class="dw m d5" stroke="#1E1C19" stroke-width="1.8" d="M85 790 C284 789 484 791 684 790 C685 834.7 683 879.3 685 924 C484 925 284 923 84 925 C83 879.3 85 834.7 85 790"></path><path class="dw s d5" stroke="#1E1C19" stroke-width="1.4" d="M106.7 798 C114.1 797.7 120.1 804.3 120 812.3 C119.7 820 113.7 826.1 105.6 826 C97.6 825.7 91.7 819.3 92.1 811.4 C92.4 803.6 99 797.6 107.7 798.4"></path><text class="fd d5" x="100.5" y="818.5" font-family="IBM Plex Mono" font-size="17" fill="#1E1C19">3</text><path class="dw m d6" stroke="#1E1C19" stroke-width="1.8" d="M85 932 C284 931 484 933 684 932 C685 976.7 683 1021.3 685 1066 C484 1067 284 1065 84 1067 C83 1021.3 85 976.7 85 932"></path><path class="dw s d6" stroke="#1E1C19" stroke-width="1.4" d="M106.7 940 C114.1 939.7 120.1 946.3 120 954.3 C119.7 962 113.7 968.1 105.6 968 C97.6 967.7 91.7 961.3 92.1 953.4 C92.4 945.6 99 939.6 107.7 940.4"></path><text class="fd d6" x="100.5" y="960.5" font-family="IBM Plex Mono" font-size="17" fill="#1E1C19">4</text><path class="dw m d7" stroke="#1E1C19" stroke-width="1.8" d="M85 1074 C284 1073 484 1075 684 1074 C685 1118.7 683 1163.3 685 1208 C484 1209 284 1207 84 1209 C83 1163.3 85 1118.7 85 1074"></path><path class="dw s d7" stroke="#1E1C19" stroke-width="1.4" d="M106.7 1082 C114.1 1081.7 120.1 1088.3 120 1096.3 C119.7 1104 113.7 1110.1 105.6 1110 C97.6 1109.7 91.7 1103.3 92.1 1095.4 C92.4 1087.6 99 1081.6 107.7 1082.4"></path><text class="fd d7" x="100.5" y="1102.5" font-family="IBM Plex Mono" font-size="17" fill="#1E1C19">5</text><path class="dw m d8" stroke="#1E1C19" stroke-width="1.8" d="M85 1216 C284 1215 484 1217 684 1216 C685 1260.7 683 1305.3 685 1350 C484 1351 284 1349 84 1351 C83 1305.3 85 1260.7 85 1216"></path><path class="dw s d8" stroke="#1E1C19" stroke-width="1.4" d="M106.7 1224 C114.1 1223.7 120.1 1230.3 120 1238.3 C119.7 1246 113.7 1252.1 105.6 1252 C97.6 1251.7 91.7 1245.3 92.1 1237.4 C92.4 1229.6 99 1223.6 107.7 1224.4"></path><text class="fd d8" x="100.5" y="1244.5" font-family="IBM Plex Mono" font-size="17" fill="#1E1C19">6</text><g class="fd d10" stroke="#B5552F" stroke-width="1.8" fill="none" stroke-linecap="round"><path class="dash" d="M84 576 L66 576 L66 718 L80 718"></path><path d="M74 712 L82 718 L74 724"></path><path class="dash" d="M84 718 L66 718 L66 860 L80 860"></path><path d="M74 854 L82 860 L74 866"></path><path class="dash" d="M84 860 L66 860 L66 1002 L80 1002"></path><path d="M74 996 L82 1002 L74 1008"></path><path class="dash" d="M84 1002 L66 1002 L66 1144 L80 1144"></path><path d="M74 1138 L82 1144 L74 1150"></path><path class="dash" d="M84 1144 L66 1144 L66 1286 L80 1286"></path><path d="M74 1280 L82 1286 L74 1292"></path></g></svg>
+    <div data-i="0" class="note rise d14" style="top:150px">solid = simulated as a component</div>
+    <div data-i="1" class="note rise d15" style="top:212px"><span style="color:var(--kiln)">dashed = proposed, not built or run</span></div>
+    <div data-i="2" class="note rise d16" style="top:300px">motion is explanatory: no waveforms were recorded</div>
+
+    <div data-i="3" class="abs kicker rise" style="left:296px;top:50px">PLATE V · ARCHITECTURE — COMPONENT EVIDENCE</div>
+    <h2 data-i="4" class="abs head rise d1" style="left:294px;top:72px;width:930px;font-size:42px">Six components, each checked on its own.</h2>
+    <p data-i="5" class="abs rise d2" style="left:296px;top:122px;width:930px;margin:0;font-size:15px;line-height:1.45;color:#3A3732">Each block animates only inside itself. Dashed lines are proposed connections: not built, connected or tested.</p>
+
+    <svg data-i="6" class="abs" viewBox="0 0 1280 720" width="1280" height="720" aria-hidden="true" style="left:0;top:0;pointer-events:none">
+      <!-- specimen frames (solid: each was simulated as a component) -->
+      <path data-j="0" class="dw m d3" stroke="#1E1C19" stroke-width="1.6" d="M297 168 C393 167 489 169 586 168 C587 237 585 305 587 374 C489 375 393 373 296 375 C295 305 297 237 297 168"></path>
+      <path data-j="1" class="dw m d4" stroke="#1E1C19" stroke-width="1.6" d="M620 168 C716 167 812 169 909 168 C910 237 908 305 910 374 C812 375 716 373 619 375 C618 305 620 237 620 168"></path>
+      <path data-j="2" class="dw m d5" stroke="#1E1C19" stroke-width="1.6" d="M943 168 C1039 167 1135 169 1232 168 C1233 237 1231 305 1233 374 C1135 375 1039 373 942 375 C941 305 943 237 943 168"></path>
+      <path data-j="3" class="dw m d6" stroke="#1E1C19" stroke-width="1.6" d="M297 430 C393 429 489 431 586 430 C587 499 585 567 587 636 C489 637 393 635 296 637 C295 567 297 499 297 430"></path>
+      <path data-j="4" class="dw m d7" stroke="#1E1C19" stroke-width="1.6" d="M620 430 C716 429 812 431 909 430 C910 499 908 567 910 636 C812 637 716 635 619 637 C618 567 620 499 620 430"></path>
+      <path data-j="5" class="dw m d8" stroke="#1E1C19" stroke-width="1.6" d="M943 430 C1039 429 1135 431 1232 430 C1233 499 1231 567 1233 636 C1135 637 1039 635 942 637 C941 567 943 499 943 430"></path>
+      <!-- numbers -->
+      <g data-j="6" fill="none" stroke="#1E1C19" stroke-width="1.1">
+        <path class="dw s d3" d="M319 182 C325 182 329 186 329 192 C329 198 325 202 319 202 C313 202 309 198 309 192 C309 186 313 182 320 182.5"></path>
+        <path class="dw s d4" d="M642 182 C648 182 652 186 652 192 C652 198 648 202 642 202 C636 202 632 198 632 192 C632 186 636 182 643 182.5"></path>
+        <path class="dw s d5" d="M965 182 C971 182 975 186 975 192 C975 198 971 202 965 202 C959 202 955 198 955 192 C955 186 959 182 966 182.5"></path>
+        <path class="dw s d6" d="M319 444 C325 444 329 448 329 454 C329 460 325 464 319 464 C313 464 309 460 309 454 C309 448 313 444 320 444.5"></path>
+        <path class="dw s d7" d="M642 444 C648 444 652 448 652 454 C652 460 648 464 642 464 C636 464 632 460 632 454 C632 448 636 444 643 444.5"></path>
+        <path class="dw s d8" d="M965 444 C971 444 975 448 975 454 C975 460 971 464 965 464 C959 464 955 460 955 454 C955 448 959 444 966 444.5"></path>
+      </g>
+      <g data-j="7" font-family="IBM Plex Mono" font-size="11" fill="#1E1C19">
+        <text class="fd d3" x="315.5" y="196">1</text><text class="fd d4" x="638.5" y="196">2</text><text class="fd d5" x="961.5" y="196">3</text>
+        <text class="fd d6" x="315.5" y="458">4</text><text class="fd d7" x="638.5" y="458">5</text><text class="fd d8" x="961.5" y="458">6</text>
+      </g>
+
+      <!-- proposed connections: dashed, never animated as flow -->
+      <g data-j="8" class="fd d10" stroke="#B5552F" stroke-width="1.5" fill="none" stroke-linecap="round">
+        <path class="dash" d="M591 271 L613 271"></path><path d="M607 266 L614 271 L607 276"></path>
+        <path class="dash" d="M914 271 L936 271"></path><path d="M930 266 L937 271 L930 276"></path>
+        <path class="dash" d="M591 533 L613 533"></path><path d="M607 528 L614 533 L607 538"></path>
+        <path class="dash" d="M914 533 L936 533"></path><path d="M930 528 L937 533 L930 538"></path>
+        <path class="dash" d="M1087 380 C1087 400 1040 404 764 404 C480 404 441 408 441 424"></path><path d="M436 418 L441 425 L446 418"></path>
+      </g>
+
+      <!-- ① 3C nonbonded lane: cutoff test on one candidate pair -->
+      <g data-j="9" transform="translate(312 224)">
+        <path class="dw s d10" stroke="#8F897E" stroke-width="1.1" d="M61.4 7 C76.2 6.4 88.3 19.6 88 35.6 C87.4 51 75.4 63.3 59.2 63 C43.2 62.4 31.4 49.6 32.3 33.9 C32.8 18.2 46 6.2 63.4 7.8"></path>
+        <path class="dw s d10" stroke="#1E1C19" stroke-width="1.4" d="M60.3 29 C63.5 28.9 66 31.6 66 35.1 C65.9 38.4 63.3 41 59.8 41 C56.5 40.9 54 38.2 54.1 34.8 C54.2 31.5 56.9 28.9 60.6 29.1"></path>
+        <g class="fd d11"><circle class="loop jx" cx="124" cy="35" r="5" fill="#B5552F"></circle></g>
+        <text class="wr d11" x="142" y="30" font-family="Caveat" font-size="17" fill="#57534B">candidate pair:</text>
+        <text class="wr d12" x="142" y="50" font-family="Caveat" font-size="17" fill="#57534B">inside the cutoff?</text>
+      </g>
+      <!-- ② 5C LJ datapath: 13 pipeline stages, one new pair per cycle -->
+      <g data-j="10" transform="translate(635 224)">
+        <path class="dw m d10" stroke="#1E1C19" stroke-width="1.1" d="M12 14h14v18h-14z M30 14h14v18h-14z M48 14h14v18h-14z M66 14h14v18h-14z M84 14h14v18h-14z M102 14h14v18h-14z M120 14h14v18h-14z M138 14h14v18h-14z M156 14h14v18h-14z M174 14h14v18h-14z M192 14h14v18h-14z M210 14h14v18h-14z M228 14h14v18h-14z"></path>
+        <g class="fd d11"><circle class="loop step13" cx="19" cy="23" r="4" fill="#B5552F"></circle></g>
+        <text class="wr d12" x="12" y="58" font-family="Caveat" font-size="17" fill="#57534B">13 stages · a new pair can enter every cycle</text>
+      </g>
+      <!-- ③ 7B accumulation: banked force sums -->
+      <g data-j="11" transform="translate(958 224)">
+        <path class="dw m d10" stroke="#1E1C19" stroke-width="1.1" d="M10 6h14v54h-14z M32 6h14v54h-14z M54 6h14v54h-14z M76 6h14v54h-14z M98 6h14v54h-14z M120 6h14v54h-14z M142 6h14v54h-14z M164 6h14v54h-14z"></path>
+        <g class="fd d11" fill="#B5552F" fill-opacity=".72">
+          <rect class="bank loop b1" x="12" y="8" width="10" height="50"></rect><rect class="bank loop b2" x="34" y="8" width="10" height="50"></rect>
+          <rect class="bank loop b3" x="56" y="8" width="10" height="50"></rect><rect class="bank loop b4" x="78" y="8" width="10" height="50"></rect>
+          <rect class="bank loop b5" x="100" y="8" width="10" height="50"></rect><rect class="bank loop b6" x="122" y="8" width="10" height="50"></rect>
+          <rect class="bank loop b7" x="144" y="8" width="10" height="50"></rect><rect class="bank loop b8" x="166" y="8" width="10" height="50"></rect>
+        </g>
+        <text class="wr d12" x="192" y="28" font-family="Caveat" font-size="17" fill="#57534B">banked</text>
+        <text class="wr d12" x="192" y="48" font-family="Caveat" font-size="17" fill="#57534B">force sums</text>
+      </g>
+      <!-- ④ 8B force reduction: lanes reduced into one ingress sum -->
+      <g data-j="12" transform="translate(312 486)">
+        <path class="dw m d10" stroke="#8F897E" stroke-width="1.1" d="M8 4 L60 8.25 M8 12.5 L60 8.25 M8 21 L60 25.25 M8 29.5 L60 25.25 M8 38 L60 42.25 M8 46.5 L60 42.25 M8 55 L60 59.25 M8 63.5 L60 59.25 M60 8.25 L100 16.75 M60 25.25 L100 16.75 M60 42.25 L100 50.75 M60 59.25 L100 50.75 M100 16.75 L140 33.75 M100 50.75 L140 33.75 M140 33.75 L168 33.75"></path>
+        <g class="fd d11"><path class="pulse loop" stroke="#B5552F" stroke-width="2.2" d="M8 4 L60 8.25 L100 16.75 L140 33.75 L168 33.75"></path>
+        <path class="pulse loop p2" stroke="#B5552F" stroke-width="2.2" d="M8 38 L60 42.25 L100 50.75 L140 33.75 L168 33.75"></path>
+        <path class="pulse loop p3" stroke="#B5552F" stroke-width="2.2" d="M8 63.5 L60 59.25 L100 50.75 L140 33.75 L168 33.75"></path></g>
+        <text class="wr d12" x="178" y="28" font-family="Caveat" font-size="17" fill="#57534B">16 lanes in,</text>
+        <text class="wr d12" x="178" y="48" font-family="Caveat" font-size="17" fill="#57534B">one sum out</text>
+      </g>
+      <!-- ⑤ 8D persistent force storage: write cursor stepping through rows -->
+      <g data-j="13" transform="translate(635 486)">
+        <path class="dw m d10" stroke="#1E1C19" stroke-width="1.1" d="M14 4h136v8h-136z M14 14h136v8h-136z M14 24h136v8h-136z M14 34h136v8h-136z M14 44h136v8h-136z M14 54h136v8h-136z"></path>
+        <g class="fd d11"><rect class="loop rowc" x="14" y="4" width="136" height="8" fill="#B5552F" fill-opacity=".55"></rect></g>
+        <text class="wr d12" x="164" y="28" font-family="Caveat" font-size="17" fill="#57534B">force state</text>
+        <text class="wr d12" x="164" y="48" font-family="Caveat" font-size="17" fill="#57534B">kept per atom</text>
+      </g>
+      <!-- ⑥ 8H1 cross-tile communication: a contributor hops between tiles -->
+      <g data-j="14" transform="translate(958 486)">
+        <path class="dw m d10" stroke="#1E1C19" stroke-width="1.1" d="M14 2h12v12h-12z M31 2h12v12h-12z M48 2h12v12h-12z M65 2h12v12h-12z M14 19h12v12h-12z M31 19h12v12h-12z M48 19h12v12h-12z M65 19h12v12h-12z M14 36h12v12h-12z M31 36h12v12h-12z M48 36h12v12h-12z M65 36h12v12h-12z M14 53h12v12h-12z M31 53h12v12h-12z M48 53h12v12h-12z M65 53h12v12h-12z"></path>
+        <g class="fd d11"><rect class="loop hop" x="14" y="2" width="12" height="12" fill="#B5552F"></rect></g>
+        <text class="wr d12" x="96" y="28" font-family="Caveat" font-size="17" fill="#57534B">force contributions</text>
+        <text class="wr d12" x="96" y="48" font-family="Caveat" font-size="17" fill="#57534B">move between 16 tiles</text>
+      </g>
+    </svg>
+
+    <!-- headers -->
+    <div data-i="7" class="cellhead rise d3" style="left:338px;top:180px"><b>Nonbonded lane</b><span>Phase 3C</span></div>
+    <div data-i="8" class="cellhead rise d4" style="left:661px;top:180px"><b>Lennard-Jones force datapath</b><span>Phase 5C</span></div>
+    <div data-i="9" class="cellhead rise d5" style="left:984px;top:180px"><b>Force accumulation</b><span>Phase 7B · nominal · one 5C inside</span></div>
+    <div data-i="10" class="cellhead rise d6" style="left:338px;top:442px"><b>Force reduction</b><span>Phase 8B · 10-bit · 16 × 5C inside</span></div>
+    <div data-i="11" class="cellhead rise d7" style="left:661px;top:442px"><b>Persistent force storage</b><span>Phase 8D · nominal 19-bit IDs</span></div>
+    <div data-i="12" class="cellhead rise d8" style="left:984px;top:442px"><b>Cross-tile communication</b><span>Phase 8H1 · 16 tiles</span></div>
+
+    <!-- evidence (exact classifications from STATUS_MATRIX.json) -->
+    <div data-i="13" class="ev rise d13" style="left:312px;top:304px"><div class="row"><span class="stamp st-sim">SIM · PASS</span><span class="stamp st-syn">SYNTH · OOC</span></div><span class="n">3,344 LUT · corrected-RNG testbench</span></div>
+    <div data-i="14" class="ev rise d14" style="left:635px;top:304px"><div class="row"><span class="stamp st-sim">SIM · PASS</span><span class="stamp st-syn">SYNTH · OOC</span></div><span class="n">7,848 LUT · vs internal integer model</span></div>
+    <div data-i="15" class="ev rise d15" style="left:958px;top:304px"><div class="row"><span class="stamp st-sim">SIM · PASS</span><span class="stamp st-no">SYNTH · FAILED</span></div><span class="n" style="color:var(--kiln)">needs 7,040 RAMB18 · device has 270</span></div>
+    <div data-i="16" class="ev rise d16" style="left:312px;top:566px"><div class="row"><span class="stamp st-sim">SIM · PASS</span><span class="stamp st-no">SYNTH · GATED</span></div><span class="n">resource-gated · no utilization report</span></div>
+    <div data-i="17" class="ev rise d17" style="left:635px;top:566px"><div class="row"><span class="stamp st-sim">SIM · PASS</span><span class="stamp st-no">SYNTH · FAILED</span></div><span class="n" style="color:var(--kiln)">needs 7,040 RAMB18 · device has 270</span></div>
+    <div data-i="18" class="ev rise d18" style="left:958px;top:566px"><div class="row"><span class="stamp st-sim">SIM · PASS</span><span class="stamp st-no">SYNTH · GATED</span></div><span class="n">component test · no full synthesis</span></div>
+
+    <div data-i="19" class="abs hand wr d19" style="left:520px;top:381px;font-size:19px;color:var(--kiln)"><span class="chip">proposed export / credit / window-close interface: not built</span></div>
+    <div data-i="20" class="abs cap rise d20" style="left:296px;top:652px;width:640px;font-size:11px;color:var(--graphite)">RTL check: 7B instantiates one 5C (u_phase5c); 8B generates sixteen (g_force_lanes). No other captured module instantiates 3C. No end-to-end path exists.</div>
+  </section>
+
+          <!-- ================= SCENE VI · Component verification ledger ================= -->
+  <section class="scene" data-scene="6" aria-label="Existing component-level verification">
+    <svg class="abs only-p" viewBox="0 0 720 1500" width="720" height="1500" aria-hidden="true" style="left:0;top:0;pointer-events:none;overflow:visible"><path class="dw m d3" stroke="#1E1C19" stroke-width="1.8" d="M84 428 C300 427 500 429 684 428"></path><path class="dw m d5" stroke="#8F897E" stroke-width="1.1" d="M84 566 C300 565 500 567 684 566 M84 706 C300 705 500 707 684 706 M84 846 C300 845 500 847 684 846 M84 986 C300 985 500 987 684 986 M84 1126 C300 1125 500 1127 684 1126 M84 1266 C300 1265 500 1267 684 1266"></path><g stroke="#1E1C19" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"><path class="dw s d8" d="M630 456 L640 467 L660 443"></path><path class="dw s d10" d="M630 596 L640 607 L660 583"></path><path class="dw s d12" d="M630 736 L640 747 L660 723"></path><path class="dw s d14" d="M630 876 L640 887 L660 863"></path><path class="dw s d16" d="M630 1016 L640 1027 L660 1003"></path><path class="dw s d18" d="M630 1156 L640 1167 L660 1143"></path></g></svg>
+    <div data-i="0" class="abs rise d1" style="left:52px;top:104px;font-family:var(--serif);font-size:178px;line-height:.9;letter-spacing:-.02em">6<span style="color:var(--terra)">/</span>6</div>
+    <div data-i="1" class="abs rise d2" style="left:58px;top:276px;width:230px;font-size:15px;line-height:1.45;color:#3A3732">component simulations passed. Verilator, with assertions enabled.</div>
+    <div data-i="2" class="abs kicker rise" style="left:330px;top:56px">PLATE VI · THE LEDGER</div>
+    <h2 data-i="3" class="abs head rise d1" style="left:328px;top:80px;width:680px;font-size:40px">Six simulations passed. None of them is the whole machine.</h2>
+
+    <svg data-i="4" class="abs" viewBox="0 0 1280 720" width="1280" height="720" aria-hidden="true" style="left:0;top:0;pointer-events:none">
+      <path data-j="0" class="dw m d3" stroke="#1E1C19" stroke-width="1.4" d="M330 212 C560 211 790 213 1010 211"></path>
+      <path data-j="1" class="dw m d5" stroke="#8F897E" stroke-width=".9" d="M330 278 C560 277 790 279 1010 277 M330 342 C560 341 790 343 1010 341 M330 406 C560 405 790 407 1010 405 M330 470 C560 469 790 471 1010 469 M330 534 C560 533 790 535 1010 533 M330 598 C560 597 790 599 1010 597"></path>
+      <g data-j="2" stroke="#1E1C19" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path class="dw s d8" d="M988 238 L995 246 L1008 230"></path>
+        <path class="dw s d10" d="M988 302 L995 310 L1008 294"></path>
+        <path class="dw s d12" d="M988 366 L995 374 L1008 358"></path>
+        <path class="dw s d14" d="M988 430 L995 438 L1008 422"></path>
+        <path class="dw s d16" d="M988 494 L995 502 L1008 486"></path>
+        <path class="dw s d18" d="M988 558 L995 566 L1008 550"></path>
+      </g>
+    </svg>
+    <div data-i="5" class="lg rise d3 mono" style="top:190px;font-size:10.5px;letter-spacing:.12em;color:var(--graphite)"><span>COMPONENT</span><span>TEST VECTORS</span><span>CHECKED AGAINST</span><span>RESULT</span></div>
+    <div data-i="6" class="lg rise d7" style="top:222px;height:56px"><div><b>Nonbonded lane</b><small>Phase 3C</small></div><span class="mono">76 directed<br>+ 50,000 stress</span><span>golden comparisons · corrected-RNG testbench</span><span><span class="stamp st-sim">PASS</span><small>0 errors</small></span></div>
+    <div data-i="7" class="lg rise d9" style="top:286px;height:56px"><div><b>Lennard-Jones datapath</b><small>Phase 5C</small></div><span class="mono">23 directed<br>+ 100,000 stress</span><span>internal integer model</span><span><span class="stamp st-sim">PASS</span><small>0 errors</small></span></div>
+    <div data-i="8" class="lg rise d11" style="top:350px;height:56px"><div><b>Force accumulation</b><small>Phase 7B · nominal</small></div><span class="mono" style="color:var(--graphite)">counts not reported</span><span>its own testbench checks</span><span><span class="stamp st-sim">PASS</span></span></div>
+    <div data-i="9" class="lg rise d13" style="top:414px;height:56px"><div><b>Force reduction</b><small>Phase 8B · 10-bit IDs</small></div><span class="mono">43 directed<br>+ 20,000 stress pairs</span><span>state hash, 29,729 pairs</span><span><span class="stamp st-sim">PASS</span><small>0 errors</small></span></div>
+    <div data-i="10" class="lg rise d15" style="top:478px;height:56px"><div><b>Persistent force storage</b><small>Phase 8D · 19-bit IDs</small></div><span class="mono">54 directed<br>+ 20,000 stress</span><span>deterministic state hash</span><span><span class="stamp st-sim">PASS</span></span></div>
+    <div data-i="11" class="lg rise d17" style="top:542px;height:56px"><div><b>Cross-tile communication</b><small>Phase 8H1 · 16 tiles</small></div><span class="mono">30 directed</span><span>directed checks, state hash</span><span><span class="stamp st-sim">PASS</span><small>0 errors</small></span></div>
+    <div data-i="12" class="abs cap rise d19" style="left:330px;top:614px;width:680px;font-size:11px;color:var(--graphite)">FIFO and bank differential tests also passed in four-state Icarus. XSim runs were blocked by a GCC startup error (623) and are not counted as passes.</div>
+
+    <div data-i="13" class="note rise d19" style="left:1066px;top:226px;width:190px">5C is checked against an internal integer model, not GROMACS</div>
+    <div data-i="14" class="note rise d21" style="left:1066px;top:384px;width:190px">3C passed after a separately versioned testbench RNG fix. The original failure is kept on record.</div>
+  </section>
+
+          <!-- ================= SCENE VII · FPGA resource finding (C + A) ================= -->
+  <section class="scene" data-scene="7" aria-label="FPGA resource finding">
+    <div data-i="0" class="note rise d3" style="top:150px">areas to scale: side ∝ √LUT, 1 px² ≈ 0.70 LUT</div>
+    <div data-i="1" class="note rise d8" style="top:236px">each square is a separate synthesis run, laid over the same chip — not one combined design</div>
+
+    <div data-i="2" class="abs kicker rise" style="left:296px;top:56px">PLATE VII · FPGA RESOURCE FINDING · AMD ARTIX-7 xc7a100tfgg484-1</div>
+    <h2 data-i="3" class="abs head rise d1" style="left:294px;top:80px;width:920px;font-size:44px">Even reduced, the accumulator is bigger than the chip.</h2>
+
+    <!-- areas: chip 300×300 = 63,400 LUT; 7B 504.0×504.0 = 178,960; 5C 105.6² = 7,848; 3C 68.9² = 3,344 -->
+    <div data-i="4" class="abs hatch grow7b" data-area="178960" style="left:330px;top:170px;width:504px;height:504px"></div>
+    <div data-i="5" class="abs fd" data-area="63400" data-area-ref="1" style="left:330px;top:170px;width:300px;height:300px;background:var(--paper)"></div>
+    <div data-i="6" class="abs fd d5" data-area="7848" style="left:330px;top:170px;width:105.6px;height:105.6px;background:#8F897E;opacity:.55"></div>
+    <div data-i="7" class="abs fd d6" data-area="3344" style="left:330px;top:170px;width:68.9px;height:68.9px;background:#57534B;opacity:.9"></div>
+
+    <svg data-i="8" class="abs" viewBox="0 0 1280 720" width="1280" height="720" aria-hidden="true" style="left:0;top:0;pointer-events:none;overflow:visible">
+      <path data-j="0" class="dw m d1" stroke="#1E1C19" stroke-width="2.4" d="M331 170 C430 168 530 171 630 169 C632 270 629 370 631 470 C530 472 430 469 330 471 C328 370 331 270 331 170"></path>
+      <path data-j="1" class="dw s d7" stroke="#57534B" stroke-width="1" d="M400 196 L452 196 M436 252 L452 252"></path>
+      <path data-j="2" class="dw L d18" stroke="#B5552F" stroke-width="2.2" d="M631 470 C632 540 630 610 633 674 C540 676 430 673 330 675 C329 610 331 540 330 471 M630 169 C700 168 770 171 834 170 C836 340 833 510 835 674 C760 676 700 673 633 674"></path>
+      <path data-j="3" class="dw s d19" stroke="#57534B" stroke-width="1.2" d="M636 476 C700 540 760 600 826 666 M812 664 L827 667 L824 652"></path>
+      <path data-j="4" class="dw m d21" stroke="#B5552F" stroke-width="2.6" d="M884 202 C960 178 1150 180 1214 220 C1250 246 1222 302 1120 310 C1020 318 900 312 872 274 C856 252 872 220 912 206"></path>
+    </svg>
+    <div data-i="9" class="abs hand wr d7" style="left:458px;top:184px;font-size:19px;line-height:1;color:var(--ink)">3C · 3,344 LUT</div>
+    <div data-i="10" class="abs hand wr d7" style="left:458px;top:240px;font-size:19px;line-height:1;color:var(--ink)">5C · 7,848 LUT</div>
+    <div data-i="11" class="abs hand wr d4" style="left:344px;top:428px;font-size:25px">the whole chip · 63,400 LUT</div>
+    <div data-i="12" class="abs rise d19" style="left:346px;top:494px"><span class="chip" style="font-size:15px;font-weight:600">Reduced Phase 7B · 178,960 LUT</span></div>
+    <div data-i="13" class="abs hand wr d20" style="left:346px;top:610px;font-size:24px;color:var(--kiln)"><span class="chip">+115,560 LUT beyond the chip</span></div>
+
+    <div data-i="14" class="abs kicker rise d20" style="left:880px;top:150px;font-size:11px">REDUCED PHASE 7B ÷ DEVICE</div>
+    <div data-i="15" class="abs wr d20" style="left:880px;top:200px;font-family:var(--serif);font-size:98px;line-height:1;color:var(--terra)">282.27%</div>
+    <div data-i="16" class="abs cap rise d21" style="left:882px;top:326px">178,960 LUT ÷ 63,400 LUT</div>
+    <div data-i="17" class="abs rise d22" style="left:882px;top:370px;width:350px;display:flex;flex-direction:column;gap:10px;font-size:13.5px;line-height:1.4;color:#33302B">
+      <div><span class="stamp st-red">REDUCED CONFIG</span><div style="margin-top:4px">5-bit atom IDs, 4 banks. Not the nominal 19-bit, 32-bank design.</div></div>
+      <div><span class="stamp st-syn">SYNTH · OOC</span><div style="margin-top:4px">Out of context. Not placed, not routed, no timing.</div></div>
+      <div><span class="stamp st-no">SIM · NOT RUN</span><div style="margin-top:4px">Not functionally simulated in this configuration.</div></div>
+      <div><span class="stamp st-over">EXCEEDS DEVICE</span><div style="margin-top:4px">A capacity result, not an implementation.</div></div>
+    </div>
+  </section>
+
+          <!-- ================= SCENE VIII · The memory-capacity problem ================= -->
+  <section class="scene" data-scene="8" aria-label="The memory-capacity problem">
+    <div data-i="0" class="abs kicker rise" style="left:64px;top:60px">PLATE VIII · MEMORY</div>
+    <h2 data-i="1" class="abs head rise d1" style="left:62px;top:86px;width:420px;font-size:46px">The nominal design asked for 26 times the chip’s block memory.</h2>
+    <p data-i="2" class="abs lede rise d3" style="left:64px;top:262px;width:400px">Nominal Phase 7B and Phase 8D (19-bit IDs, 32 banks) stopped in synthesis: <b>7,040 RAMB18</b> required, <b>270</b> available on the xc7a100t. Those runs produced no logic count.</p>
+    <div data-i="3" class="abs rise d5" style="left:64px;top:388px;display:flex;gap:8px;flex-wrap:wrap;width:410px"><span class="stamp st-no">SYNTH · FAILED</span><span class="stamp st-sim">SIM · PASS (nominal)</span></div>
+
+    <!-- one cell = one RAMB18: 88 × 80 = 7,040 requested; 18 × 15 = 270 on the chip -->
+    <div data-i="4" class="abs cells flood" data-area="7040" style="left:520px;top:58px;width:704px;height:640px"></div>
+    <div data-i="5" class="abs cells-ink fd d1" data-area="270" data-area-ref="1" style="left:520px;top:58px;width:144px;height:120px"></div>
+    <svg data-i="6" class="abs" viewBox="0 0 1280 720" width="1280" height="720" aria-hidden="true" style="left:0;top:0;pointer-events:none">
+      <path data-j="0" class="dw s d2" stroke="#1E1C19" stroke-width="2.4" d="M521 58 C568 57 616 59 664 58 C665 98 663 138 665 178 C616 179 568 177 520 179 C519 138 521 98 521 58"></path>
+      <path data-j="1" class="dw L d14" stroke="#B5552F" stroke-width="2.2" d="M664 58 C850 57 1040 59 1224 58 C1225 270 1223 480 1225 698 C1000 699 760 697 520 699 C519 520 521 350 520 178"></path>
+      <path data-j="2" class="dw s d4" stroke="#57534B" stroke-width="1.1" d="M666 120 C690 122 708 128 724 140"></path>
+    </svg>
+    <div data-i="7" class="abs hand wr d4" style="left:730px;top:130px;font-size:24px"><span class="chip">270 RAMB18 · the whole chip</span></div>
+    <div data-i="8" class="abs hand wr d16" style="left:820px;top:430px;font-size:34px;color:var(--kiln);line-height:1.05"><span class="chip">7,040 RAMB18 requested</span></div>
+    <div data-i="9" class="abs hand wr d17" style="left:822px;top:478px;font-size:20px;color:var(--graphite)"><span class="chip">one cell = one RAMB18, drawn to count</span></div>
+
+    <div data-i="10" class="note rise d18" style="left:64px;top:468px;width:390px;font-size:22px">More RAM in the workstation helps the tools finish. It adds no block RAM to the FPGA.</div>
+    <div data-i="11" class="abs rise d20" style="left:64px;top:560px;width:410px;font-size:15px;line-height:1.45;color:#3A3732"><b>Open question (Q-ENG-13):</b> can memory architecture and resource sharing bring a demonstrator inside a real device?</div>
+  </section>
+
+          <!-- ================= SCENE IX · MDX-FPGA-Lite (proposed) ================= -->
+  <section class="scene" data-scene="9" aria-label="Proposed MDX-FPGA-Lite demonstrator">
+    <svg class="abs only-p" viewBox="0 0 720 1500" width="720" height="1500" aria-hidden="true" style="left:0;top:0;pointer-events:none;overflow:visible"><g class="fd d5" fill="none" stroke-linecap="round"><path class="dash" stroke="#8F897E" stroke-width="1.8" d="M41 630 C253.3 629 466.7 631 680 630 C681 833.3 679 1036.7 681 1240 C466.7 1241 253.3 1239 40 1241 C39 1036.7 41 833.3 41 630"></path><path class="dash" stroke="#57534B" stroke-width="1.8" d="M71 690 C263.3 689 456.7 691 650 690 C651 853.3 649 1016.7 651 1180 C456.7 1181 263.3 1179 70 1181 C69 1016.7 71 853.3 71 690"></path><path class="dash" stroke="#B5552F" stroke-width="2" d="M111 720 C276.7 719 443.3 721 610 720 C611 742.7 609 765.3 611 788 C443.3 789 276.7 787 110 789 C109 765.3 111 742.7 111 720"></path><path class="dash" stroke="#B5552F" stroke-width="2" d="M111 1040 C276.7 1039 443.3 1041 610 1040 C611 1064 609 1088 611 1112 C443.3 1113 276.7 1111 110 1113 C109 1088 111 1064 111 1040"></path><path class="dash" stroke="#B5552F" stroke-width="2" d="M85 1290 C156 1289 228 1291 300 1290 C301 1340 299 1390 301 1440 C228 1441 156 1439 84 1441 C83 1390 85 1340 85 1290"></path><path class="dash" stroke="#B5552F" stroke-width="2" d="M184 590 L184 622 M184 1246 L184 1282"></path><path stroke="#B5552F" stroke-width="2" d="M177 598 L184 588 L191 598 M177 614 L184 624 L191 614 M177 1254 L184 1244 L191 1254 M177 1274 L184 1284 L191 1274"></path></g></svg>
+    <div data-i="0" class="abs kicker rise" style="left:64px;top:50px">PLATE IX · PROPOSED DEMONSTRATOR</div>
+    <h2 data-i="1" class="abs head rise d1" style="left:62px;top:74px;width:940px;font-size:46px">MDX-FPGA-Lite: start from what already fits.</h2>
+    <p data-i="2" class="abs lede rise d2" style="left:64px;top:130px;width:940px;font-size:15px">A proposed, resource-constrained demonstrator around the Phase 5C datapath. Nothing on this plate is implemented. Every saving is an estimate until a new utilization report exists.</p>
+
+    <svg data-i="3" class="abs" viewBox="0 0 1280 720" width="1280" height="720" aria-hidden="true" style="left:0;top:0;pointer-events:none">
+      <!-- host: exists as software today -->
+      <path data-j="0" class="dw m d3" stroke="#8F897E" stroke-width="1.4" d="M65 330 C117.3 329 170.7 331 224 330 C225 370 223 410 225 450 C170.7 451 117.3 449 64 451 C63 410 65 370 65 330"></path>
+      <!-- proposed, dashed -->
+      <g data-j="1" class="fd d5" fill="none" stroke-linecap="round">
+        <path class="dash" stroke="#8F897E" stroke-width="1.4" d="M301 196 C533.3 195 766.7 197 1000 196 C1001 345.3 999 494.7 1001 644 C766.7 645 533.3 643 300 645 C299 494.7 301 345.3 301 196"></path>
+        <path class="dash" stroke="#57534B" stroke-width="1.4" d="M341 236 C480 235 620 237 760 236 C761 358.7 759 481.3 761 604 C620 605 480 603 340 605 C339 481.3 341 358.7 341 236"></path>
+        <path class="dash" stroke="#B5552F" stroke-width="1.5" d="M381 262 C493.3 261 606.7 263 720 262 C721 277.3 719 292.7 721 308 C606.7 309 493.3 307 380 309 C379 292.7 381 277.3 381 262"></path>
+        <path class="dash" stroke="#B5552F" stroke-width="1.5" d="M381 480 C493.3 479 606.7 481 720 480 C721 496.7 719 513.3 721 530 C606.7 531 493.3 529 380 531 C379 513.3 381 496.7 381 480"></path>
+        <path class="dash" stroke="#B5552F" stroke-width="1.5" d="M807 330 C861.3 329 916.7 331 972 330 C973 370 971 410 973 450 C916.7 451 861.3 449 806 451 C805 410 807 370 807 330"></path>
+        <path class="dash" stroke="#B5552F" stroke-width="1.5" d="M226 390 L298 390 M760 390 L804 390"></path>
+        <path stroke="#B5552F" stroke-width="1.5" d="M290 384 L299 390 L290 396 M234 384 L225 390 L234 396 M796 384 L805 390 L796 396 M768 384 L759 390 L768 396"></path>
+      </g>
+      <!-- the one solid block: Phase 5C, synthesized out of context -->
+      <path data-j="2" class="dw m d8" stroke="#1E1C19" stroke-width="2.2" d="M471 330 C543.3 329 616.7 331 690 330 C691 370 689 410 691 450 C616.7 451 543.3 449 470 451 C469 410 471 370 471 330"></path>
+    </svg>
+    <div data-i="4" class="orbit" aria-hidden="true"></div>
+    <div data-i="5" class="abs rise d3" style="left:80px;top:346px;width:136px"><b style="font-size:14.5px;font-weight:600;display:block">Host software</b><span class="hand" style="font-size:18px;color:var(--graphite);line-height:1.05;display:block;margin-top:4px">sends pairs, collects forces</span></div>
+    <div data-i="6" class="abs hand wr d6" style="left:64px;top:462px;font-size:18px;color:var(--kiln);width:230px;line-height:1.05">↔ host-assisted data movement</div>
+    <div data-i="7" class="abs mono fd d5" style="left:314px;top:206px;font-size:10.5px;letter-spacing:.1em;color:var(--graphite)">FPGA BOARD · NOT YET SELECTED</div>
+    <div data-i="8" class="abs mono fd d6" style="left:352px;top:574px;font-size:10.5px;letter-spacing:.06em;color:var(--graphite)">xc7a100t baseline part · 63,400 LUT</div>
+    <div data-i="9" class="abs fd d7" style="left:394px;top:274px;font-size:13.5px;color:var(--kiln)">pair scheduler · time-multiplexed</div>
+    <div data-i="10" class="abs fd d7" style="left:394px;top:494px;font-size:13.5px;color:var(--kiln)">small on-chip force buffers · shared arithmetic</div>
+    <div data-i="11" class="abs rise d9" style="left:486px;top:342px;width:196px"><b style="font-size:14.5px;font-weight:600;display:block">Phase 5C · LJ force datapath</b><div style="display:flex;gap:6px;margin-top:8px"><span class="stamp st-sim">SIM · PASS</span><span class="stamp st-syn">SYNTH · OOC</span></div><span class="mono" style="font-size:11px;color:#47443E;display:block;margin-top:6px">7,848 LUT ≈ 12% of the part</span></div>
+    <div data-i="12" class="abs fd d8" style="left:820px;top:350px;width:142px;font-size:13.5px;line-height:1.35;color:var(--kiln)">external memory, if the board allows</div>
+    <div data-i="13" class="abs hand wr d13" style="left:640px;top:458px;font-size:17px;color:var(--kiln)"><span class="chip">orbit: illustrative</span></div>
+    <div data-i="14" class="abs rise d14" style="left:64px;top:664px;display:flex;gap:16px;align-items:center;font-size:12.5px;color:#3A3732"><span><span style="display:inline-block;width:26px;border-top:2px solid #1E1C19;vertical-align:middle;margin-right:6px"></span>exists as RTL, synthesized out of context</span><span><span style="display:inline-block;width:26px;border-top:2px dashed #B5552F;vertical-align:middle;margin-right:6px"></span>proposed · [ESTIMATED]</span></div>
+
+    <div data-i="15" class="note rise d15" style="left:1064px;top:212px;width:186px">Stage L1 keeps the boundary at or below the 5C hierarchy</div>
+    <div data-i="16" class="note rise d17" style="left:1064px;top:356px;width:186px">Throughput falls as multiplexing deepens. That fall is not yet quantified.</div>
+  </section>
+
+          <!-- ================= SCENE X · Validation journey ================= -->
+  <section class="scene" data-scene="10" aria-label="The engineering validation journey">
+    <svg class="abs only-p" viewBox="0 0 720 1500" width="720" height="1500" aria-hidden="true" style="left:0;top:0;pointer-events:none;overflow:visible"><path class="dw L d3" stroke="#1E1C19" stroke-width="2.2" d="M100 430 C110 445 120 455 120 470 C120 540 150 560 120 630 C92 700 150 720 120 790 C92 860 150 880 120 950 C92 1020 150 1040 120 1110 C110 1140 125 1160 140 1172"></path><path class="dw s d5" stroke="#B5552F" stroke-width="2.4" d="M120.5 459 C126.4 458.8 131.1 463.9 131 470.2 C130.8 476.3 126 481.1 119.7 481 C113.4 480.8 108.8 475.7 109.1 469.6 C109.3 463.4 114.5 458.7 121.3 459.3"></path><circle class="fd d5" cx="120" cy="470" r="6.5" fill="#B5552F"></circle><circle class="beat" cx="120" cy="470" r="15" fill="none" stroke="#B5552F" stroke-width="1.2"></circle><text class="wr d6" x="52" y="512" font-family="Caveat" font-size="23" fill="#93401F">we are here</text><path class="dw s d7" stroke="#1E1C19" stroke-width="2" d="M120.5 620 C125.8 619.8 130.1 624.5 130 630.2 C129.8 635.7 125.5 640.1 119.7 640 C114 639.8 109.8 635.2 110.1 629.6 C110.3 624 115 619.7 121.2 620.3"></path><path class="dw s d9" stroke="#1E1C19" stroke-width="2" d="M120.5 780 C125.8 779.8 130.1 784.5 130 790.2 C129.8 795.7 125.5 800.1 119.7 800 C114 799.8 109.8 795.2 110.1 789.6 C110.3 784 115 779.7 121.2 780.3"></path><path class="dw s d11" stroke="#1E1C19" stroke-width="2" d="M120.5 940 C125.8 939.8 130.1 944.5 130 950.2 C129.8 955.7 125.5 960.1 119.7 960 C114 959.8 109.8 955.2 110.1 949.6 C110.3 944 115 939.7 121.2 940.3"></path><path class="dw s d13" stroke="#1E1C19" stroke-width="2" d="M120.5 1100 C125.8 1099.8 130.1 1104.5 130 1110.2 C129.8 1115.7 125.5 1120.1 119.7 1120 C114 1119.8 109.8 1115.2 110.1 1109.6 C110.3 1104 115 1099.7 121.2 1100.3"></path><path class="dw m d16" stroke="#1E1C19" stroke-width="1.8" d="M84 1262 C250 1261 470 1263 636 1262"></path><path class="dw s d16" stroke="#1E1C19" stroke-width="1.6" d="M84 1254 L84 1270 M268 1254 L268 1270 M452 1254 L452 1270 M636 1254 L636 1270"></path><path class="dw s d17" stroke="#B5552F" stroke-width="2.4" d="M90 1248 L90 1276"></path></svg>
+    <div data-i="0" class="abs kicker rise" style="left:64px;top:52px">PLATE X · VALIDATION</div>
+    <h2 data-i="1" class="abs head rise d1" style="left:62px;top:76px;width:620px;font-size:60px">One gate at a time.</h2>
+    <p data-i="2" class="abs lede rise d2" style="left:64px;top:150px;width:560px">Each Lite stage closes only on the evidence written under it. L0 is done as documentation; L1 to L4 are proposed.</p>
+    <div data-i="3" class="note rise d20" style="left:860px;top:70px;width:360px;font-size:20px">GROMACS comparison only after a pre-registered protocol: version, force field, system, atom count, cutoff, precision, error metric, tolerance.</div>
+
+    <svg data-i="4" class="abs" viewBox="0 0 1280 720" width="1280" height="720" aria-hidden="true" style="left:0;top:0;pointer-events:none">
+      <path data-j="0" class="dw L d3" stroke="#1E1C19" stroke-width="1.8" d="M90 520 C120 500 128 478 150 470 C230 440 300 470 380 420 C440 382 520 470 620 452 C700 440 760 360 860 344 C960 330 1030 290 1110 262 C1150 250 1180 244 1210 246"></path>
+      <path data-j="1" class="dw s d5" stroke="#B5552F" stroke-width="2.2" d="M150.5 460 C155.8 459.8 160.1 464.5 160 470.2 C159.8 475.7 155.5 480.1 149.7 480 C144 479.8 139.8 475.2 140.1 469.6 C140.3 464 145 459.7 151.2 460.3"></path>
+      <circle data-j="2" class="fd d5" cx="150" cy="470" r="6" fill="#B5552F"></circle>
+      <circle data-j="3" class="beat" cx="150" cy="470" r="13" fill="none" stroke="#B5552F" stroke-width="1"></circle>
+      <path data-j="4" class="dw s d7" stroke="#1E1C19" stroke-width="1.6" d="M380.4 411 C385.2 410.8 389.1 415.1 389 420.2 C388.8 425.1 384.9 429.1 379.7 429 C374.6 428.8 370.8 424.7 371.1 419.6 C371.3 414.6 375.5 410.7 381.1 411.3"></path>
+      <path data-j="5" class="dw s d9" stroke="#1E1C19" stroke-width="1.6" d="M620.5 443 C625.2 442.8 629.1 447.1 629 452.2 C628.8 457.1 625 461.1 619.7 461 C614.6 460.8 610.8 456.7 611.1 451.6 C611.3 446.6 615.5 442.7 621.1 443.3"></path>
+      <path data-j="6" class="dw s d11" stroke="#1E1C19" stroke-width="1.6" d="M860.5 335 C865.2 334.8 869.1 339.1 869 344.2 C868.8 349.1 865 353.1 859.7 353 C854.6 352.8 850.8 348.7 851.1 343.6 C851.3 338.6 855.5 334.7 861.1 335.3"></path>
+      <path data-j="7" class="dw s d13" stroke="#1E1C19" stroke-width="1.6" d="M1110.5 253 C1115.2 252.8 1119.1 257.1 1119 262.2 C1118.8 267.1 1115 271.1 1109.7 271 C1104.6 270.8 1100.8 266.7 1101.1 261.6 C1101.3 256.6 1105.5 252.7 1111.1 253.3"></path>
+      <text data-j="8" class="wr d6" x="118" y="508" font-family="Caveat" font-size="18" fill="#93401F">we are here</text>
+      <!-- 90-day ruler -->
+      <path data-j="9" class="dw m d16" stroke="#1E1C19" stroke-width="1.3" d="M64 628 C460 627 820 629 1216 628"></path>
+      <path data-j="10" class="dw s d16" stroke="#1E1C19" stroke-width="1.2" d="M64 620 L64 636 M448 620 L448 636 M832 620 L832 636 M1216 620 L1216 636"></path>
+      <path data-j="11" class="dw s d17" stroke="#B5552F" stroke-width="2" d="M72.5 616 L72.5 640"></path>
+    </svg>
+    <div data-i="5" class="abs rise d4" style="left:96px;top:376px;width:230px"><b style="font-size:14px;font-weight:600">L0 · evidence audit of 3C and 5C</b><br><span class="stamp st-sim" style="margin-top:6px">DONE · AS DOCUMENTATION</span></div>
+    <div data-i="6" class="abs rise d7" style="left:300px;top:282px;width:200px"><b style="font-size:14px;font-weight:600">L1 · reduced synthesis at or below 5C</b><div class="mono" style="font-size:10.5px;color:#47443E;margin-top:4px;line-height:1.4">needs a new out-of-context utilization report</div></div>
+    <div data-i="7" class="abs rise d9" style="left:540px;top:478px;width:200px"><b style="font-size:14px;font-weight:600">L2 · place, route, time</b><div class="mono" style="font-size:10.5px;color:#47443E;margin-top:4px;line-height:1.4">needs a routed timing report with user constraints</div></div>
+    <div data-i="8" class="abs rise d11" style="left:876px;top:372px;width:210px"><b style="font-size:14px;font-weight:600">L3 · program a named board</b><div class="mono" style="font-size:10.5px;color:#47443E;margin-top:4px;line-height:1.4">needs a board log matching the 5C vector hash or the 3C golden</div></div>
+    <div data-i="9" class="abs rise d13" style="left:1060px;top:300px;width:180px"><b style="font-size:14px;font-weight:600">L4 · host and external memory</b><div class="mono" style="font-size:10.5px;color:#47443E;margin-top:4px;line-height:1.4">optional · needs measured bandwidth and latency</div></div>
+    <div data-i="10" class="abs rise d17" style="left:76px;top:644px;width:370px;font-size:12.5px;color:#33302B"><b>Days 1–30</b> · 8 Nov – 7 Dec 2026 · audit, map, feasibility</div>
+    <div data-i="11" class="abs rise d18" style="left:460px;top:644px;width:370px;font-size:12.5px;color:#33302B"><b>Days 31–60</b> · 8 Dec – 6 Jan 2027 · first new reports</div>
+    <div data-i="12" class="abs rise d19" style="left:844px;top:644px;width:270px;font-size:12.5px;color:#33302B"><b>Days 61–90</b> · 7 Jan – 5 Feb 2027 · evaluate</div>
+    <div data-i="13" class="abs rise d20" style="left:64px;top:586px"><span class="stamp st-red">PROPOSED OBJECTIVES · NOT COMMITMENTS</span></div>
+  </section>
+
+          <!-- ================= SCENE XI · Technical collaboration ================= -->
+  <section class="scene" data-scene="11" aria-label="Opportunity for technical collaboration">
+    <svg class="abs only-p" viewBox="0 0 720 1500" width="720" height="1500" aria-hidden="true" style="left:0;top:0;pointer-events:none;overflow:visible"><path class="dw m d16" stroke="#B5552F" stroke-width="2.2" d="M100 600 C82 615 80 640 96 654 M86 648 L97 655 L99 643"></path></svg>
+    <div data-i="0" class="abs kicker rise" style="left:80px;top:60px">PLATE XI · WHAT EXISTS</div>
+    <h2 data-i="1" class="abs head rise d1" style="left:78px;top:84px;width:520px;font-size:42px">Evidence you can inspect.</h2>
+    <div data-i="2" class="abs kicker rise d2" style="left:690px;top:60px">WHERE HELP WOULD MATTER</div>
+    <h2 data-i="3" class="abs head rise d3" style="left:688px;top:84px;width:520px;font-size:42px">Five places to work together.</h2>
+
+    <svg data-i="4" class="abs" viewBox="0 0 1280 720" width="1280" height="720" aria-hidden="true" style="left:0;top:0;pointer-events:none">
+      <g data-j="0" stroke="#1E1C19" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path class="dw s d4" d="M84 192 L90 199 L102 185"></path>
+        <path class="dw s d5" d="M84 254 L90 261 L102 247"></path>
+        <path class="dw s d6" d="M84 316 L90 323 L102 309"></path>
+        <path class="dw s d7" d="M84 378 L90 385 L102 371"></path>
+        <path class="dw s d8" d="M84 440 L90 447 L102 433"></path>
+      </g>
+      <g data-j="1" stroke="#B5552F" stroke-width="1.3" fill="none">
+        <path class="dw s d10" d="M702.6 182 C709 181.8 714.1 187.4 714 194.2 C713.8 200.8 708.6 206.1 701.6 206 C694.8 205.8 689.8 200.2 690.1 193.5 C690.4 186.8 696 181.6 703.4 182.4"></path><path class="dw s d11" d="M702.6 244 C709 243.8 714.1 249.4 714 256.2 C713.8 262.8 708.6 268.1 701.6 268 C694.8 267.8 689.8 262.2 690.1 255.5 C690.4 248.8 696 243.6 703.4 244.4"></path><path class="dw s d12" d="M702.6 306 C709 305.8 714.1 311.4 714 318.2 C713.8 324.8 708.6 330.1 701.6 330 C694.8 329.8 689.8 324.2 690.1 317.5 C690.4 310.8 696 305.6 703.4 306.4"></path><path class="dw s d13" d="M702.6 368 C709 367.8 714.1 373.4 714 380.2 C713.8 386.8 708.6 392.1 701.6 392 C694.8 391.8 689.8 386.2 690.1 379.5 C690.4 372.8 696 367.6 703.4 368.4"></path><path class="dw s d14" d="M702.6 430 C709 429.8 714.1 435.4 714 442.2 C713.8 448.8 708.6 454.1 701.6 454 C694.8 453.8 689.8 448.2 690.1 441.5 C690.4 434.8 696 429.6 703.4 430.4"></path>
+      </g>
+      <g data-j="2" font-family="IBM Plex Mono" font-size="12" fill="#93401F"><text class="fd d10" x="698" y="198">1</text><text class="fd d11" x="698" y="260">2</text><text class="fd d12" x="698" y="322">3</text><text class="fd d13" x="698" y="384">4</text><text class="fd d14" x="698" y="446">5</text></g>
+      <path data-j="3" class="dw m d16" stroke="#B5552F" stroke-width="1.8" d="M420 560 C480 520 560 506 640 512 C720 518 800 540 860 572 M848 563 L861 573 L846 578"></path>
+      <text data-j="4" class="wr d17" x="664" y="604" font-family="Caveat" font-size="22" fill="#93401F">from evidence to the next gate</text>
+    </svg>
+    <div data-i="5" class="abs rise d4" style="left:116px;top:182px;width:470px;display:grid;grid-auto-rows:62px;font-size:15.5px;line-height:1.35;color:#2A2824">
+      <span>39 captured RTL files, with their testbenches</span>
+      <span>Six component simulations, with logs and seeds</span>
+      <span>Out-of-context synthesis reports for 3C, 5C and the reduced 7B</span>
+      <span>Every failure kept: resource stops, compiler errors and the original 3C coverage failure</span>
+      <span>A sealed evidence archive, verified by SHA-256</span>
+    </div>
+    <div data-i="6" class="abs rise d10" style="left:728px;top:184px;width:480px;display:grid;grid-auto-rows:62px;font-size:15.5px;line-height:1.35;color:#2A2824">
+      <span>Technical review of the MDX architecture</span>
+      <span>Access to an FPGA prototyping platform</span>
+      <span>A high-memory synthesis environment</span>
+      <span>Engineering support for integration, memory architecture and physical implementation</span>
+      <span>A conversation about a future FPGA-to-ASIC path</span>
+    </div>
+    <div data-i="7" class="abs rise d15" style="left:728px;top:506px"><span class="stamp st-red">PROPOSED TOPICS · NONE AGREED</span></div>
+    <div data-i="8" class="note rise d18" style="left:84px;top:520px;width:300px;font-size:20px">RTL and the detailed annex are shared after a confidentiality agreement.</div>
+  </section>
+
+          <!-- ================= SCENE XII · Closing ================= -->
+  <section class="scene" data-scene="12" aria-label="Closing">
+    <svg class="abs only-p" viewBox="0 0 720 1500" width="720" height="1500" aria-hidden="true" style="left:0;top:0;pointer-events:none;overflow:visible"><path class="dw s d14" stroke="#8F897E" stroke-width="1.8" d="M360 1336 C336 1328 318 1316 304 1298 M302 1312 L303 1297 L317 1301"></path></svg>
+    <div data-i="0" class="abs kicker rise d3" style="left:640px;top:112px">PLATE XII</div>
+    <div data-i="1" class="abs rise d4" style="left:634px;top:138px;font-family:var(--serif);font-size:176px;line-height:.86;letter-spacing:-.02em">MDX</div>
+    <div data-i="2" class="abs rise d6" style="left:640px;top:306px;width:560px;font-family:var(--serif);font-style:italic;font-size:34px;line-height:1.12">Every pair, every timestep — verified one step at a time.</div>
+    <svg data-i="3" class="abs" viewBox="0 0 1280 720" width="1280" height="720" aria-hidden="true" style="left:0;top:0;pointer-events:none">
+      <path data-j="0" class="dw m d8" stroke="#B5552F" stroke-width="2.6" d="M640 398 C760 392 900 390 1020 394 C1080 396 1120 399 1150 396"></path>
+      <path data-j="1" class="dw s d14" stroke="#8F897E" stroke-width="1.1" d="M560 610 C530 612 500 600 470 580 M478 590 L469 579 L482 577"></path>
+    </svg>
+    <p data-i="4" class="abs lede rise d9" style="left:640px;top:424px;width:540px">Six components simulate. Two blocks fit in synthesis. The accumulator and its memory do not, yet. The next step is a small demonstrator that can be measured.</p>
+    <div data-i="5" class="abs hand wr d14" style="left:566px;top:598px;font-size:20px;color:var(--graphite)">the same pair as plate I</div>
+    <div data-i="6" class="abs rise d12" style="left:640px;top:540px;line-height:1.35">
+      <div style="font-size:20px;font-weight:600">Selman Ali Dokumacı</div>
+      <div style="font-size:15px;color:var(--graphite)">Researcher</div>
+    </div>
+  </section>
+
+        </div><!-- /frame -->
+      </div><!-- /page -->
+      <svg class="book book--front" id="bookFront" aria-hidden="true"></svg>
+    </div><!-- /world -->
+
+    <nav class="nb-ctrl" id="nbCtrl" aria-label="Plates">
+      <button type="button" id="nbPrev" aria-label="Previous plate"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M19 12.5 C14 12 9 12.6 5 12 M10 7 L4.6 12 L10 17.2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <span class="nb-ctrl__count" id="nbCount" aria-live="polite">01 / 12</span>
+      <button type="button" id="nbNext" aria-label="Next plate"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 11.5 C10 12 15 11.4 19 12 M14 7 L19.4 12 L14 17.2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    </nav>
+  </div>
+</section>
+
+<!-- static plates (reduced motion and ?static), built from the same markup -->
+<div class="static-plates" id="staticPlates" aria-label="Plates, static"></div>
+
+<!-- 6 · how the opening hands over to the twelve plates -->
+<section class="contents" id="contents" aria-labelledby="contents-title">
+  <div class="contents__inner">
+    <p class="contents__kicker">CONTENTS · TWELVE PLATES</p>
+    <h2 class="contents__title" id="contents-title">The notebook, plate by plate.</h2>
+    <p class="contents__lede">Each plate keeps the evidence stamp it carries in the presentation. What was simulated or synthesized is marked as such; proposed work is marked as proposed.</p>
+
+    <ol class="plates">
+      <li><span class="plates__n">I</span><span class="plates__t"><a href="#plate-1" data-goto="1">MDX — Molecular Dynamics Accelerator</a><small>One nonbonded pair, pair after pair</small><details class="plates__x"><summary>Read the plate as text</summary><ul><li>fig. I — two molecules, one nonbonded pair</li><li>pencil = context ink = the subject terracotta = the point</li><li>PLATE I · A STUDY IN SPECIALISED HARDWARE · 2026</li><li>MDX</li><li>Molecular Dynamics Accelerator</li><li>A study of specialised hardware for the short-range nonbonded force: the pairwise calculation that a molecular simulation repeats at every timestep.</li><li>1</li><li>bond → host software</li><li>every pair, every step</li><li>One nonbonded pair. MDX studies hardware for computing this force, pair after pair.</li><li>Selman Ali Dokumacı</li><li>Researcher</li></ul></details></span><span class="plates__s"></span></li>
+      <li><span class="plates__n">II</span><span class="plates__t"><a href="#plate-2" data-goto="2">Every pair, every timestep.</a><small>The loop</small><details class="plates__x"><summary>Read the plate as text</summary><ul><li>Newton’s third law: one evaluation, two atoms</li><li>PLATE II · THE LOOP</li><li>Every pair, every timestep.</li><li>1</li><li>2</li><li>3</li><li>4</li><li>② + ③ — the loop MDX studies in hardware</li><li>F(r) = 24ε/r · [ 2(σ/r)¹² − (σ/r)⁶ ]</li><li>Find neighbour pairs inside the cutoff.</li><li>Evaluate the Lennard-Jones force for each pair.</li><li>Add each pair’s force to both atoms.</li><li>Integrate positions, advance one timestep, repeat.</li><li>Bonded terms, long-range electrostatics, constraints and integration stay in host software.</li></ul></details></span><span class="plates__s"></span></li>
+      <li><span class="plates__n">III</span><span class="plates__t"><a href="#plate-3" data-goto="3">The same arithmetic, again, every timestep.</a><small>Why the pair loop</small><details class="plates__x"><summary>Read the plate as text</summary><ul><li>PLATE III · WHY THE PAIR LOOP</li><li>The same arithmetic, again, every timestep.</li><li>MDX starts from a premise: in many classical timesteps, short-range nonbonded pair forces are a large share of the work, and the pair loop is regular and numerically intensive.</li><li>PREMISE · NOT AN MDX MEASUREMENT</li><li>t</li><li>t + Δt</li><li>t + 2Δt</li><li>t + 3Δt</li><li>t + 4Δt …</li><li>pairs re-checked and recomputed as atoms move</li><li>10³</li><li>10⁴</li><li>10⁵</li><li>10⁶</li><li>10⁷ atoms</li><li>intended investigation range: about 1,000 to 10,000,000 atoms</li><li>NOT RUN ON MDX HARDWARE</li><li>10-bit IDs name 1,024 atoms · the 8B simulation</li><li>19-bit IDs: 524,288 · the nominal simulations</li><li>10 million atoms need ≥ 24 bits · not implemented</li></ul></details></span><span class="plates__s"><span class="stamp st-red">PREMISE · NOT AN MDX MEASUREMENT</span></span></li>
+      <li><span class="plates__n">IV</span><span class="plates__t"><a href="#plate-4" data-goto="4">The hypothesis</a><small>One pair per cycle, force sums on chip</small><details class="plates__x"><summary>Read the plate as text</summary><ul><li>one pair per cycle</li><li>1</li><li>2</li><li>3</li><li>PLATE IV · THE HYPOTHESIS</li><li>If one candidate pair can enter a dedicated pipeline every clock cycle, and the force sums stay in on-chip memory, the pair loop becomes a stream of hardware operations instead of a program.</li><li>HYPOTHESIS · NOT YET TESTED AT SYSTEM LEVEL</li><li>a hypothesis, not a result</li><li>Does it compute the right force? PARTIAL</li><li>components agree with an internal integer model · no GROMACS comparison yet</li><li>Does it fit a real device? PARTIAL</li><li>3C and 5C fit in synthesis · the accumulator does not (plate VII)</li><li>Is it faster on a board? NOT MEASURED</li><li>no board, no throughput, no speedup claimed</li></ul></details></span><span class="plates__s"><span class="stamp st-red">HYPOTHESIS · NOT YET TESTED AT SYSTEM LEVEL</span></span></li>
+      <li><span class="plates__n">V</span><span class="plates__t"><a href="#plate-5" data-goto="5">Six components, each checked on its own.</a><small>Architecture — component evidence</small><details class="plates__x"><summary>Read the plate as text</summary><ul><li>solid = simulated as a component</li><li>dashed = proposed, not built or run</li><li>motion is explanatory: no waveforms were recorded</li><li>PLATE V · ARCHITECTURE — COMPONENT EVIDENCE</li><li>Six components, each checked on its own.</li><li>Each block animates only inside itself. Dashed lines are proposed connections: not built, connected or tested.</li><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>candidate pair:</li><li>inside the cutoff?</li><li>13 stages · a new pair can enter every cycle</li><li>banked</li><li>force sums</li><li>16 lanes in,</li><li>one sum out</li><li>force state</li><li>kept per atom</li><li>force contributions</li><li>move between 16 tiles</li><li>Nonbonded lane</li><li>Phase 3C</li><li>Lennard-Jones force datapath</li><li>Phase 5C</li><li>Force accumulation</li><li>Phase 7B · nominal · one 5C inside</li><li>Force reduction</li><li>Phase 8B · 10-bit · 16 × 5C inside</li><li>Persistent force storage</li><li>Phase 8D · nominal 19-bit IDs</li><li>Cross-tile communication</li><li>Phase 8H1 · 16 tiles</li><li>SIM · PASS</li><li>SYNTH · OOC</li><li>3,344 LUT · corrected-RNG testbench</li><li>7,848 LUT · vs internal integer model</li><li>SYNTH · FAILED</li><li>needs 7,040 RAMB18 · device has 270</li><li>SYNTH · GATED</li><li>resource-gated · no utilization report</li><li>component test · no full synthesis</li><li>proposed export / credit / window-close interface: not built</li><li>RTL check: 7B instantiates one 5C (u_phase5c); 8B generates sixteen (g_force_lanes). No other captured module instantiates 3C. No end-to-end path exists.</li></ul></details></span><span class="plates__s"><span class="stamp st-sim">SIM · PASS</span><span class="stamp st-syn">SYNTH · OOC</span></span></li>
+      <li><span class="plates__n">VI</span><span class="plates__t"><a href="#plate-6" data-goto="6">Six simulations passed. None of them is the whole machine.</a><small>The ledger</small><details class="plates__x"><summary>Read the plate as text</summary><ul><li>6/6</li><li>component simulations passed. Verilator, with assertions enabled.</li><li>PLATE VI · THE LEDGER</li><li>Six simulations passed. None of them is the whole machine.</li><li>COMPONENT</li><li>TEST VECTORS</li><li>CHECKED AGAINST</li><li>RESULT</li><li>Nonbonded lane</li><li>Phase 3C</li><li>76 directed + 50,000 stress</li><li>golden comparisons · corrected-RNG testbench</li><li>PASS</li><li>0 errors</li><li>Lennard-Jones datapath</li><li>Phase 5C</li><li>23 directed + 100,000 stress</li><li>internal integer model</li><li>Force accumulation</li><li>Phase 7B · nominal</li><li>counts not reported</li><li>its own testbench checks</li><li>Force reduction</li><li>Phase 8B · 10-bit IDs</li><li>43 directed + 20,000 stress pairs</li><li>state hash, 29,729 pairs</li><li>Persistent force storage</li><li>Phase 8D · 19-bit IDs</li><li>54 directed + 20,000 stress</li><li>deterministic state hash</li><li>Cross-tile communication</li><li>Phase 8H1 · 16 tiles</li><li>30 directed</li><li>directed checks, state hash</li><li>FIFO and bank differential tests also passed in four-state Icarus. XSim runs were blocked by a GCC startup error (623) and are not counted as passes.</li><li>5C is checked against an internal integer model, not GROMACS</li><li>3C passed after a separately versioned testbench RNG fix. The original failure is kept on record.</li></ul></details></span><span class="plates__s"><span class="stamp st-sim">SIM · PASS</span></span></li>
+      <li><span class="plates__n">VII</span><span class="plates__t"><a href="#plate-7" data-goto="7">Even reduced, the accumulator is bigger than the chip.</a><small>FPGA resource finding</small><details class="plates__x"><summary>Read the plate as text</summary><ul><li>areas to scale: side ∝ √LUT, 1 px² ≈ 0.70 LUT</li><li>each square is a separate synthesis run, laid over the same chip — not one combined design</li><li>PLATE VII · FPGA RESOURCE FINDING · AMD ARTIX-7 xc7a100tfgg484-1</li><li>Even reduced, the accumulator is bigger than the chip.</li><li>3C · 3,344 LUT</li><li>5C · 7,848 LUT</li><li>the whole chip · 63,400 LUT</li><li>Reduced Phase 7B · 178,960 LUT</li><li>+115,560 LUT beyond the chip</li><li>REDUCED PHASE 7B ÷ DEVICE</li><li>282.27%</li><li>178,960 LUT ÷ 63,400 LUT</li><li>REDUCED CONFIG</li><li>5-bit atom IDs, 4 banks. Not the nominal 19-bit, 32-bank design.</li><li>SYNTH · OOC</li><li>Out of context. Not placed, not routed, no timing.</li><li>SIM · NOT RUN</li><li>Not functionally simulated in this configuration.</li><li>EXCEEDS DEVICE</li><li>A capacity result, not an implementation.</li></ul></details></span><span class="plates__s"><span class="stamp st-over">EXCEEDS DEVICE</span></span></li>
+      <li><span class="plates__n">VIII</span><span class="plates__t"><a href="#plate-8" data-goto="8">The nominal design asked for 26 times the chip’s block memory.</a><small>Memory</small><details class="plates__x"><summary>Read the plate as text</summary><ul><li>PLATE VIII · MEMORY</li><li>The nominal design asked for 26 times the chip’s block memory.</li><li>Nominal Phase 7B and Phase 8D (19-bit IDs, 32 banks) stopped in synthesis: 7,040 RAMB18 required, 270 available on the xc7a100t. Those runs produced no logic count.</li><li>SYNTH · FAILED</li><li>SIM · PASS (nominal)</li><li>270 RAMB18 · the whole chip</li><li>7,040 RAMB18 requested</li><li>one cell = one RAMB18, drawn to count</li><li>More RAM in the workstation helps the tools finish. It adds no block RAM to the FPGA.</li><li>Open question (Q-ENG-13): can memory architecture and resource sharing bring a demonstrator inside a real device?</li></ul></details></span><span class="plates__s"><span class="stamp st-no">SYNTH · FAILED</span></span></li>
+      <li><span class="plates__n">IX</span><span class="plates__t"><a href="#plate-9" data-goto="9">MDX-FPGA-Lite: start from what already fits.</a><small>Proposed demonstrator</small><details class="plates__x"><summary>Read the plate as text</summary><ul><li>PLATE IX · PROPOSED DEMONSTRATOR</li><li>MDX-FPGA-Lite: start from what already fits.</li><li>A proposed, resource-constrained demonstrator around the Phase 5C datapath. Nothing on this plate is implemented. Every saving is an estimate until a new utilization report exists.</li><li>Host software sends pairs, collects forces</li><li>↔ host-assisted data movement</li><li>FPGA BOARD · NOT YET SELECTED</li><li>xc7a100t baseline part · 63,400 LUT</li><li>pair scheduler · time-multiplexed</li><li>small on-chip force buffers · shared arithmetic</li><li>Phase 5C · LJ force datapath</li><li>SIM · PASS</li><li>SYNTH · OOC</li><li>7,848 LUT ≈ 12% of the part</li><li>external memory, if the board allows</li><li>orbit: illustrative</li><li>exists as RTL, synthesized out of context</li><li>proposed · [ESTIMATED]</li><li>Stage L1 keeps the boundary at or below the 5C hierarchy</li><li>Throughput falls as multiplexing deepens. That fall is not yet quantified.</li></ul></details></span><span class="plates__s"><span class="stamp st-red">PROPOSED · [ESTIMATED]</span></span></li>
+      <li><span class="plates__n">X</span><span class="plates__t"><a href="#plate-10" data-goto="10">One gate at a time.</a><small>Validation</small><details class="plates__x"><summary>Read the plate as text</summary><ul><li>PLATE X · VALIDATION</li><li>One gate at a time.</li><li>Each Lite stage closes only on the evidence written under it. L0 is done as documentation; L1 to L4 are proposed.</li><li>GROMACS comparison only after a pre-registered protocol: version, force field, system, atom count, cutoff, precision, error metric, tolerance.</li><li>we are here</li><li>L0 · evidence audit of 3C and 5C DONE · AS DOCUMENTATION</li><li>L1 · reduced synthesis at or below 5C</li><li>needs a new out-of-context utilization report</li><li>L2 · place, route, time</li><li>needs a routed timing report with user constraints</li><li>L3 · program a named board</li><li>needs a board log matching the 5C vector hash or the 3C golden</li><li>L4 · host and external memory</li><li>optional · needs measured bandwidth and latency</li><li>Days 1–30 · 8 Nov – 7 Dec 2026 · audit, map, feasibility</li><li>Days 31–60 · 8 Dec – 6 Jan 2027 · first new reports</li><li>Days 61–90 · 7 Jan – 5 Feb 2027 · evaluate</li><li>PROPOSED OBJECTIVES · NOT COMMITMENTS</li></ul></details></span><span class="plates__s"><span class="stamp st-red">PROPOSED OBJECTIVES · NOT COMMITMENTS</span></span></li>
+      <li><span class="plates__n">XI</span><span class="plates__t"><a href="#plate-11" data-goto="11">Evidence you can inspect. Five places to work together.</a><small>What exists · where help would matter</small><details class="plates__x"><summary>Read the plate as text</summary><ul><li>PLATE XI · WHAT EXISTS</li><li>Evidence you can inspect.</li><li>WHERE HELP WOULD MATTER</li><li>Five places to work together.</li><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>from evidence to the next gate</li><li>39 captured RTL files, with their testbenches</li><li>Six component simulations, with logs and seeds</li><li>Out-of-context synthesis reports for 3C, 5C and the reduced 7B</li><li>Every failure kept: resource stops, compiler errors and the original 3C coverage failure</li><li>A sealed evidence archive, verified by SHA-256</li><li>Technical review of the MDX architecture</li><li>Access to an FPGA prototyping platform</li><li>A high-memory synthesis environment</li><li>Engineering support for integration, memory architecture and physical implementation</li><li>A conversation about a future FPGA-to-ASIC path</li><li>PROPOSED TOPICS · NONE AGREED</li><li>RTL and the detailed annex are shared after a confidentiality agreement.</li></ul></details></span><span class="plates__s"><span class="stamp st-red">PROPOSED TOPICS · NONE AGREED</span></span></li>
+      <li><span class="plates__n">XII</span><span class="plates__t"><a href="#plate-12" data-goto="12">Every pair, every timestep — verified one step at a time.</a><small>Closing</small><details class="plates__x"><summary>Read the plate as text</summary><ul><li>PLATE XII</li><li>MDX</li><li>Every pair, every timestep — verified one step at a time.</li><li>Six components simulate. Two blocks fit in synthesis. The accumulator and its memory do not, yet. The next step is a small demonstrator that can be measured.</li><li>the same pair as plate I</li><li>Selman Ali Dokumacı</li><li>Researcher</li></ul></details></span><span class="plates__s"></span></li>
+    </ol>
+
+
+    <dl class="key">
+      <div><dt><span class="stamp st-sim">SIM · PASS</span></dt><dd>Simulated as a component</dd></div>
+      <div><dt><span class="stamp st-syn">SYNTH · OOC</span></dt><dd>Synthesized out of context. Not placed, not routed, no timing.</dd></div>
+      <div><dt><span class="stamp st-no">NOT MEASURED</span></dt><dd>Not run, failed, or not measured</dd></div>
+      <div><dt><span class="stamp st-red">PROPOSED</span></dt><dd>Proposed: not built, connected or tested</dd></div>
+      <div><dt><span class="stamp st-over">EXCEEDS DEVICE</span></dt><dd>A capacity result, not an implementation</dd></div>
+    </dl>
+  </div>
+</section>
+</main>
+
+<footer class="nb-foot">
+  <p><b>MDX — Molecular Dynamics Accelerator</b><br>Selman Ali Dokumacı · Researcher</p>
+  <a href="/mdx-project">Read the technical dossier <span aria-hidden="true">→</span></a>
+</footer>
+</body>
+</html>

@@ -51,6 +51,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
 
     <link href="/assets/css/style.css" rel="stylesheet">
+    <link href="/assets/mdx-sketchbook/entry.css" rel="stylesheet">
 </head>
 <body>
     <a href="#main-content" class="skip-link">İçeriğe atla</a>
@@ -159,9 +160,20 @@
                         <li class="engineering-status__step engineering-status__step--future"><strong>Ölçülen Donanım Performansı / Enerji</strong><span>Gelecek</span></li>
                         <li class="engineering-status__step engineering-status__step--future"><strong>ASIC Fizibilitesi</strong><span>Gelecek</span></li>
                     </ol>
-                    <p class="footnote">Aşama 8J.3B haritalama kanıtıdır, RTL tekrarı değildir. Simülasyon doğrulaması, ölçülmüş fiziksel donanım performansı değildir.</p>
+                    <p class="footnote">Aşama 8J.3B haritalama kanıtıdır, RTL tekrarı değildir. Simülasyon doğrulaması, ölçülmüş fiziksel donanım performansı değildir. Alt sistem ve entegre yol sonuçları sınırlı entegrasyonları kapsar; tam bağlı bir MDX-1 anlamına gelmez (bkz. 08, Mevcut Sınırlar).</p>
                 </div>
             </div>
+
+            <aside class="nb-entry" aria-labelledby="nb-entry-title">
+                <a class="nb-entry__figure" href="/tr/mdx-sketchbook/" tabindex="-1" aria-hidden="true"><img src="/assets/mdx/mdx-notebook-pair.svg" alt="" width="460" height="460" loading="lazy" decoding="async"></a>
+                <div>
+                    <p class="nb-entry__kicker">Etkileşimli defter</p>
+                    <h2 class="nb-entry__title" id="nb-entry-title"><a href="/tr/mdx-sketchbook/">MDX &mdash; Yaşayan Defter</a></h2>
+                    <p class="nb-entry__text">Tek bir bağ dışı çifti simülasyon döngüsünden bileşen kanıtına, FPGA kaynak bulgusuna ve sonraki doğrulama geçitlerine kadar izleyen on iki el çizimi levha. Her levha kendi kanıt damgasını korur.</p>
+                    <p class="nb-entry__scope">MDX, ASIC odaklıdır. FPGA ürünün kendisi değil, ara bir prototipleme ve doğrulama platformudur.</p>
+                    <p class="nb-entry__links"><a class="textlink" href="/tr/mdx-sketchbook/">Defteri açın <span aria-hidden="true">&rarr;</span></a><a class="nb-entry__alt" href="/tr/mdx-sketchbook/?static">Statik sürüm</a></p>
+                </div>
+            </aside>
 
             <details class="toc-collapse toc">
                 <summary>İçindekiler</summary>
@@ -240,28 +252,28 @@
                     <figcaption class="figure__cap"><span class="figure__num">Şekil&nbsp;1</span> &mdash; Mevcut MDX-1 tasarımının mimari düzeyde gösterimidir. Diyagram etiketleri mimari kapsamı ve geliştirme durumunu gösterir; tam sistem fiziksel donanım uygulamasını ifade etmez.</figcaption>
                 </figure>
 
-                <h3 class="sec__sub">Vivado uygulama görünümleri</h3>
+                <h3 class="sec__sub">Faz 3C bileşen denemesinin Vivado görünümleri</h3>
 
                 <figure class="figure figure--device">
-                    <button type="button" class="figure__frame" data-viewer-src="/assets/mdx/mdx-vivado-device-floorplan.png" data-viewer-zoom="true" data-viewer-alt="Vivado cihaz görünümünde, alt bölgede vurgulanan yerleşim yapıları" data-viewer-caption="Vivado cihaz/floorplan genel görünümü; vurgulanan yapılar cihazın alt bölgesinde yer alır.">
+                    <button type="button" class="figure__frame" data-viewer-src="/assets/mdx/mdx-vivado-device-floorplan.png" data-viewer-zoom="true" data-viewer-alt="Bir xc7a100t’nin Vivado cihaz görünümü: Faz 3C bağ dışı şerit test derlemesinin vurgulanan yerleştirilmiş hücreleri en alttaki iki saat bölgesinde" data-viewer-caption="Tek bileşenli bir gerçekleştirim denemesinin cihaz görünümü (18 Eylül 2026): yalnızca Faz 3C bağ dışı şeridi, yonga üstü sözde rastgele uyarıcıyla sarılmış, bir xc7a100t üzerinde yerleştirilip yönlendirilmiştir. Vurgulanan hücreler X0Y0 ve X1Y0 saat bölgelerindedir. Bu, MDX-1 değildir; entegre bir MDX tasarımı da değildir.">
                         <span class="viewer-thumbnail-frame">
-                            <img src="/assets/mdx/mdx-vivado-device-floorplan.png" alt="Vivado cihaz görünümünde, alt bölgede vurgulanan yerleşim yapıları" width="902" height="890" loading="lazy" decoding="async">
+                            <img src="/assets/mdx/mdx-vivado-device-floorplan.png" alt="Bir xc7a100t’nin Vivado cihaz görünümü: Faz 3C bağ dışı şerit test derlemesinin vurgulanan yerleştirilmiş hücreleri en alttaki iki saat bölgesinde" width="902" height="890" loading="lazy" decoding="async">
                             <span class="viewer-affordance">Büyüt ve yakınlaştır <span aria-hidden="true">&#8599;</span></span>
                         </span>
                     </button>
-                    <figcaption class="figure__cap"><span class="figure__num">Şekil&nbsp;2</span> &mdash; Vivado cihaz/floorplan genel görünümü; vurgulanan yapılar cihazın alt bölgesinde yer alır.</figcaption>
+                    <figcaption class="figure__cap"><span class="figure__num">Şekil&nbsp;2</span> &mdash; Tek bileşenli bir gerçekleştirim denemesinin cihaz görünümü (18 Eylül 2026): yalnızca Faz 3C bağ dışı şeridi, yonga üstü sözde rastgele uyarıcıyla sarılmış, bir xc7a100t üzerinde yerleştirilip yönlendirilmiştir. Vurgulanan hücreler X0Y0 ve X1Y0 saat bölgelerindedir. Bu, MDX-1 değildir; entegre bir MDX tasarımı da değildir.</figcaption>
                 </figure>
 
                 <figure class="figure figure--logic">
-                    <button type="button" class="figure__frame" data-viewer-src="/assets/mdx/mdx-vivado-slice-logic.png" data-viewer-zoom="true" data-viewer-alt="Vivado SLICE_X18Y25 görünümünde vurgulanan yerel mantık elemanları ve bağlantıları" data-viewer-caption="Vivado yerel slice görünümü; SLICE_X18Y25 içindeki mantık elemanları ve bağlantılar.">
+                    <button type="button" class="figure__frame" data-viewer-src="/assets/mdx/mdx-vivado-slice-logic.png" data-viewer-zoom="true" data-viewer-alt="Faz 3C şerit test derlemesinden SLICE_X18Y25’in Vivado görünümü: ters karekök biriminin vurgulanan dört LUT’u ve bir F7 çoklayıcısı" data-viewer-caption="Aynı denemeden slice görünümü: SLICE_X18Y25, şeridin ters karekök biriminin (3C içindeki Faz 3B) dört LUT’unu ve bir F7 çoklayıcısını içerir.">
                         <span class="viewer-thumbnail-frame">
-                            <img src="/assets/mdx/mdx-vivado-slice-logic.png" alt="Vivado SLICE_X18Y25 görünümünde vurgulanan yerel mantık elemanları ve bağlantıları" width="1867" height="892" loading="lazy" decoding="async">
+                            <img src="/assets/mdx/mdx-vivado-slice-logic.png" alt="Faz 3C şerit test derlemesinden SLICE_X18Y25’in Vivado görünümü: ters karekök biriminin vurgulanan dört LUT’u ve bir F7 çoklayıcısı" width="1867" height="892" loading="lazy" decoding="async">
                             <span class="viewer-affordance">Büyüt ve yakınlaştır <span aria-hidden="true">&#8599;</span></span>
                         </span>
                     </button>
-                    <figcaption class="figure__cap"><span class="figure__num">Şekil&nbsp;3</span> &mdash; Vivado yerel slice görünümü; SLICE_X18Y25 içindeki mantık elemanları ve bağlantılar.</figcaption>
+                    <figcaption class="figure__cap"><span class="figure__num">Şekil&nbsp;3</span> &mdash; Aynı denemeden slice görünümü: SLICE_X18Y25, şeridin ters karekök biriminin (3C içindeki Faz 3B) dört LUT’unu ve bir F7 çoklayıcısını içerir.</figcaption>
                 </figure>
-                <p class="footnote">Bu görüntüler Vivado uygulama artefaktlarını gösterir. FPGA gösterimi ve ölçülmüş donanım performansı, aşağıdaki yol haritasında gelecek aşamalar olarak yer almaktadır.</p>
+                <p class="footnote">İki görünüm de bu denemenin tek bir yönlendirilmiş kontrol noktasından (checkpoint) alınmıştır; kaynağı dosya özeti, yerleşimi ve SLICE_X18Y25’in içeriğiyle belirlenmiştir. Çalıştırmada yalnızca saat kısıtı vardır; pin ataması ya da G/Ç zamanlama kısıtı yoktur. Bitstream üretilmemiş, kart programlanmamış, hiçbir ölçüm yapılmamıştır. Bu çalıştırmanın zamanlama ve güç değerleri MDX’i değil bir test sarmalayıcısını tanımlar ve burada verilmez. FPGA gösterimi ve ölçülmüş donanım performansı, aşağıdaki yol haritasında gelecek aşamalar olarak yer almaktadır.</p>
             </section>
 
             <!-- 04 -->
@@ -381,6 +393,7 @@
                     <ul class="ul-tight" style="margin-top:0.75rem">
                         <li><strong>Silikon Durumu:</strong> Silikon öncesi. Proje mimari tanımlama ve referans modelleme aşamasındadır.</li>
                         <li><strong>RTL Kapsamı:</strong> Alt sistem ve entegre yol RTL doğrulama kanıtları mevcuttur; tam MDX-1 gerçek iş yükü RTL entegrasyonu devam etmektedir.</li>
+                        <li><strong>Doğrulama Sınırı:</strong> Alt sistem ve entegre yol simülasyonları, seçili bileşenlerin sınırlı entegrasyonlarını doğrular. Bunlar, tam bağlı ve doğrulanmış bir MDX-1 hızlandırıcısına eşdeğer değildir: uçtan uca eksiksiz bir MDX-1 yolu doğrulanmamıştır.</li>
                         <li><strong>Performans:</strong> Doğrulanmış bir donanım performans modeli yoktur.</li>
                         <li><strong>Metrikler:</strong> Şu anda bildirilen hiçbir ölçülmüş donanım performansı, hızlanma (speedup), iş çıkarma yeteneği (throughput), frekans, güç, alan, FPGA veya ASIC sonucu yoktur.</li>
                     </ul>
