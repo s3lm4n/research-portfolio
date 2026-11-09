@@ -1,343 +1,405 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selman Ali Dokumacı - Hesaplamalı Biyofizik Araştırmacısı</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <meta name="description" content="Hesaplamalı biyofizik, moleküler dinamik ve koşula duyarlı terapötik tasarımı belgeleyen araştırma portföyü.">
-    <meta property="og:title" content="Selman Ali Dokumacı - Hesaplamalı Biyofizik Araştırmacısı">
-    <meta property="og:description" content="Hesaplamalı biyofizik, moleküler dinamik ve koşula duyarlı terapötik tasarımı belgeleyen araştırma portföyü.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://selmandokumaci.com/tr/">
-    <meta property="og:image" content="https://selmandokumaci.com/assets/macs/overlay.png">
-    <meta property="og:locale" content="tr_TR">
-    <meta property="og:locale:alternate" content="en_US">
-
-    <link rel="canonical" href="https://selmandokumaci.com/tr/">
-    <link rel="alternate" hreflang="en" href="https://selmandokumaci.com/">
-    <link rel="alternate" hreflang="tr" href="https://selmandokumaci.com/tr/">
-    <link rel="alternate" hreflang="x-default" href="https://selmandokumaci.com/">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
-
-    <link href="/assets/css/style.css" rel="stylesheet">
-
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Selman Ali Dokumacı",
-        "jobTitle": "Bağımsız Hesaplamalı Biyofizik Araştırmacısı",
-        "url": "https://selmandokumaci.com/tr/",
-        "sameAs": [
-            "https://github.com/s3lm4n",
-            "https://www.linkedin.com/in/selman-ali-dokumac%C4%B1-4a6ba630a/"
-        ]
-    }
-    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Selman Ali Dokumacı - Hesaplamalı Biyofizik Araştırmacısı</title>
+<meta name="description" content="Hesaplamalı biyofizik, moleküler dinamik ve koşula duyarlı terapötik tasarımı belgeleyen araştırma portföyü.">
+<meta property="og:title" content="Selman Ali Dokumacı - Hesaplamalı Biyofizik Araştırmacısı">
+<meta property="og:description" content="Hesaplamalı biyofizik, moleküler dinamik ve koşula duyarlı terapötik tasarımı belgeleyen araştırma portföyü.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://selmandokumaci.com/tr/">
+<meta property="og:image" content="https://selmandokumaci.com/assets/macs/overlay.png">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:locale:alternate" content="en_US">
+<link rel="canonical" href="https://selmandokumaci.com/tr/">
+<link rel="alternate" hreflang="en" href="https://selmandokumaci.com/">
+<link rel="alternate" hreflang="tr" href="https://selmandokumaci.com/tr/">
+<link rel="alternate" hreflang="x-default" href="https://selmandokumaci.com/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="/assets/css/ink-core.css">
+<link rel="stylesheet" href="/assets/css/ink-home.css">
+<script>document.documentElement.classList.replace('no-js','js');</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Selman Ali Dokumacı",
+  "jobTitle": "Bağımsız Hesaplamalı Biyofizik Araştırmacısı",
+  "url": "https://selmandokumaci.com/tr/",
+  "sameAs": [
+    "https://github.com/s3lm4n",
+    "https://www.linkedin.com/in/selman-ali-dokumac%C4%B1-4a6ba630a/"
+  ]
+}
+</script>
+<script src="/assets/js/ink-brush.js" defer></script>
+<script src="/assets/js/ink-site.js" defer></script>
 </head>
 <body>
-    <a href="#main-content" class="skip-link">İçeriğe atla</a>
+<a href="#main-content" class="skip">İçeriğe atla</a>
 
-    <header class="masthead">
-        <div class="masthead__inner">
-            <a href="/tr/" class="masthead__name">Selman Ali Dokumacı</a>
+<!-- shared drawing defs: stop-motion line boil + hatch -->
+<svg class="defs" aria-hidden="true" focusable="false" width="0" height="0">
+  <defs>
+    <filter id="boil" x="-4%" y="-4%" width="108%" height="108%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.032" numOctaves="2" seed="1" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="hatch-terra" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <path d="M0 0 V5" stroke="#B5552F" stroke-width="1.7"/>
+    </pattern>
+    <pattern id="hatch-slate" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)">
+      <path d="M0 0 V5" stroke="#3F6F6A" stroke-width="1.3"/>
+    </pattern>
+  </defs>
+</svg>
 
-            <nav class="masthead__nav masthead__nav--primary" aria-label="Ana menü">
-                <a href="/tr/#research" data-scroll-target="research" class="navlink">Araştırma</a>
-                <a href="/tr/#reports" data-scroll-target="reports" class="navlink">Raporlar</a>
-                <a href="/tr/#inventions" data-scroll-target="inventions" class="navlink">Buluşlar</a>
-                <a href="/tr/#about" data-scroll-target="about" class="navlink">Hakkında</a>
-                <a href="/tr/#contact" data-scroll-target="contact" class="navlink">İletişim</a>
-                <p class="lang">
-                    <a href="/" class="lang__link" hreflang="en" lang="en">EN</a>
-                    <span class="lang__sep" aria-hidden="true">/</span>
-                    <span class="lang__current" aria-current="true">TR</span>
-                </p>
-            </nav>
+<header class="mast">
+  <a href="/tr/" class="mast__brand"><span class="mast__mono" aria-hidden="true">S·A·D</span><span class="mast__name">Selman Ali Dokumacı</span></a>
+  <nav class="mast__nav" aria-label="Ana menü">
+    <a href="#research">Araştırma</a>
+    <a href="#reports">Raporlar</a>
+    <a href="#inventions">Buluşlar</a>
+    <a href="#about">Hakkında</a>
+    <a href="#contact">İletişim</a>
+    <p class="lang"><a href="/" hreflang="en" lang="en">EN</a><span aria-hidden="true">/</span><span aria-current="true">TR</span></p>
+  </nav>
+  <button type="button" class="mast__toggle" aria-expanded="false" aria-controls="drawer" aria-label="Menü">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7.5c5-.6 11-.4 16 0M4 12.2c6 .4 10-.3 16 .1M4 16.8c4-.3 11 .4 16-.2"/></svg>
+  </button>
+</header>
+<nav id="drawer" class="drawer" aria-label="Mobil gezinme" hidden>
+  <a href="#research">Araştırma</a>
+  <a href="#reports">Raporlar</a>
+  <a href="#inventions">Buluşlar</a>
+  <a href="#about">Hakkında</a>
+  <a href="#contact">İletişim</a>
+  <p class="lang"><a href="/" hreflang="en" lang="en">EN</a><span aria-hidden="true">/</span><span aria-current="true">TR</span></p>
+</nav>
 
-            <button type="button" id="nav-toggle" class="masthead__toggle" aria-expanded="false" aria-controls="nav-drawer" aria-label="Menü">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                    <path d="M4 7h16M4 12h16M4 17h16"/>
-                </svg>
-            </button>
-        </div>
+<!-- reading progress: the notebook's terracotta margin rule, drawn as you scroll -->
+<svg class="margin-rule" viewBox="0 0 12 1000" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+  <path class="margin-rule__ghost" d="M5 0 C4 160 6.5 330 5 500 C3.8 660 6 830 5 1000"/>
+  <path class="margin-rule__ink" pathLength="1" d="M5 0 C4 160 6.5 330 5 500 C3.8 660 6 830 5 1000"/>
+</svg>
+
+<main id="main-content" tabindex="-1">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" aria-labelledby="hero-name">
+    <p class="hero__kicker step-in">Araştırma dosyası <span aria-hidden="true">·</span> Hesaplamalı Biyofizik <span aria-hidden="true">·</span> Moleküler Mühendislik <span aria-hidden="true">·</span> Bilimsel Hesaplama</p>
+
+    <h1 class="hero__name" id="hero-name">
+      <span class="hero__l1 step-in">Selman Ali</span>
+      <span class="hero__l2 step-in"><canvas class="hero__swash" aria-hidden="true"></canvas><span class="hero__l2txt">Dokumacı</span></span>
+    </h1>
+
+    <p class="hero__note hand write-in" aria-hidden="true">
+      <span>bağımsız araştırmacı</span>
+      <svg viewBox="0 0 120 70" width="96" height="56" fill="none"><path class="draw" pathLength="1" d="M6 8 C30 6 62 18 84 40 C92 48 98 56 104 62 M92 60 L105 63 L102 50" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </p>
+
+    <figure class="hero__plate">
+      <svg class="plate plate--wide boil" viewBox="0 0 640 318" role="img" aria-labelledby="pw-title pw-desc" focusable="false">
+        <title id="pw-title">Şema: bir histidin yan zincirinden MDX-1’in 4 × 4 karo temeline uzanan tek mürekkep çizgisi</title>
+        <desc id="pw-desc">Histidinin el çizimi imidazol halkası (MACS pH kapılama hipotezinin merkezindeki protonasyona duyarlı kalıntı) şematik bir protein sarmalı olarak devam eder ve MDX-1’in dörde dört mimari karo temelinde sona erer. Yalnızca şemadır: moleküler yapı, donanım yerleşim planı ya da doğrulama kanıtı değildir.</desc>
+        <g class="plate__ink" filter="url(#boil)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path class="draw d1" pathLength="1" stroke="#1E1C19" stroke-width="1.9" d="M105.7 155.5 L86.5 182.2 L54.8 172.3 L55.8 139.9 L87.0 129.0 L106.0 155.7"/>
+          <path class="draw d2" pathLength="1" stroke="#1E1C19" stroke-width="1.4" d="M97.9 152.6 L87.4 138.1 M80.9 176.0 L63.9 170.5"/>
+          <path class="draw d3 helix" pathLength="1" stroke="#1E1C19" stroke-width="1.7" d="M106.0 156.0 Q118.0 146.0 129.0 153.0 Q140.0 160.0 144.9 157.9 Q149.8 155.8 150.5 154.6 Q151.2 153.4 152.0 152.4 Q152.8 151.5 154.2 150.8 Q155.6 150.1 156.8 149.5 Q158.1 148.9 159.4 148.9 Q160.8 149.0 162.2 149.4 Q163.6 149.9 165.0 151.2 Q166.5 152.5 168.0 154.1 Q169.6 155.6 170.8 157.5 Q171.9 159.4 172.7 162.0 Q173.5 164.7 174.2 167.5 Q174.9 170.4 175.2 173.2 Q175.4 175.9 174.7 178.1 Q174.0 180.3 173.2 181.8 Q172.3 183.3 171.4 184.4 Q170.4 185.5 169.5 186.4 Q168.6 187.3 167.3 187.3 Q166.1 187.2 165.2 186.9 Q164.2 186.5 163.2 185.7 Q162.2 184.9 161.2 183.3 Q160.2 181.8 159.5 180.0 Q158.9 178.1 158.3 175.9 Q157.7 173.6 157.6 171.1 Q157.6 168.5 157.4 166.0 Q157.3 163.5 157.7 160.6 Q158.1 157.8 158.8 155.0 Q159.5 152.1 160.7 149.4 Q161.8 146.6 162.8 144.1 Q163.9 141.7 165.4 139.5 Q167.0 137.3 168.6 135.5 Q170.2 133.8 172.1 132.3 Q174.0 130.9 176.1 129.8 Q178.3 128.7 180.2 128.3 Q182.0 127.9 184.3 128.1 Q186.6 128.3 188.5 128.8 Q190.4 129.4 192.4 130.5 Q194.4 131.7 196.1 133.3 Q197.9 135.0 199.8 137.1 Q201.7 139.1 203.1 141.5 Q204.4 143.8 205.4 146.2 Q206.3 148.6 207.4 151.4 Q208.6 154.3 208.9 157.2 Q209.3 160.0 209.7 162.8 Q210.0 165.5 209.8 168.0 Q209.7 170.4 209.4 172.8 Q209.2 175.2 208.6 177.6 Q208.0 179.9 207.3 181.3 Q206.5 182.7 205.5 184.1 Q204.5 185.4 203.7 186.2 Q202.8 187.0 201.6 187.2 Q200.4 187.3 199.5 187.1 Q198.6 186.9 197.4 186.0 Q196.1 185.1 195.1 183.8 Q194.2 182.5 193.6 180.7 Q193.0 179.0 192.3 176.9 Q191.5 174.9 191.3 172.6 Q191.0 170.2 191.0 167.4 Q190.9 164.6 191.3 161.7 Q191.8 158.8 192.4 156.0 Q193.0 153.2 193.6 150.3 Q194.3 147.5 195.4 144.9 Q196.4 142.3 197.9 140.0 Q199.4 137.8 201.2 135.6 Q203.0 133.5 204.6 131.8 Q206.2 130.1 208.2 128.9 Q210.2 127.7 212.3 127.3 Q214.4 126.8 216.4 126.4 Q218.5 126.0 220.8 126.6 Q223.2 127.1 225.2 128.0 Q227.2 128.9 229.1 130.3 Q230.9 131.8 232.6 133.7 Q234.3 135.5 235.7 137.5 Q237.1 139.5 238.2 142.2 Q239.4 144.9 240.5 147.6 Q241.7 150.3 242.2 152.9 Q242.7 155.6 243.1 158.4 Q243.6 161.2 243.7 163.8 Q243.8 166.4 243.5 168.9 Q243.2 171.5 242.6 173.7 Q242.0 176.0 241.6 177.6 Q241.1 179.1 240.2 180.8 Q239.3 182.5 238.2 183.1 Q237.1 183.7 236.1 184.2 Q235.1 184.6 234.1 184.6 Q233.0 184.7 231.7 183.9 Q230.3 183.1 229.5 182.0 Q228.8 181.0 228.0 179.5 Q227.2 178.0 226.4 175.7 Q225.6 173.4 225.4 171.0 Q225.2 168.6 225.1 166.1 Q225.0 163.5 225.1 160.9 Q225.2 158.3 225.7 155.4 Q226.2 152.5 226.9 149.5 Q227.7 146.6 228.7 144.0 Q229.7 141.4 231.0 139.0 Q232.4 136.7 233.9 134.5 Q235.3 132.3 236.9 130.4 Q238.6 128.5 240.7 127.4 Q242.8 126.2 244.9 125.4 Q247.0 124.7 248.9 124.3 Q250.8 124.0 253.1 124.3 Q255.4 124.6 257.2 125.4 Q259.0 126.3 261.2 127.4 Q263.3 128.4 265.0 130.2 Q266.7 132.1 268.3 134.2 Q270.0 136.3 271.1 138.7 Q272.3 141.2 273.5 143.8 Q274.8 146.3 275.3 149.3 Q275.8 152.2 276.5 155.0 Q277.2 157.8 277.2 160.7 Q277.2 163.5 277.2 165.9 Q277.2 168.3 276.8 170.7 Q276.4 173.0 275.6 175.3 Q274.8 177.5 274.1 179.0 Q273.3 180.6 272.2 181.8 Q271.2 183.0 270.2 183.4 Q269.1 183.8 268.1 184.0 Q267.1 184.1 266.0 183.9 Q265.0 183.6 264.0 182.4 Q263.1 181.2 262.1 180.0 Q261.1 178.8 260.5 177.0 Q259.8 175.2 259.3 172.8 Q258.9 170.4 258.6 168.1 Q258.3 165.9 258.4 163.2 Q258.5 160.5 259.0 157.7 Q259.5 154.9 260.1 152.1 Q260.7 149.3 261.5 146.7 Q262.4 144.1 263.6 141.7 Q264.9 139.2 266.3 137.0 Q267.8 134.8 269.6 132.9 Q271.5 131.0 273.3 129.4 Q275.0 127.9 277.1 127.0 Q279.3 126.2 281.3 125.7 Q283.4 125.3 285.3 125.4 Q287.2 125.5 289.5 126.2 Q291.8 126.9 293.8 128.1 Q295.8 129.3 297.5 130.9 Q299.3 132.6 300.9 134.5 Q302.6 136.5 303.9 139.1 Q305.2 141.8 306.3 144.3 Q307.4 146.9 308.3 149.5 Q309.2 152.2 309.6 155.0 Q310.1 157.8 310.6 160.9 Q311.2 164.0 311.1 166.7 Q311.0 169.3 310.7 171.6 Q310.5 173.9 309.8 176.2 Q309.1 178.4 308.4 180.3 Q307.6 182.2 306.8 183.6 Q305.9 184.9 304.7 185.6 Q303.4 186.4 302.5 186.7 Q301.6 187.0 300.5 186.8 Q299.4 186.6 298.3 185.9 Q297.1 185.2 296.3 183.9 Q295.4 182.5 294.8 180.9 Q294.1 179.2 293.4 177.0 Q292.7 174.7 292.4 172.5 Q292.1 170.2 292.2 167.7 Q292.4 165.1 292.5 162.2 Q292.6 159.3 293.2 156.5 Q293.9 153.6 294.6 150.8 Q295.4 148.0 296.5 145.6 Q297.5 143.2 299.1 140.9 Q300.6 138.6 302.2 136.8 Q303.7 134.9 305.6 133.1 Q307.5 131.3 309.3 130.4 Q311.1 129.6 313.5 129.0 Q315.8 128.3 317.8 128.1 Q319.8 127.8 321.7 128.3 Q323.7 128.7 325.7 129.9 Q327.8 131.1 329.8 132.5 Q331.9 133.9 333.4 135.6 Q334.9 137.3 336.4 139.7 Q338.0 142.2 339.1 144.7 Q340.3 147.1 341.4 149.8 Q342.5 152.4 343.3 155.1 Q344.0 157.9 344.2 160.6 Q344.5 163.4 344.4 166.1 Q344.3 168.8 344.2 171.3 Q344.0 173.8 343.5 176.3 Q342.9 178.8 342.3 180.6 Q341.7 182.4 340.9 183.8 Q340.2 185.2 339.2 186.2 Q338.1 187.2 337.1 187.6 Q336.1 187.9 334.9 187.8 Q333.7 187.7 332.7 187.0 Q331.7 186.3 330.7 185.1 Q329.7 183.8 329.0 182.3 Q328.2 180.8 327.4 178.7 Q326.5 176.6 327.0 173.6 Q327.5 170.7 327.9 168.0 Q328.4 165.4 329.4 162.8 Q330.5 160.2 331.5 158.2 Q332.5 156.1 333.8 154.7 Q335.0 153.2 336.5 152.2 Q338.0 151.2 339.5 150.4 Q341.0 149.7 342.7 149.8 Q344.3 150.0 345.4 150.4 Q346.5 150.8 347.7 151.6 Q348.9 152.5 349.7 153.6 Q350.5 154.6 351.4 155.8 Q352.3 156.9 362.1 156.7 Q372.0 156.5 382.0 156.2 Q392.0 156.0 412.0 156.2 Q432.0 156.4 447.0 156.2 L462.0 156.0"/>
+          <path class="draw d5" pathLength="1" stroke="#1E1C19" stroke-width="1.6" d="M455 149.5 L466 156 L455 162.5"/>
+        </g>
+        <path class="draw d6" pathLength="1" fill="none" stroke="#8F897E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" d="M469.5 84.0 L607.1 84.2 L606.9 220.1 L471.2 220.2 L470.8 82.5"/>
+        <g class="tiles" stroke="#93401F" stroke-width="1.1">
+          <rect class="tile" style="--i:0" x="486" y="99" width="22" height="22" fill="url(#hatch-terra)"/>
+          <rect class="tile" style="--i:1" x="514" y="99" width="22" height="22" fill="url(#hatch-terra)"/>
+          <rect class="tile" style="--i:2" x="542" y="99" width="22" height="22" fill="url(#hatch-terra)"/>
+          <rect class="tile" style="--i:3" x="570" y="99" width="22" height="22" fill="url(#hatch-terra)"/>
+          <rect class="tile" style="--i:7" x="486" y="127" width="22" height="22" fill="url(#hatch-terra)"/>
+          <rect class="tile" style="--i:6" x="514" y="127" width="22" height="22" fill="url(#hatch-terra)"/>
+          <rect class="tile" style="--i:5" x="542" y="127" width="22" height="22" fill="url(#hatch-terra)"/>
+          <rect class="tile" style="--i:4" x="570" y="127" width="22" height="22" fill="url(#hatch-terra)"/>
+          <rect class="tile" style="--i:8" x="486" y="155" width="22" height="22" fill="url(#hatch-terra)"/>
+          <rect class="tile" style="--i:9" x="514" y="155" width="22" height="22" fill="url(#hatch-terra)"/>
+          <rect class="tile" style="--i:10" x="542" y="155" width="22" height="22" fill="url(#hatch-terra)"/>
+          <rect class="tile" style="--i:11" x="570" y="155" width="22" height="22" fill="url(#hatch-terra)"/>
+          <rect class="tile" style="--i:15" x="486" y="183" width="22" height="22" fill="url(#hatch-terra)"/>
+          <rect class="tile" style="--i:14" x="514" y="183" width="22" height="22" fill="url(#hatch-terra)"/>
+          <rect class="tile" style="--i:13" x="542" y="183" width="22" height="22" fill="url(#hatch-terra)"/>
+          <rect class="tile" style="--i:12" x="570" y="183" width="22" height="22" fill="url(#hatch-terra)"/>
+        </g>
+        <g class="pop d2" font-family="IBM Plex Mono, monospace" font-size="12" fill="#1E1C19" text-anchor="middle">
+          <circle cx="86.7" cy="182.6" r="8" fill="#F6F1E7"/><text x="86.7" y="186.8">N</text>
+          <circle cx="55.3" cy="139.5" r="8" fill="#F6F1E7"/><text x="55.3" y="143.7">N</text>
+          <text x="40.3" y="128.0" font-size="11">H</text>
+          <path d="M44.5 131.5 L50.0 135.5" stroke="#1E1C19" stroke-width="1.2"/>
+        </g>
+        <g class="annot" font-family="Caveat, cursive">
+          <text class="write d3" x="18" y="104" font-size="19" fill="#57534B">His · imidazol</text>
+          <path class="draw d4" pathLength="1" fill="none" stroke="#3F6F6A" stroke-width="1.5" stroke-linecap="round" d="M118 236 C108 224 98 208 92 194 M86 202 L91.5 193 L98.5 200"/>
+          <text class="write d4" x="104" y="254" font-size="20" fill="#2F5551">+H<tspan dy="-0.42em" font-size="0.68em">+</tspan><tspan dy="0.42em"> → HIP, pH 6.8’de modellendi</tspan></text>
+          <text class="write d4" x="104" y="279" font-size="16" fill="#57534B">(sabit protonasyon · in silico)</text>
+          <text class="write d3" x="186" y="98" font-size="19" fill="#57534B">protein (şematik)</text>
+          <text class="write d6" x="471" y="58" font-size="19" fill="#57534B">MDX-1 · 4 × 4 karo</text>
+          <text class="write d7" x="538.5" y="252" font-size="16" fill="#57534B" text-anchor="middle">mimari temel, yerleşim planı değil</text>
+          <text class="write d7" x="538.5" y="274" font-size="19" fill="#93401F" text-anchor="middle">silikon öncesi</text>
+        </g>
+        <g transform="rotate(-2 400 302)"><g class="pop d8">
+          <rect x="316" y="291" width="168" height="22" fill="none" stroke="#93401F" stroke-width="1.1" stroke-dasharray="3 2.4"/>
+          <text x="400" y="306" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9" letter-spacing="1" fill="#93401F">ŞEMATİK · ÖLÇEKSİZ</text>
+        </g></g>
+      </svg>
+      <svg class="plate plate--tall boil" viewBox="0 0 344 492" role="img" aria-labelledby="pt-title pt-desc" focusable="false">
+        <title id="pt-title">Şema: bir histidin yan zincirinden MDX-1’in 4 × 4 karo temeline uzanan tek mürekkep çizgisi</title>
+        <desc id="pt-desc">Histidinin el çizimi imidazol halkası (MACS pH kapılama hipotezinin merkezindeki protonasyona duyarlı kalıntı) şematik bir protein sarmalı olarak devam eder ve MDX-1’in dörde dört mimari karo temelinde sona erer. Yalnızca şemadır: moleküler yapı, donanım yerleşim planı ya da doğrulama kanıtı değildir.</desc>
+        <g class="plate__ink" filter="url(#boil)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path class="draw d1" pathLength="1" stroke="#1E1C19" stroke-width="1.9" d="M84.0 127.8 L65.6 153.2 L36.4 143.3 L37.4 112.2 L66.1 103.4 L83.4 127.9"/>
+          <path class="draw d2" pathLength="1" stroke="#1E1C19" stroke-width="1.4" d="M76.5 124.8 L66.7 111.4 M60.7 146.6 L44.9 141.4"/>
+          <path class="draw d3 helix" pathLength="1" stroke="#1E1C19" stroke-width="1.7" d="M84.0 128.0 Q96.0 120.0 105.0 126.0 Q114.0 132.0 119.0 130.0 Q124.0 127.9 124.4 127.0 Q124.8 126.2 125.4 125.1 Q126.0 124.0 127.1 123.1 Q128.2 122.1 129.0 121.6 Q129.9 121.1 130.8 120.6 Q131.7 120.1 133.1 120.0 Q134.4 119.9 135.6 120.0 Q136.8 120.1 137.9 120.6 Q139.0 121.1 140.3 122.2 Q141.6 123.3 142.8 124.5 Q144.0 125.6 145.0 127.2 Q146.0 128.7 146.9 130.4 Q147.7 132.2 148.1 134.1 Q148.5 136.1 148.5 137.7 Q148.6 139.3 148.5 141.0 Q148.4 142.7 148.2 144.4 Q148.1 146.1 147.8 147.5 Q147.5 148.8 147.4 149.8 Q147.2 150.7 146.6 151.8 Q146.0 152.9 145.4 153.6 Q144.8 154.2 144.6 154.6 Q144.3 155.0 143.6 155.2 Q143.0 155.4 142.4 155.6 Q141.8 155.8 141.2 155.2 Q140.5 154.7 139.9 154.3 Q139.4 153.8 138.9 152.9 Q138.4 152.0 138.2 151.2 Q137.9 150.4 137.6 149.0 Q137.3 147.6 137.1 146.1 Q137.0 144.6 136.9 143.1 Q136.8 141.6 136.8 140.1 Q136.9 138.7 136.9 136.8 Q136.9 134.9 137.3 132.9 Q137.8 131.0 138.1 129.4 Q138.5 127.8 139.3 125.8 Q140.1 123.7 140.7 122.2 Q141.3 120.7 142.1 118.9 Q142.8 117.2 143.7 115.6 Q144.6 114.0 145.9 112.7 Q147.1 111.3 148.3 110.0 Q149.5 108.7 150.7 107.9 Q151.8 107.2 153.2 106.3 Q154.6 105.4 155.9 105.1 Q157.2 104.7 158.7 104.1 Q160.1 103.6 161.6 103.7 Q163.1 103.8 164.4 104.0 Q165.7 104.2 167.0 104.7 Q168.4 105.3 169.6 106.1 Q170.8 107.0 172.1 108.0 Q173.3 109.0 174.5 110.2 Q175.6 111.3 176.9 112.6 Q178.2 113.9 179.1 115.3 Q180.1 116.8 180.9 118.4 Q181.8 120.1 182.3 122.0 Q182.9 123.9 183.5 125.5 Q184.1 127.1 184.7 128.9 Q185.2 130.7 185.5 132.4 Q185.7 134.2 185.9 135.9 Q186.1 137.7 185.9 139.5 Q185.7 141.4 185.6 142.9 Q185.5 144.4 185.6 145.7 Q185.6 146.9 185.0 147.9 Q184.4 149.0 184.0 150.0 Q183.7 151.1 183.3 152.0 Q183.0 153.0 182.4 153.2 Q181.8 153.5 181.3 153.8 Q180.8 154.0 180.1 154.1 Q179.4 154.3 179.0 153.8 Q178.6 153.4 178.0 153.1 Q177.4 152.8 177.0 151.9 Q176.6 151.1 176.2 150.0 Q175.8 149.0 175.4 147.9 Q175.0 146.9 174.8 145.4 Q174.6 144.0 174.2 142.3 Q173.9 140.6 174.0 138.9 Q174.1 137.3 174.2 135.5 Q174.4 133.7 174.6 131.9 Q174.9 130.1 175.1 128.2 Q175.2 126.3 175.9 124.5 Q176.5 122.8 177.2 120.8 Q177.8 118.9 178.6 117.4 Q179.5 115.9 180.4 114.2 Q181.3 112.6 182.2 111.1 Q183.1 109.7 184.5 108.2 Q185.9 106.8 187.0 105.7 Q188.1 104.6 189.5 103.6 Q190.9 102.5 192.2 102.0 Q193.5 101.5 194.8 101.2 Q196.0 100.9 197.6 100.6 Q199.1 100.2 200.5 100.5 Q201.9 100.7 203.2 101.2 Q204.6 101.6 205.8 102.2 Q207.0 102.9 208.4 103.8 Q209.7 104.8 210.9 105.8 Q212.1 106.9 213.3 108.1 Q214.6 109.4 215.6 110.7 Q216.7 111.9 217.5 113.7 Q218.3 115.5 219.1 117.1 Q219.9 118.8 220.3 120.5 Q220.8 122.2 221.4 124.0 Q222.1 125.9 222.3 127.7 Q222.4 129.6 222.8 131.4 Q223.1 133.3 223.1 135.1 Q223.0 136.9 223.0 138.5 Q223.1 140.1 222.8 141.6 Q222.6 143.2 222.5 144.5 Q222.4 145.8 222.1 146.9 Q221.9 147.9 221.2 148.7 Q220.4 149.5 220.0 150.3 Q219.5 151.1 219.0 151.3 Q218.4 151.6 217.8 151.7 Q217.2 151.8 216.9 152.0 Q216.6 152.2 215.9 151.8 Q215.1 151.4 214.7 150.7 Q214.2 150.0 213.7 149.3 Q213.2 148.5 212.8 147.3 Q212.4 146.1 212.1 144.9 Q211.9 143.6 211.7 142.4 Q211.5 141.2 211.3 139.4 Q211.1 137.6 211.4 135.9 Q211.7 134.2 211.7 132.7 Q211.7 131.2 212.1 129.2 Q212.6 127.2 212.8 125.4 Q213.1 123.7 213.8 122.0 Q214.5 120.4 215.4 118.7 Q216.4 117.0 217.2 115.4 Q218.0 113.9 219.0 112.4 Q220.0 110.9 221.1 109.4 Q222.2 107.8 223.2 106.7 Q224.2 105.7 225.6 104.8 Q226.9 104.0 228.2 103.4 Q229.4 102.8 230.8 102.2 Q232.2 101.6 233.6 101.5 Q234.9 101.4 236.4 101.5 Q237.9 101.7 239.3 101.9 Q240.6 102.1 242.0 102.8 Q243.3 103.4 244.6 104.3 Q245.8 105.2 247.1 106.3 Q248.3 107.4 249.6 108.5 Q250.9 109.6 252.0 111.1 Q253.0 112.7 253.9 114.3 Q254.8 116.0 255.7 117.8 Q256.6 119.6 257.3 121.2 Q258.0 122.9 258.5 124.8 Q259.0 126.7 259.2 128.6 Q259.5 130.6 259.9 132.5 Q260.3 134.5 260.4 136.2 Q260.5 138.0 260.5 139.5 Q260.6 141.0 260.5 142.7 Q260.5 144.3 260.2 145.7 Q259.9 147.0 259.4 148.5 Q259.0 150.0 258.6 150.8 Q258.1 151.6 257.7 152.4 Q257.3 153.2 256.9 154.0 Q256.6 154.9 256.0 155.0 Q255.4 155.1 254.9 155.2 Q254.4 155.3 253.6 155.1 Q252.8 155.0 252.4 154.4 Q251.9 153.8 251.4 153.1 Q250.9 152.4 250.4 151.6 Q250.0 150.7 249.8 149.5 Q249.7 148.4 249.2 147.0 Q248.7 145.7 248.6 144.2 Q248.5 142.6 248.7 141.0 Q249.0 139.5 249.1 137.7 Q249.2 136.0 249.3 134.1 Q249.4 132.1 249.8 130.4 Q250.3 128.8 250.7 126.9 Q251.2 124.9 252.0 123.2 Q252.9 121.4 253.6 119.8 Q254.4 118.2 255.4 116.5 Q256.4 114.7 257.3 113.5 Q258.1 112.4 259.4 110.9 Q260.7 109.5 261.7 108.5 Q262.8 107.4 264.2 106.8 Q265.7 106.2 266.9 105.4 Q268.2 104.6 269.7 104.4 Q271.3 104.1 272.7 104.2 Q274.2 104.3 275.6 104.4 Q277.0 104.5 278.3 104.7 Q279.5 104.9 281.0 105.7 Q282.4 106.5 283.6 107.5 Q284.7 108.5 286.1 109.6 Q287.4 110.7 288.5 112.1 Q289.6 113.5 290.3 114.8 Q291.1 116.1 292.2 117.8 Q293.3 119.6 294.1 121.1 Q294.9 122.6 295.3 124.6 Q295.8 126.6 295.7 128.4 Q295.6 130.1 295.5 131.4 Q295.4 132.7 294.8 134.1 Q294.2 135.4 294.0 136.0 Q293.8 136.6 293.5 137.1 Q293.1 137.5 292.6 137.7 Q292.0 137.8 291.6 137.6 Q291.3 137.4 291.3 136.9 Q291.3 136.4 291.3 135.6 Q291.2 134.7 291.0 133.8 Q290.8 132.9 291.1 131.9 Q291.4 130.9 291.7 129.9 Q292.1 128.8 299.1 128.7 Q306.0 128.5 312.0 128.6 Q318.0 128.6 325.0 130.3 Q332.0 132.0 334.0 139.0 Q336.0 146.0 336.0 180.0 Q336.0 214.0 334.5 221.0 Q333.0 228.0 325.5 232.0 Q318.0 236.0 247.0 236.0 Q176.0 236.0 170.0 237.0 Q164.0 238.0 162.0 243.0 Q160.0 248.0 160.0 255.0 L160.0 262.0"/>
+          <path class="draw d5" pathLength="1" stroke="#1E1C19" stroke-width="1.6" d="M153.5 255 L160 266 L166.5 255"/>
+        </g>
+        <path class="draw d6" pathLength="1" fill="none" stroke="#8F897E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" d="M82.5 270.0 L220.1 270.2 L219.9 406.1 L84.2 406.2 L83.8 268.5"/>
+        <g class="tiles" stroke="#93401F" stroke-width="1.1">
+          <rect class="tile" style="--i:0" x="99" y="285" width="22" height="22" fill="url(#hatch-terra)"/>
+          <rect class="tile" style="--i:1" x="127" y="285" width="22" height="22" fill="url(#hatch-terra)"/>
+          <rect class="tile" style="--i:2" x="155" y="285" width="22" height="22" fill="url(#hatch-terra)"/>
+          <rect class="tile" style="--i:3" x="183" y="285" width="22" height="22" fill="url(#hatch-terra)"/>
+          <rect class="tile" style="--i:7" x="99" y="313" width="22" height="22" fill="url(#hatch-terra)"/>
+          <rect class="tile" style="--i:6" x="127" y="313" width="22" height="22" fill="url(#hatch-terra)"/>
+          <rect class="tile" style="--i:5" x="155" y="313" width="22" height="22" fill="url(#hatch-terra)"/>
+          <rect class="tile" style="--i:4" x="183" y="313" width="22" height="22" fill="url(#hatch-terra)"/>
+          <rect class="tile" style="--i:8" x="99" y="341" width="22" height="22" fill="url(#hatch-terra)"/>
+          <rect class="tile" style="--i:9" x="127" y="341" width="22" height="22" fill="url(#hatch-terra)"/>
+          <rect class="tile" style="--i:10" x="155" y="341" width="22" height="22" fill="url(#hatch-terra)"/>
+          <rect class="tile" style="--i:11" x="183" y="341" width="22" height="22" fill="url(#hatch-terra)"/>
+          <rect class="tile" style="--i:15" x="99" y="369" width="22" height="22" fill="url(#hatch-terra)"/>
+          <rect class="tile" style="--i:14" x="127" y="369" width="22" height="22" fill="url(#hatch-terra)"/>
+          <rect class="tile" style="--i:13" x="155" y="369" width="22" height="22" fill="url(#hatch-terra)"/>
+          <rect class="tile" style="--i:12" x="183" y="369" width="22" height="22" fill="url(#hatch-terra)"/>
+        </g>
+        <g class="pop d2" font-family="IBM Plex Mono, monospace" font-size="12" fill="#1E1C19" text-anchor="middle">
+          <circle cx="66.0" cy="152.7" r="8" fill="#F6F1E7"/><text x="66.0" y="156.9">N</text>
+          <circle cx="37.0" cy="112.7" r="8" fill="#F6F1E7"/><text x="37.0" y="116.9">N</text>
+          <text x="22.0" y="101.2" font-size="11">H</text>
+          <path d="M26.2 104.7 L31.7 108.7" stroke="#1E1C19" stroke-width="1.2"/>
+        </g>
+        <g class="annot" font-family="Caveat, cursive">
+          <text class="write d3" x="8" y="76" font-size="17" fill="#57534B">His · imidazol</text>
+          <text class="write d3" x="150" y="82" font-size="17" fill="#57534B">protein (şematik)</text>
+          <path class="draw d4" pathLength="1" fill="none" stroke="#3F6F6A" stroke-width="1.5" stroke-linecap="round" d="M34 184 C40 174 50 166 60 160 M50 160 L61 159 L57 169"/>
+          <text class="write d4" x="8" y="201" font-size="18" fill="#2F5551">+H<tspan dy="-0.42em" font-size="0.68em">+</tspan><tspan dy="0.42em"> → HIP, pH 6.8’de modellendi</tspan></text>
+          <text class="write d4" x="8" y="226" font-size="15" fill="#57534B">(sabit protonasyon · in silico)</text>
+          <text class="write d6" x="232" y="302" font-size="18" fill="#57534B">MDX-1</text>
+          <text class="write d6" x="232" y="324" font-size="17" fill="#57534B">4 × 4 karo</text>
+          <text class="write d7" x="232" y="356" font-size="18" fill="#93401F">silikon öncesi</text>
+          <text class="write d7" x="84" y="436" font-size="15" fill="#57534B">mimari temel, yerleşim planı değil</text>
+        </g>
+        <g transform="rotate(-2 172 470)"><g class="pop d8">
+          <rect x="70" y="456" width="204" height="25" fill="none" stroke="#93401F" stroke-width="1.1" stroke-dasharray="3 2.4"/>
+          <text x="172" y="473" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10.5" letter-spacing="1.1" fill="#93401F">ŞEMATİK · ÖLÇEKSİZ</text>
+        </g></g>
+      </svg>
+      <figcaption id="plate-cap" class="hero__cap">şekil 0 — tek çizgi, iki ölçek: protonasyona duyarlı bir kalıntı (MACS) ve 4 × 4 mimari temel (MDX). Yalnızca şema: yapı değil, yerleşim planı değil, doğrulama sonucu değil.</figcaption>
+    </figure>
+
+    <div class="hero__foot">
+      <p class="hero__lede step-in">Koşula duyarlı protein tasarımı ve doğruluk-öncelikli moleküler dinamik donanımı üzerine bir araştırma dosyası — kanıt görünür, spekülasyon spekülasyon olarak damgalanır.</p>
+      <div class="hero__cta step-in">
+        <a class="btn" href="#research">Araştırmaya gir <span aria-hidden="true">↘</span></a>
+        <a class="btn btn--quiet" href="/tr/mdx-sketchbook/">Yaşayan Defteri aç</a>
+      </div>
+    </div>
+    <p class="hero__cue" aria-hidden="true"><span>okumaya devam</span>
+      <svg viewBox="0 0 24 40" width="14" height="24" fill="none"><path d="M12 2 C11 14 13 24 12 36 M5 29 L12 37 L19 29" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </p>
+  </section>
+
+  <!-- ============ 01 · INTRODUCTION — inked as you read ============ -->
+  <section class="sec thesis" id="introduction" aria-labelledby="intro-title">
+    <header class="sec__head">
+      <p class="sec__no"><canvas class="mark" aria-hidden="true"></canvas><span>§ 01</span></p>
+      <h2 class="sec__kicker" id="intro-title">Giriş</h2>
+    </header>
+    <div class="thesis__grid">
+      <div class="thesis__text" data-ink-text>
+        <p>Hesaplamalı biyofizik ve moleküler mühendislik üzerine odaklanan bağımsız araştırmacı.</p>
+        <p>Mevcut çalışmalar atomistik simülasyon, elastik ağ (elastic network) analizi ve termodinamik modelleme kullanarak koşula duyarlı protein sistemleri tasarlamaya odaklanmaktadır.</p>
+      </div>
+      <aside class="thesis__notes" aria-label="Kenar notları">
+        <p class="hand note" data-at="0.42"><span class="note__k">koşul</span> pH 7.4 ↔ 6.8</p>
+        <p class="hand note" data-at="0.62"><span class="note__k">atomistik</span> GROMACS 2026.1 · koşul başına 300 ns</p>
+        <p class="hand note" data-at="0.78"><span class="note__k">elastik ağ</span> ANM / GNM · 20 modlu profiller</p>
+        <p class="hand note" data-at="0.92"><span class="note__k">termodinamik</span> PB-MMPBSA · PROPKA 3.4</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ 02 · SELECTED RESEARCH ============ -->
+  <section class="sec research" id="research" aria-labelledby="research-title">
+    <header class="sec__head">
+      <p class="sec__no"><canvas class="mark" aria-hidden="true"></canvas><span>§ 02</span></p>
+      <h2 class="sec__title" id="research-title">Seçili Araştırmalar</h2>
+      <p class="sec__aside hand">biri in silico, biri silikon öncesi</p>
     </header>
 
-    <nav id="nav-drawer" class="navdrawer" aria-label="Mobil gezinme">
-        <div class="navdrawer__inner">
-            <a href="/tr/#research" data-scroll-target="research" class="navlink">Araştırma</a>
-            <a href="/tr/#reports" data-scroll-target="reports" class="navlink">Raporlar</a>
-            <a href="/tr/#inventions" data-scroll-target="inventions" class="navlink">Buluşlar</a>
-            <a href="/tr/#about" data-scroll-target="about" class="navlink">Hakkında</a>
-            <a href="/tr/#contact" data-scroll-target="contact" class="navlink">İletişim</a>
-            <p class="lang navdrawer__lang">
-                <a href="/" class="lang__link" hreflang="en" lang="en">EN</a>
-                <span class="lang__sep" aria-hidden="true">/</span>
-                <span class="lang__current" aria-current="true">TR</span>
-            </p>
+    <div class="folios">
+      <article class="folio folio--macs rise-in" style="--ink-brush:#2F5551">
+        <a class="folio__fig" href="/tr/macs-project" tabindex="-1" aria-hidden="true">
+          <span class="folio__mat">
+            <img src="/assets/macs/overlay.png" alt="" width="2600" height="2000" loading="lazy" decoding="async">
+          </span>
+          <span class="tape tape--a"></span><span class="tape tape--b"></span>
+        </a>
+        <div class="folio__body">
+          <p class="folio__field"><span class="folio__letter">A</span> Koşula Duyarlı Terapötik</p>
+          <ul class="stamps" aria-label="Durum">
+            <li class="stamp stamp--slate">In silico</li>
+            <li class="stamp stamp--dash">Hipotez</li>
+          </ul>
+          <h3 class="folio__title"><a href="/tr/macs-project">MACS: Modular Activated Cancer Suppressor</a></h3>
+          <p class="folio__sub">Asidik Mikroçevreye Duyarlı Mantık Kapısına Sahip, Tek mRNA Kodlu, Çoklu Alanlı Protein Sistemi</p>
+          <p class="folio__hand hand">pH 7.4’te korumalı → ≤ 6.8’de aktifleşir <span>(önerilen)</span></p>
+          <dl class="folio__meta">
+            <div><dt>Alan</dt><dd>Hesaplamalı Biyofizik</dd></div>
+            <div><dt>Yıl</dt><dd>2026</dd></div>
+            <div><dt>Durum</dt><dd>Hesaplamalı Keşif (In Silico)</dd></div>
+            <div><dt>Örnekleme</dt><dd>~600 ns tüm atomlu MD · pH 6.8 ↔ 7.4</dd></div>
+          </dl>
+          <p class="folio__links"><a class="folio__link" href="/tr/macs-project">Tam proje kaydı <span aria-hidden="true">→</span></a></p>
         </div>
-    </nav>
+        <p class="folio__cap">şekil 1 — yörünge ortalamalı konformasyonlar, pH 6.8 ve 7.4</p>
+      </article>
 
-    <main id="main-content" tabindex="-1">
-
-        <div class="wrap">
-            <div class="page-head" id="home">
-                <h1 class="identity__name">Selman Ali Dokumacı</h1>
-                <p class="identity__role">Bağımsız Araştırmacı</p>
-                <p class="identity__fields">
-                    Hesaplamalı Biyofizik<span class="sep" aria-hidden="true">·</span>Moleküler Mühendislik<span class="sep" aria-hidden="true">·</span>Bilimsel Hesaplama
-                </p>
-            </div>
+      <article class="folio folio--mdx rise-in" style="--ink-brush:#93401F">
+        <a class="folio__fig" href="/tr/mdx-project" tabindex="-1" aria-hidden="true">
+          <span class="folio__mat folio__mat--grid">
+            <img src="/assets/mdx/mdx-notebook-pair.svg" alt="" width="460" height="460" loading="lazy" decoding="async">
+          </span>
+          <span class="tape tape--a"></span>
+        </a>
+        <div class="folio__body">
+          <p class="folio__field"><span class="folio__letter">B</span> Alana Özgü Mimari</p>
+          <ul class="stamps" aria-label="Durum">
+            <li class="stamp stamp--terra">Silikon öncesi</li>
+            <li class="stamp stamp--double">RTL sim</li>
+          </ul>
+          <h3 class="folio__title"><a href="/tr/mdx-project">MDX: Moleküler Dinamik Hızlandırıcısı</a></h3>
+          <p class="folio__sub">Klasik moleküler dinamik iş yükleri için tasarlanmış doğruluk-öncelikli, silikon öncesi, alana özgü bir hızlandırıcı mimarisi.</p>
+          <p class="folio__hand hand">tek bağ dışı çift, F<sub>ij</sub>, her zaman adımında</p>
+          <dl class="folio__meta">
+            <div><dt>Alan</dt><dd>Bilimsel Hesaplama</dd></div>
+            <div><dt>Yıl</dt><dd>2026</dd></div>
+            <div><dt>Durum</dt><dd>Silikon Öncesi</dd></div>
+            <div><dt>Kanıt</dt><dd>RTL simülasyon kanıtı · Aşama 8J.3B haritalaması</dd></div>
+          </dl>
+          <p class="folio__links">
+            <a class="folio__link" href="/tr/mdx-project">Tam proje kaydı <span aria-hidden="true">→</span></a>
+            <a class="folio__link folio__link--quiet" href="/tr/mdx-sketchbook/">Yaşayan Defter · 12 levha <span aria-hidden="true">→</span></a>
+          </p>
         </div>
+        <p class="folio__cap">şekil 2 — defter levhası: iki molekül, bir bağ dışı çift</p>
+      </article>
+    </div>
+  </section>
 
-        <div class="wrap">
+  <!-- ============ 03 · AREAS ============ -->
+  <section class="sec areas" id="areas" aria-labelledby="areas-title">
+    <header class="sec__head">
+      <p class="sec__no"><canvas class="mark" aria-hidden="true"></canvas><span>§ 03</span></p>
+      <h2 class="sec__title" id="areas-title">Araştırma Alanları</h2>
+    </header>
+    <ol class="areas__list">
+      <li class="area rise-in">
+        <svg class="area__glyph boil" viewBox="0 0 120 80" aria-hidden="true" focusable="false"><g filter="url(#boil)" fill="none" stroke="#1E1C19" stroke-width="1.6" stroke-linecap="round"><path class="draw" pathLength="1" d="M8 40 C14 20 22 20 26 40 C30 60 38 60 42 40 C46 20 54 20 58 40 C62 60 70 60 74 40 C78 20 86 20 90 40 C94 60 102 60 108 42"/><path class="draw" pathLength="1" stroke="#8F897E" stroke-width="1" d="M8 66 C40 64 80 68 112 65"/></g></svg>
+        <p class="area__no">i.</p>
+        <h3>Hesaplamalı Yapısal Biyoloji</h3>
+        <p>Mühendislik ürünü protein sistemlerinde atomistik moleküler dinamik, konformasyonel analiz ve yapı-işlev ilişkileri.</p>
+      </li>
+      <li class="area rise-in">
+        <svg class="area__glyph boil" viewBox="0 0 120 80" aria-hidden="true" focusable="false"><g filter="url(#boil)" fill="none" stroke-linecap="round" stroke-linejoin="round"><path class="draw" pathLength="1" stroke="#1E1C19" stroke-width="1.6" d="M30 30 L30 62 L70 62 L70 30 Z M38 30 C38 14 62 14 62 24"/><path class="draw" pathLength="1" stroke="#3F6F6A" stroke-width="1.5" d="M84 22 C92 30 94 40 88 50 M80 34 h10 M85 29 v10"/><text x="80" y="70" font-family="Caveat" font-size="15" fill="#2F5551" stroke="none">pH ↓</text></g></svg>
+        <p class="area__no">ii.</p>
+        <h3>Koşula Duyarlı Terapötikler</h3>
+        <p>Fizikokimyasal kapılama (gating) yoluyla sağlıklı ve hastalıklı mikroçevreleri ayırt eden biyoterapötikler için tasarım prensipleri.</p>
+      </li>
+      <li class="area rise-in">
+        <svg class="area__glyph boil" viewBox="0 0 120 80" aria-hidden="true" focusable="false"><g filter="url(#boil)" fill="none" stroke="#1E1C19" stroke-width="1.5"><path class="draw" pathLength="1" d="M34 10 H86 V70 H34 Z"/><path class="draw" pathLength="1" stroke="#93401F" stroke-width="1.1" d="M47 10 V70 M60 10 V70 M73 10 V70 M34 25 H86 M34 40 H86 M34 55 H86"/><path class="draw" pathLength="1" stroke="#57534B" stroke-width="1" d="M14 25 H34 M14 40 H34 M14 55 H34 M86 32 H106 M86 48 H106"/></g></svg>
+        <p class="area__no">iii.</p>
+        <h3>Bilimsel Hesaplama ve Hızlandırıcı Mimarisi</h3>
+        <p>Moleküler dinamik ve bilimsel hesaplama iş yükleri için doğruluk öncelikli referans modelleri ve alana özgü mimariler.</p>
+      </li>
+    </ol>
+  </section>
 
-            <!-- 01 Giriş -->
-            <section class="sec" id="introduction" aria-labelledby="introduction-title">
-                <div class="sec__head">
-                    <span class="sec__num" aria-hidden="true">01</span>
-                    <h2 class="sec__title" id="introduction-title">Giriş</h2>
-                </div>
-                <div class="prose-col">
-                    <p class="lede">Hesaplamalı biyofizik ve moleküler mühendislik üzerine odaklanan bağımsız araştırmacı.</p>
-                    <p>Mevcut çalışmalar atomistik simülasyon, elastik ağ (elastic network) analizi ve termodinamik modelleme kullanarak koşula duyarlı protein sistemleri tasarlamaya odaklanmaktadır.</p>
-                </div>
-            </section>
+  <!-- ============ 04 · REPORTS ============ -->
+  <section class="sec reports" id="reports" aria-labelledby="reports-title">
+    <header class="sec__head">
+      <p class="sec__no"><canvas class="mark" aria-hidden="true"></canvas><span>§ 04</span></p>
+      <h2 class="sec__title" id="reports-title">Raporlar ve Teknik Dokümantasyon</h2>
+      <p class="sec__aside hand">kâğıt izi</p>
+    </header>
+    <div class="ledger-wrap" tabindex="0" role="region" aria-label="Tablo: Raporlar ve Teknik Dokümantasyon">
+      <table class="ledger">
+        <caption>Yukarıdaki araştırma kayıtlarını destekleyen teknik dokümantasyon.</caption>
+        <thead>
+          <tr><th scope="col">Yıl</th><th scope="col">Başlık</th><th scope="col">Doküman türü</th><th scope="col">Proje</th><th scope="col">Erişim</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="ledger__year">2026</td><td class="ledger__title">Mekanistik Kanıt Özeti</td><td>Teknik Rapor</td><td>MACS</td><td class="ledger__go"><a href="/tr/macs-evidence-summary">Oku<span class="sr"> — Mekanistik Kanıt Özeti</span></a></td></tr>
+          <tr><td class="ledger__year">2026</td><td class="ledger__title">Metodolojik Karar Günlüğü</td><td>Teknik Dokümantasyon</td><td>MACS</td><td class="ledger__go"><a href="/tr/macs-decision-log">Oku<span class="sr"> — Metodolojik Karar Günlüğü</span></a></td></tr>
+          <tr><td class="ledger__year">2026</td><td class="ledger__title">Mekanistik Kanıt Matrisi</td><td>Teknik Dokümantasyon</td><td>MACS</td><td class="ledger__go"><a href="/tr/macs-evidence-matrix">Oku<span class="sr"> — Mekanistik Kanıt Matrisi</span></a></td></tr>
+          <tr><td class="ledger__year">2026</td><td class="ledger__title">MDP Tutarlılık Raporu</td><td>Teknik Dokümantasyon</td><td>MACS</td><td class="ledger__go"><a href="/tr/macs-mdp-consistency">Oku<span class="sr"> — MDP Tutarlılık Raporu</span></a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
 
-            <!-- 02 Seçili Araştırmalar -->
-            <section class="sec" id="research" aria-labelledby="research-title">
-                <div class="sec__head">
-                    <span class="sec__num" aria-hidden="true">02</span>
-                    <h2 class="sec__title" id="research-title">Seçili Araştırmalar</h2>
-                </div>
+  <!-- ============ 05 · INVENTIONS ============ -->
+  <section class="sec inventions" id="inventions" aria-labelledby="inventions-title">
+    <header class="sec__head">
+      <p class="sec__no"><canvas class="mark" aria-hidden="true"></canvas><span>§ 05</span></p>
+      <h2 class="sec__title" id="inventions-title">Buluşlar ve Fikri Mülkiyet</h2>
+    </header>
+    <div class="record rise-in">
+      <p class="record__stamp" aria-hidden="true"><span>Başvuru yapıldı</span><span>TÜRKPATENT</span></p>
+      <h3 class="record__title">Moleküler İşaretçi Yoğunluğuna Bağlı Koşullu Aktivasyon ve Protein Yıkımına Olanak Sağlayan Modüler Sentetik Transmembran Biyolojik Sistem</h3>
+      <dl class="record__meta">
+        <div><dt>Durum</dt><dd>Ulusal Patent Başvurusu Yapıldı</dd></div>
+        <div><dt>Yargı Alanı</dt><dd>Türkiye (TÜRKPATENT)</dd></div>
+        <div><dt>Buluş Sahibi</dt><dd>Selman Ali Dokumacı</dd></div>
+      </dl>
+      <p class="fine">Herkese açık başvuru bilgileri. Detaylar yayınlanana kadar gizli tutulmuştur.</p>
+    </div>
+  </section>
 
-                <div class="entry-list">
-
-                    <article class="entry">
-                        <a class="entry__figure entry__figure--macs" href="/tr/macs-project" tabindex="-1" aria-hidden="true">
-                            <img src="/assets/macs/overlay.png" alt="" width="2600" height="2000" loading="lazy" decoding="async">
-                        </a>
-                        <div class="entry__body">
-                            <p class="entry__field">Koşula Duyarlı Terapötik</p>
-                            <h3 class="entry__title"><a href="/tr/macs-project">MACS: Modular Activated Cancer Suppressor</a></h3>
-                            <p class="entry__expanded">Asidik Mikroçevreye Duyarlı Mantık Kapısına Sahip, Tek mRNA Kodlu, Çoklu Alanlı Protein Sistemi</p>
-                            <dl class="entry__meta">
-                                <div>
-                                    <dt>Alan</dt>
-                                    <dd class="meta-val">Hesaplamalı Biyofizik</dd>
-                                </div>
-                                <div>
-                                    <dt>Yıl</dt>
-                                    <dd class="meta-val">2026</dd>
-                                </div>
-                                <div>
-                                    <dt>Durum</dt>
-                                    <dd class="meta-val">Hesaplamalı Keşif (In Silico)</dd>
-                                </div>
-                                <div>
-                                    <dt>Örnekleme</dt>
-                                    <dd class="meta-val">~600 ns tüm atomlu MD &middot; pH 6.8 &harr; 7.4</dd>
-                                </div>
-                            </dl>
-                            <a href="/tr/macs-project" class="textlink textlink--standalone">Tam proje kaydı <span aria-hidden="true">&rarr;</span></a>
-                        </div>
-                    </article>
-
-                    <article class="entry">
-                        <a class="entry__figure entry__figure--mdx" href="/tr/mdx-project" tabindex="-1" aria-hidden="true">
-                            <span class="entry__matte">
-                                <img src="/assets/mdx/mdx-notebook-pair.svg" alt="El çizimi defter levhası: iki molekül ve aralarındaki bağ dışı çift kuvveti" width="460" height="460" loading="lazy" decoding="async">
-                            </span>
-                        </a>
-                        <div class="entry__body">
-                            <p class="entry__field">Alana Özgü Mimari</p>
-                            <h3 class="entry__title"><a href="/tr/mdx-project">MDX: Moleküler Dinamik Hızlandırıcısı</a></h3>
-                            <p class="entry__expanded">Klasik moleküler dinamik iş yükleri için tasarlanmış doğruluk-öncelikli, silikon öncesi, alana özgü bir hızlandırıcı mimarisi.</p>
-                            <dl class="entry__meta">
-                                <div>
-                                    <dt>Alan</dt>
-                                    <dd class="meta-val">Bilimsel Hesaplama</dd>
-                                </div>
-                                <div>
-                                    <dt>Yıl</dt>
-                                    <dd class="meta-val">2026</dd>
-                                </div>
-                                <div>
-                                    <dt>Durum</dt>
-                                    <dd class="meta-val">Silikon Öncesi</dd>
-                                </div>
-                                <div>
-                                    <dt>Kanıt</dt>
-                                    <dd class="meta-val">RTL simülasyon kanıtı &middot; Aşama 8J.3B haritalaması</dd>
-                                </div>
-                            </dl>
-                            <a href="/tr/mdx-project" class="textlink textlink--standalone">Tam proje kaydı <span aria-hidden="true">&rarr;</span></a>
-                        </div>
-                    </article>
-
-                </div>
-            </section>
-
-            <!-- 03 Araştırma Alanları -->
-            <section class="sec" id="areas" aria-labelledby="areas-title">
-                <div class="sec__head">
-                    <span class="sec__num" aria-hidden="true">03</span>
-                    <h2 class="sec__title" id="areas-title">Araştırma Alanları</h2>
-                </div>
-                <div class="areas">
-                    <div class="area">
-                        <h3 class="area__title">Hesaplamalı Yapısal Biyoloji</h3>
-                        <p class="area__body">Mühendislik ürünü protein sistemlerinde atomistik moleküler dinamik, konformasyonel analiz ve yapı-işlev ilişkileri.</p>
-                    </div>
-                    <div class="area">
-                        <h3 class="area__title">Koşula Duyarlı Terapötikler</h3>
-                        <p class="area__body">Fizikokimyasal kapılama (gating) yoluyla sağlıklı ve hastalıklı mikroçevreleri ayırt eden biyoterapötikler için tasarım prensipleri.</p>
-                    </div>
-                    <div class="area">
-                        <h3 class="area__title">Bilimsel Hesaplama ve Hızlandırıcı Mimarisi</h3>
-                        <p class="area__body">Moleküler dinamik ve bilimsel hesaplama iş yükleri için doğruluk öncelikli referans modelleri ve alana özgü mimariler.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 04 Raporlar ve Teknik Dokümantasyon -->
-            <section class="sec" id="reports" aria-labelledby="reports-title">
-                <div class="sec__head">
-                    <span class="sec__num" aria-hidden="true">04</span>
-                    <h2 class="sec__title" id="reports-title">Raporlar ve Teknik Dokümantasyon</h2>
-                </div>
-                <div class="table-scroll" tabindex="0" role="region" aria-label="Tablo: Raporlar ve Teknik Dokümantasyon">
-                    <table class="biblio">
-                        <caption>Yukarıdaki araştırma kayıtlarını destekleyen teknik dokümantasyon.</caption>
-                        <thead>
-                            <tr>
-                                <th scope="col">Yıl</th>
-                                <th scope="col">Başlık</th>
-                                <th scope="col">Doküman türü</th>
-                                <th scope="col">Proje</th>
-                                <th scope="col">Erişim</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="biblio__year">2026</td>
-                                <td class="biblio__title">Mekanistik Kanıt Özeti</td>
-                                <td>Teknik Rapor</td>
-                                <td>MACS</td>
-                                <td class="biblio__access"><a href="/tr/macs-evidence-summary">Oku</a></td>
-                            </tr>
-                            <tr>
-                                <td class="biblio__year">2026</td>
-                                <td class="biblio__title">Metodolojik Karar Günlüğü</td>
-                                <td>Teknik Dokümantasyon</td>
-                                <td>MACS</td>
-                                <td class="biblio__access"><a href="/tr/macs-decision-log">Oku</a></td>
-                            </tr>
-                            <tr>
-                                <td class="biblio__year">2026</td>
-                                <td class="biblio__title">Mekanistik Kanıt Matrisi</td>
-                                <td>Teknik Dokümantasyon</td>
-                                <td>MACS</td>
-                                <td class="biblio__access"><a href="/tr/macs-evidence-matrix">Oku</a></td>
-                            </tr>
-                            <tr>
-                                <td class="biblio__year">2026</td>
-                                <td class="biblio__title">MDP Tutarlılık Raporu</td>
-                                <td>Teknik Dokümantasyon</td>
-                                <td>MACS</td>
-                                <td class="biblio__access"><a href="/tr/macs-mdp-consistency">Oku</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-
-            <!-- 05 Buluşlar ve Fikri Mülkiyet -->
-            <section class="sec" id="inventions" aria-labelledby="inventions-title">
-                <div class="sec__head">
-                    <span class="sec__num" aria-hidden="true">05</span>
-                    <h2 class="sec__title" id="inventions-title">Buluşlar ve Fikri Mülkiyet</h2>
-                </div>
-                <div class="record">
-                    <h3 class="record__title">Moleküler İşaretçi Yoğunluğuna Bağlı Koşullu Aktivasyon ve Protein Yıkımına Olanak Sağlayan Modüler Sentetik Transmembran Biyolojik Sistem</h3>
-                    <dl class="record__meta">
-                        <div>
-                            <dt class="meta-key">Durum</dt>
-                            <dd class="meta-val">Ulusal Patent Başvurusu Yapıldı</dd>
-                        </div>
-                        <div>
-                            <dt class="meta-key">Yargı Alanı</dt>
-                            <dd class="meta-val">Türkiye (TÜRKPATENT)</dd>
-                        </div>
-                        <div>
-                            <dt class="meta-key">Buluş Sahibi</dt>
-                            <dd class="meta-val">Selman Ali Dokumacı</dd>
-                        </div>
-                    </dl>
-                    <p class="footnote">Herkese açık başvuru bilgileri. Detaylar yayınlanana kadar gizli tutulmuştur.</p>
-                </div>
-            </section>
-
-            <!-- 06 Hakkında -->
-            <section class="sec" id="about" aria-labelledby="about-title">
-                <div class="sec__head">
-                    <span class="sec__num" aria-hidden="true">06</span>
-                    <h2 class="sec__title" id="about-title">Hakkında</h2>
-                </div>
-                <div class="prose-col">
-                    <p>Araştırmalar, yerel GPU iş istasyonları ve yüksek başarımlı hesaplama (HPC) erişimi dâhil olmak üzere bilgisayar kaynakları ile bağımsız olarak yürütülmektedir.</p>
-                </div>
-            </section>
-
-            <!-- 07 Profiller ve İletişim -->
-            <section class="sec" id="contact" aria-labelledby="contact-title">
-                <div class="sec__head">
-                    <span class="sec__num" aria-hidden="true">07</span>
-                    <h2 class="sec__title" id="contact-title">Profiller ve İletişim</h2>
-                </div>
-                <div class="prose-col">
-                    <p>Akademik iş birliği, araştırma talepleri veya profesyonel iletişim için aşağıdaki kanallar aracılığıyla ulaşabilirsiniz:</p>
-                </div>
-                <ul class="profiles" style="margin-top:1.5rem">
-                    <li>
-                        <a href="https://www.linkedin.com/in/selman-ali-dokumac%C4%B1-4a6ba630a/" target="_blank" rel="noopener noreferrer" class="profile-link">
-                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                            LinkedIn
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/s3lm4n" target="_blank" rel="noopener noreferrer" class="profile-link">
-                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                            GitHub
-                        </a>
-                    </li>
-                    <li>
-                        <a href="mailto:selman_dokumaci@hotmail.com" class="profile-link" aria-label="Selman Ali Dokumacı’ya e-posta gönder">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                            E-posta
-                        </a>
-                    </li>
-                </ul>
-                <p class="footnote">Not: Araştırma ile ilgili taleplere öncelik verilmektedir. İlk iletişim için LinkedIn önerilir.</p>
-            </section>
-
-        </div>
-    </main>
-
-    <footer class="site-foot">
-        <div class="site-foot__inner">
-            <p>&copy; <span id="year">2026</span> Selman Ali Dokumacı &middot; Bağımsız Hesaplamalı Biyofizik Araştırmacısı</p>
-            <div class="site-foot__links">
-                <a href="https://github.com/s3lm4n" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a href="https://www.linkedin.com/in/selman-ali-dokumac%C4%B1-4a6ba630a/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            </div>
-        </div>
+  <!-- ============ 06–07 · ABOUT & CONTACT (night plate) ============ -->
+  <section class="night" aria-label="Hakkında ve iletişim">
+    <div class="night__inner">
+      <div class="night__about" id="about">
+        <p class="sec__no sec__no--night"><span>§ 06</span></p>
+        <h2 class="night__kicker" id="about-title">Hakkında</h2>
+        <p class="night__lead">Araştırmalar, yerel GPU iş istasyonları ve yüksek başarımlı hesaplama (HPC) erişimi dâhil olmak üzere bilgisayar kaynakları ile bağımsız olarak yürütülmektedir.</p>
+      </div>
+      <div class="night__contact" id="contact">
+        <p class="sec__no sec__no--night"><span>§ 07</span></p>
+        <h2 class="night__title" id="contact-title">Profiller ve İletişim</h2>
+        <p class="night__body">Akademik iş birliği, araştırma talepleri veya profesyonel iletişim için aşağıdaki kanallar aracılığıyla ulaşabilirsiniz:</p>
+        <ul class="night__links">
+          <li><a href="https://www.linkedin.com/in/selman-ali-dokumac%C4%B1-4a6ba630a/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://github.com/s3lm4n" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></li>
+          <li><a href="mailto:selman_dokumaci@hotmail.com" aria-label="Selman Ali Dokumacı’ya e-posta gönder">E-posta <span aria-hidden="true">→</span></a></li>
+        </ul>
+        <p class="fine fine--night">Not: Araştırma ile ilgili taleplere öncelik verilmektedir. İlk iletişim için LinkedIn önerilir.</p>
+      </div>
+    </div>
+    <footer class="foot">
+      <p>&copy; <span id="year">2026</span> Selman Ali Dokumacı · Bağımsız Hesaplamalı Biyofizik Araştırmacısı</p>
+      <p class="foot__links"><a href="https://github.com/s3lm4n" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/selman-ali-dokumac%C4%B1-4a6ba630a/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
     </footer>
-
-    <script src="/assets/js/site-ui.js" defer></script>
+  </section>
+</main>
 </body>
 </html>

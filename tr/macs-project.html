@@ -48,29 +48,40 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&amp;family=Hanken+Grotesk:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
 
     <link href="/assets/css/style.css" rel="stylesheet">
+    <link href="/assets/css/ink-core.css" rel="stylesheet">
+    <link href="/assets/css/ink-pages.css" rel="stylesheet">
+    <script>document.documentElement.classList.add('js');</script>
 </head>
-<body>
+<body class="ink-page ink--dossier ink--macs">
     <a href="#main-content" class="skip-link">İçeriğe atla</a>
-
-    <header class="masthead">
-        <div class="masthead__inner">
-            <a href="/tr/" class="backlink">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7 7-7m-7 7h18"/></svg>
-                Selman Ali Dokumacı
-            </a>
-            <div class="masthead__nav">
-                <span class="masthead__context">MACS</span>
-                <p class="lang">
-                    <a href="/macs-project" class="lang__link" hreflang="en" lang="en">EN</a>
-                    <span class="lang__sep" aria-hidden="true">/</span>
-                    <span class="lang__current" aria-current="true">TR</span>
-                </p>
-            </div>
-        </div>
-    </header>
+<svg class="defs" aria-hidden="true" focusable="false" width="0" height="0"><defs><filter id="boil" x="-4%" y="-4%" width="108%" height="108%"><feTurbulence type="fractalNoise" baseFrequency="0.032" numOctaves="2" seed="1" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.2" xChannelSelector="R" yChannelSelector="G"/></filter><pattern id="hatch-terra" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0 V5" stroke="#B5552F" stroke-width="1.6"/></pattern></defs></svg>
+<header class="mast mast--page">
+    <a href="/tr/" class="mast__brand"><span class="mast__mono" aria-hidden="true">S·A·D</span><span class="mast__name">Selman Ali Dokumacı</span></a>
+    <p class="mast__context" aria-label="Konum"><span>MACS</span></p>
+    <nav class="mast__nav" aria-label="Ana menü">
+        <a href="/tr/#research">Araştırma</a>
+        <a href="/tr/#reports">Raporlar</a>
+        <a href="/tr/#inventions">Buluşlar</a>
+        <a href="/tr/#about">Hakkında</a>
+        <a href="/tr/#contact">İletişim</a>
+        <p class="lang"><a href="/macs-project" hreflang="en" lang="en">EN</a><span aria-hidden="true">/</span><span aria-current="true">TR</span></p>
+    </nav>
+    <button type="button" class="mast__toggle" aria-expanded="false" aria-controls="drawer" aria-label="Menü">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7.5c5-.6 11-.4 16 0M4 12.2c6 .4 10-.3 16 .1M4 16.8c4-.3 11 .4 16-.2"/></svg>
+    </button>
+</header>
+<nav id="drawer" class="drawer" aria-label="Mobil gezinme" hidden>
+    <a href="/tr/">Selman Ali Dokumacı</a>
+    <a href="/tr/#research">Araştırma</a>
+        <a href="/tr/#reports">Raporlar</a>
+        <a href="/tr/#inventions">Buluşlar</a>
+        <a href="/tr/#about">Hakkında</a>
+        <a href="/tr/#contact">İletişim</a>
+    <p class="lang"><a href="/macs-project" hreflang="en" lang="en">EN</a><span aria-hidden="true">/</span><span aria-current="true">TR</span></p>
+</nav>
 
     <div class="dossier">
 
@@ -107,6 +118,66 @@
                 </ul>
                 <h1 class="page-title" id="project-title">MACS: Modular Activated Cancer Suppressor</h1>
                 <p class="page-subtitle">Asidik Mikroçevreye Duyarlı Mantık Kapısına Sahip, Tek mRNA Kodlu, Çoklu Alanlı Protein Sistemi</p>
+
+                <figure class="ink-plate" data-deco>
+<svg class="plate plate--wide boil" viewBox="0 0 760 284" role="img" aria-labelledby="macs-pw" focusable="false"><title id="macs-pw">MACS zincirinin ve önerilen iki pH durumunun şeması</title>
+<g filter="url(#boil)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path class="draw d1" pathLength="1" stroke="#1E1C19" stroke-width="2" d="M40.0 81.6 Q54.1 84.8 61.1 84.7 Q68.1 84.6 75.2 83.4 Q82.2 82.2 89.2 80.8 Q96.3 79.4 103.3 79.0 Q110.3 78.5 117.4 79.9 Q124.4 81.2 131.4 83.3 Q138.5 85.3 145.5 84.8 Q152.5 84.4 159.6 83.0 Q166.6 81.6 173.6 80.8 Q180.7 80.0 187.7 79.6 Q194.7 79.2 201.8 80.9 Q208.8 82.5 215.8 83.6 Q222.9 84.7 229.9 84.9 Q236.9 85.0 244.0 83.2 Q251.0 81.4 258.0 80.4 Q265.1 79.4 272.1 79.6 Q279.1 79.8 286.2 80.9 Q293.2 82.0 300.2 83.6 Q307.3 85.2 314.3 85.1 Q321.3 85.0 328.4 83.2 Q335.4 81.3 342.4 80.5 Q349.5 79.6 356.5 79.5 Q363.5 79.4 370.6 80.5 Q377.6 81.7 384.6 82.9 Q391.7 84.0 398.7 84.7 Q405.7 85.4 412.8 83.7 Q419.8 82.0 426.8 80.8 Q433.9 79.6 440.9 79.7 Q447.9 79.8 455.0 81.1 L462.0 82.3"/>
+<path class="draw d2" pathLength="1" stroke="#3F6F6A" stroke-width="2.2" d="M466.0 82.2 Q480.1 85.2 487.2 85.2 Q494.2 85.2 501.3 84.0 Q508.3 82.7 515.4 81.2 Q522.4 79.6 529.5 79.8 Q536.6 79.9 543.6 80.6 Q550.7 81.2 557.7 83.0 Q564.8 84.7 571.8 85.1 Q578.9 85.5 585.9 83.9 Q593.0 82.2 600.1 81.1 Q607.1 79.9 614.2 79.2 Q621.2 78.6 628.3 80.3 Q635.3 82.0 642.4 83.2 Q649.4 84.4 656.5 84.6 Q663.6 84.8 670.6 83.5 Q677.7 82.1 684.7 80.3 Q691.8 78.4 698.8 78.6 Q705.9 78.8 712.9 80.2 L720.0 81.6"/>
+<path class="draw d2" pathLength="1" stroke="#8F897E" stroke-width="1" d="M39.6 92.3 L40.3 99.8 M464.5 74.4 L463.6 99.6 M719.7 91.6 L719.9 99.7"/>
+<path class="draw d4" pathLength="1" stroke="#1E1C19" stroke-width="1.8" d="M136.0 195.5 Q127.6 203.7 122.3 205.8 Q117.0 207.9 111.6 208.5 Q106.1 209.1 99.8 209.3 Q93.6 209.5 88.7 205.8 Q83.9 202.1 83.4 196.7 Q82.9 191.2 83.8 186.5 Q84.8 181.8 87.0 177.4 Q89.3 173.0 93.3 168.8 Q97.3 164.5 103.7 164.4 Q110.1 164.2 115.2 167.0 Q120.2 169.8 124.2 173.0 Q128.2 176.2 132.1 180.3 Q136.1 184.4 135.9 189.9 Q135.7 195.4 133.1 200.0"/>
+<path class="draw d4" pathLength="1" stroke="#3F6F6A" stroke-width="2" d="M136.0 181.6 Q147.7 190.5 153.6 189.9 Q159.4 189.2 165.3 185.8 Q171.1 182.3 177.0 177.9 Q182.9 173.5 188.7 173.7 Q194.6 173.8 200.4 178.3 Q206.3 182.8 212.1 186.1 Q218.0 189.3 223.9 189.7 Q229.7 190.0 235.6 186.0 Q241.4 181.9 247.3 178.0 Q253.1 174.1 259.0 174.2 Q264.9 174.2 270.7 177.9 Q276.6 181.5 282.4 185.9 Q288.3 190.3 294.1 189.7 L300.0 189.1"/>
+<path class="draw d5" pathLength="1" stroke="#57534B" stroke-width="1.4" d="M330 186 C350 182 372 184 394 186 M384 179 L395 186 L384 193"/>
+<path class="draw d6" pathLength="1" stroke="#1E1C19" stroke-width="1.8" d="M516.1 194.4 Q513.1 204.9 508.1 208.6 Q503.0 212.2 496.5 211.4 Q490.0 210.6 484.9 208.3 Q479.8 206.1 474.9 203.5 Q470.0 200.9 466.8 196.3 Q463.5 191.7 464.0 186.2 Q464.6 180.7 468.9 176.9 Q473.3 173.0 478.1 170.4 Q482.8 167.9 488.4 166.4 Q494.0 165.0 500.3 165.6 Q506.7 166.2 510.4 170.6 Q514.1 175.0 515.5 179.9 Q516.9 184.8 516.7 189.7 Q516.6 194.5 516.3 200.2"/>
+<path class="draw d6" pathLength="1" stroke="#3F6F6A" stroke-width="2" d="M555.7 186.1 Q555.6 188.2 554.5 189.5 Q553.5 190.7 552.3 191.7 Q551.0 192.8 549.5 193.1 Q547.9 193.4 546.1 193.2 Q544.2 193.0 542.4 192.2 Q540.6 191.3 539.4 190.2 Q538.2 189.1 537.7 187.5 Q537.2 185.9 537.5 184.1 Q537.9 182.4 539.1 180.8 Q540.4 179.2 542.5 178.1 Q544.5 176.9 546.5 176.9 Q548.5 176.8 551.0 176.9 Q553.5 176.9 555.7 178.4 Q558.0 179.8 559.0 181.3 Q560.0 182.8 560.5 184.8 Q560.9 186.8 560.5 188.8 Q560.1 190.9 558.5 192.6 Q557.0 194.3 554.4 195.8 Q551.7 197.3 549.0 197.4 Q546.2 197.6 543.5 197.0 Q540.7 196.5 538.2 194.8 Q535.8 193.2 534.4 191.4 Q533.0 189.6 532.7 187.0 Q532.5 184.4 533.1 181.8 Q533.8 179.2 536.0 177.3 Q538.2 175.3 540.9 173.9 Q543.7 172.5 547.2 172.3 Q550.7 172.2 554.2 173.1 Q557.7 173.9 560.1 175.9 Q562.5 177.9 564.3 180.4 Q566.0 182.9 566.2 185.8 Q566.3 188.7 565.1 191.7 Q564.0 194.7 561.3 196.9 Q558.6 199.0 555.0 200.4 Q551.5 201.8 547.5 201.7 Q543.5 201.7 539.8 200.7 Q536.2 199.7 533.1 197.3 Q530.0 195.0 528.4 191.8 Q526.8 188.7 526.8 185.6 Q526.9 182.4 528.5 179.2"/>
+<path class="draw d7" pathLength="1" stroke="#B5552F" stroke-width="1.6" d="M574 160 h8 M578 156 v8 M584 206 h8 M588 202 v8 M532 214 h8 M536 210 v8"/>
+</g>
+<g class="annot">
+<text class="write d2" x="40" y="44" font-size="18" fill="#1E1C19" font-family="Caveat, cursive">Modül A · 1–587</text>
+<text class="write d2" x="40" y="62" font-size="15" fill="#57534B" font-family="Caveat, cursive">efektör ve yapısal iskele</text>
+<text class="write d3" x="472" y="44" font-size="18" fill="#2F5551" font-family="Caveat, cursive">Modül B · 588–947</text>
+<text class="write d3" x="472" y="62" font-size="15" fill="#57534B" font-family="Caveat, cursive">pH’a duyarlı kalkan</text>
+<text class="pop d2" x="40" y="114" font-size="10.5" fill="#8F897E" font-family="IBM Plex Mono, monospace" text-anchor="middle">1</text>
+<text class="pop d2" x="464" y="114" font-size="10.5" fill="#8F897E" font-family="IBM Plex Mono, monospace" text-anchor="middle">587 | 588</text>
+<text class="pop d2" x="720" y="114" font-size="10.5" fill="#8F897E" font-family="IBM Plex Mono, monospace" text-anchor="middle">947</text>
+<text class="write d4" x="40" y="146" font-size="17" fill="#1E1C19" font-family="Caveat, cursive">pH 7.4 · önerilen dingin durum</text>
+<text class="write d5" x="40" y="240" font-size="15" fill="#57534B" font-family="Caveat, cursive">B esnek, uzatılmış · arayüz korumalı</text>
+<text class="write d5" x="362" y="172" font-size="17" fill="#93401F" font-family="Caveat, cursive" text-anchor="middle">pH ↓</text>
+<text class="write d6" x="424" y="146" font-size="17" fill="#2F5551" font-family="Caveat, cursive">pH 6.8 · önerilen aktif durum</text>
+<text class="write d7" x="424" y="240" font-size="15" fill="#57534B" font-family="Caveat, cursive">HIP atandı · MD’de B kompaktlığı</text>
+</g>
+<g transform="rotate(-1.6 380 267)"><g class="pop d8"><rect x="248.0" y="256" width="264" height="22" fill="none" stroke="#93401F" stroke-width="1.1" stroke-dasharray="3 2.4"/><text x="380" y="271" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9.5" letter-spacing="1" fill="#93401F">ŞEMATİK · IN SILICO HİPOTEZ</text></g></g>
+</svg>
+<svg class="plate plate--tall boil" viewBox="0 0 360 610" role="img" aria-labelledby="macs-pt" focusable="false"><title id="macs-pt">MACS zincirinin ve önerilen iki pH durumunun şeması</title>
+<g filter="url(#boil)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path class="draw d1" pathLength="1" stroke="#1E1C19" stroke-width="2" d="M14.0 103.6 Q26.6 106.7 32.9 106.5 Q39.2 106.4 45.6 105.3 Q51.9 104.2 58.2 102.9 Q64.5 101.6 70.8 101.2 Q77.1 100.7 83.4 102.0 Q89.8 103.2 96.1 105.2 Q102.4 107.1 108.7 106.7 Q115.0 106.2 121.3 104.9 Q127.6 103.6 133.9 102.9 Q140.2 102.2 146.6 101.8 Q152.9 101.4 159.2 102.9 Q165.5 104.5 171.8 105.5 Q178.1 106.6 184.4 106.7 Q190.8 106.8 197.1 105.1 Q203.4 103.4 209.7 102.5 L216.0 101.6"/>
+<path class="draw d2" pathLength="1" stroke="#3F6F6A" stroke-width="2.2" d="M220.0 104.2 Q232.6 107.0 238.9 107.0 Q245.2 107.1 251.5 105.9 Q257.8 104.7 264.1 103.2 Q270.4 101.8 276.7 101.9 Q283.0 102.1 289.3 102.7 Q295.6 103.2 301.9 104.9 Q308.2 106.5 314.5 106.9 Q320.8 107.3 327.1 105.8 Q333.4 104.2 339.7 103.1 L346.0 102.0"/>
+<path class="draw d2" pathLength="1" stroke="#8F897E" stroke-width="1" d="M13.6 114.3 L14.3 121.8 M218.5 96.4 L217.6 121.6 M345.7 113.6 L345.9 121.7"/>
+<path class="draw d4" pathLength="1" stroke="#1E1C19" stroke-width="1.8" d="M95.0 269.2 Q86.9 277.1 81.8 279.1 Q76.7 281.1 71.5 281.7 Q66.2 282.3 60.2 282.5 Q54.1 282.7 49.5 279.1 Q44.8 275.6 44.3 270.3 Q43.8 265.1 44.7 260.6 Q45.6 256.0 47.8 251.8 Q50.0 247.6 53.8 243.5 Q57.7 239.4 63.9 239.3 Q70.0 239.1 74.9 241.8 Q79.8 244.5 83.6 247.6 Q87.5 250.6 91.3 254.6 Q95.0 258.5 94.8 263.8 Q94.6 269.1 92.2 273.6"/>
+<path class="draw d4" pathLength="1" stroke="#3F6F6A" stroke-width="2" d="M96.0 255.6 Q110.6 264.5 117.9 263.9 Q125.1 263.2 132.4 259.8 Q139.7 256.3 147.0 251.9 Q154.3 247.5 161.6 247.7 Q168.9 247.8 176.1 252.3 Q183.4 256.8 190.7 260.1 Q198.0 263.3 205.3 263.7 Q212.6 264.0 219.9 260.0 Q227.1 255.9 234.4 252.0 Q241.7 248.1 249.0 248.2 Q256.3 248.2 263.6 251.9 Q270.9 255.5 278.1 259.9 Q285.4 264.3 292.7 263.7 L300.0 263.1"/>
+<path class="draw d5" pathLength="1" stroke="#57534B" stroke-width="1.4" d="M180 340 C178 356 181 372 180 388 M173 378 L180 389 L187 378"/>
+<path class="draw d6" pathLength="1" stroke="#1E1C19" stroke-width="1.8" d="M99.2 476.2 Q96.3 486.2 91.5 489.8 Q86.6 493.4 80.4 492.5 Q74.1 491.7 69.2 489.6 Q64.3 487.4 59.6 484.9 Q54.8 482.4 51.7 478.0 Q48.6 473.5 49.1 468.3 Q49.6 463.0 53.8 459.3 Q58.0 455.6 62.6 453.1 Q67.2 450.6 72.6 449.2 Q77.9 447.9 84.0 448.4 Q90.1 449.0 93.7 453.3 Q97.3 457.5 98.6 462.2 Q100.0 466.9 99.8 471.6 Q99.7 476.3 99.5 481.8"/>
+<path class="draw d6" pathLength="1" stroke="#3F6F6A" stroke-width="2" d="M139.3 468.1 Q139.2 470.1 138.2 471.3 Q137.2 472.5 136.0 473.5 Q134.9 474.5 133.4 474.7 Q132.0 475.0 130.2 474.9 Q128.4 474.7 126.6 473.9 Q124.9 473.1 123.8 472.0 Q122.6 471.0 122.1 469.4 Q121.6 467.9 122.0 466.2 Q122.3 464.6 123.5 463.1 Q124.8 461.5 126.7 460.4 Q128.7 459.3 130.6 459.3 Q132.4 459.3 134.8 459.3 Q137.3 459.3 139.4 460.7 Q141.5 462.1 142.5 463.5 Q143.5 465.0 143.9 466.9 Q144.3 468.8 144.0 470.7 Q143.6 472.6 142.1 474.3 Q140.6 475.9 138.1 477.3 Q135.6 478.8 132.9 478.9 Q130.3 479.1 127.7 478.5 Q125.0 478.0 122.7 476.4 Q120.3 474.8 119.0 473.1 Q117.7 471.5 117.4 469.0 Q117.2 466.4 117.8 464.0 Q118.4 461.5 120.5 459.7 Q122.6 457.8 125.2 456.5 Q127.8 455.1 131.2 455.0 Q134.6 454.8 137.9 455.7 Q141.3 456.5 143.5 458.4 Q145.8 460.3 147.5 462.6 Q149.2 465.0 149.3 467.8 Q149.5 470.6 148.4 473.4 Q147.2 476.3 144.6 478.4 Q142.1 480.5 138.7 481.8 Q135.4 483.1 131.5 483.0 Q127.7 483.0 124.2 482.0 Q120.7 481.0 117.7 478.8 Q114.8 476.6 113.2 473.6 Q111.7 470.6 111.8 467.6 Q111.9 464.6 113.4 461.5"/>
+<path class="draw d7" pathLength="1" stroke="#B5552F" stroke-width="1.6" d="M156 442 h8 M160 438 v8 M166 488 h8 M170 484 v8 M114 496 h8 M118 492 v8"/>
+</g>
+<g class="annot">
+<text class="write d2" x="14" y="40" font-size="18" fill="#1E1C19" font-family="Caveat, cursive">Modül A · 1–587</text>
+<text class="write d2" x="14" y="60" font-size="15.6" fill="#57534B" font-family="Caveat, cursive">efektör ve yapısal iskele</text>
+<text class="write d3" x="346" y="156" font-size="18" fill="#2F5551" font-family="Caveat, cursive" text-anchor="end">Modül B · 588–947</text>
+<text class="write d3" x="346" y="176" font-size="15.6" fill="#57534B" font-family="Caveat, cursive" text-anchor="end">pH’a duyarlı kalkan</text>
+<text class="pop d2" x="14" y="136" font-size="12.2" fill="#8F897E" font-family="IBM Plex Mono, monospace" text-anchor="middle">1</text>
+<text class="pop d2" x="218" y="136" font-size="12.2" fill="#8F897E" font-family="IBM Plex Mono, monospace" text-anchor="middle">587 | 588</text>
+<text class="pop d2" x="340" y="136" font-size="12.2" fill="#8F897E" font-family="IBM Plex Mono, monospace" text-anchor="middle">947</text>
+<text class="write d4" x="14" y="222" font-size="17" fill="#1E1C19" font-family="Caveat, cursive">pH 7.4 · önerilen dingin durum</text>
+<text class="write d5" x="14" y="316" font-size="15.6" fill="#57534B" font-family="Caveat, cursive">B esnek, uzatılmış · arayüz korumalı</text>
+<text class="write d5" x="196" y="370" font-size="17" fill="#93401F" font-family="Caveat, cursive">pH ↓</text>
+<text class="write d6" x="14" y="426" font-size="17" fill="#2F5551" font-family="Caveat, cursive">pH 6.8 · önerilen aktif durum</text>
+<text class="write d7" x="14" y="530" font-size="15.6" fill="#57534B" font-family="Caveat, cursive">HIP atandı · MD’de B kompaktlığı</text>
+</g>
+<g transform="rotate(-1.6 180 573)"><g class="pop d8"><rect x="15.0" y="562" width="330" height="22" fill="none" stroke="#93401F" stroke-width="1.1" stroke-dasharray="3 2.4"/><text x="180" y="577" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12.2" letter-spacing="1" fill="#93401F">ŞEMATİK · IN SILICO HİPOTEZ</text></g></g>
+</svg>
+<figcaption class="ink-plate__cap">Levha — 947 kalıntılı zincir ve önerilen iki pH durumu, Bölüm 02–03’ten yeniden çizildi. Şematik: yapı değil, deneysel kanıt değil.</figcaption>
+</figure>
 
                 <div class="byline">
                     <div>
@@ -163,7 +234,7 @@
             <!-- 01 -->
             <section class="sec" id="unmet-need-title" aria-labelledby="h-overview">
                 <div class="sec__head">
-                    <span class="sec__num" aria-hidden="true">01</span>
+                    <span class="sec__num" aria-hidden="true"><canvas class="mark" data-deco data-ink="#2F5551"></canvas>01</span>
                     <h2 class="sec__title" id="h-overview">Katı Tümör Onkolojisinde Seçicilik Bariyeri</h2>
                 </div>
                 <div class="prose-col">
@@ -175,7 +246,7 @@
             <!-- 02 -->
             <section class="sec" id="architecture-title" aria-labelledby="h-architecture">
                 <div class="sec__head">
-                    <span class="sec__num" aria-hidden="true">02</span>
+                    <span class="sec__num" aria-hidden="true"><canvas class="mark" data-deco data-ink="#2F5551"></canvas>02</span>
                     <h2 class="sec__title" id="h-architecture">Sistem Mimarisi</h2>
                 </div>
 
@@ -219,7 +290,7 @@
             <!-- 03 -->
             <section class="sec" id="mechanism-title" aria-labelledby="h-mechanism">
                 <div class="sec__head">
-                    <span class="sec__num" aria-hidden="true">03</span>
+                    <span class="sec__num" aria-hidden="true"><canvas class="mark" data-deco data-ink="#2F5551"></canvas>03</span>
                     <h2 class="sec__title" id="h-mechanism">Mekanistik Hipotez: Asidoz Kaynaklı Kuaterner Düzeyde Geçitleme (quaternary gating)</h2>
                 </div>
 
@@ -257,7 +328,7 @@
             <!-- 04 -->
             <section class="sec" id="methods-title" aria-labelledby="h-methods">
                 <div class="sec__head">
-                    <span class="sec__num" aria-hidden="true">04</span>
+                    <span class="sec__num" aria-hidden="true"><canvas class="mark" data-deco data-ink="#2F5551"></canvas>04</span>
                     <h2 class="sec__title" id="h-methods">Hesaplamalı Kanıt Yığını</h2>
                 </div>
 
@@ -297,7 +368,7 @@
             <!-- 05 -->
             <section class="sec" id="findings-title" aria-labelledby="h-findings">
                 <div class="sec__head">
-                    <span class="sec__num" aria-hidden="true">05</span>
+                    <span class="sec__num" aria-hidden="true"><canvas class="mark" data-deco data-ink="#2F5551"></canvas>05</span>
                     <h2 class="sec__title" id="h-findings">Temel Yapısal Bulgular</h2>
                 </div>
 
@@ -362,7 +433,7 @@
             <!-- 06 -->
             <section class="sec" id="motion-title" aria-labelledby="h-visual">
                 <div class="sec__head">
-                    <span class="sec__num" aria-hidden="true">06</span>
+                    <span class="sec__num" aria-hidden="true"><canvas class="mark" data-deco data-ink="#2F5551"></canvas>06</span>
                     <h2 class="sec__title" id="h-visual">Görsel Kanıtlar</h2>
                 </div>
 
@@ -439,7 +510,7 @@
             <!-- 07 -->
             <section class="sec" id="limitations-title" aria-labelledby="h-limitations">
                 <div class="sec__head">
-                    <span class="sec__num" aria-hidden="true">07</span>
+                    <span class="sec__num" aria-hidden="true"><canvas class="mark" data-deco data-ink="#2F5551"></canvas>07</span>
                     <h2 class="sec__title" id="h-limitations">Sınırlamalar ve Planlanan Doğrulamalar</h2>
                 </div>
 
@@ -471,7 +542,7 @@
             <!-- 08 -->
             <section class="sec" id="documents-title" aria-labelledby="h-documents">
                 <div class="sec__head">
-                    <span class="sec__num" aria-hidden="true">08</span>
+                    <span class="sec__num" aria-hidden="true"><canvas class="mark" data-deco data-ink="#2F5551"></canvas>08</span>
                     <h2 class="sec__title" id="h-documents">Araştırma Dokümantasyonu</h2>
                 </div>
                 <div class="prose-col">
@@ -575,6 +646,8 @@
         </div>
     </footer>
 
+    <script src="/assets/js/ink-brush.js" defer></script>
+    <script src="/assets/js/ink-site.js" defer></script>
     <script src="/assets/js/site-ui.js" defer></script>
 </body>
 </html>
