@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <rect width="100" height="100" rx="20" fill="#1e40af"/>
-  <text x="50" y="65" font-family="Inter, sans-serif" font-size="45" font-weight="bold" fill="white" text-anchor="middle">SD</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" fill="#F6F1E7"/>
+  <g fill="#1E1C19">
+    <path d="M27 10v13h-3c-1-7-4-10-9-10-4 0-7 3-7 7 0 5 4 7 10 10 8 4 12 7 12 14 0 8-6 12-14 12-4 0-8-1-11-3l-2 2V40h3c1 8 5 13 10 13s8-3 8-7c0-5-4-7-10-10C6 32 3 28 3 21c0-7 5-12 13-12 4 0 7 1 9 3z"/>
+    <path fill-rule="evenodd" d="M33 10h12c12 0 17 9 17 22s-5 22-17 22H33v-3h4V13h-4zm11 3v38h1c7 0 10-6 10-19s-3-19-10-19z"/>
+  </g>
 </svg>
