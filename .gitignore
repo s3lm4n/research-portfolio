@@ -37,3 +37,9 @@ temp/
 # Local QA scratch files
 scratch_qa.py
 .vercel
+
+# MDX sketchbook: page generator, source copy and review material, kept local and out of the public repository
+# (the published pages and assets under mdx-sketchbook/, tr/mdx-sketchbook/ and assets/mdx-sketchbook/ are committed)
+src/mdx-sketchbook/
+mdx-sketchbook/opening-prototype/
+assets/mdx-sketchbook/opening-prototype/
