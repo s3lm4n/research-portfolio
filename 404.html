@@ -3,35 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404: Page Not Found - Selman Ali Dokumaci</title>
+    <title>404: Page Not Found - Selman Ali Dokumacı</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <meta name="description" content="The page you requested could not be found. Return to the research portfolio of Selman Ali Dokumaci.">
+    <meta name="description" content="The page you requested could not be found. Return to the research portfolio of Selman Ali Dokumacı.">
     <meta name="robots" content="noindex, follow">
 
     <meta property="og:type" content="website">
-    <meta property="og:title" content="404: Page Not Found - Selman Ali Dokumaci">
-    <meta property="og:description" content="The requested page could not be found on Selman Ali Dokumaci's research portfolio.">
+    <meta property="og:title" content="404: Page Not Found - Selman Ali Dokumacı">
+    <meta property="og:description" content="The requested page could not be found on Selman Ali Dokumacı's research portfolio.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&amp;family=Hanken+Grotesk:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
 
     <link href="/assets/css/style.css" rel="stylesheet">
+    <link href="/assets/css/ink-core.css" rel="stylesheet">
+    <link href="/assets/css/ink-pages.css" rel="stylesheet">
+    <script>document.documentElement.classList.add('js');</script>
 </head>
-<body>
+<body class="ink-page ink--plain ink--404">
     <a href="#main-content" class="skip-link">Skip to main content</a>
+<svg class="defs" aria-hidden="true" focusable="false" width="0" height="0"><defs><filter id="boil" x="-4%" y="-4%" width="108%" height="108%"><feTurbulence type="fractalNoise" baseFrequency="0.032" numOctaves="2" seed="1" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.2" xChannelSelector="R" yChannelSelector="G"/></filter><pattern id="hatch-terra" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0 V5" stroke="#B5552F" stroke-width="1.6"/></pattern></defs></svg>
+<header class="mast mast--page">
+    <a href="/" class="mast__brand"><span class="mast__mono" aria-hidden="true">S·A·D</span><span class="mast__name">Selman Ali Dokumacı</span></a>
+    <nav class="mast__nav" aria-label="Main">
+        <a href="/#research">Research</a>
+        <a href="/#reports">Reports</a>
+        <a href="/#inventions">Inventions</a>
+        <a href="/#about">About</a>
+        <a href="/#contact">Contact</a>
+        
+    </nav>
+    <button type="button" class="mast__toggle" aria-expanded="false" aria-controls="drawer" aria-label="Menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7.5c5-.6 11-.4 16 0M4 12.2c6 .4 10-.3 16 .1M4 16.8c4-.3 11 .4 16-.2"/></svg>
+    </button>
+</header>
+<nav id="drawer" class="drawer" aria-label="Mobile navigation" hidden>
+    <a href="/">Selman Ali Dokumacı</a>
+    <a href="/#research">Research</a>
+        <a href="/#reports">Reports</a>
+        <a href="/#inventions">Inventions</a>
+        <a href="/#about">About</a>
+        <a href="/#contact">Contact</a>
+    
+</nav>
 
-    <header class="masthead">
-        <div class="masthead__inner">
-            <a href="/" class="masthead__name">Selman Ali Dokumaci</a>
-            <nav class="masthead__nav" aria-label="Main">
-                <a href="/" class="navlink">Home</a>
-                <a href="/macs-project" class="navlink">Research</a>
-            </nav>
-        </div>
-    </header>
-
-    <main id="main-content" class="wrap-text" style="padding-block:5rem 4rem" tabindex="-1">
+    <main id="main-content" class="wrap-text" style="padding-block:5rem 4rem" tabindex="-1" data-reveal>
+        <svg class="ink-404-art boil" viewBox="0 0 420 150" data-deco aria-hidden="true" focusable="false"><g filter="url(#boil)" fill="none" stroke-linecap="round" stroke-linejoin="round"><path class="draw d1" pathLength="1" stroke="#1E1C19" stroke-width="1.8" d="M24 20 L210 18 L214 132 L28 134 Z"/><path class="draw d2" pathLength="1" stroke="#B5552F" stroke-width="1.6" d="M52 20 L50 134"/><path class="draw d3" pathLength="1" stroke="#8F897E" stroke-width="1.1" d="M66 48 H190 M66 70 H176 M66 92 H186 M66 114 H150"/><path class="draw d4" pathLength="1" stroke="#1E1C19" stroke-width="1.6" stroke-dasharray="5 5" d="M250 22 L396 20 L398 132 L252 134 Z"/></g><text class="write d5" x="324" y="84" text-anchor="middle" font-family="Caveat, cursive" font-size="24" fill="#93401F">404</text></svg>
         <p class="eyebrow">Error 404</p>
         <h1 class="page-title">Page not found</h1>
         <p class="page-subtitle">The requested URL was not found on this server. It may have been moved, renamed, or is temporarily unavailable.</p>
@@ -48,7 +66,7 @@
 
     <footer class="site-foot">
         <div class="site-foot__inner">
-            <p>&copy; <span id="year">2026</span> Selman Ali Dokumaci. All rights reserved.</p>
+            <p>&copy; <span id="year">2026</span> Selman Ali Dokumacı. All rights reserved.</p>
             <div class="site-foot__links">
                 <a href="/">Home</a>
                 <a href="/sitemap.xml">Sitemap</a>
@@ -56,6 +74,8 @@
         </div>
     </footer>
 
+    <script src="/assets/js/ink-brush.js" defer></script>
+    <script src="/assets/js/ink-site.js" defer></script>
     <script src="/assets/js/site-ui.js" defer></script>
 </body>
 </html>

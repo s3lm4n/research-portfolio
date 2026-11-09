@@ -3,3 +3,16 @@
 src/mdx-sketchbook/
 mdx-sketchbook/opening-prototype/
 assets/mdx-sketchbook/opening-prototype/
+
+# Ink & Instrument redesign: private working material, never deployed from a local copy
+# (approved prototype + review videos/QA in ink/, archives, build/QA tooling, earlier drafts)
+_backups/
+ink/
+tools/
+node_modules/
+redesign/
+prototype/
+DESIGN.md
+assets/css/notebook-system.css
+assets/js/notebook-site.js
+assets/illustrations/

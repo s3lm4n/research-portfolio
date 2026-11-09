@@ -54,29 +54,39 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&amp;family=Hanken+Grotesk:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
 
     <link href="/assets/css/style.css" rel="stylesheet">
+    <link href="/assets/css/ink-core.css" rel="stylesheet">
+    <link href="/assets/css/ink-pages.css" rel="stylesheet">
+    <script>document.documentElement.classList.add('js');</script>
 </head>
-<body class="report-page">
+<body class="report-page ink-page ink--report ink--macs">
     <a href="#main-content" class="skip-link">İçeriğe atla</a>
-
-    <header class="masthead">
-        <div class="masthead__inner">
-            <a href="/tr/macs-project" class="backlink">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7 7-7m-7 7h18"/></svg>
-                MACS
-            </a>
-            <div class="masthead__nav">
-                <span class="masthead__context">MDP Tutarlılığı</span>
-                <p class="lang">
-                    <a href="/macs-mdp-consistency" class="lang__link" hreflang="en" lang="en">EN</a>
-                    <span class="lang__sep" aria-hidden="true">/</span>
-                    <span class="lang__current" aria-current="true">TR</span>
-                </p>
-            </div>
-        </div>
-    </header>
+<header class="mast mast--page">
+    <a href="/tr/" class="mast__brand"><span class="mast__mono" aria-hidden="true">S·A·D</span><span class="mast__name">Selman Ali Dokumacı</span></a>
+    <p class="mast__context" aria-label="Konum"><a href="/tr/macs-project">MACS</a> <span aria-hidden="true">/</span> <span>MDP Tutarlılığı</span></p>
+    <nav class="mast__nav" aria-label="Ana menü">
+        <a href="/tr/#research">Araştırma</a>
+        <a href="/tr/#reports">Raporlar</a>
+        <a href="/tr/#inventions">Buluşlar</a>
+        <a href="/tr/#about">Hakkında</a>
+        <a href="/tr/#contact">İletişim</a>
+        <p class="lang"><a href="/macs-mdp-consistency" hreflang="en" lang="en">EN</a><span aria-hidden="true">/</span><span aria-current="true">TR</span></p>
+    </nav>
+    <button type="button" class="mast__toggle" aria-expanded="false" aria-controls="drawer" aria-label="Menü">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7.5c5-.6 11-.4 16 0M4 12.2c6 .4 10-.3 16 .1M4 16.8c4-.3 11 .4 16-.2"/></svg>
+    </button>
+</header>
+<nav id="drawer" class="drawer" aria-label="Mobil gezinme" hidden>
+    <a href="/tr/">Selman Ali Dokumacı</a>
+    <a href="/tr/#research">Araştırma</a>
+        <a href="/tr/#reports">Raporlar</a>
+        <a href="/tr/#inventions">Buluşlar</a>
+        <a href="/tr/#about">Hakkında</a>
+        <a href="/tr/#contact">İletişim</a>
+    <p class="lang"><a href="/macs-mdp-consistency" hreflang="en" lang="en">EN</a><span aria-hidden="true">/</span><span aria-current="true">TR</span></p>
+</nav>
 
     <main class="report" id="main-content" tabindex="-1">
 
@@ -95,6 +105,7 @@
         <div class="page-head" style="padding-top:0">
             <p class="eyebrow">MACS Araştırma Dokümantasyonu</p>
             <h1 class="page-title">MDP Tutarlılık Raporu</h1>
+            <canvas class="mark mark--title" data-deco data-ink="#2F5551"></canvas>
             <div class="byline">
                 <dl class="docmeta">
                     <div>
@@ -149,7 +160,7 @@
 
         <section class="sec" aria-labelledby="h-params">
             <div class="sec__head">
-                <span class="sec__num" aria-hidden="true">01</span>
+                <span class="sec__num" aria-hidden="true"><canvas class="mark" data-deco data-ink="#2F5551"></canvas>01</span>
                 <h2 class="sec__title" id="h-params">Üretim (Production) MD Parametreleri (300 ns)</h2>
             </div>
             <div class="prose-col">
@@ -191,7 +202,7 @@
         </section>
         <section class="sec" aria-labelledby="h-conclusion">
             <div class="sec__head">
-                <span class="sec__num" aria-hidden="true">02</span>
+                <span class="sec__num" aria-hidden="true"><canvas class="mark" data-deco data-ink="#2F5551"></canvas>02</span>
                 <h2 class="sec__title" id="h-conclusion">Doğrulama Sonucu</h2>
             </div>
             <div class="prose-col">
@@ -223,6 +234,8 @@
         </div>
     </footer>
 
+    <script src="/assets/js/ink-brush.js" defer></script>
+    <script src="/assets/js/ink-site.js" defer></script>
     <script src="/assets/js/site-ui.js" defer></script>
 </body>
 </html>
