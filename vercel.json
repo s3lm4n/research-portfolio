@@ -3,6 +3,25 @@
   "cleanUrls": true,
   "redirects": [
     {
+      "source": "/",
+      "has": [
+        { "type": "cookie", "key": "site_language", "value": "tr" }
+      ],
+      "destination": "/tr/",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "has": [
+        { "type": "header", "key": "x-vercel-ip-country", "value": "TR" }
+      ],
+      "missing": [
+        { "type": "cookie", "key": "site_language", "value": "en" }
+      ],
+      "destination": "/tr/",
+      "permanent": false
+    },
+    {
       "source": "/index.html",
       "destination": "/",
       "permanent": true
