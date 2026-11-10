@@ -4,6 +4,17 @@
    Persistent elements (lens, 7B accumulator, margin rule) follow V004's per-scene geometry. */
 (function () {
   'use strict';
+  /* Remember explicit language choices; leave the existing page links in charge of navigation. */
+  document.querySelectorAll('a[hreflang="en"], a[hreflang="tr"]').forEach(function (link) {
+    function rememberLanguage(e) {
+      if (e.type === 'auxclick' && e.button !== 1) return;
+      document.cookie = 'site_language=' + link.hreflang + '; Path=/; Max-Age=31536000; SameSite=Lax'
+        + (location.protocol === 'https:' ? '; Secure' : '');
+    }
+    link.addEventListener('click', rememberLanguage);
+    link.addEventListener('auxclick', rememberLanguage);
+  });
+
 
   var doc = document.documentElement;
   var params = new URLSearchParams(location.search);

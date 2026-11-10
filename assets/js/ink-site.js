@@ -4,6 +4,17 @@
    Every block is a no-op when its markup is absent. */
 (function () {
   'use strict';
+  /* Remember explicit language choices; leave the existing page links in charge of navigation. */
+  document.querySelectorAll('a[hreflang="en"], a[hreflang="tr"]').forEach(function (link) {
+    function rememberLanguage(e) {
+      if (e.type === 'auxclick' && e.button !== 1) return;
+      document.cookie = 'site_language=' + link.hreflang + '; Path=/; Max-Age=31536000; SameSite=Lax'
+        + (location.protocol === 'https:' ? '; Secure' : '');
+    }
+    link.addEventListener('click', rememberLanguage);
+    link.addEventListener('auxclick', rememberLanguage);
+  });
+
   var doc = document.documentElement;
   var B = window.InkBrush;
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
